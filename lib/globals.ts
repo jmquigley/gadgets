@@ -9,6 +9,7 @@
  */
 "use strict";
 
+import "util.obj-cycle";
 import "util.string";
 import {globalize} from "./shared/helpers";
 

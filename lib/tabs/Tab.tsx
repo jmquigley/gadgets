@@ -29,9 +29,9 @@
  *
  * ## API
  * #### Events
- * - `onClick` - invoked when a tab is selected from the Container
- * - `onClose` - invoked when the close button is selected on the tab.  A
- * reference to the closed tab is passed to the callback.
+ * - `onClick` - Invoked when a tab is selected from the Container
+ * - `onClose(tab: any)` - Invoked when the close button is selected on the tab.
+ * A reference to the closed tab is passed to the callback.
  *
  * #### Styles
  * - `ui-tab` - The global CSS class applied to the top level `div` of the
@@ -42,16 +42,22 @@
  * the parent to the child.  It includes the following attributes:
  *   - `selectHandler` - a function reference back to the container that is
  *     invoked to tell the container that this tab was selected.
- * - `orientation` - the location in the container component where the
- * tab will be drawn (top, bottom, left, right)
- * - `selected: {boolean} (false)` - if this is set to true, then the tab
+ * - `noclose=false {boolean}` - when set to true the close button is
+ * disabled and this tab cannot be hidden.  This is generally passed to the
+ * component by the TabContainer.
+ * - `orientation=Location.top {Location}` - the location in the container
+ * component where the tab will be drawn (top, bottom, left, right)
+ * - `selected=false {boolean}` - if this is set to true, then the tab
  * will show as selected.
- * - `title: {string} ('')` - the text that will be shown on the tab.
+ * - `title='' {string}` - the text that will be shown on the tab.
  *
  * @module Tab
  */
 
+// const debug = require("debug")("Tab");
+
 import autobind from "autobind-decorator";
+import _ from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
@@ -73,6 +79,7 @@ import styled, {css} from "../shared/themed-components";
 
 export interface TabProps extends BaseProps {
 	href?: any;
+	noclose?: boolean;
 	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
 	onClose?: (tab: any) => void;
 	orientation?: Location;
@@ -81,26 +88,31 @@ export interface TabProps extends BaseProps {
 }
 
 export function getDefaultTabProps(): TabProps {
-	return {
-		...getDefaultBaseProps(),
-		href: {
-			selectHandler: nilEvent
+	return _.omitBy(
+		{
+			...getDefaultBaseProps(),
+			href: {
+				selectHandler: nilEvent
+			},
+			minWidth: "120px",
+			noclose: false,
+			obj: "Tab",
+			onClick: nilEvent,
+			onClose: nilEvent,
+			orientation: Location.top,
+			selected: false,
+			title: ""
 		},
-		obj: "Tab",
-		onClick: nilEvent,
-		onClose: nilEvent,
-		orientation: Location.top,
-		selected: false,
-		title: ""
-	};
+		_.isNil
+	);
 }
 
 export interface TabState extends BaseState {
-	hidden: boolean;
+	visible: boolean;
 }
 
 export function getDefaultTabState(): TabState {
-	return {...getDefaultBaseState(), hidden: false};
+	return {...getDefaultBaseState(), visible: true};
 }
 
 const TabBorderTop: any = css`
@@ -151,12 +163,37 @@ const TabBorderRight: any = css`
 	}
 `;
 
+const TabHidden: any = css`
+	display: none;
+	min-width: unset;
+	width: unset;
+`;
+
+const TabVisible: any = css`
+	display: inline-block;
+	min-width: ${(props: TabProps) => props.minWidth};
+	width: ${(props: TabProps) => props.width};
+`;
+
 const TabView: any = styled.div`
 	cursor: default;
-	display: inline-block;
 	flex-grow: unset;
 
-	${(props: TabProps) => (props.xcss ? props.xcss : "")}
+	${(props: TabProps) => (props.visible ? TabVisible : TabHidden)}
+
+	${(props: TabProps) => {
+		switch (props.orientation) {
+			case Location.bottom:
+				return TabBorderBottom;
+			case Location.left:
+				return TabBorderLeft;
+			case Location.right:
+				return TabBorderRight;
+			case Location.top:
+			default:
+				return TabBorderTop;
+		}
+	}}
 
 	&:hover .ui-button {
 		color: ${(props: TabProps) => props.theme.backgroundColor};
@@ -189,6 +226,11 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 
 	constructor(props: TabProps) {
 		super(props, "ui-tab", Tab.defaultProps.style);
+
+		this.state = {
+			...getDefaultTabState(),
+			visible: this.props.visible
+		};
 	}
 
 	@autobind
@@ -201,48 +243,26 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 
 	@autobind
 	private handleClose() {
-		this.setState({hidden: true}, () => {
-			this.props.href.hiddenTabHandler(this);
-			this.props.onClose(this);
-		});
-	}
-
-	public static getDerivedStateFromProps(props: TabProps, state: TabState) {
-		const newState: TabState = {...state};
-
-		if (newState.hidden) {
-			newState.style = {
-				display: "none",
-				minWidth: "",
-				width: ""
-			};
-		} else {
-			newState.style = {
-				minWidth: "120px",
-				width: props.width
-			};
+		if (!this.props.noclose) {
+			this.setState({visible: false}, () => {
+				this.props.href.hiddenTabHandler(this);
+				this.props.onClose(this);
+			});
 		}
-
-		return super.getDerivedStateFromProps(props, newState, true);
 	}
 
 	public render() {
 		this.updateClassName();
 
-		let xcss: any = "";
-		switch (this.props.orientation) {
-			case Location.top:
-				xcss = TabBorderTop;
-				break;
-			case Location.bottom:
-				xcss = TabBorderBottom;
-				break;
-			case Location.left:
-				xcss = TabBorderLeft;
-				break;
-			case Location.right:
-				xcss = TabBorderRight;
-				break;
+		let closeButton: any = null;
+		if (!this.props.noclose) {
+			closeButton = (
+				<Button
+					{...this.props}
+					iconName='times'
+					onClick={this.handleClose}
+				/>
+			);
 		}
 
 		return (
@@ -250,26 +270,22 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 				<TabView
 					disabled={this.props.disabled}
 					className={this.className}
+					minWidth={this.props.minWidth}
+					orientation={this.props.orientation}
 					selected={this.props.selected}
 					sizing={this.props.sizing}
 					style={this.state.style}
-					visible={this.props.visible}
-					xcss={xcss}
+					visible={this.state.visible}
+					width={this.props.width}
 				>
 					<Item
 						{...this.props}
 						hiddenRightButton={true}
 						onClick={this.handleClick}
-						rightButton={
-							<Button
-								{...this.props}
-								iconName='times'
-								onClick={this.handleClose}
-							/>
-						}
+						rightButton={closeButton}
 						title={this.props.title}
 						useedit={false}
-						visible={!this.state.hidden}
+						visible={this.state.visible}
 					/>
 				</TabView>
 			</Wrapper>

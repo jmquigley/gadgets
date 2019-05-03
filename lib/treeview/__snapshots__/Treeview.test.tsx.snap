@@ -4,11 +4,11 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -25,6 +25,7 @@ exports[`Test creation of a simple Treeview component (inherit) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -223,11 +224,11 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -244,6 +245,7 @@ exports[`Test creation of a simple Treeview component (large) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -442,11 +444,11 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -463,6 +465,7 @@ exports[`Test creation of a simple Treeview component (medium) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -661,11 +664,11 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -682,6 +685,7 @@ exports[`Test creation of a simple Treeview component (normal) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -880,11 +884,11 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -901,6 +905,7 @@ exports[`Test creation of a simple Treeview component (small) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -1099,11 +1104,11 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -1120,6 +1125,7 @@ exports[`Test creation of a simple Treeview component (xlarge) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -1318,11 +1324,11 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -1339,6 +1345,7 @@ exports[`Test creation of a simple Treeview component (xsmall) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -1537,11 +1544,11 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -1558,6 +1565,7 @@ exports[`Test creation of a simple Treeview component (xxlarge) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -1756,11 +1764,11 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
 <Treeview
   addAsFirstChild={true}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultTitle="New Title"
   direction="top"
@@ -1777,6 +1785,7 @@ exports[`Test creation of a simple Treeview component (xxsmall) 1`] = `
   maxWidth={null}
   minHeight="15em"
   minWidth={null}
+  noborder={false}
   nodeWidth="20em"
   noedit={false}
   nohover={false}
@@ -1975,12 +1984,12 @@ exports[`Test retrieval of Treeview props object 1`] = `
 Object {
   "addAsFirstChild": true,
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "defaultTitle": "New Title",
   "direction": "top",
@@ -1997,6 +2006,7 @@ Object {
   "maxWidth": null,
   "minHeight": "15em",
   "minWidth": null,
+  "noborder": false,
   "nodeWidth": "20em",
   "noedit": false,
   "nohover": false,

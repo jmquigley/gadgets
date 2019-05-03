@@ -102,7 +102,7 @@ test("Test the close click handler on a Tab instance", () => {
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
 
-	expect(ctl.state("hidden")).toBe(false);
+	expect(ctl.state("visible"));
 	ctl.find(".ui-button")
 		.first()
 		.simulate("click");
@@ -113,5 +113,5 @@ test("Test the close click handler on a Tab instance", () => {
 	expect(close).toHaveBeenCalled();
 	expect(close).toHaveBeenCalledWith(ctl.instance());
 
-	assert(ctl.state("hidden"));
+	assert(!ctl.state("visible"));
 });

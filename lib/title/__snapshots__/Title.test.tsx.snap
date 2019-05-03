@@ -3,11 +3,11 @@
 exports[`Test creation of a Title control with bad layout 1`] = `
 <Title
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -23,6 +23,7 @@ exports[`Test creation of a Title control with bad layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -51,11 +52,11 @@ exports[`Test creation of a Title control with bad layout 1`] = `
 exports[`Test creation of a Title control with bad layout 2`] = `
 <Title
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -71,6 +72,7 @@ exports[`Test creation of a Title control with bad layout 2`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -99,11 +101,11 @@ exports[`Test creation of a Title control with bad layout 2`] = `
 exports[`Test creation of a Title control with default props 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -119,6 +121,7 @@ exports[`Test creation of a Title control with default props 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -155,11 +158,11 @@ exports[`Test creation of a Title control with default props 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -175,6 +178,7 @@ exports[`Test creation of a Title control with default props 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -209,11 +213,11 @@ exports[`Test creation of a Title control with default props 1`] = `
 exports[`Test creation of a Title control with even layout 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -229,6 +233,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -265,11 +270,11 @@ exports[`Test creation of a Title control with even layout 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -285,6 +290,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -314,11 +320,11 @@ exports[`Test creation of a Title control with even layout 1`] = `
     />
     <Title__StyledWidget
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title-widget"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -334,6 +340,7 @@ exports[`Test creation of a Title control with even layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -368,11 +375,11 @@ exports[`Test creation of a Title control with even layout 1`] = `
 exports[`Test creation of a Title control with no layout 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -388,6 +395,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -424,11 +432,11 @@ exports[`Test creation of a Title control with no layout 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -444,6 +452,7 @@ exports[`Test creation of a Title control with no layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -478,11 +487,11 @@ exports[`Test creation of a Title control with no layout 1`] = `
 exports[`Test creation of a Title control with quarter layout 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -498,6 +507,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -534,11 +544,11 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -554,6 +564,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -583,11 +594,11 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
     />
     <Title__StyledWidget
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title-widget"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -603,6 +614,7 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -637,11 +649,11 @@ exports[`Test creation of a Title control with quarter layout 1`] = `
 exports[`Test creation of a Title control with stacked layout 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -657,6 +669,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -693,11 +706,11 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -713,6 +726,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -742,11 +756,11 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
     />
     <Title__StyledWidget
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title-widget"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -762,6 +776,7 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -796,11 +811,11 @@ exports[`Test creation of a Title control with stacked layout 1`] = `
 exports[`Test creation of a Title control with thirds layout 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -816,6 +831,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -852,11 +868,11 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -872,6 +888,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -901,11 +918,11 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
     />
     <Title__StyledWidget
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title-widget"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -921,6 +938,7 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -955,11 +973,11 @@ exports[`Test creation of a Title control with thirds layout 1`] = `
 exports[`Test creation of a Title control with threequarter layout 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -975,6 +993,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -1011,11 +1030,11 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
   >
     <Title__StyledLabel
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -1031,6 +1050,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -1060,11 +1080,11 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
     />
     <Title__StyledWidget
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className="ui-title-widget"
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -1080,6 +1100,7 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -1114,11 +1135,11 @@ exports[`Test creation of a Title control with threequarter layout 1`] = `
 exports[`Test disabling the Title control 1`] = `
 <Title
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
@@ -1134,6 +1155,7 @@ exports[`Test disabling the Title control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -1162,11 +1184,11 @@ exports[`Test disabling the Title control 1`] = `
 exports[`Test making the Title control invisible 1`] = `
 <Title
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -1182,6 +1204,7 @@ exports[`Test making the Title control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -1210,12 +1233,12 @@ exports[`Test making the Title control invisible 1`] = `
 exports[`Test retrieval of Title props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -1231,6 +1254,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

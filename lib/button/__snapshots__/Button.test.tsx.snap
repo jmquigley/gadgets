@@ -3,11 +3,11 @@
 exports[`Test Button click event 1`] = `
 <Button
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -24,6 +24,7 @@ exports[`Test Button click event 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -48,11 +49,11 @@ exports[`Test Button click event 1`] = `
 exports[`Test creation of a Button control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -69,6 +70,7 @@ exports[`Test creation of a Button control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -102,11 +104,11 @@ exports[`Test creation of a Button control 1`] = `
   >
     <Icon
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className=""
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -123,6 +125,7 @@ exports[`Test creation of a Button control 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -148,11 +151,11 @@ exports[`Test creation of a Button control 1`] = `
 exports[`Test creation of a Button control with custom icon, colors, and border 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -169,6 +172,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -216,11 +220,11 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   >
     <Icon
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className=""
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -237,6 +241,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -262,11 +267,11 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
 exports[`Test disabling of a Button 1`] = `
 <Button
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
@@ -283,6 +288,7 @@ exports[`Test disabling of a Button 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -307,11 +313,11 @@ exports[`Test disabling of a Button 1`] = `
 exports[`Test making a Button invisible 1`] = `
 <Button
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -328,6 +334,7 @@ exports[`Test making a Button invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -352,12 +359,12 @@ exports[`Test making a Button invisible 1`] = `
 exports[`Test retrieval of Button props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -374,6 +381,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

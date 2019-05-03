@@ -69,6 +69,7 @@ export interface TextAreaProps extends BaseProps {
 export function getDefaultTextAreaProps(): TextAreaProps {
 	return {
 		...getDefaultBaseProps(),
+		obj: "TextArea",
 		onChange: nilEvent,
 		onUpdate: nilEvent,
 		padding: "4px",

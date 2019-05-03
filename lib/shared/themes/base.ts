@@ -8,7 +8,7 @@ const theme: ThemeProps = {
 	...defaultTheme,
 	backgroundColor: Color.white,
 	borderColor: Color.silver,
-	chevronColor: Color.gray,
+	chevronColor: Color.lightgray,
 	color: Color.black,
 	headerForegroundColor: Color.white,
 	headerBackgroundColor: ColorScheme.c1,

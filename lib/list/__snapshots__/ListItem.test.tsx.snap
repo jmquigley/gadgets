@@ -3,11 +3,11 @@
 exports[`Test disabling of a ListItem control 1`] = `
 <ListItem
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
@@ -32,6 +32,7 @@ exports[`Test disabling of a ListItem control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -70,11 +71,11 @@ exports[`Test disabling of a ListItem control 1`] = `
 exports[`Test making ListItem control invisible 1`] = `
 <ListItem
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -99,6 +100,7 @@ exports[`Test making ListItem control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -137,12 +139,12 @@ exports[`Test making ListItem control invisible 1`] = `
 exports[`Test retrieval of ListItem props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -165,6 +167,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -212,11 +215,11 @@ Object {
 exports[`Test the creation of a ListItem control with left & right title 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -241,6 +244,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -278,11 +282,11 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
 >
   <Item
     backgroundColor={null}
+    border={null}
     borderColor={null}
     bottom={null}
     className="ui-listitem"
     color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
@@ -307,6 +311,7 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
     maxWidth={null}
     minHeight={null}
     minWidth={null}
+    noborder={false}
     noedit={false}
     nohover={false}
     notheme={false}
@@ -346,11 +351,11 @@ exports[`Test the creation of a ListItem control with left & right title 1`] = `
 exports[`Test the creation of a ListItem control with simple title 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -375,6 +380,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -412,11 +418,11 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
 >
   <Item
     backgroundColor={null}
+    border={null}
     borderColor={null}
     bottom={null}
     className="ui-listitem ui-selected"
     color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
@@ -441,6 +447,7 @@ exports[`Test the creation of a ListItem control with simple title 1`] = `
     maxWidth={null}
     minHeight={null}
     minWidth={null}
+    noborder={false}
     noedit={false}
     nohover={false}
     notheme={false}

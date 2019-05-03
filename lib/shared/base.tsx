@@ -41,8 +41,6 @@
  * @module BaseComponent
  */
 
-"use strict";
-
 // const debug = require("debug")("base");
 
 import {isEqual} from "lodash";

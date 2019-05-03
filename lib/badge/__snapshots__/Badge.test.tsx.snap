@@ -3,11 +3,11 @@
 exports[`Test creation of a Badge control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   counter={1}
   direction="right"
@@ -23,6 +23,7 @@ exports[`Test creation of a Badge control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -79,11 +80,11 @@ exports[`Test creation of a Badge control 1`] = `
 exports[`Test making the Badge control invisible 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   counter={0}
   direction="right"
@@ -99,6 +100,7 @@ exports[`Test making the Badge control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -137,12 +139,12 @@ exports[`Test making the Badge control invisible 1`] = `
 exports[`Test retrieval of Badge props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "counter": 0,
   "direction": "right",
@@ -158,6 +160,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -196,11 +199,11 @@ Object {
 exports[`Test the disabling of a Badge control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   counter={0}
   direction="right"
@@ -216,6 +219,7 @@ exports[`Test the disabling of a Badge control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}

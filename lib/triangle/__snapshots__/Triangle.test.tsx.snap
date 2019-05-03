@@ -3,11 +3,11 @@
 exports[`Create a triangle in bottom direction 1`] = `
 <Triangle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="bottom"
   disabled={false}
@@ -23,6 +23,7 @@ exports[`Create a triangle in bottom direction 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -51,11 +52,11 @@ exports[`Create a triangle in bottom direction 1`] = `
 exports[`Create a triangle in down direction 1`] = `
 <Triangle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="down"
   disabled={false}
@@ -71,6 +72,7 @@ exports[`Create a triangle in down direction 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -99,11 +101,11 @@ exports[`Create a triangle in down direction 1`] = `
 exports[`Create a triangle in left direction 1`] = `
 <Triangle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="left"
   disabled={false}
@@ -119,6 +121,7 @@ exports[`Create a triangle in left direction 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -147,11 +150,11 @@ exports[`Create a triangle in left direction 1`] = `
 exports[`Create a triangle in right direction 1`] = `
 <Triangle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -167,6 +170,7 @@ exports[`Create a triangle in right direction 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -195,11 +199,11 @@ exports[`Create a triangle in right direction 1`] = `
 exports[`Create a triangle in top direction 1`] = `
 <Triangle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="top"
   disabled={false}
@@ -215,6 +219,7 @@ exports[`Create a triangle in top direction 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -243,11 +248,11 @@ exports[`Create a triangle in top direction 1`] = `
 exports[`Create a triangle in up direction 1`] = `
 <Triangle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="up"
   disabled={false}
@@ -263,6 +268,7 @@ exports[`Create a triangle in up direction 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -291,11 +297,11 @@ exports[`Create a triangle in up direction 1`] = `
 exports[`Test creation of a Triangle control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="up"
   disabled={false}
@@ -311,6 +317,7 @@ exports[`Test creation of a Triangle control 1`] = `
   minHeight={null}
   minWidth={null}
   nobase={false}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -339,11 +346,11 @@ exports[`Test creation of a Triangle control 1`] = `
 >
   <Triangle__SVGView
     backgroundColor={null}
+    border={null}
     borderColor={null}
     bottom={null}
     className="ui-triangle test-class"
     color={null}
-    contentEditable={false}
     controlled={true}
     direction="up"
     disabled={false}
@@ -359,6 +366,7 @@ exports[`Test creation of a Triangle control 1`] = `
     minHeight={null}
     minWidth={null}
     nobase={false}
+    noborder={false}
     noedit={false}
     nohover={false}
     notheme={false}
@@ -397,12 +405,12 @@ exports[`Test creation of a Triangle control 1`] = `
 exports[`Test retrieval of Triangle props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "up",
   "disabled": false,
@@ -418,6 +426,7 @@ Object {
   "minHeight": null,
   "minWidth": null,
   "nobase": false,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

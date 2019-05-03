@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.0.67
+#### Enhancements:
+
+- Added noborder and border properties to the base props object
+- Simplified how children were handled within the [TabContainer](https://github.com/jmquigley/gadgets/blob/master/docs/lib/tabs/TabContainer.md) component
+
+#### Bug Fixes:
+
+- Fixed broken `onClose` property for the TabContainer.
+
+---
 
 ## v0.0.66
 #### Enhancements:

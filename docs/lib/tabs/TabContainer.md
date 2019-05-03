@@ -18,11 +18,16 @@ const debug = require('debug')('App')
      location={Location.bottom}
      nonavigation
      onRemove={(tab: any) => {
-         debug(removing %o (id=${tab.props['id']})`, tab);
+         debug(removing %o (id=${tab.props['id']})`, tab.props["title"]);
      }}
      onSelect={(tab: any, previous: any) => {
-         debug(`new: %o (id=${tab.props['id']}),
-             old: %o (id=${previous.props['id']})`, tab, previous);
+         debug(
+             `selected: %o (id=${tab.props["id"]}), previous: %o (id=${
+                 previous.props["id"]
+             })`,
+             tab.props["title"],
+             previous.props["title"]
+         );
      }}
 >
     <Tab title="tab #1">#1<br/><br/>{randomText}</Tab>

@@ -3,11 +3,11 @@
 exports[`Test creation of a default Wrapper 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -22,6 +22,7 @@ exports[`Test creation of a default Wrapper 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -68,12 +69,12 @@ exports[`Test creation of a default Wrapper 1`] = `
 exports[`Test creation of the Wrapper props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -88,6 +89,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -125,11 +127,11 @@ Object {
 exports[`Test disabling the Wrapper 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
@@ -144,6 +146,7 @@ exports[`Test disabling the Wrapper 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}

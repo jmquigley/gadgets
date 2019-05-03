@@ -87,6 +87,7 @@ export enum Color {
 	glow = "#51cbee",
 	gray = "#666666",
 	info = "#5bc0de",
+	lightgray = "#cccccc",
 	lightsaber = "#2ff923",
 	red = "#ff0000",
 	silver = "#c0c0c0",
@@ -137,12 +138,12 @@ export interface Styles {
 
 export interface BaseProps {
 	backgroundColor?: string;
+	border?: string;
 	borderColor?: string;
 	bottom?: string;
 	children?: any;
 	className?: string;
 	color?: string;
-	contentEditable?: boolean;
 	controlled?: boolean;
 	direction?: Direction;
 	disabled?: boolean;
@@ -157,6 +158,7 @@ export interface BaseProps {
 	maxWidth?: string;
 	minHeight?: string;
 	minWidth?: string;
+	noborder?: boolean;
 	noedit?: boolean;
 	nohover?: boolean;
 	notheme?: boolean;
@@ -179,12 +181,12 @@ export interface BaseProps {
 export function getDefaultBaseProps(): BaseProps {
 	return {
 		backgroundColor: null,
+		border: null,
 		borderColor: null,
 		bottom: null,
 		children: null,
 		className: null,
 		color: null,
-		contentEditable: false,
 		controlled: true,
 		direction: Direction.right,
 		disabled: false,
@@ -199,6 +201,7 @@ export function getDefaultBaseProps(): BaseProps {
 		maxWidth: null,
 		minHeight: null,
 		minWidth: null,
+		noborder: false,
 		noedit: false,
 		nohover: false,
 		notheme: false,

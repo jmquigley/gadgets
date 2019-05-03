@@ -2,27 +2,15 @@
 
 exports[`Create an empty TabContainer instance 1`] = `
 <TabContainer
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
-  id={null}
-  left={null}
   location="top"
-  maxHeight={null}
   maxTabs={5}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -32,45 +20,27 @@ exports[`Create an empty TabContainer instance 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelect={[Function]}
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test TabContainer retrieval functions 1`] = `
 <TabContainer
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
-  id={null}
-  left={null}
   location="top"
-  maxHeight={null}
   maxTabs={5}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -80,45 +50,27 @@ exports[`Test TabContainer retrieval functions 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelect={[Function]}
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test disabling the TabContainer instance 1`] = `
 <TabContainer
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
-  id={null}
-  left={null}
   location="top"
-  maxHeight={null}
   maxTabs={5}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -128,30 +80,24 @@ exports[`Test disabling the TabContainer instance 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelect={[Function]}
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test making the TabContainer invisible 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -165,8 +111,9 @@ exports[`Test making the TabContainer invisible 1`] = `
   maxHeight={null}
   maxTabs={5}
   maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -182,7 +129,7 @@ exports[`Test making the TabContainer invisible 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
   theme={null}
   tooltip={null}
@@ -192,27 +139,16 @@ exports[`Test making the TabContainer invisible 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
-    backgroundColor={null}
-    borderColor={null}
-    bottom={null}
     className="ui-tab-container"
-    color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
-    err={null}
-    errorMessage={null}
     focus={false}
-    height={null}
-    id={null}
-    left={null}
     location="top"
-    maxHeight={null}
     maxTabs={5}
-    maxWidth={null}
-    minHeight={null}
-    minWidth={null}
+    minHeight="120px"
+    minWidth="500px"
+    noborder={false}
     noclose={false}
     noedit={false}
     nohover={false}
@@ -221,798 +157,283 @@ exports[`Test making the TabContainer invisible 1`] = `
     notooltip={false}
     obj="TabContainer"
     onSelect={[Function]}
-    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
-    style={
-      Object {
-        "minWidth": "480px",
-      }
-    }
-    tabWidth={120}
+    style={Object {}}
+    tabWidth={100}
     testing={true}
-    theme={null}
-    tooltip={null}
-    top={null}
     visible={false}
-    width={null}
-    xcss={null}
   >
-    <TabBar
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      contentEditable={false}
+    <TabContainer__TabBarView
+      className="ui-tab-bar"
       controlled={true}
       direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
       focus={false}
-      height={null}
-      id={null}
-      left={null}
       location="top"
-      maxHeight={null}
       maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      navigation={
-        <TabNavigation
+      minHeight="100px"
+      minWidth="350px"
+      noborder={false}
+      noclose={false}
+      noedit={false}
+      nohover={false}
+      nonavigation={false}
+      notheme={false}
+      notooltip={false}
+      obj="TabContainer"
+      onSelect={[Function]}
+      ripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      tabWidth={100}
+      testing={true}
+      visible={false}
+    >
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="0"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="top"
+        ripple={false}
+        selected={true}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #1"
+        visible={true}
+        width="100px"
+      >
+        #1
+      </Tab>
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="1"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="top"
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #2"
+        visible={true}
+        width="100px"
+      >
+        #2
+      </Tab>
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="2"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="top"
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #3"
+        visible={true}
+        width="100px"
+      >
+        #3
+      </Tab>
+      <TabContainer__TabNavigationView
+        className="ui-tab-navigation"
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        location="top"
+        maxTabs={5}
+        minHeight="100px"
+        minWidth="350px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        nonavigation={false}
+        notheme={false}
+        notooltip={false}
+        obj="TabContainer"
+        onSelect={[Function]}
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        tabWidth={100}
+        testing={true}
+        visible={false}
+      >
+        <Button
           backgroundColor={null}
+          border={null}
           borderColor={null}
           bottom={null}
           className={null}
-          color={null}
-          contentEditable={false}
+          color="#cccccc"
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
           errorMessage={null}
           focus={false}
-          handleLeftClick={[Function]}
-          handleRightClick={[Function]}
           height={null}
+          iconName="chevron-left"
+          iconStyle=""
           id={null}
           left={null}
-          location="top"
+          location="none"
           maxHeight={null}
-          maxTabs={5}
           maxWidth={null}
           minHeight={null}
           minWidth={null}
-          noclose={false}
+          noborder={false}
           noedit={false}
           nohover={false}
-          nonavigation={false}
           notheme={false}
           notooltip={false}
-          obj="TabContainer"
-          onSelect={[Function]}
+          obj="Button"
+          onClick={[Function]}
           padding={null}
-          ripple={false}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={120}
           testing={true}
           theme={null}
           tooltip={null}
           top={null}
-          visible={false}
+          visible={true}
           width={null}
           xcss={null}
-        >
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #1
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #2
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #3
-          </Tab>
-        </TabNavigation>
-      }
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      tabWidth={120}
-      tabs={
-        Immutable.List [
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="0"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={true}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #1
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="1"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #2
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="2"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #3
-          </Tab>,
-        ]
-      }
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={false}
-      width={null}
-      xcss={null}
-    >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabBar>
-    <TabContent
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      content="#1"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      id={null}
-      left={null}
+        />
+        <Button
+          backgroundColor={null}
+          border={null}
+          borderColor={null}
+          bottom={null}
+          className={null}
+          color="#cccccc"
+          controlled={true}
+          direction="right"
+          disabled={false}
+          err={null}
+          errorMessage={null}
+          focus={false}
+          height={null}
+          iconName="chevron-right"
+          iconStyle=""
+          id={null}
+          left={null}
+          location="none"
+          maxHeight={null}
+          maxWidth={null}
+          minHeight={null}
+          minWidth={null}
+          noborder={false}
+          noedit={false}
+          nohover={false}
+          notheme={false}
+          notooltip={false}
+          obj="Button"
+          onClick={[Function]}
+          padding={null}
+          ripple={true}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip={null}
+          top={null}
+          visible={true}
+          width={null}
+          xcss={null}
+        />
+      </TabContainer__TabNavigationView>
+    </TabContainer__TabBarView>
+    <TabContainer__TabContentView
+      className="ui-tab-content"
       location="top"
-      maxHeight={null}
-      maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      tabWidth={120}
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={false}
-      width={null}
-      xcss={null}
+      noborder={false}
     >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabContent>
+      #1
+    </TabContainer__TabContentView>
   </TabContainer__TabContainerView>
 </Wrapper>
 `;
 
 exports[`Test removing the first item from the TabContainer 1`] = `
 <TabContainer
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
-  id={null}
-  left={null}
   location="top"
-  maxHeight={null}
   maxTabs={5}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -1022,46 +443,27 @@ exports[`Test removing the first item from the TabContainer 1`] = `
   obj="TabContainer"
   onRemove={[MockFunction]}
   onSelect={[Function]}
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test retrieval of Tabs props object 1`] = `
 Object {
-  "backgroundColor": null,
-  "borderColor": null,
-  "bottom": null,
-  "children": null,
-  "className": null,
-  "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
-  "err": null,
-  "errorMessage": null,
   "focus": false,
-  "height": null,
-  "id": null,
-  "left": null,
   "location": "top",
-  "maxHeight": null,
   "maxTabs": 5,
-  "maxWidth": null,
-  "minHeight": null,
-  "minWidth": null,
+  "minHeight": "100px",
+  "minWidth": "350px",
+  "noborder": false,
   "noclose": false,
   "noedit": false,
   "nohover": false,
@@ -1071,19 +473,13 @@ Object {
   "obj": "TabContainer",
   "onRemove": [Function],
   "onSelect": [Function],
-  "padding": null,
   "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
-  "tabWidth": 120,
+  "tabWidth": 100,
   "testing": true,
-  "theme": null,
-  "tooltip": null,
-  "top": null,
   "visible": true,
-  "width": null,
-  "xcss": null,
 }
 `;
 
@@ -1098,27 +494,15 @@ Object {
 
 exports[`Test selecting the first tab within the TabContainer 1`] = `
 <TabContainer
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
-  id={null}
-  left={null}
   location="top"
-  maxHeight={null}
   maxTabs={5}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -1128,45 +512,27 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelect={[MockFunction]}
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test the TabContainer with the previous and next buttons 1`] = `
 <TabContainer
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
-  id={null}
-  left={null}
   location="top"
-  maxHeight={null}
   maxTabs={5}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -1176,30 +542,24 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelect={[MockFunction]}
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
-  theme={null}
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -1213,8 +573,9 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
   maxHeight={null}
   maxTabs={5}
   maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -1230,7 +591,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
   theme={null}
   tooltip={null}
@@ -1240,27 +601,16 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
-    backgroundColor={null}
-    borderColor={null}
-    bottom={null}
     className="ui-tab-container"
-    color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
-    err={null}
-    errorMessage={null}
     focus={false}
-    height={null}
-    id={null}
-    left={null}
     location="bottom"
-    maxHeight={null}
     maxTabs={5}
-    maxWidth={null}
-    minHeight={null}
-    minWidth={null}
+    minHeight="120px"
+    minWidth="500px"
+    noborder={false}
     noclose={false}
     noedit={false}
     nohover={false}
@@ -1269,47 +619,32 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
     notooltip={false}
     obj="TabContainer"
     onSelect={[Function]}
-    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
-    style={
-      Object {
-        "minWidth": "480px",
-      }
-    }
-    tabWidth={120}
+    style={Object {}}
+    tabWidth={100}
     testing={true}
-    theme={null}
-    tooltip={null}
-    top={null}
     visible={true}
-    width={null}
-    xcss={null}
   >
-    <TabContent
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      content="#1"
-      contentEditable={false}
+    <TabContainer__TabContentView
+      className="ui-tab-content"
+      location="bottom"
+      noborder={false}
+    >
+      #1
+    </TabContainer__TabContentView>
+    <TabContainer__TabBarView
+      className="ui-tab-bar"
       controlled={true}
       direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
       focus={false}
-      height={null}
-      id={null}
-      left={null}
       location="bottom"
-      maxHeight={null}
       maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
+      minHeight="100px"
+      minWidth="350px"
+      noborder={false}
       noclose={false}
       noedit={false}
       nohover={false}
@@ -1318,46 +653,30 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       notooltip={false}
       obj="TabContainer"
       onSelect={[Function]}
-      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={120}
+      tabWidth={100}
       testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
       visible={true}
-      width={null}
-      xcss={null}
     >
       <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
-        err={null}
-        errorMessage={null}
         focus={false}
-        height={null}
         href={
           Object {
+            "hiddenTabHandler": [Function],
             "selectHandler": [Function],
           }
         }
-        id={null}
-        left={null}
+        id="0"
         location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -1365,49 +684,34 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         obj="Tab"
         onClick={[Function]}
         onClose={[Function]}
-        orientation="top"
-        padding={null}
+        orientation="bottom"
         ripple={false}
-        selected={false}
+        selected={true}
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={null}
         title="tab #1"
-        tooltip={null}
-        top={null}
         visible={true}
-        width={null}
-        xcss={null}
+        width="100px"
       >
         #1
       </Tab>
       <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
-        err={null}
-        errorMessage={null}
         focus={false}
-        height={null}
         href={
           Object {
+            "hiddenTabHandler": [Function],
             "selectHandler": [Function],
           }
         }
-        id={null}
-        left={null}
+        id="1"
         location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -1415,49 +719,34 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         obj="Tab"
         onClick={[Function]}
         onClose={[Function]}
-        orientation="top"
-        padding={null}
+        orientation="bottom"
         ripple={false}
         selected={false}
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={null}
         title="tab #2"
-        tooltip={null}
-        top={null}
         visible={true}
-        width={null}
-        xcss={null}
+        width="100px"
       >
         #2
       </Tab>
       <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
-        err={null}
-        errorMessage={null}
         focus={false}
-        height={null}
         href={
           Object {
+            "hiddenTabHandler": [Function],
             "selectHandler": [Function],
           }
         }
-        id={null}
-        left={null}
+        id="2"
         location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -1465,85 +754,80 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         obj="Tab"
         onClick={[Function]}
         onClose={[Function]}
-        orientation="top"
-        padding={null}
+        orientation="bottom"
         ripple={false}
         selected={false}
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={null}
         title="tab #3"
-        tooltip={null}
-        top={null}
         visible={true}
-        width={null}
-        xcss={null}
+        width="100px"
       >
         #3
       </Tab>
-    </TabContent>
-    <TabBar
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      id={null}
-      left={null}
-      location="bottom"
-      maxHeight={null}
-      maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      navigation={
-        <TabNavigation
+      <TabContainer__TabNavigationView
+        className="ui-tab-navigation"
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        location="bottom"
+        maxTabs={5}
+        minHeight="100px"
+        minWidth="350px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        nonavigation={false}
+        notheme={false}
+        notooltip={false}
+        obj="TabContainer"
+        onSelect={[Function]}
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        tabWidth={100}
+        testing={true}
+        visible={true}
+      >
+        <Button
           backgroundColor={null}
+          border={null}
           borderColor={null}
           bottom={null}
           className={null}
-          color={null}
-          contentEditable={false}
+          color="#cccccc"
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
           errorMessage={null}
           focus={false}
-          handleLeftClick={[Function]}
-          handleRightClick={[Function]}
           height={null}
+          iconName="chevron-left"
+          iconStyle=""
           id={null}
           left={null}
-          location="bottom"
+          location="none"
           maxHeight={null}
-          maxTabs={5}
           maxWidth={null}
           minHeight={null}
           minWidth={null}
-          noclose={false}
+          noborder={false}
           noedit={false}
           nohover={false}
-          nonavigation={false}
           notheme={false}
           notooltip={false}
-          obj="TabContainer"
-          onSelect={[Function]}
+          obj="Button"
+          onClick={[Function]}
           padding={null}
-          ripple={false}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={120}
           testing={true}
           theme={null}
           tooltip={null}
@@ -1551,489 +835,52 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           visible={true}
           width={null}
           xcss={null}
-        >
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #1
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #2
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #3
-          </Tab>
-        </TabNavigation>
-      }
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      tabWidth={120}
-      tabs={
-        Immutable.List [
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="0"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="bottom"
-            padding={null}
-            ripple={false}
-            selected={true}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #1
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="1"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="bottom"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #2
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="2"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="bottom"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #3
-          </Tab>,
-        ]
-      }
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
-    >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabBar>
+        />
+        <Button
+          backgroundColor={null}
+          border={null}
+          borderColor={null}
+          bottom={null}
+          className={null}
+          color="#cccccc"
+          controlled={true}
+          direction="right"
+          disabled={false}
+          err={null}
+          errorMessage={null}
+          focus={false}
+          height={null}
+          iconName="chevron-right"
+          iconStyle=""
+          id={null}
+          left={null}
+          location="none"
+          maxHeight={null}
+          maxWidth={null}
+          minHeight={null}
+          minWidth={null}
+          noborder={false}
+          noedit={false}
+          nohover={false}
+          notheme={false}
+          notooltip={false}
+          obj="Button"
+          onClick={[Function]}
+          padding={null}
+          ripple={true}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip={null}
+          top={null}
+          visible={true}
+          width={null}
+          xcss={null}
+        />
+      </TabContainer__TabNavigationView>
+    </TabContainer__TabBarView>
   </TabContainer__TabContainerView>
 </Wrapper>
 `;
@@ -2041,11 +888,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
 exports[`Test the creation of a TabContainer instance (left) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -2059,8 +906,9 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
   maxHeight={null}
   maxTabs={5}
   maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -2076,7 +924,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
   theme={null}
   tooltip={null}
@@ -2086,27 +934,16 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
-    backgroundColor={null}
-    borderColor={null}
-    bottom={null}
     className="ui-tab-container"
-    color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
-    err={null}
-    errorMessage={null}
     focus={false}
-    height={null}
-    id={null}
-    left={null}
     location="left"
-    maxHeight={null}
     maxTabs={5}
-    maxWidth={null}
-    minHeight={null}
-    minWidth={null}
+    minHeight="120px"
+    minWidth="500px"
+    noborder={false}
     noclose={false}
     noedit={false}
     nohover={false}
@@ -2115,85 +952,208 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
     notooltip={false}
     obj="TabContainer"
     onSelect={[Function]}
-    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
-    style={
-      Object {
-        "minWidth": "600px",
-      }
-    }
-    tabWidth={120}
+    style={Object {}}
+    tabWidth={100}
     testing={true}
-    theme={null}
-    tooltip={null}
-    top={null}
     visible={true}
-    width={null}
-    xcss={null}
   >
-    <TabBar
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      contentEditable={false}
+    <TabContainer__TabBarView
+      className="ui-tab-bar"
       controlled={true}
       direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
       focus={false}
-      height={null}
-      id={null}
-      left={null}
       location="left"
-      maxHeight={null}
       maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      navigation={
-        <TabNavigation
+      minHeight="100px"
+      minWidth="350px"
+      noborder={false}
+      noclose={false}
+      noedit={false}
+      nohover={false}
+      nonavigation={false}
+      notheme={false}
+      notooltip={false}
+      obj="TabContainer"
+      onSelect={[Function]}
+      ripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      tabWidth={100}
+      testing={true}
+      visible={true}
+    >
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="0"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="left"
+        ripple={false}
+        selected={true}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #1"
+        visible={true}
+        width="100px"
+      >
+        #1
+      </Tab>
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="1"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="left"
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #2"
+        visible={true}
+        width="100px"
+      >
+        #2
+      </Tab>
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="2"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="left"
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #3"
+        visible={true}
+        width="100px"
+      >
+        #3
+      </Tab>
+      <TabContainer__TabNavigationView
+        className="ui-tab-navigation"
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        location="left"
+        maxTabs={5}
+        minHeight="100px"
+        minWidth="350px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        nonavigation={false}
+        notheme={false}
+        notooltip={false}
+        obj="TabContainer"
+        onSelect={[Function]}
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        tabWidth={100}
+        testing={true}
+        visible={true}
+      >
+        <Button
           backgroundColor={null}
+          border={null}
           borderColor={null}
           bottom={null}
           className={null}
-          color={null}
-          contentEditable={false}
+          color="#cccccc"
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
           errorMessage={null}
           focus={false}
-          handleLeftClick={[Function]}
-          handleRightClick={[Function]}
           height={null}
+          iconName="chevron-left"
+          iconStyle=""
           id={null}
           left={null}
-          location="left"
+          location="none"
           maxHeight={null}
-          maxTabs={5}
           maxWidth={null}
           minHeight={null}
           minWidth={null}
-          noclose={false}
+          noborder={false}
           noedit={false}
           nohover={false}
-          nonavigation={false}
           notheme={false}
           notooltip={false}
-          obj="TabContainer"
-          onSelect={[Function]}
+          obj="Button"
+          onClick={[Function]}
           padding={null}
-          ripple={false}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={120}
           testing={true}
           theme={null}
           tooltip={null}
@@ -2201,689 +1161,59 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           visible={true}
           width={null}
           xcss={null}
-        >
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #1
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #2
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #3
-          </Tab>
-        </TabNavigation>
-      }
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={
-        Object {
-          "width": "120px",
-        }
-      }
-      tabWidth={120}
-      tabs={
-        Immutable.List [
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="0"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="left"
-            padding={null}
-            ripple={false}
-            selected={true}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #1
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="1"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="left"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #2
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="2"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="left"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #3
-          </Tab>,
-        ]
-      }
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
-    >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabBar>
-    <TabContent
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      content="#1"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      id={null}
-      left={null}
+        />
+        <Button
+          backgroundColor={null}
+          border={null}
+          borderColor={null}
+          bottom={null}
+          className={null}
+          color="#cccccc"
+          controlled={true}
+          direction="right"
+          disabled={false}
+          err={null}
+          errorMessage={null}
+          focus={false}
+          height={null}
+          iconName="chevron-right"
+          iconStyle=""
+          id={null}
+          left={null}
+          location="none"
+          maxHeight={null}
+          maxWidth={null}
+          minHeight={null}
+          minWidth={null}
+          noborder={false}
+          noedit={false}
+          nohover={false}
+          notheme={false}
+          notooltip={false}
+          obj="Button"
+          onClick={[Function]}
+          padding={null}
+          ripple={true}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip={null}
+          top={null}
+          visible={true}
+          width={null}
+          xcss={null}
+        />
+      </TabContainer__TabNavigationView>
+    </TabContainer__TabBarView>
+    <TabContainer__TabContentView
+      className="ui-tab-content"
       location="left"
-      maxHeight={null}
-      maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      tabWidth={120}
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
+      noborder={false}
     >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabContent>
+      #1
+    </TabContainer__TabContentView>
   </TabContainer__TabContainerView>
 </Wrapper>
 `;
@@ -2891,11 +1221,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
 exports[`Test the creation of a TabContainer instance (right) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -2909,8 +1239,9 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
   maxHeight={null}
   maxTabs={5}
   maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -2926,7 +1257,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
   theme={null}
   tooltip={null}
@@ -2936,27 +1267,16 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
-    backgroundColor={null}
-    borderColor={null}
-    bottom={null}
     className="ui-tab-container"
-    color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
-    err={null}
-    errorMessage={null}
     focus={false}
-    height={null}
-    id={null}
-    left={null}
     location="right"
-    maxHeight={null}
     maxTabs={5}
-    maxWidth={null}
-    minHeight={null}
-    minWidth={null}
+    minHeight="120px"
+    minWidth="500px"
+    noborder={false}
     noclose={false}
     noedit={false}
     nohover={false}
@@ -2965,47 +1285,32 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
     notooltip={false}
     obj="TabContainer"
     onSelect={[Function]}
-    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
-    style={
-      Object {
-        "minWidth": "600px",
-      }
-    }
-    tabWidth={120}
+    style={Object {}}
+    tabWidth={100}
     testing={true}
-    theme={null}
-    tooltip={null}
-    top={null}
     visible={true}
-    width={null}
-    xcss={null}
   >
-    <TabContent
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      content="#1"
-      contentEditable={false}
+    <TabContainer__TabContentView
+      className="ui-tab-content"
+      location="right"
+      noborder={false}
+    >
+      #1
+    </TabContainer__TabContentView>
+    <TabContainer__TabBarView
+      className="ui-tab-bar"
       controlled={true}
       direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
       focus={false}
-      height={null}
-      id={null}
-      left={null}
       location="right"
-      maxHeight={null}
       maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
+      minHeight="100px"
+      minWidth="350px"
+      noborder={false}
       noclose={false}
       noedit={false}
       nohover={false}
@@ -3014,46 +1319,30 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       notooltip={false}
       obj="TabContainer"
       onSelect={[Function]}
-      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
       style={Object {}}
-      tabWidth={120}
+      tabWidth={100}
       testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
       visible={true}
-      width={null}
-      xcss={null}
     >
       <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
-        err={null}
-        errorMessage={null}
         focus={false}
-        height={null}
         href={
           Object {
+            "hiddenTabHandler": [Function],
             "selectHandler": [Function],
           }
         }
-        id={null}
-        left={null}
+        id="0"
         location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -3061,49 +1350,34 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         obj="Tab"
         onClick={[Function]}
         onClose={[Function]}
-        orientation="top"
-        padding={null}
+        orientation="right"
         ripple={false}
-        selected={false}
+        selected={true}
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={null}
         title="tab #1"
-        tooltip={null}
-        top={null}
         visible={true}
-        width={null}
-        xcss={null}
+        width="100px"
       >
         #1
       </Tab>
       <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
-        err={null}
-        errorMessage={null}
         focus={false}
-        height={null}
         href={
           Object {
+            "hiddenTabHandler": [Function],
             "selectHandler": [Function],
           }
         }
-        id={null}
-        left={null}
+        id="1"
         location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -3111,49 +1385,34 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         obj="Tab"
         onClick={[Function]}
         onClose={[Function]}
-        orientation="top"
-        padding={null}
+        orientation="right"
         ripple={false}
         selected={false}
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={null}
         title="tab #2"
-        tooltip={null}
-        top={null}
         visible={true}
-        width={null}
-        xcss={null}
+        width="100px"
       >
         #2
       </Tab>
       <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
-        err={null}
-        errorMessage={null}
         focus={false}
-        height={null}
         href={
           Object {
+            "hiddenTabHandler": [Function],
             "selectHandler": [Function],
           }
         }
-        id={null}
-        left={null}
+        id="2"
         location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -3161,85 +1420,80 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         obj="Tab"
         onClick={[Function]}
         onClose={[Function]}
-        orientation="top"
-        padding={null}
+        orientation="right"
         ripple={false}
         selected={false}
         sizing="normal"
         style={Object {}}
         testing={true}
-        theme={null}
         title="tab #3"
-        tooltip={null}
-        top={null}
         visible={true}
-        width={null}
-        xcss={null}
+        width="100px"
       >
         #3
       </Tab>
-    </TabContent>
-    <TabBar
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      id={null}
-      left={null}
-      location="right"
-      maxHeight={null}
-      maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      navigation={
-        <TabNavigation
+      <TabContainer__TabNavigationView
+        className="ui-tab-navigation"
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        location="right"
+        maxTabs={5}
+        minHeight="100px"
+        minWidth="350px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        nonavigation={false}
+        notheme={false}
+        notooltip={false}
+        obj="TabContainer"
+        onSelect={[Function]}
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        tabWidth={100}
+        testing={true}
+        visible={true}
+      >
+        <Button
           backgroundColor={null}
+          border={null}
           borderColor={null}
           bottom={null}
           className={null}
-          color={null}
-          contentEditable={false}
+          color="#cccccc"
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
           errorMessage={null}
           focus={false}
-          handleLeftClick={[Function]}
-          handleRightClick={[Function]}
           height={null}
+          iconName="chevron-left"
+          iconStyle=""
           id={null}
           left={null}
-          location="right"
+          location="none"
           maxHeight={null}
-          maxTabs={5}
           maxWidth={null}
           minHeight={null}
           minWidth={null}
-          noclose={false}
+          noborder={false}
           noedit={false}
           nohover={false}
-          nonavigation={false}
           notheme={false}
           notooltip={false}
-          obj="TabContainer"
-          onSelect={[Function]}
+          obj="Button"
+          onClick={[Function]}
           padding={null}
-          ripple={false}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={120}
           testing={true}
           theme={null}
           tooltip={null}
@@ -3247,493 +1501,52 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           visible={true}
           width={null}
           xcss={null}
-        >
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #1
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #2
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #3
-          </Tab>
-        </TabNavigation>
-      }
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={
-        Object {
-          "width": "120px",
-        }
-      }
-      tabWidth={120}
-      tabs={
-        Immutable.List [
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="0"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="right"
-            padding={null}
-            ripple={false}
-            selected={true}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #1
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="1"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="right"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #2
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="2"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="right"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #3
-          </Tab>,
-        ]
-      }
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
-    >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabBar>
+        />
+        <Button
+          backgroundColor={null}
+          border={null}
+          borderColor={null}
+          bottom={null}
+          className={null}
+          color="#cccccc"
+          controlled={true}
+          direction="right"
+          disabled={false}
+          err={null}
+          errorMessage={null}
+          focus={false}
+          height={null}
+          iconName="chevron-right"
+          iconStyle=""
+          id={null}
+          left={null}
+          location="none"
+          maxHeight={null}
+          maxWidth={null}
+          minHeight={null}
+          minWidth={null}
+          noborder={false}
+          noedit={false}
+          nohover={false}
+          notheme={false}
+          notooltip={false}
+          obj="Button"
+          onClick={[Function]}
+          padding={null}
+          ripple={true}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip={null}
+          top={null}
+          visible={true}
+          width={null}
+          xcss={null}
+        />
+      </TabContainer__TabNavigationView>
+    </TabContainer__TabBarView>
   </TabContainer__TabContainerView>
 </Wrapper>
 `;
@@ -3741,11 +1554,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
 exports[`Test the creation of a TabContainer instance (top) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -3759,8 +1572,9 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
   maxHeight={null}
   maxTabs={5}
   maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minHeight="100px"
+  minWidth="350px"
+  noborder={false}
   noclose={false}
   noedit={false}
   nohover={false}
@@ -3776,7 +1590,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tabWidth={120}
+  tabWidth={100}
   testing={true}
   theme={null}
   tooltip={null}
@@ -3786,27 +1600,16 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
-    backgroundColor={null}
-    borderColor={null}
-    bottom={null}
     className="ui-tab-container"
-    color={null}
-    contentEditable={false}
     controlled={true}
     direction="right"
     disabled={false}
-    err={null}
-    errorMessage={null}
     focus={false}
-    height={null}
-    id={null}
-    left={null}
     location="top"
-    maxHeight={null}
     maxTabs={5}
-    maxWidth={null}
-    minHeight={null}
-    minWidth={null}
+    minHeight="120px"
+    minWidth="500px"
+    noborder={false}
     noclose={false}
     noedit={false}
     nohover={false}
@@ -3815,85 +1618,208 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
     notooltip={false}
     obj="TabContainer"
     onSelect={[Function]}
-    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
-    style={
-      Object {
-        "minWidth": "480px",
-      }
-    }
-    tabWidth={120}
+    style={Object {}}
+    tabWidth={100}
     testing={true}
-    theme={null}
-    tooltip={null}
-    top={null}
     visible={true}
-    width={null}
-    xcss={null}
   >
-    <TabBar
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      contentEditable={false}
+    <TabContainer__TabBarView
+      className="ui-tab-bar"
       controlled={true}
       direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
       focus={false}
-      height={null}
-      id={null}
-      left={null}
       location="top"
-      maxHeight={null}
       maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      navigation={
-        <TabNavigation
+      minHeight="100px"
+      minWidth="350px"
+      noborder={false}
+      noclose={false}
+      noedit={false}
+      nohover={false}
+      nonavigation={false}
+      notheme={false}
+      notooltip={false}
+      obj="TabContainer"
+      onSelect={[Function]}
+      ripple={false}
+      selected={false}
+      sizing="normal"
+      style={Object {}}
+      tabWidth={100}
+      testing={true}
+      visible={true}
+    >
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="0"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="top"
+        ripple={false}
+        selected={true}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #1"
+        visible={true}
+        width="100px"
+      >
+        #1
+      </Tab>
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="1"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="top"
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #2"
+        visible={true}
+        width="100px"
+      >
+        #2
+      </Tab>
+      <Tab
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        href={
+          Object {
+            "hiddenTabHandler": [Function],
+            "selectHandler": [Function],
+          }
+        }
+        id="2"
+        location="none"
+        minWidth="120px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        notheme={false}
+        notooltip={false}
+        obj="Tab"
+        onClick={[Function]}
+        onClose={[Function]}
+        orientation="top"
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        testing={true}
+        title="tab #3"
+        visible={true}
+        width="100px"
+      >
+        #3
+      </Tab>
+      <TabContainer__TabNavigationView
+        className="ui-tab-navigation"
+        controlled={true}
+        direction="right"
+        disabled={false}
+        focus={false}
+        location="top"
+        maxTabs={5}
+        minHeight="100px"
+        minWidth="350px"
+        noborder={false}
+        noclose={false}
+        noedit={false}
+        nohover={false}
+        nonavigation={false}
+        notheme={false}
+        notooltip={false}
+        obj="TabContainer"
+        onSelect={[Function]}
+        ripple={false}
+        selected={false}
+        sizing="normal"
+        style={Object {}}
+        tabWidth={100}
+        testing={true}
+        visible={true}
+      >
+        <Button
           backgroundColor={null}
+          border={null}
           borderColor={null}
           bottom={null}
           className={null}
-          color={null}
-          contentEditable={false}
+          color="#cccccc"
           controlled={true}
           direction="right"
           disabled={false}
           err={null}
           errorMessage={null}
           focus={false}
-          handleLeftClick={[Function]}
-          handleRightClick={[Function]}
           height={null}
+          iconName="chevron-left"
+          iconStyle=""
           id={null}
           left={null}
-          location="top"
+          location="none"
           maxHeight={null}
-          maxTabs={5}
           maxWidth={null}
           minHeight={null}
           minWidth={null}
-          noclose={false}
+          noborder={false}
           noedit={false}
           nohover={false}
-          nonavigation={false}
           notheme={false}
           notooltip={false}
-          obj="TabContainer"
-          onSelect={[Function]}
+          obj="Button"
+          onClick={[Function]}
           padding={null}
-          ripple={false}
+          ripple={true}
           selected={false}
           sizing="normal"
           style={Object {}}
-          tabWidth={120}
           testing={true}
           theme={null}
           tooltip={null}
@@ -3901,685 +1827,59 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           visible={true}
           width={null}
           xcss={null}
-        >
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #1
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #2
-          </Tab>
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "selectHandler": [Function],
-              }
-            }
-            id={null}
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width={null}
-            xcss={null}
-          >
-            #3
-          </Tab>
-        </TabNavigation>
-      }
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      tabWidth={120}
-      tabs={
-        Immutable.List [
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="0"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={true}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #1"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #1
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="1"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #2"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #2
-          </Tab>,
-          <Tab
-            backgroundColor={null}
-            borderColor={null}
-            bottom={null}
-            className={null}
-            color={null}
-            contentEditable={false}
-            controlled={true}
-            direction="right"
-            disabled={false}
-            err={null}
-            errorMessage={null}
-            focus={false}
-            height={null}
-            href={
-              Object {
-                "hiddenTabHandler": [Function],
-                "selectHandler": [Function],
-              }
-            }
-            id="2"
-            left={null}
-            location="none"
-            maxHeight={null}
-            maxWidth={null}
-            minHeight={null}
-            minWidth={null}
-            noedit={false}
-            nohover={false}
-            notheme={false}
-            notooltip={false}
-            obj="Tab"
-            onClick={[Function]}
-            onClose={[Function]}
-            orientation="top"
-            padding={null}
-            ripple={false}
-            selected={false}
-            sizing="normal"
-            style={Object {}}
-            testing={true}
-            theme={null}
-            title="tab #3"
-            tooltip={null}
-            top={null}
-            visible={true}
-            width="120px"
-            xcss={null}
-          >
-            #3
-          </Tab>,
-        ]
-      }
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
-    >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabBar>
-    <TabContent
-      backgroundColor={null}
-      borderColor={null}
-      bottom={null}
-      className={null}
-      color={null}
-      content="#1"
-      contentEditable={false}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      id={null}
-      left={null}
+        />
+        <Button
+          backgroundColor={null}
+          border={null}
+          borderColor={null}
+          bottom={null}
+          className={null}
+          color="#cccccc"
+          controlled={true}
+          direction="right"
+          disabled={false}
+          err={null}
+          errorMessage={null}
+          focus={false}
+          height={null}
+          iconName="chevron-right"
+          iconStyle=""
+          id={null}
+          left={null}
+          location="none"
+          maxHeight={null}
+          maxWidth={null}
+          minHeight={null}
+          minWidth={null}
+          noborder={false}
+          noedit={false}
+          nohover={false}
+          notheme={false}
+          notooltip={false}
+          obj="Button"
+          onClick={[Function]}
+          padding={null}
+          ripple={true}
+          selected={false}
+          sizing="normal"
+          style={Object {}}
+          testing={true}
+          theme={null}
+          tooltip={null}
+          top={null}
+          visible={true}
+          width={null}
+          xcss={null}
+        />
+      </TabContainer__TabNavigationView>
+    </TabContainer__TabBarView>
+    <TabContainer__TabContentView
+      className="ui-tab-content"
       location="top"
-      maxHeight={null}
-      maxTabs={5}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noclose={false}
-      noedit={false}
-      nohover={false}
-      nonavigation={false}
-      notheme={false}
-      notooltip={false}
-      obj="TabContainer"
-      onSelect={[Function]}
-      padding={null}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      tabWidth={120}
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
+      noborder={false}
     >
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #1"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #1
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #2"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #2
-      </Tab>
-      <Tab
-        backgroundColor={null}
-        borderColor={null}
-        bottom={null}
-        className={null}
-        color={null}
-        contentEditable={false}
-        controlled={true}
-        direction="right"
-        disabled={false}
-        err={null}
-        errorMessage={null}
-        focus={false}
-        height={null}
-        href={
-          Object {
-            "selectHandler": [Function],
-          }
-        }
-        id={null}
-        left={null}
-        location="none"
-        maxHeight={null}
-        maxWidth={null}
-        minHeight={null}
-        minWidth={null}
-        noedit={false}
-        nohover={false}
-        notheme={false}
-        notooltip={false}
-        obj="Tab"
-        onClick={[Function]}
-        onClose={[Function]}
-        orientation="top"
-        padding={null}
-        ripple={false}
-        selected={false}
-        sizing="normal"
-        style={Object {}}
-        testing={true}
-        theme={null}
-        title="tab #3"
-        tooltip={null}
-        top={null}
-        visible={true}
-        width={null}
-        xcss={null}
-      >
-        #3
-      </Tab>
-    </TabContent>
+      #1
+    </TabContainer__TabContentView>
   </TabContainer__TabContainerView>
 </Wrapper>
 `;

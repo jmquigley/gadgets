@@ -3,12 +3,12 @@
 exports[`Test retrieval of Item props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -27,6 +27,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -72,11 +73,11 @@ Object {
 exports[`Test the creation of a Item control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -95,6 +96,7 @@ exports[`Test the creation of a Item control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -144,11 +146,11 @@ exports[`Test the creation of a Item control 1`] = `
   >
     <Title
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className={null}
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -167,6 +169,7 @@ exports[`Test the creation of a Item control 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}

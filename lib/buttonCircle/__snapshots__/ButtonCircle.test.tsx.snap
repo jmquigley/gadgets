@@ -3,11 +3,11 @@
 exports[`Test ButtonCircle click event 1`] = `
 <ButtonCircle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -24,6 +24,7 @@ exports[`Test ButtonCircle click event 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -48,11 +49,11 @@ exports[`Test ButtonCircle click event 1`] = `
 exports[`Test creation of a ButtonCircle control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -69,6 +70,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -99,11 +101,11 @@ exports[`Test creation of a ButtonCircle control 1`] = `
     >
       <ButtonCircle__ButtonCircleView
         backgroundColor={null}
+        border={null}
         borderColor={null}
         bottom={null}
         className="test-class"
         color={null}
-        contentEditable={false}
         controlled={true}
         direction="right"
         disabled={false}
@@ -120,6 +122,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
         maxWidth={null}
         minHeight={null}
         minWidth={null}
+        noborder={false}
         noedit={false}
         nohover={false}
         notheme={false}
@@ -147,11 +150,11 @@ exports[`Test creation of a ButtonCircle control 1`] = `
 exports[`Test disabling of a ButtonCircle control 1`] = `
 <ButtonCircle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
@@ -168,6 +171,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -192,11 +196,11 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
 exports[`Test making a ButtonCircle control invisible 1`] = `
 <ButtonCircle
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -213,6 +217,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -237,12 +242,12 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
 exports[`Test retrieval of ButtonCircle props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -259,6 +264,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

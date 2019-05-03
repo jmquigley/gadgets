@@ -2,31 +2,19 @@
 
 exports[`Test disabling of a Tab 1`] = `
 <Tab
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
   href={
     Object {
       "selectHandler": [MockFunction],
     }
   }
-  id={null}
-  left={null}
   location="none"
-  maxHeight={null}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minWidth="120px"
+  noborder={false}
+  noclose={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -35,49 +23,31 @@ exports[`Test disabling of a Tab 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   orientation="top"
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
-  theme={null}
   title="tab title"
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test making a Tab invisible 1`] = `
 <Tab
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
   href={
     Object {
       "selectHandler": [Function],
     }
   }
-  id={null}
-  left={null}
   location="none"
-  maxHeight={null}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minWidth="120px"
+  noborder={false}
+  noclose={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -86,48 +56,29 @@ exports[`Test making a Tab invisible 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   orientation="top"
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
-  theme={null}
   title="tab title"
-  tooltip={null}
-  top={null}
   visible={false}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test retrieval of Tab props object 1`] = `
 Object {
-  "backgroundColor": null,
-  "borderColor": null,
-  "bottom": null,
-  "children": null,
-  "className": null,
-  "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
-  "err": null,
-  "errorMessage": null,
   "focus": false,
-  "height": null,
   "href": Object {
     "selectHandler": [Function],
   },
-  "id": null,
-  "left": null,
   "location": "none",
-  "maxHeight": null,
-  "maxWidth": null,
-  "minHeight": null,
-  "minWidth": null,
+  "minWidth": "120px",
+  "noborder": false,
+  "noclose": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -136,58 +87,40 @@ Object {
   "onClick": [Function],
   "onClose": [Function],
   "orientation": "top",
-  "padding": null,
   "ripple": false,
   "selected": false,
   "sizing": "normal",
   "style": Object {},
   "testing": true,
-  "theme": null,
   "title": "",
-  "tooltip": null,
-  "top": null,
   "visible": true,
-  "width": null,
-  "xcss": null,
 }
 `;
 
 exports[`Test retrieval of Tab props object 2`] = `
 Object {
   "children": null,
-  "hidden": false,
   "sizing": "normal",
   "style": Object {},
+  "visible": true,
 }
 `;
 
 exports[`Test the click handler in the Tab instance 1`] = `
 <Tab
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
   href={
     Object {
       "selectHandler": [MockFunction],
     }
   }
-  id={null}
-  left={null}
   location="none"
-  maxHeight={null}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minWidth="120px"
+  noborder={false}
+  noclose={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -196,49 +129,31 @@ exports[`Test the click handler in the Tab instance 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   orientation="top"
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
-  theme={null}
   title="tab title"
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test the close click handler on a Tab instance 1`] = `
 <Tab
-  backgroundColor={null}
-  borderColor={null}
-  bottom={null}
-  className={null}
-  color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
-  err={null}
-  errorMessage={null}
   focus={false}
-  height={null}
   href={
     Object {
       "hiddenTabHandler": [MockFunction],
     }
   }
-  id={null}
-  left={null}
   location="none"
-  maxHeight={null}
-  maxWidth={null}
-  minHeight={null}
-  minWidth={null}
+  minWidth="120px"
+  noborder={false}
+  noclose={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -247,30 +162,24 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   onClick={[Function]}
   onClose={[MockFunction]}
   orientation="top"
-  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   testing={true}
-  theme={null}
   title="tab title"
-  tooltip={null}
-  top={null}
   visible={true}
-  width={null}
-  xcss={null}
 />
 `;
 
 exports[`Test the creation of a Tab instance 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -289,7 +198,9 @@ exports[`Test the creation of a Tab instance 1`] = `
   maxHeight={null}
   maxWidth={null}
   minHeight={null}
-  minWidth={null}
+  minWidth="120px"
+  noborder={false}
+  noclose={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -317,34 +228,20 @@ exports[`Test the creation of a Tab instance 1`] = `
   <Tab__TabView
     className="ui-tab ui-selected"
     disabled={false}
+    minWidth="120px"
+    orientation="top"
     selected={true}
     sizing="normal"
-    style={
-      Object {
-        "minWidth": "120px",
-        "width": null,
-      }
-    }
+    style={Object {}}
     visible={true}
-    xcss={
-      Array [
-        "border-right:solid 1px ",
-        [Function],
-        ";border-top:solid 1px ",
-        [Function],
-        ";&:first-child{border-left:solid 1px ",
-        [Function],
-        ";}",
-      ]
-    }
   >
     <Item
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className={null}
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -367,7 +264,9 @@ exports[`Test the creation of a Tab instance 1`] = `
       maxHeight={null}
       maxWidth={null}
       minHeight={null}
-      minWidth={null}
+      minWidth="120px"
+      noborder={false}
+      noclose={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -388,11 +287,11 @@ exports[`Test the creation of a Tab instance 1`] = `
       rightButton={
         <Button
           backgroundColor={null}
+          border={null}
           borderColor={null}
           bottom={null}
           className={null}
           color={null}
-          contentEditable={false}
           controlled={true}
           direction="right"
           disabled={false}
@@ -413,7 +312,9 @@ exports[`Test the creation of a Tab instance 1`] = `
           maxHeight={null}
           maxWidth={null}
           minHeight={null}
-          minWidth={null}
+          minWidth="120px"
+          noborder={false}
+          noclose={false}
           noedit={false}
           nohover={false}
           notheme={false}

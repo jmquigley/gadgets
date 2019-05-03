@@ -31,9 +31,9 @@ valid HTML objects.
 
 ## API
 #### Events
-- `onClick` - invoked when a tab is selected from the Container
-- `onClose` - invoked when the close button is selected on the tab.  A
-reference to the closed tab is passed to the callback.
+- `onClick` - Invoked when a tab is selected from the Container
+- `onClose(tab: any)` - Invoked when the close button is selected on the tab.
+A reference to the closed tab is passed to the callback.
 
 #### Styles
 - `ui-tab` - The global CSS class applied to the top level `div` of the
@@ -44,9 +44,12 @@ reference to the closed tab is passed to the callback.
 the parent to the child.  It includes the following attributes:
   - `selectHandler` - a function reference back to the container that is
     invoked to tell the container that this tab was selected.
-- `orientation` - the location in the container component where the
-tab will be drawn (top, bottom, left, right)
-- `selected: {boolean} (false)` - if this is set to true, then the tab
+- `noclose=false {boolean}` - when set to true the close button is
+disabled and this tab cannot be hidden.  This is generally passed to the
+component by the TabContainer.
+- `orientation=Location.top {Location}` - the location in the container
+component where the tab will be drawn (top, bottom, left, right)
+- `selected=false {boolean}` - if this is set to true, then the tab
 will show as selected.
-- `title: {string} ('')` - the text that will be shown on the tab.
+- `title='' {string}` - the text that will be shown on the tab.
 

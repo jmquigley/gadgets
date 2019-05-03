@@ -5,8 +5,22 @@ const debug = require("debug")("DemoTabs");
 import autobind from "autobind-decorator";
 import * as loremIpsum from "lorem-ipsum";
 import * as React from "react";
-import {Break, Location, Tab, TabContainer} from "../../dist/bundle";
+import {
+	Break,
+	ColorScheme,
+	Location,
+	styled,
+	Tab,
+	TabContainer
+} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
+
+const TabStyledContainer: any = styled(StyledContainer)`
+	> h3 {
+		background-color: ${ColorScheme.c4};
+		margin: 10px 0 10px 1px;
+	}
+`;
 
 export default class DemoTabs extends React.Component<any, undefined> {
 	private randomText = loremIpsum({
@@ -33,21 +47,23 @@ export default class DemoTabs extends React.Component<any, undefined> {
 	@autobind
 	private handleSelect(tab: any, previous: any) {
 		debug(
-			`new: %o (id=${tab.props["id"]}), old: %o (id=${
+			`selected: %o (id=${tab.props["id"]}), previous: %o (id=${
 				previous.props["id"]
 			})`,
-			tab,
-			previous
+			tab.props["title"],
+			previous.props["title"]
 		);
 	}
 
 	public render() {
 		return (
-			<StyledContainer id='tabControl' title='Tabs'>
+			<TabStyledContainer id='tabControl' title='Tabs'>
 				<h3>Top</h3>
 				<TabContainer
 					disabled={this.props["disabled"]}
 					maxTabs={5}
+					onRemove={this.handleRemove}
+					onSelect={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>
@@ -94,6 +110,8 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					disabled={this.props["disabled"]}
 					location={Location.left}
 					maxTabs={3}
+					onRemove={this.handleRemove}
+					onSelect={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>
@@ -123,12 +141,13 @@ export default class DemoTabs extends React.Component<any, undefined> {
 				</TabContainer>
 				<Break sizing={this.props["sizing"]} />
 
-				<h3>Bottom (no navigation)</h3>
+				<h3>Bottom</h3>
 				<TabContainer
 					disabled={this.props["disabled"]}
 					location={Location.bottom}
-					maxTabs={3}
-					nonavigation
+					maxTabs={5}
+					onRemove={this.handleRemove}
+					onSelect={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>
@@ -155,20 +174,26 @@ export default class DemoTabs extends React.Component<any, undefined> {
 						<br />
 						{this.randomText}
 					</Tab>
+					<Tab title='tab #5' onClose={this.handleClose}>
+						#5
+						<br />
+						<br />
+						{this.randomText}
+					</Tab>
 				</TabContainer>
 				<Break sizing={this.props["sizing"]} />
 
-				<h3>Right (no navigation, onSelect)</h3>
+				<h3>Right (nonavigation, noclose)</h3>
 				<TabContainer
 					disabled={this.props["disabled"]}
 					location={Location.right}
 					maxTabs={3}
+					noclose
 					nonavigation
 					onRemove={this.handleRemove}
 					onSelect={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
-					<p>Bad tab type to be ignored</p>
 					<Tab title='tab #1' onClose={this.handleClose}>
 						#1
 						<br />
@@ -194,40 +219,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 						{this.randomText}
 					</Tab>
 				</TabContainer>
-				<Break sizing={this.props["sizing"]} />
-
-				<h3>Disabled Tab within container</h3>
-				<TabContainer
-					disabled={this.props["disabled"]}
-					location={Location.bottom}
-					sizing={this.props["sizing"]}
-				>
-					<Tab title='tab #1' onClose={this.handleClose} disabled>
-						#1
-						<br />
-						<br />
-						{this.randomText}
-					</Tab>
-					<Tab title='tab #2' onClose={this.handleClose}>
-						#2
-						<br />
-						<br />
-						{this.randomText}
-					</Tab>
-					<Tab title='tab #3' onClose={this.handleClose}>
-						#3
-						<br />
-						<br />
-						{this.randomText}
-					</Tab>
-					<Tab title='tab #4' onClose={this.handleClose}>
-						#4
-						<br />
-						<br />
-						{this.randomText}
-					</Tab>
-				</TabContainer>
-			</StyledContainer>
+			</TabStyledContainer>
 		);
 	}
 }

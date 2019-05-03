@@ -3,13 +3,13 @@
 exports[`Test retrieval of the Editor props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
   "content": "",
-  "contentEditable": false,
   "controlled": true,
   "defaultFont": "Fira Code",
   "defaultFontSize": 12,
@@ -26,6 +26,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

@@ -3,11 +3,11 @@
 exports[`Test creation of a ButtonDialog control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   dialogClasses={
     Array [
@@ -29,6 +29,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -63,11 +64,11 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   >
     <Button
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className={null}
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -84,6 +85,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -144,11 +146,11 @@ exports[`Test creation of a ButtonDialog control 1`] = `
 exports[`Test creation of a ButtonDialog control on top 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   dialogClasses={
     Array [
@@ -170,6 +172,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -204,11 +207,11 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   >
     <Button
       backgroundColor={null}
+      border={null}
       borderColor={null}
       bottom={null}
       className={null}
       color={null}
-      contentEditable={false}
       controlled={true}
       direction="right"
       disabled={false}
@@ -225,6 +228,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       maxWidth={null}
       minHeight={null}
       minWidth={null}
+      noborder={false}
       noedit={false}
       nohover={false}
       notheme={false}
@@ -285,11 +289,11 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
 exports[`Test making the ButtonDialog invisible 1`] = `
 <ButtonDialog
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   dialogClasses={Array []}
   direction="right"
@@ -307,6 +311,7 @@ exports[`Test making the ButtonDialog invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -338,12 +343,12 @@ exports[`Test making the ButtonDialog invisible 1`] = `
 exports[`Test retrieval of ButtonDialog props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "dialogClasses": Array [],
   "direction": "right",
@@ -361,6 +366,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -399,11 +405,11 @@ Object {
 exports[`Test the disabling of the ButtonDialog control 1`] = `
 <ButtonDialog
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   dialogClasses={Array []}
   direction="right"
@@ -421,6 +427,7 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}

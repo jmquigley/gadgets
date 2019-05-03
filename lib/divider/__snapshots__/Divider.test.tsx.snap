@@ -3,11 +3,11 @@
 exports[`Creation of the Divider control (inherit) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -23,6 +23,7 @@ exports[`Creation of the Divider control (inherit) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -56,11 +57,11 @@ exports[`Creation of the Divider control (inherit) 1`] = `
 exports[`Creation of the Divider control (large) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -76,6 +77,7 @@ exports[`Creation of the Divider control (large) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -109,11 +111,11 @@ exports[`Creation of the Divider control (large) 1`] = `
 exports[`Creation of the Divider control (medium) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -129,6 +131,7 @@ exports[`Creation of the Divider control (medium) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -162,11 +165,11 @@ exports[`Creation of the Divider control (medium) 1`] = `
 exports[`Creation of the Divider control (normal) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -182,6 +185,7 @@ exports[`Creation of the Divider control (normal) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -215,11 +219,11 @@ exports[`Creation of the Divider control (normal) 1`] = `
 exports[`Creation of the Divider control (small) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -235,6 +239,7 @@ exports[`Creation of the Divider control (small) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -268,11 +273,11 @@ exports[`Creation of the Divider control (small) 1`] = `
 exports[`Creation of the Divider control (xlarge) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -288,6 +293,7 @@ exports[`Creation of the Divider control (xlarge) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -321,11 +327,11 @@ exports[`Creation of the Divider control (xlarge) 1`] = `
 exports[`Creation of the Divider control (xsmall) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -341,6 +347,7 @@ exports[`Creation of the Divider control (xsmall) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -374,11 +381,11 @@ exports[`Creation of the Divider control (xsmall) 1`] = `
 exports[`Creation of the Divider control (xxlarge) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -394,6 +401,7 @@ exports[`Creation of the Divider control (xxlarge) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -427,11 +435,11 @@ exports[`Creation of the Divider control (xxlarge) 1`] = `
 exports[`Creation of the Divider control (xxsmall) 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -447,6 +455,7 @@ exports[`Creation of the Divider control (xxsmall) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -480,12 +489,12 @@ exports[`Creation of the Divider control (xxsmall) 1`] = `
 exports[`Test retrieval of Divider props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -501,6 +510,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

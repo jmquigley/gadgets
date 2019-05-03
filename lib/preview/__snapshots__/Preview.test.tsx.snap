@@ -3,12 +3,12 @@
 exports[`Create a simple Preview widget 1`] = `
 <Preview
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
   content=""
-  contentEditable={false}
   controlled={true}
   css=""
   direction="right"
@@ -25,6 +25,7 @@ exports[`Create a simple Preview widget 1`] = `
   minHeight={null}
   minWidth={null}
   mode="markdown"
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -49,13 +50,13 @@ exports[`Create a simple Preview widget 1`] = `
 exports[`Test retrieval of Preview props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
   "content": "",
-  "contentEditable": false,
   "controlled": true,
   "css": "",
   "direction": "right",
@@ -72,6 +73,7 @@ Object {
   "minHeight": null,
   "minWidth": null,
   "mode": "markdown",
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,

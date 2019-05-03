@@ -3,11 +3,11 @@
 exports[`Creation of the Dropdown control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultVal="idstr2"
   direction="right"
@@ -40,6 +40,7 @@ exports[`Creation of the Dropdown control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -72,7 +73,7 @@ exports[`Creation of the Dropdown control 1`] = `
       onChange={[Function]}
       style={
         Object {
-          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='16px' fill='%23666666'><path d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/></svg>\\")",
+          "backgroundImage": "url(\\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='16px' fill='%23cccccc'><path d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'/></svg>\\")",
           "paddingLeft": "9.600000000000001px",
           "paddingRight": "24px",
         }
@@ -102,11 +103,11 @@ exports[`Creation of the Dropdown control 1`] = `
 exports[`Disable the Dropdown control 1`] = `
 <Dropdown
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultVal="idstr2"
   direction="right"
@@ -139,6 +140,7 @@ exports[`Disable the Dropdown control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -163,11 +165,11 @@ exports[`Disable the Dropdown control 1`] = `
 exports[`Make the Dropdown control invisible 1`] = `
 <Dropdown
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultVal="idstr2"
   direction="right"
@@ -200,6 +202,7 @@ exports[`Make the Dropdown control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -224,12 +227,12 @@ exports[`Make the Dropdown control invisible 1`] = `
 exports[`Test retrieval of Dropdown props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -246,6 +249,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -279,11 +283,11 @@ Object {
 exports[`Test the Dropdown click event 1`] = `
 <Dropdown
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultVal="idstr1"
   direction="right"
@@ -316,6 +320,7 @@ exports[`Test the Dropdown click event 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}

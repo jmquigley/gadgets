@@ -3,11 +3,11 @@
 exports[`Test creation of a ButtonText control to the left 1`] = `
 <ButtonText
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -25,6 +25,7 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   noicon={false}
@@ -57,11 +58,11 @@ exports[`Test creation of a ButtonText control to the left 1`] = `
 exports[`Test disabling of a ButtonText control 1`] = `
 <ButtonText
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={true}
@@ -79,6 +80,7 @@ exports[`Test disabling of a ButtonText control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   noicon={false}
@@ -105,11 +107,11 @@ exports[`Test disabling of a ButtonText control 1`] = `
 exports[`Test making a ButtonText control invisible 1`] = `
 <ButtonText
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -127,6 +129,7 @@ exports[`Test making a ButtonText control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   noicon={false}
@@ -153,12 +156,12 @@ exports[`Test making a ButtonText control invisible 1`] = `
 exports[`Test retrieval of ButtonText props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -176,6 +179,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "noicon": false,
@@ -202,12 +206,12 @@ Object {
 exports[`Test retrieval of ButtonText props object 2`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -225,6 +229,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "noicon": false,

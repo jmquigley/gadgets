@@ -8586,13 +8586,6 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-"sprintf-js@git+https://github.com/jmquigley/sprintf.js.git#dc62b1c":
-  version "1.1.2"
-  uid dc62b1cfe788952cfee6f303a174a5f4546625a3
-  resolved "git+https://github.com/jmquigley/sprintf.js.git#dc62b1cfe788952cfee6f303a174a5f4546625a3"
-  dependencies:
-    util.obj-cycle "0.0.1"
-
 "sprintf-js@https://github.com/jmquigley/sprintf.js.git#dc62b1c":
   version "1.1.2"
   resolved "https://github.com/jmquigley/sprintf.js.git#dc62b1cfe788952cfee6f303a174a5f4546625a3"
@@ -9560,6 +9553,11 @@ util.obj-cycle@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/util.obj-cycle/-/util.obj-cycle-0.0.1.tgz#bedbfa187a298efb83732c753de9f62f6793639e"
   integrity sha512-ddSbrhSUEUkvhmGoD+liKTClKq07tMy5tWFeMoJl57ZL/81DAnZmu/++JT1atlfc4/SgwvHmJbQGGooA94Lu2Q==
+
+util.obj-cycle@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/util.obj-cycle/-/util.obj-cycle-0.0.8.tgz#0a58df78ae9f41cc1d68154d18adea5abe3b7c84"
+  integrity sha512-WQpJ7YnemM/F1Qk6qtaTzFX4bPbb3F2aLPFBiqW/GdiT2D0//3ZMT8XE2fRXD6jCfeOtvI2LEccWGao021vy8g==
 
 util.pkgwrap@^0.0.112:
   version "0.0.112"

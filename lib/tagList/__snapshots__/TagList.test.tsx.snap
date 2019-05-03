@@ -3,11 +3,11 @@
 exports[`Create a new dynamic TagList by adding a new input 1`] = `
 <TagList
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -22,6 +22,7 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={false}
@@ -60,11 +61,11 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
 exports[`Create a new dynamic TagList item and cancel creation with escape 1`] = `
 <TagList
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -79,6 +80,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={false}
@@ -117,11 +119,11 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
 exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 <TagList
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -136,6 +138,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={false}
@@ -174,11 +177,11 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
 exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] = `
 <TagList
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -193,6 +196,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={true}
@@ -231,11 +235,11 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
 exports[`Remove a tag from a TagList 1`] = `
 <TagList
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -250,6 +254,7 @@ exports[`Remove a tag from a TagList 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={false}
@@ -288,11 +293,11 @@ exports[`Remove a tag from a TagList 1`] = `
 exports[`Test creation of a simple TagList instance 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -307,6 +312,7 @@ exports[`Test creation of a simple TagList instance 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={false}
@@ -354,12 +360,12 @@ exports[`Test creation of a simple TagList instance 1`] = `
 exports[`Test retrieval of TagList props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -374,6 +380,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "nosort": false,
@@ -416,11 +423,11 @@ Object {
 exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
 <TagList
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -435,6 +442,7 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   nosort={false}

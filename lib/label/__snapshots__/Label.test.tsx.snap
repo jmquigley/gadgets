@@ -3,11 +3,11 @@
 exports[`Test a double click edit of the Label control 1`] = `
 <Label
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultText="default"
   direction="right"
@@ -23,6 +23,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -55,11 +56,11 @@ exports[`Test a double click edit of the Label control 1`] = `
 exports[`Test cancelling a double click edit of the Label control 1`] = `
 <Label
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultText="default"
   direction="right"
@@ -75,6 +76,7 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -107,11 +109,11 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
 exports[`Test creation of a Label control 1`] = `
 <Wrapper
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className="test-class"
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultText="default"
   direction="right"
@@ -127,6 +129,7 @@ exports[`Test creation of a Label control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -179,11 +182,11 @@ exports[`Test creation of a Label control 1`] = `
 exports[`Test double click change to Label and blur to save 1`] = `
 <Label
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultText="default"
   direction="right"
@@ -199,6 +202,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -231,11 +235,11 @@ exports[`Test double click change to Label and blur to save 1`] = `
 exports[`Test making the Label control invisible 1`] = `
 <Label
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultText="default"
   direction="right"
@@ -251,6 +255,7 @@ exports[`Test making the Label control invisible 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}
@@ -283,12 +288,12 @@ exports[`Test making the Label control invisible 1`] = `
 exports[`Test retrieval of default Label props object 1`] = `
 Object {
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": null,
-  "contentEditable": false,
   "controlled": true,
   "defaultText": "default",
   "direction": "right",
@@ -304,6 +309,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "notheme": false,
@@ -348,11 +354,11 @@ Object {
 exports[`Test the disabling of the Label control 1`] = `
 <Label
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color={null}
-  contentEditable={false}
   controlled={true}
   defaultText="default"
   direction="right"
@@ -368,6 +374,7 @@ exports[`Test the disabling of the Label control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   notheme={false}

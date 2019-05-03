@@ -4,12 +4,12 @@ exports[`Test retrieval of ListHeader props object 1`] = `
 Object {
   "alternating": false,
   "backgroundColor": null,
+  "border": null,
   "borderColor": null,
   "bottom": null,
   "children": null,
   "className": null,
   "color": "lightgray",
-  "contentEditable": false,
   "controlled": true,
   "direction": "right",
   "disabled": false,
@@ -24,6 +24,7 @@ Object {
   "maxWidth": null,
   "minHeight": null,
   "minWidth": null,
+  "noborder": false,
   "noedit": false,
   "nohover": false,
   "noselect": false,
@@ -60,11 +61,11 @@ exports[`Test the creation of a ListDivider control 1`] = `
 <Wrapper
   alternating={false}
   backgroundColor={null}
+  border={null}
   borderColor={null}
   bottom={null}
   className={null}
   color="blue"
-  contentEditable={false}
   controlled={true}
   direction="right"
   disabled={false}
@@ -79,6 +80,7 @@ exports[`Test the creation of a ListDivider control 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  noborder={false}
   noedit={false}
   nohover={false}
   noselect={false}
