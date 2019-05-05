@@ -212,7 +212,6 @@ const TabContentView: any = styled.div`
 
 	box-sizing: border-box;
 	flex: 1;
-	padding: 0 3px;
 
 	${(props: TabContainerProps) => {
 		if (
