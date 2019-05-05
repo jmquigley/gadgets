@@ -62,7 +62,7 @@
 
 "use strict";
 
-// const debug = require('debug')('Wrapper');
+// const debug = require('debug')('gadgets.Wrapper');
 
 import * as React from "react";
 import {nilEvent} from "util.toolbox";

@@ -123,7 +123,7 @@
  * @module TextField
  */
 
-// const debug = require("debug")("TextField");
+// const debug = require("debug")("gadgets.TextField");
 
 import autobind from "autobind-decorator";
 import * as React from "react";

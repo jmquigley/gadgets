@@ -52,7 +52,7 @@
  * @module Datagrid
  */
 
-// const debug = require("debug")("Datagrid");
+// const debug = require("debug")("gadgets.Datagrid");
 
 import autobind from "autobind-decorator";
 import * as React from "react";

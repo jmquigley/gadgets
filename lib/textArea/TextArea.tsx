@@ -37,7 +37,7 @@
  * @module TextArea
  */
 
-// const debug = require("debug")("TextArea");
+// const debug = require("debug")("gadgets.TextArea");
 
 import autobind from "autobind-decorator";
 import {debounce} from "lodash";

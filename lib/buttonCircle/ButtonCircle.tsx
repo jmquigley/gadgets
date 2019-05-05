@@ -36,6 +36,8 @@
  * @module ButtonCircle
  */
 
+// const debug = require("debug")("gadgets.ButtonCircle");
+
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {

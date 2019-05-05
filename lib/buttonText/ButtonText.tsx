@@ -39,6 +39,8 @@
  * @module ButtonText
  */
 
+// const debug = require("debug")("gadgets.ButtonText");
+
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";

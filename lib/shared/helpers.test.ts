@@ -1,6 +1,6 @@
 "use strict";
 
-const debug = require("debug")("helpers.test");
+const debug = require("debug")("gadgets.shared.helpers.test");
 
 import {globalize} from "./helpers";
 

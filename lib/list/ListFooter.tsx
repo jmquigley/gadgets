@@ -1,5 +1,7 @@
 // TODO: add documenation for ListFooter
 
+// const debug = require("debug")("gadgets.ListFooter");
+
 import * as React from "react";
 import {BaseComponent, Wrapper} from "../shared";
 import styled from "../shared/themed-components";

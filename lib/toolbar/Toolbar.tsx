@@ -50,7 +50,7 @@
  * @module Toolbar
  */
 
-// const debug = require('debug')('Toolbar');
+// const debug = require('debug')('gadgets.Toolbar');
 
 import * as React from "react";
 import {BinaryTree} from "util.ds";

@@ -45,7 +45,7 @@
 
 "use strict";
 
-const debug = require("debug")("sizing");
+const debug = require("debug")("gadgets.shared.sizing");
 
 import {css} from "./themed-components";
 

@@ -82,7 +82,7 @@
  * @module Pager
  */
 
-const debug = require("debug")("Pager");
+// const debug = require("debug")("gadgets.Pager");
 
 import autobind from "autobind-decorator";
 import {sortBy} from "lodash";
@@ -653,7 +653,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		debug("handleChange: %O", e.target as HTMLInputElement);
 		this.currentPage = Number((e.target as HTMLInputElement).value);
 	}
 

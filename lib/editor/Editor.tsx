@@ -104,7 +104,7 @@
  * @module Editor
  */
 
-const debug = require("debug")("Editor");
+const debug = require("debug")("gadgets.Editor");
 
 const Quill = (global as any).Quill;
 

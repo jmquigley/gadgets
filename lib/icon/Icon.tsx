@@ -47,7 +47,7 @@
  * @module Icon
  */
 
-// const debug = require("debug")("Icon");
+// const debug = require("debug")("gadgets.Icon");
 
 import * as React from "react";
 import {

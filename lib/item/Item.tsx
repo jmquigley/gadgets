@@ -1,6 +1,6 @@
 // TODO: add Item documentation
 
-// const debug = require('debug')('Item');
+// const debug = require('debug')('gadgets.Item');
 
 import * as React from "react";
 import {sp} from "util.constants";

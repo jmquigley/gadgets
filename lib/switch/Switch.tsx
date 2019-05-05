@@ -52,6 +52,8 @@
  * @module Switch
  */
 
+// const debug = require("debug")("gadgets.Switch");
+
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {ClassNames} from "util.classnames";

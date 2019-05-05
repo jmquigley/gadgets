@@ -64,7 +64,7 @@
  * @module Title
  */
 
-// const debug = require('debug')('Title');
+// const debug = require('debug')('gadgets.Title');
 
 import * as React from "react";
 import {nilEvent} from "util.toolbox";

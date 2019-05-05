@@ -49,7 +49,7 @@
  * @module Label
  */
 
-// const debug = require('debug')('Label');
+// const debug = require('debug')('gadgets.Label');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

@@ -55,7 +55,7 @@
  * @module TagList
  */
 
-const debug = require("debug")("TagList");
+// const debug = require("debug")("gadgets.TagList");
 
 import autobind from "autobind-decorator";
 import {List} from "immutable";
@@ -159,7 +159,6 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	}
 
 	private clearInput(e: HTMLInputElement) {
-		debug("clearInput()");
 		this.setState({inputTextSize: 0});
 		e.value = "";
 	}
@@ -226,8 +225,6 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	}
 
 	public render() {
-		debug("render-> props: %O, state: %O", this.props, this.state);
-
 		this.updateClassName();
 
 		const tags = this.state.tags.map((tag: string) => {
@@ -266,7 +263,6 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				textFieldProps["value"] = "";
 			}
 
-			debug("textFieldProps: %O", textFieldProps);
 			textInputField = <StyledTextField {...textFieldProps} />;
 		}
 

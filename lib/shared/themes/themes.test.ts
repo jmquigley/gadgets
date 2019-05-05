@@ -1,6 +1,6 @@
 "use strict";
 
-const debug = require("debug")("themes.test");
+const debug = require("debug")("gadgets.shared.themes.test");
 
 import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from "./index";
 

@@ -48,7 +48,7 @@
  * @module DialogWindow
  */
 
-// const debug = require('debug')('DialogWindow');
+// const debug = require('debug')('gadgets.DialogWindow');
 
 const ReactModal = require("react-modal");
 

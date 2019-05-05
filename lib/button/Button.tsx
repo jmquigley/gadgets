@@ -32,7 +32,7 @@
  * @module Button
  */
 
-// const debug = require('debug')('Button');
+// const debug = require('debug')('gadgets.Button');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

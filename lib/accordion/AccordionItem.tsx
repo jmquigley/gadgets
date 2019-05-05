@@ -55,7 +55,7 @@
  * @module AccordionItem
  */
 
-// const debug = require('debug')('AccordionItem');
+// const debug = require('debug')('gadgets.AccordionItem');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

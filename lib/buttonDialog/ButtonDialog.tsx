@@ -34,6 +34,8 @@
  * @module ButtonDialog
  */
 
+// const debug = require("debug")("gadgets.ButtonDialog");
+
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {ClassNames} from "util.classnames";

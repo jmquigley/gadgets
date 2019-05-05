@@ -123,7 +123,7 @@
  * @module Treeview
  */
 
-// const debug = require('debug')('Treeview');
+// const debug = require('debug')('gadgets.Treeview');
 
 import autobind from "autobind-decorator";
 import {clone, cloneDeep} from "lodash";

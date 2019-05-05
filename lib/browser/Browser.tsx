@@ -59,7 +59,7 @@
  * @module Browser
  */
 
-const debug = require("debug")("Browser");
+const debug = require("debug")("gadgets.Browser");
 
 import autobind from "autobind-decorator";
 import {List} from "immutable";

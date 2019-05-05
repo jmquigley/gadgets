@@ -37,7 +37,7 @@
  * @module Badge
  */
 
-// const debug = require("debug")("Badge");
+// const debug = require("debug")("gadgets.Badge");
 
 import autobind from "autobind-decorator";
 import * as React from "react";

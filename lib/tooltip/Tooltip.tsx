@@ -44,7 +44,7 @@
  * @module Tooltip
  */
 
-// const debug = require('debug')('Tooltip');
+// const debug = require('debug')('gadgets.Tooltip');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

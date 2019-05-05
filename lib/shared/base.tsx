@@ -41,7 +41,7 @@
  * @module BaseComponent
  */
 
-// const debug = require("debug")("base");
+// const debug = require("debug")("gadgets.shared.base");
 
 import {isEqual} from "lodash";
 import * as React from "react";

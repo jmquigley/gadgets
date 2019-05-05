@@ -59,7 +59,7 @@
  * @module DialogBox
  */
 
-// const debug = require('debug')('DialogBox');
+// const debug = require('debug')('gadgets.DialogBox');
 
 const ReactModal = require("react-modal");
 

@@ -75,7 +75,7 @@
  * @module TabContainer
  */
 
-// const debug = require("debug")("TabContainer");
+// const debug = require("debug")("gadgets.TabContainer");
 
 import autobind from "autobind-decorator";
 import _ from "lodash";

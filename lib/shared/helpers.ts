@@ -1,6 +1,6 @@
 "use strict";
 
-const debug = require("debug")("helpers");
+const debug = require("debug")("gadgets.shared.helpers");
 
 /**
  * Takes a variable name and an object and places that name and associated

@@ -37,7 +37,7 @@
  * @module Preview
  */
 
-// const debug = require("debug")("Preview");
+// const debug = require("debug")("gadgets.Preview");
 
 import autobind from "autobind-decorator";
 import * as React from "react";

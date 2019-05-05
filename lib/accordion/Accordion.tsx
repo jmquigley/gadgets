@@ -36,7 +36,7 @@
  * @module Accordion
  */
 
-// const debug = require("debug")("Accordion");
+// const debug = require("debug")("gadgets.Accordion");
 
 import * as React from "react";
 import {Keys} from "util.keys";

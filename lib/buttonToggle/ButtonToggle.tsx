@@ -73,7 +73,7 @@
  * @module ButtonToggle
  */
 
-// const debug = require('debug')('ButtonToggle');
+// const debug = require('debug')('gadgets.ButtonToggle');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

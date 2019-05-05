@@ -55,7 +55,7 @@
  * @module List
  */
 
-// const debug = require('debug')('List');
+// const debug = require('debug')('gadgets.List');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

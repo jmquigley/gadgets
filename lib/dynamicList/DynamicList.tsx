@@ -122,7 +122,7 @@
  * @module DynamicList
  */
 
-const debug = require("debug")("DynamicList");
+const debug = require("debug")("gadgets.DynamicList");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -440,7 +440,6 @@ export class DynamicList extends BaseComponent<
 	private handleDelete(title: string, cb: any = nil) {
 		if (title in this._listItems) {
 			delete this._listItems[title];
-			debug("removing item: %s", title);
 
 			this.setState(
 				{
@@ -494,7 +493,6 @@ export class DynamicList extends BaseComponent<
 	private handleNewItem(title: string, widget: any = null, cb: any = nil) {
 		title = trimHTML(title);
 		if (title) {
-			debug("creating new item: %s, %O", title, widget);
 			this.setState(
 				{
 					showNew: false,
@@ -563,7 +561,6 @@ export class DynamicList extends BaseComponent<
 	private handleSelect(title: string) {
 		if (this._selection !== title) {
 			this._selection = title;
-			debug("selected item: %s", title);
 			this.props.onSelect(title);
 		} else {
 			this._selection = "";
@@ -590,7 +587,6 @@ export class DynamicList extends BaseComponent<
 	private handleUpdate(previous: string, title: string) {
 		title = trimHTML(title);
 		if (title !== previous) {
-			debug('updating item "%s" to "%s"', previous, title);
 			delete this._listItems[previous];
 
 			this.setState(

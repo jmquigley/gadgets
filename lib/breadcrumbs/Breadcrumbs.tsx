@@ -59,7 +59,7 @@
  * @module Breadcrumbs
  */
 
-// const debug = require('debug')('Breadcrumbs');
+// const debug = require('debug')('gadgets.Breadcrumbs');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

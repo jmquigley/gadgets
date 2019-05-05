@@ -6,6 +6,8 @@
 // for a header.
 //
 
+// const debug = require("debug")("gadgets.ListHeader");
+
 import * as React from "react";
 import {
 	getDefaultItemProps,

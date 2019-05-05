@@ -84,7 +84,7 @@
  * @module Toast
  */
 
-// const debug = require('debug')('Toast');
+// const debug = require('debug')('gadgets.Toast');
 
 import autobind from "autobind-decorator";
 import * as React from "react";

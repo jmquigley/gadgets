@@ -5,6 +5,8 @@
 // to the `<li>` tag.
 //
 
+// const debug = require("debug")("gadgets.ListItem");
+
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";

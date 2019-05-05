@@ -37,7 +37,7 @@
  * @module Divider
  */
 
-"use strict";
+// const debug = require("debug")("gadgets.Divider");
 
 import * as React from "react";
 import {

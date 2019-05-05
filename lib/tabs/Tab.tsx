@@ -54,7 +54,7 @@
  * @module Tab
  */
 
-// const debug = require("debug")("Tab");
+// const debug = require("debug")("gadgets.Tab");
 
 import autobind from "autobind-decorator";
 import _ from "lodash";

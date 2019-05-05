@@ -57,7 +57,7 @@
  * @module Slider
  */
 
-// const debug = require('debug')('Slider');
+// const debug = require('debug')('gadgets.Slider');
 
 import autobind from "autobind-decorator";
 import {debounce} from "lodash";

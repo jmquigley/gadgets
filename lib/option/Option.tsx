@@ -53,7 +53,7 @@
  * @module Option
  */
 
-// const debug = require("debug")("Option");
+// const debug = require("debug")("gadgets.Option");
 
 import autobind from "autobind-decorator";
 import * as React from "react";

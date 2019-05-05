@@ -49,7 +49,7 @@
  * @module Dropdown
  */
 
-// const debug = require("debug")("Dropdown");
+// const debug = require("debug")("gadgets.Dropdown");
 
 import autobind from "autobind-decorator";
 import * as React from "react";

@@ -28,6 +28,8 @@
  * @module Container
  */
 
+// const debug = require("debug")("gadgets.Container");
+
 import * as React from "react";
 import {
 	BaseComponent,

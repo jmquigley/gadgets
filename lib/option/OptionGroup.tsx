@@ -48,7 +48,7 @@
  * @module OptionGroup
  */
 
-// const debug = require('debug')('OptionGroup');
+// const debug = require('debug')('gadgets.OptionGroup');
 
 import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
