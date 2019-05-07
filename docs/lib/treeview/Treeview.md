@@ -84,6 +84,10 @@ via the collapse all button.
 removed from the tree.  The node parameter is the node that was deleted.
 - `onExpand(treeData: TreeItem[])` - Invoked when the full tree is expanded
 via the expand all button.
+- `onInit(treeData: TreeItem[])` - Invoked when the constructor first builds the
+internal tree from the props treeData it may not have all parent/child keys.
+This callback will send back a sanitized version of the treeData structure when
+the tree is initialized.  This is only called once.
 - `onSearch(node: TreeItem)` - Invoked when a search is performed.  It returns
 the current item found in the search.  This callback is also called when moving
 to/from previous/next the title.

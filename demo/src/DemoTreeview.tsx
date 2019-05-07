@@ -21,6 +21,7 @@ interface DemoData extends TreeviewData {
 
 export interface DemoTreeviewState {
 	menuPosition: boolean;
+	selectNew: boolean;
 	treeData: DemoData[];
 }
 
@@ -38,6 +39,7 @@ export default class DemoTreeview extends React.Component<
 
 		this.state = {
 			menuPosition: false,
+			selectNew: false,
 			treeData: [
 				{
 					title: "1.0",
@@ -92,6 +94,12 @@ export default class DemoTreeview extends React.Component<
 	}
 
 	@autobind
+	private handleInit(treeData: TreeItem[]) {
+		debug("Initializing the treeData structure");
+		this.setState({treeData});
+	}
+
+	@autobind
 	private handleMenuPosition(selected: boolean) {
 		this.setState({menuPosition: selected});
 	}
@@ -104,6 +112,11 @@ export default class DemoTreeview extends React.Component<
 	@autobind
 	private handleSelect(node: TreeItem) {
 		debug("selecting node %o: %O", node.title, node);
+	}
+
+	@autobind
+	private handleSelectNew(selected: boolean) {
+		this.setState({selectNew: selected});
 	}
 
 	@autobind
@@ -122,12 +135,20 @@ export default class DemoTreeview extends React.Component<
 	}
 
 	public render() {
+		debug("render -> props: %O, state: %O", this.props, this.state);
+
 		return (
 			<TreeviewStyledContainer id='treeviewExample' title='Treeview'>
 				<Option
 					disabled={this.props["disabled"]}
 					onSelect={this.handleMenuPosition}
 					text='Select the option to put the menu on the bottom'
+				/>
+				<Break sizing={this.props["sizing"]} />
+				<Option
+					disabled={this.props["disabled"]}
+					onSelect={this.handleSelectNew}
+					text='Check this to select new node when created (default stays with parent)'
 				/>
 				<Break sizing={this.props["sizing"]} />
 
@@ -139,16 +160,18 @@ export default class DemoTreeview extends React.Component<
 					}
 					disabled={this.props["disabled"]}
 					height='640px'
+					isVirtualized={false}
 					notooltip
 					onAdd={this.handleAdd}
 					onChange={this.handleChange}
 					onCollapse={this.handleCollapse}
 					onDelete={this.handleDelete}
 					onExpand={this.handleExpand}
+					onInit={this.handleInit}
 					onSearch={this.handleSearch}
 					onSelect={this.handleSelect}
 					onUpdate={this.handleUpdate}
-					selectNew={false}
+					selectNew={this.state.selectNew}
 					sizing={this.props["sizing"]}
 					treeData={this.state.treeData}
 				/>

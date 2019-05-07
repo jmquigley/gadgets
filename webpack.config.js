@@ -30,6 +30,40 @@ const constants = new webpack.DefinePlugin({
 	NODE_ENV: mode
 });
 
+const alias = {
+	react: path.resolve(
+		__dirname,
+		"node_modules",
+		"react",
+		"cjs",
+		"react.production.min.js"
+	),
+	"react-dom": path.resolve(
+		__dirname,
+		"node_modules",
+		"react-dom",
+		"cjs",
+		"react-dom.production.min.js"
+	)
+};
+
+if (mode === "development") {
+	alias["react"] = path.resolve(
+		__dirname,
+		"node_modules",
+		"react",
+		"cjs",
+		"react.development.js"
+	);
+	alias["react-dom"] = path.resolve(
+		__dirname,
+		"node_modules",
+		"react-dom",
+		"cjs",
+		"react-dom.development.js"
+	);
+}
+
 module.exports = {
 	mode,
 	target: "node",
@@ -99,7 +133,8 @@ module.exports = {
 		globalObject: "this"
 	},
 	resolve: {
-		extensions: [".js", ".jsx", ".css"]
+		extensions: [".js", ".jsx", ".css"],
+		alias
 	},
 	externals,
 	resolveLoader: {

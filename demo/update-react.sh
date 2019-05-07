@@ -12,6 +12,8 @@
 FILES=(
     "react.production.min.js,https://unpkg.com/react@16/umd/"
     "react-dom.production.min.js,https://unpkg.com/react-dom@16/umd/"
+    "react.development.js,https://unpkg.com/react@16/umd/"
+    "react-dom.development.js,https://unpkg.com/react-dom@16/umd/"
 )
 
 TS=`date +"%Y%m%d%H%M%S"`

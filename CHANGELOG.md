@@ -10,6 +10,8 @@
 #### Bug Fixes:
 
 - Fixed broken `onClose` property for the TabContainer.
+- The changes in patchset to remove cloneDeep calls and add signatures to callbacks (1e68b85692) caused this issue.  The Label component was changed to use onUpdate with custom parameters instead of using onChange.  The onChange was modified to pass the event.  The node properties were using onChange instead of onUpdate and passing the event object instead of the title string.
+- Fixed broken generaltree removal routine in [util.ds](https://github.com/jmquigley/util.ds) dependency for Treeview.
 
 ---
 
