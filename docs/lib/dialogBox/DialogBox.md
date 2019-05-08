@@ -16,7 +16,7 @@ It contains five types of windows:
 - custom (user selected from font awesome) `DialogType.custom`
 
 ## Screen:
-<img src="https://github.com/jmquigley/gadgets/blob/master/images/dialogBox.png" width="30%" />
+<img src="https://github.com/jmquigley/gadgets/blob/master/images/dialogBox.png" width="50%" />
 
 ## Examples:
 

@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.0.68
+#### Enhancements:
+
+- Added the [react-hotkeys]() library to the module to handle keyboard interactions for the following components:
+  - [Browser](https://github.com/jmquigley/gadgets/blob/master/docs/lib/browser/Browser.md)
+  - [Buttons](https://github.com/jmquigley/gadgets/blob/master/docs/lib/button/Button.md)
+  - [DialogBox](https://github.com/jmquigley/gadgets/blob/master/docs/lib/dialogBox/DialogBox.md)
+  - [DynamicList](https://github.com/jmquigley/gadgets/blob/master/docs/lib/dynamicList/DynamicList.md)
+  - [Editor](https://github.com/jmquigley/gadgets/blob/master/docs/lib/editor/Editor.md)
+  - [Tab](https://github.com/jmquigley/gadgets/blob/master/docs/lib/tabs/TabContainer.md)
+  - [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md)
+
+#### Bug Fixes:
+
+
+
+---
+
 ## v0.0.67
 #### Enhancements:
 

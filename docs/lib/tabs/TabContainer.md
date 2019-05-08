@@ -4,7 +4,7 @@
 A typical tab control container.  This manages `Tab` elements within it.
 
 ## Screen:
-<img src="https://github.com/jmquigley/gadgets/blob/master/images/tabs.png" width="50%" />
+<img src="https://github.com/jmquigley/gadgets/blob/master/images/tabs.png" width="70%" />
 
 ## Examples:
 

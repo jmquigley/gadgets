@@ -8,7 +8,7 @@
  * - Perform a text search within the page with forward/backward navigation
  *
  * ## Screen:
- * <img src="https://github.com/jmquigley/gadgets/blob/master/images/browser.png" width="60%" />
+ * <img src="https://github.com/jmquigley/gadgets/blob/master/images/browser.png" width="80%" />
  *
  * ## Examples:
  *

@@ -48,6 +48,7 @@ import * as React from "react";
 import {calc} from "util.calc";
 import {ClassNames} from "util.classnames";
 import {getUUID} from "util.toolbox";
+import {KeyHandler, KeyMap} from "./keybinding";
 import {BaseProps, Styles} from "./props";
 import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
 import {getTheme, ThemeProps} from "./themes";
@@ -68,6 +69,9 @@ export abstract class BaseComponent<
 	private _defaultClassName: string;
 	private _id: string;
 	private _theme: ThemeProps = null;
+
+	protected _keyHandler: KeyHandler = {};
+	protected _keyMap: KeyMap = {};
 
 	constructor(
 		props: P,

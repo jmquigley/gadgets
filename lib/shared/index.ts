@@ -2,6 +2,8 @@ import {BaseComponent, baseZIndex, defaultSize} from "./base";
 
 import {globalize} from "./helpers";
 
+import {KeyHandler, KeyMap} from "./keybinding";
+
 import {
 	BaseProps,
 	Color,
@@ -67,6 +69,8 @@ export {
 	invisible,
 	InvisibleCSS,
 	Justify,
+	KeyHandler,
+	KeyMap,
 	lineHeightStyle,
 	Location,
 	locationStyle,

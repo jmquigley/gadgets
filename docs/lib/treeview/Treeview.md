@@ -101,8 +101,9 @@ new treeData array after the change was applied.
 #### Styles
 - `ui-treeview` - Root style applied to the SortableTree component wrapper.
 - `ui-treeview-container` - applied to a div that surrounds the tree control and the
-toolbar used to control it..
+toolbar used to control it.
 this is where the height of the control is handled.
+- `ui-treeview-hotkeys-wrapper` - A surrounding `div` that is added by `HotKeys`.
 - `ui-treeview-toolbar` - applied to the search toollbar
 
 #### Properties
@@ -116,6 +117,13 @@ toolbar.  If set to Direction.top it is at the top of the component.  If set to
 Direction.bottom it is on the bottom.
 - `height="15em" {string}` - The height of the treeview container.  This must
 be set or the tree will not display anything.
+- `kbAdd="" {string}` - keyboard combination to add a new node as a child
+of the selected node.
+- `kbCollapseAll="ctrl+-" {string}` - keyboard combination to collapse all
+nodes.
+- `kbDelete="" {string}` - keyboard combination to remove the node that is
+selected.
+- `kbExpandAll="ctrl+=" {string}` - keyboard combination to expand all nodes.
 - `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
 - `selectNew=true {boolean}` - When a new node is added it is selected by
 default (true).  If this property is false, then the parent remains selected

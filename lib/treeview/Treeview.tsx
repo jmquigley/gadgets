@@ -99,8 +99,9 @@
  * #### Styles
  * - `ui-treeview` - Root style applied to the SortableTree component wrapper.
  * - `ui-treeview-container` - applied to a div that surrounds the tree control and the
- * toolbar used to control it..
+ * toolbar used to control it.
  * this is where the height of the control is handled.
+ * - `ui-treeview-hotkeys-wrapper` - A surrounding `div` that is added by `HotKeys`.
  * - `ui-treeview-toolbar` - applied to the search toollbar
  *
  * #### Properties
@@ -114,6 +115,13 @@
  * Direction.bottom it is on the bottom.
  * - `height="15em" {string}` - The height of the treeview container.  This must
  * be set or the tree will not display anything.
+ * - `kbAdd="" {string}` - keyboard combination to add a new node as a child
+ * of the selected node.
+ * - `kbCollapseAll="ctrl+-" {string}` - keyboard combination to collapse all
+ * nodes.
+ * - `kbDelete="" {string}` - keyboard combination to remove the node that is
+ * selected.
+ * - `kbExpandAll="ctrl+=" {string}` - keyboard combination to expand all nodes.
  * - `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
  * - `selectNew=true {boolean}` - When a new node is added it is selected by
  * default (true).  If this property is false, then the parent remains selected
@@ -131,6 +139,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import {HotKeys} from "react-hotkeys";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
 import {GeneralTree, GeneralTreeItem} from "util.ds";
 import {Keys} from "util.keys";
@@ -173,6 +182,10 @@ export interface TreeviewProps extends BaseProps {
 	defaultTitle: string;
 	direction: Direction;
 	isVirtualized: boolean;
+	kbAdd: string;
+	kbCollapseAll: string;
+	kbDelete: string;
+	kbExpandAll: string;
 	nodeWidth?: string;
 	nosearch?: boolean;
 	onAdd?: (node: TreeItem, treeData: TreeItem[]) => void;
@@ -201,6 +214,10 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		direction: Direction.top,
 		height: "15em",
 		isVirtualized: true,
+		kbAdd: "ctrl+alt+n",
+		kbCollapseAll: "ctrl+-",
+		kbDelete: "ctrl+alt+d",
+		kbExpandAll: "ctrl+=",
 		minHeight: "15em",
 		nodeWidth: "20em",
 		nosearch: false,
@@ -237,6 +254,13 @@ export function getDefaultTreeviewState(): TreeviewState {
 		searchFoundCount: 0,
 		selectedId: null
 	};
+}
+
+enum TreeviewKeyActions {
+	KB_ADD = "KB_ADD",
+	KB_COLLAPSE_ALL = "KB_COLLAPSE_ALL",
+	KB_DELETE = "KB_DELETE",
+	KB_EXPAND_ALL = "KB_EXPAND_ALL"
 }
 
 const SortableTreeView: any = styled(SortableTree)`
@@ -350,6 +374,20 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		super(props, "ui-treeview", Treeview.defaultProps.style);
 
 		this._keys = new Keys({testing: this.props.testing});
+
+		this._keyHandler = {
+			[TreeviewKeyActions.KB_ADD]: this.handleAdd,
+			[TreeviewKeyActions.KB_COLLAPSE_ALL]: this.handleNodeCollapse,
+			[TreeviewKeyActions.KB_DELETE]: this.handleKeyboardDelete,
+			[TreeviewKeyActions.KB_EXPAND_ALL]: this.handleNodeExpand
+		};
+
+		this._keyMap = {
+			[TreeviewKeyActions.KB_ADD]: this.props.kbAdd,
+			[TreeviewKeyActions.KB_COLLAPSE_ALL]: this.props.kbCollapseAll,
+			[TreeviewKeyActions.KB_DELETE]: this.props.kbDelete,
+			[TreeviewKeyActions.KB_EXPAND_ALL]: this.props.kbExpandAll
+		};
 
 		// Internally the component manages a general tree struture to aid in
 		// adding/removing nodes from the given input tree structure.
@@ -510,6 +548,16 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				} else {
 					this.handleSelect(this._td.find(deletedNode.parentId));
 				}
+			}
+		}
+	}
+
+	@autobind
+	private handleKeyboardDelete() {
+		if (!this.props.disabled) {
+			const node = this._td.find(this.state.selectedId);
+			if (node) {
+				this.handleDelete(node);
 			}
 		}
 	}
@@ -708,25 +756,35 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 		return (
 			<Wrapper {...this.props}>
-				<TreeviewContainer
-					className='ui-treeview-container'
-					style={this.state.style}
+				<HotKeys
+					className='ui-treeview-hotkeys-wrapper'
+					handlers={this._keyHandler}
+					keyMap={this._keyMap}
 				>
-					{this.props.direction === Direction.top ? toolbar : null}
-					<TreeviewWrapper className={this.className}>
-						<SortableTreeView
-							generateNodeProps={this.customNodeProperties}
-							isVirtualized={this.props.isVirtualized}
-							onChange={this.handleChange}
-							rowHeight={this.rowHeight}
-							searchFinishCallback={this.handleSearchFinish}
-							searchFocusOffset={this.state.searchFocusIndex}
-							searchQuery={this.state.search}
-							treeData={this.props.treeData}
-						/>
-					</TreeviewWrapper>
-					{this.props.direction !== Direction.top ? toolbar : null}
-				</TreeviewContainer>
+					<TreeviewContainer
+						className='ui-treeview-container'
+						style={this.state.style}
+					>
+						{this.props.direction === Direction.top
+							? toolbar
+							: null}
+						<TreeviewWrapper className={this.className}>
+							<SortableTreeView
+								generateNodeProps={this.customNodeProperties}
+								isVirtualized={this.props.isVirtualized}
+								onChange={this.handleChange}
+								rowHeight={this.rowHeight}
+								searchFinishCallback={this.handleSearchFinish}
+								searchFocusOffset={this.state.searchFocusIndex}
+								searchQuery={this.state.search}
+								treeData={this.props.treeData}
+							/>
+						</TreeviewWrapper>
+						{this.props.direction !== Direction.top
+							? toolbar
+							: null}
+					</TreeviewContainer>
+				</HotKeys>
 			</Wrapper>
 		);
 	}

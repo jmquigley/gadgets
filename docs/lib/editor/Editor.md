@@ -22,7 +22,7 @@ The tools include:
 - Changing the syntax highlihgting color scheme
 
 ## Screen:
-<img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="70%" />
+<img src="https://github.com/jmquigley/gadgets/blob/master/images/editor.png" width="80%" />
 
 ## Examples:
 
