@@ -51,7 +51,7 @@ test("Test creation of a ButtonDialog control on top", () => {
 
 test("Test the disabling of the ButtonDialog control", () => {
 	const ctl = mount(
-		<ButtonDialog disabled={true}>
+		<ButtonDialog disabled>
 			<p>Dialog test</p>
 		</ButtonDialog>
 	);
@@ -66,9 +66,9 @@ test("Test the disabling of the ButtonDialog control", () => {
 	assert(ctl.state("visible") === false);
 });
 
-test("Test making the ButtonDialog invisible", () => {
+test("Test making the ButtonDialog hidden", () => {
 	const ctl = mount(
-		<ButtonDialog visible={false}>
+		<ButtonDialog hidden>
 			<p>Dialog test</p>
 		</ButtonDialog>
 	);
@@ -84,23 +84,25 @@ test("Test making the ButtonDialog invisible", () => {
 });
 
 test("Test the click event on a ButtonDialog control", () => {
+	const click = jest.fn();
 	const ctl = mount(
-		<ButtonDialog>
+		<ButtonDialog onClick={click}>
 			<p>Dialog test</p>
 		</ButtonDialog>
 	);
 
 	assert(ctl);
-
 	assert(ctl.prop("iconName") === "bomb");
 	assert(ctl.prop("disabled") === false);
-	assert(ctl.prop("visible"));
+	assert(ctl.prop("hidden") === false);
 	assert(ctl.contains(<p>Dialog test</p>));
+	assert(ctl.state("visible") === false);
 
 	ctl.find(".ui-button")
 		.first()
 		.simulate("click");
 
+	expect(click).toHaveBeenCalled();
 	assert(ctl.state("visible"));
 });
 

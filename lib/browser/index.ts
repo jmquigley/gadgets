@@ -4,4 +4,19 @@ import Browser, {
 	getDefaultBrowserState
 } from "./Browser";
 
-export {Browser, BrowserProps, getDefaultBrowserProps, getDefaultBrowserState};
+import WebView, {
+	getDefaultWebViewProps,
+	getDefaultWebViewState,
+	WebViewProps
+} from "./WebView";
+
+export {
+	Browser,
+	BrowserProps,
+	getDefaultBrowserProps,
+	getDefaultBrowserState,
+	getDefaultWebViewProps,
+	getDefaultWebViewState,
+	WebViewProps,
+	WebView
+};

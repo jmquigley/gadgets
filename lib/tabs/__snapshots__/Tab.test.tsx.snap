@@ -6,6 +6,7 @@ exports[`Test disabling of a Tab 1`] = `
   direction="right"
   disabled={true}
   focus={false}
+  hidden={false}
   href={
     Object {
       "selectHandler": [MockFunction],
@@ -17,6 +18,7 @@ exports[`Test disabling of a Tab 1`] = `
   noclose={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -39,6 +41,7 @@ exports[`Test making a Tab invisible 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  hidden={false}
   href={
     Object {
       "selectHandler": [Function],
@@ -50,6 +53,7 @@ exports[`Test making a Tab invisible 1`] = `
   noclose={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -72,6 +76,7 @@ Object {
   "direction": "right",
   "disabled": false,
   "focus": false,
+  "hidden": false,
   "href": Object {
     "selectHandler": [Function],
   },
@@ -81,6 +86,7 @@ Object {
   "noclose": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Tab",
@@ -112,6 +118,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  hidden={false}
   href={
     Object {
       "selectHandler": [MockFunction],
@@ -123,6 +130,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
   noclose={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -145,6 +153,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   direction="right"
   disabled={false}
   focus={false}
+  hidden={false}
   href={
     Object {
       "hiddenTabHandler": [MockFunction],
@@ -156,6 +165,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   noclose={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -187,6 +197,7 @@ exports[`Test the creation of a Tab instance 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   href={
     Object {
       "selectHandler": [Function],
@@ -203,6 +214,7 @@ exports[`Test the creation of a Tab instance 1`] = `
   noclose={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tab"
@@ -249,6 +261,7 @@ exports[`Test the creation of a Tab instance 1`] = `
       errorMessage={null}
       focus={false}
       height={null}
+      hidden={false}
       hiddenLeftButton={false}
       hiddenRightButton={true}
       href={
@@ -269,6 +282,7 @@ exports[`Test the creation of a Tab instance 1`] = `
       noclose={false}
       noedit={false}
       nohover={false}
+      nopropagation={false}
       notheme={false}
       notooltip={false}
       obj="Tab"
@@ -299,6 +313,7 @@ exports[`Test the creation of a Tab instance 1`] = `
           errorMessage={null}
           focus={false}
           height={null}
+          hidden={false}
           href={
             Object {
               "selectHandler": [Function],
@@ -307,6 +322,7 @@ exports[`Test the creation of a Tab instance 1`] = `
           iconName="times"
           iconStyle=""
           id={null}
+          kbActivate=""
           left={null}
           location="none"
           maxHeight={null}
@@ -317,6 +333,7 @@ exports[`Test the creation of a Tab instance 1`] = `
           noclose={false}
           noedit={false}
           nohover={false}
+          nopropagation={false}
           notheme={false}
           notooltip={false}
           obj="Tab"

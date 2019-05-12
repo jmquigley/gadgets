@@ -49,7 +49,7 @@ test("Test disabling of a ButtonToggle", () => {
 
 test("Test making a ButtonToggle invisible", () => {
 	const click = jest.fn();
-	const ctl = mount(<ButtonToggle onClick={click} visible={false} />);
+	const ctl = mount(<ButtonToggle onClick={click} hidden />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -57,7 +57,7 @@ test("Test making a ButtonToggle invisible", () => {
 	ctl.find(".ui-button-toggle")
 		.first()
 		.simulate("click");
-	expect(click).not.toHaveBeenCalled();
+	expect(click).toHaveBeenCalled();
 });
 
 test("Test ButtonToggle click event", () => {

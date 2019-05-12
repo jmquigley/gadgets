@@ -15,6 +15,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
   errorMessage={null}
   focus={false}
   height="600px"
+  hidden={false}
   icon="plane"
   id={null}
   left={null}
@@ -26,6 +27,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="DialogWindow"
@@ -91,6 +93,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       errorMessage={null}
       focus={false}
       height="600px"
+      hidden={false}
       icon="plane"
       id={null}
       left={null}
@@ -102,6 +105,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
       noborder={false}
       noedit={false}
       nohover={false}
+      nopropagation={false}
       notheme={false}
       notooltip={false}
       obj="DialogWindow"
@@ -136,6 +140,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
         errorMessage={null}
         focus={false}
         height="600px"
+        hidden={false}
         icon="plane"
         id={null}
         left={null}
@@ -154,6 +159,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
             errorMessage={null}
             focus={false}
             height={null}
+            hidden={false}
             iconName="plane"
             id={null}
             imageFile=""
@@ -166,6 +172,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
             noborder={false}
             noedit={false}
             nohover={false}
+            nopropagation={false}
             notheme={false}
             notooltip={false}
             obj="Icon"
@@ -191,6 +198,7 @@ exports[`Test creation of a default DialogWindow control 1`] = `
         noborder={false}
         noedit={false}
         nohover={true}
+        nopropagation={false}
         noripple={true}
         notheme={false}
         notooltip={false}
@@ -250,6 +258,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": "400px",
+  "hidden": false,
   "icon": "window-restore",
   "id": null,
   "left": null,
@@ -261,6 +270,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "DialogWindow",

@@ -17,6 +17,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "id": null,
   "left": null,
   "location": "none",
@@ -27,6 +28,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "noselect": false,
   "notheme": false,
   "notooltip": false,
@@ -73,6 +75,7 @@ exports[`Test the creation of a ListDivider control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -83,6 +86,7 @@ exports[`Test the creation of a ListDivider control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   noselect={false}
   notheme={false}
   notooltip={false}

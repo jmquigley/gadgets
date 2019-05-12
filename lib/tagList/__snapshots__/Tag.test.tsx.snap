@@ -15,6 +15,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -25,6 +26,7 @@ exports[`Test creation of a simple Tag instance 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tag"
@@ -78,6 +80,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -88,6 +91,7 @@ exports[`Test disabling of the simple Tag instance 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tag"
@@ -126,6 +130,7 @@ exports[`Test making Tag invisible 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -136,6 +141,7 @@ exports[`Test making Tag invisible 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Tag"
@@ -175,6 +181,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "id": null,
   "left": null,
   "location": "none",
@@ -185,6 +192,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Tag",

@@ -16,6 +16,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "id": null,
   "layout": 1,
   "left": null,
@@ -27,6 +28,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "ListFooter",
@@ -73,6 +75,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   layout={1}
   left={null}
@@ -84,6 +87,7 @@ exports[`Test the creation of a ListFooter control with simple title 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="ListFooter"

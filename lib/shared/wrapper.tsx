@@ -102,7 +102,7 @@ export function getDefaultWrapperState(): WrapperState {
 	};
 }
 
-export const WrapperView: any = styled.div`
+const WrapperView: any = styled.div`
 	${(props: WrapperProps) => disabled(props)}
 	${(props: WrapperProps) => invisible(props)}
 `;

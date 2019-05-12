@@ -2,6 +2,7 @@
 
 const debug = require("debug")("DemoButtons");
 
+import autobind from "autobind-decorator";
 import * as React from "react";
 import {
 	Button,
@@ -23,6 +24,11 @@ export default class DemoButtons extends React.Component<any, undefined> {
 	constructor(props: any) {
 		super(props);
 		debug("creating");
+	}
+
+	@autobind
+	private handleActivate() {
+		debug("Activated button");
 	}
 
 	private buildIcons() {
@@ -76,6 +82,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<Button
 						disabled={this.props["disabled"]}
 						iconName='motorcycle'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					/>
 				</td>
@@ -85,6 +93,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						color='yellow'
 						disabled={this.props["disabled"]}
 						iconName='motorcycle'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					/>
 				</td>

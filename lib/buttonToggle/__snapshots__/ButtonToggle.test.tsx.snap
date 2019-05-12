@@ -19,12 +19,14 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   fgColorOn="black"
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
   iconStyle=""
   id={null}
   initialToggle={false}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -34,6 +36,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonToggle"
@@ -72,12 +75,14 @@ exports[`Test creation of a ButtonToggle control 1`] = `
     fgColorOn="black"
     focus={false}
     height={null}
+    hidden={false}
     iconName="bomb"
     iconNameOff="bomb"
     iconNameOn="bomb"
     iconStyle=""
     id={null}
     initialToggle={false}
+    kbActivate=""
     left={null}
     location="none"
     maxHeight={null}
@@ -87,6 +92,7 @@ exports[`Test creation of a ButtonToggle control 1`] = `
     noborder={false}
     noedit={false}
     nohover={false}
+    nopropagation={true}
     notheme={false}
     notooltip={false}
     obj="ButtonToggle"
@@ -132,12 +138,14 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   fgColorOn="black"
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconNameOff="star-o"
   iconNameOn="star"
   iconStyle=""
   id={null}
   initialToggle={false}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -147,6 +155,7 @@ exports[`Test creation of a ButtonToggle control with on/off icons 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonToggle"
@@ -186,12 +195,14 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   fgColorOn="black"
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
   iconStyle=""
   id={null}
   initialToggle={false}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -201,6 +212,7 @@ exports[`Test disabling of a ButtonToggle 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonToggle"
@@ -240,12 +252,14 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   fgColorOn="black"
   focus={false}
   height={null}
+  hidden={true}
   iconName="bomb"
   iconNameOff="bomb"
   iconNameOn="bomb"
   iconStyle=""
   id={null}
   initialToggle={false}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -255,6 +269,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonToggle"
@@ -269,7 +284,7 @@ exports[`Test making a ButtonToggle invisible 1`] = `
   theme={null}
   tooltip={null}
   top={null}
-  visible={false}
+  visible={true}
   width={null}
   xcss={null}
 />
@@ -295,12 +310,14 @@ Object {
   "fgColorOn": "black",
   "focus": false,
   "height": null,
+  "hidden": false,
   "iconName": "bomb",
   "iconNameOff": "bomb",
   "iconNameOn": "bomb",
   "iconStyle": "",
   "id": null,
   "initialToggle": false,
+  "kbActivate": "",
   "left": null,
   "location": "none",
   "maxHeight": null,
@@ -310,6 +327,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": true,
   "notheme": false,
   "notooltip": false,
   "obj": "ButtonToggle",

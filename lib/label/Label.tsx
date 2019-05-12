@@ -197,9 +197,11 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
-		if (!this.props.disabled && this.props.visible) {
-			e.stopPropagation();
-			e.preventDefault();
+		if (!this.props.disabled) {
+			if (this.props.nopropagation) {
+				e.stopPropagation();
+				e.preventDefault();
+			}
 
 			if (!this.props.noedit && document != null && window != null) {
 				if ("caretRangeFromPoint" in document) {

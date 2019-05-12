@@ -16,6 +16,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "id": null,
@@ -30,6 +31,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Item",
@@ -85,6 +87,7 @@ exports[`Test the creation of a Item control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   id={null}
@@ -99,6 +102,7 @@ exports[`Test the creation of a Item control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Item"
@@ -158,6 +162,7 @@ exports[`Test the creation of a Item control 1`] = `
       errorMessage={null}
       focus={false}
       height={null}
+      hidden={false}
       hiddenLeftButton={false}
       hiddenRightButton={false}
       id={null}
@@ -172,6 +177,7 @@ exports[`Test the creation of a Item control 1`] = `
       noborder={false}
       noedit={false}
       nohover={false}
+      nopropagation={false}
       notheme={false}
       notooltip={false}
       obj="Item"

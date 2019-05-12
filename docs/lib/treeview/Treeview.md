@@ -36,7 +36,7 @@ relationships are available to the caller (via callbacks when changes occur).
 ## Examples:
 
 ```javascript
-import {Treeview, TreeviewItem} from 'gadgets';
+import {TreeItem, Treeview} from 'gadgets';
 
 ...
 
@@ -63,7 +63,7 @@ this.state = {
 
 <Treeview
     height="640px"
-    onChange={(treeData: TreeviewItem[]) => this.setState({treeData})}
+    onChange={(treeData: TreeItem[]) => this.setState({treeData})}
     treeData={this.state.treeData}
 />
 ```
@@ -103,7 +103,6 @@ new treeData array after the change was applied.
 - `ui-treeview-container` - applied to a div that surrounds the tree control and the
 toolbar used to control it.
 this is where the height of the control is handled.
-- `ui-treeview-hotkeys-wrapper` - A surrounding `div` that is added by `HotKeys`.
 - `ui-treeview-toolbar` - applied to the search toollbar
 
 #### Properties

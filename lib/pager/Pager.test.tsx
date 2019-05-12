@@ -189,7 +189,7 @@ test('Test pressing the "<" (previous) button', () => {
 
 	// Select the first button "<" move from 3 -> 2
 	ctl.find(".ui-button")
-		.at(3)
+		.at(5)
 		.simulate("click");
 	expect(select).toHaveBeenCalled();
 	expect(select.mock.calls[0][0]).toBe(2);
@@ -209,7 +209,7 @@ test('Test pressing the ">" (next) button', () => {
 
 	// Select the third button ">", move from 1 -> 2
 	ctl.find(".ui-button")
-		.at(6)
+		.at(14)
 		.simulate("click");
 	expect(select).toHaveBeenCalled();
 	expect(select.mock.calls[0][0]).toBe(2);
@@ -229,7 +229,7 @@ test('Test pressing the ">>" (last) button', () => {
 
 	// Select the fourth button ">>", move from 1 -> 12
 	ctl.find(".ui-button")
-		.at(10)
+		.at(19)
 		.simulate("click");
 	expect(select).toHaveBeenCalled();
 	expect(select.mock.calls[0][0]).toBe(12);

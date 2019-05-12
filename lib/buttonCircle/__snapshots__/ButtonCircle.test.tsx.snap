@@ -15,9 +15,11 @@ exports[`Test ButtonCircle click event 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -27,6 +29,7 @@ exports[`Test ButtonCircle click event 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
@@ -61,9 +64,11 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -73,6 +78,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
@@ -113,9 +119,11 @@ exports[`Test creation of a ButtonCircle control 1`] = `
         errorMessage={null}
         focus={false}
         height={null}
+        hidden={false}
         iconName="bomb"
         iconStyle=""
         id={null}
+        kbActivate=""
         left={null}
         location="none"
         maxHeight={null}
@@ -125,6 +133,7 @@ exports[`Test creation of a ButtonCircle control 1`] = `
         noborder={false}
         noedit={false}
         nohover={false}
+        nopropagation={true}
         notheme={false}
         notooltip={false}
         obj="ButtonCircle"
@@ -162,9 +171,11 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -174,6 +185,7 @@ exports[`Test disabling of a ButtonCircle control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
@@ -208,9 +220,11 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={true}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -220,6 +234,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="ButtonCircle"
@@ -233,7 +248,7 @@ exports[`Test making a ButtonCircle control invisible 1`] = `
   theme={null}
   tooltip={null}
   top={null}
-  visible={false}
+  visible={true}
   width={null}
   xcss={null}
 />
@@ -255,9 +270,11 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "iconName": "bomb",
   "iconStyle": "",
   "id": null,
+  "kbActivate": "",
   "left": null,
   "location": "none",
   "maxHeight": null,
@@ -267,6 +284,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": true,
   "notheme": false,
   "notooltip": false,
   "obj": "ButtonCircle",

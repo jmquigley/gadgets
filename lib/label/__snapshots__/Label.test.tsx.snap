@@ -16,6 +16,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   errorMessage={null}
   focus={true}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -26,6 +27,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -69,6 +71,7 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -79,6 +82,7 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -122,6 +126,7 @@ exports[`Test creation of a Label control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -132,6 +137,7 @@ exports[`Test creation of a Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -195,6 +201,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   errorMessage={null}
   focus={true}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -205,6 +212,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -248,6 +256,7 @@ exports[`Test making the Label control invisible 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -258,6 +267,7 @@ exports[`Test making the Label control invisible 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -302,6 +312,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "id": null,
   "left": null,
   "location": "none",
@@ -312,6 +323,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "Label",
@@ -367,6 +379,7 @@ exports[`Test the disabling of the Label control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   id={null}
   left={null}
   location="none"
@@ -377,6 +390,7 @@ exports[`Test the disabling of the Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="Label"

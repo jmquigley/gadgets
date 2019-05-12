@@ -173,15 +173,9 @@ export class ButtonDialog extends BaseComponent<
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (!this.props.disabled) {
-			this.setState(
-				{
-					visible: !this.state.visible
-				},
-				() => {
-					this.props.onClick(e);
-				}
-			);
+		if (!this.props.disabled && !this.props.hidden) {
+			this.setState({visible: !this.state.visible});
+			this.props.onClick(e);
 		}
 	}
 
@@ -250,11 +244,11 @@ export class ButtonDialog extends BaseComponent<
 				<ButtonDialogView className={this.className} id={this.id}>
 					<Button
 						disabled={this.props.disabled}
+						hidden={this.props.hidden}
 						iconName={this.props.iconName}
 						onClick={this.handleClick}
 						sizing={this.props.sizing}
 						style={this.state.style}
-						visible={this.props.visible}
 					/>
 					<ButtonDialogPopup
 						className={this._dialogClasses.value}

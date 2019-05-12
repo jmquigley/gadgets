@@ -53,7 +53,7 @@ test("Test disabling of a ButtonText control", () => {
 
 test("Test making a ButtonText control invisible", () => {
 	const click = jest.fn();
-	const ctl = mount(<ButtonText onClick={click} visible={false} />);
+	const ctl = mount(<ButtonText onClick={click} hidden />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -61,7 +61,7 @@ test("Test making a ButtonText control invisible", () => {
 	ctl.find(".ui-button-text")
 		.first()
 		.simulate("click");
-	expect(click).not.toHaveBeenCalled();
+	expect(click).toHaveBeenCalled();
 });
 
 test("Test button click in ButtonText control", () => {

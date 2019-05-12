@@ -49,10 +49,10 @@ import {getDefaultIconProps, Icon, IconProps} from "../icon";
 import {
 	BaseComponent,
 	BaseState,
-	DisabledCSS,
+	disabled,
 	fontStyle,
 	getDefaultBaseState,
-	InvisibleCSS,
+	hidden,
 	Justify,
 	Wrapper
 } from "../shared";
@@ -111,8 +111,8 @@ const ButtonTextView: any = styled.div`
 			${(props) => props.style.backgroundColor && "!important"};
 	}
 
-	${(props: ButtonTextProps) => props.disabled && DisabledCSS}
-	${(props: ButtonTextProps) => !props.visible && InvisibleCSS}
+	${(props: ButtonTextProps) => disabled(props)}
+	${(props: ButtonTextProps) => hidden(props)}
 `;
 
 export class ButtonText extends BaseComponent<
@@ -128,14 +128,13 @@ export class ButtonText extends BaseComponent<
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (
-			!this.props.disabled &&
-			this.props.visible &&
-			this.props.onClick != null
-		) {
+		if (this.props.nopropagation) {
+			e.stopPropagation();
+		}
+
+		if (!this.props.disabled) {
 			this.props.onClick(e);
 		}
-		e.stopPropagation();
 	}
 
 	public render() {
@@ -174,10 +173,10 @@ export class ButtonText extends BaseComponent<
 				<ButtonTextView
 					disabled={this.props.disabled}
 					className={this.className}
+					hidden={this.props.hidden}
 					style={this.state.style}
 					onClick={this.handleClick}
 					ripple={this.props.ripple}
-					visible={this.props.visible}
 				>
 					{leftButton}
 					{icon}

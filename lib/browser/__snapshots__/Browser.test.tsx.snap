@@ -15,8 +15,16 @@ exports[`Test creation of a Browser instance 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   home="about:blank"
   id={null}
+  kbBack="alt+arrowleft"
+  kbForward="alt+arrowright"
+  kbHome="alt+home"
+  kbNextSearch="f3"
+  kbPreviousSearch="alt+f3"
+  kbRefresh="alt+r"
+  kbSnapshot=""
   left={null}
   location="none"
   maxHeight={null}
@@ -26,6 +34,7 @@ exports[`Test creation of a Browser instance 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   notooltips={false}
@@ -64,8 +73,16 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   home=""
   id={null}
+  kbBack="alt+arrowleft"
+  kbForward="alt+arrowright"
+  kbHome="alt+home"
+  kbNextSearch="f3"
+  kbPreviousSearch="alt+f3"
+  kbRefresh="alt+r"
+  kbSnapshot=""
   left={null}
   location="none"
   maxHeight={null}
@@ -75,6 +92,7 @@ exports[`Test creation of a Browser instance with empty uri values 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   notooltips={false}
@@ -114,8 +132,16 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "home": "about:blank",
   "id": null,
+  "kbBack": "alt+arrowleft",
+  "kbForward": "alt+arrowright",
+  "kbHome": "alt+home",
+  "kbNextSearch": "f3",
+  "kbPreviousSearch": "alt+f3",
+  "kbRefresh": "alt+r",
+  "kbSnapshot": "",
   "left": null,
   "location": "none",
   "maxHeight": null,
@@ -125,6 +151,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "notooltips": false,

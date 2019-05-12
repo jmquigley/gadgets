@@ -34,7 +34,7 @@
  * ## Examples:
  *
  * ```javascript
- * import {Treeview, TreeviewItem} from 'gadgets';
+ * import {TreeItem, Treeview} from 'gadgets';
  *
  * ...
  *
@@ -61,7 +61,7 @@
  *
  * <Treeview
  *     height="640px"
- *     onChange={(treeData: TreeviewItem[]) => this.setState({treeData})}
+ *     onChange={(treeData: TreeItem[]) => this.setState({treeData})}
  *     treeData={this.state.treeData}
  * />
  * ```
@@ -101,7 +101,6 @@
  * - `ui-treeview-container` - applied to a div that surrounds the tree control and the
  * toolbar used to control it.
  * this is where the height of the control is handled.
- * - `ui-treeview-hotkeys-wrapper` - A surrounding `div` that is added by `HotKeys`.
  * - `ui-treeview-toolbar` - applied to the search toollbar
  *
  * #### Properties
@@ -256,13 +255,6 @@ export function getDefaultTreeviewState(): TreeviewState {
 	};
 }
 
-enum TreeviewKeyActions {
-	KB_ADD = "KB_ADD",
-	KB_COLLAPSE_ALL = "KB_COLLAPSE_ALL",
-	KB_DELETE = "KB_DELETE",
-	KB_EXPAND_ALL = "KB_EXPAND_ALL"
-}
-
 const SortableTreeView: any = styled(SortableTree)`
 	${(props: TreeviewProps) => disabled(props)}
 	${(props: TreeviewProps) =>
@@ -338,7 +330,7 @@ const StyledToolbar: any = styled(Toolbar)`
 	z-index: 1;
 `;
 
-const TreeviewContainer: any = styled.div`
+const TreeviewContainer: any = styled(HotKeys)`
 	${(props: TreeviewProps) => invisible(props)}
 
 	display: flex;
@@ -375,19 +367,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 		this._keys = new Keys({testing: this.props.testing});
 
-		this._keyHandler = {
-			[TreeviewKeyActions.KB_ADD]: this.handleAdd,
-			[TreeviewKeyActions.KB_COLLAPSE_ALL]: this.handleNodeCollapse,
-			[TreeviewKeyActions.KB_DELETE]: this.handleKeyboardDelete,
-			[TreeviewKeyActions.KB_EXPAND_ALL]: this.handleNodeExpand
-		};
-
-		this._keyMap = {
-			[TreeviewKeyActions.KB_ADD]: this.props.kbAdd,
-			[TreeviewKeyActions.KB_COLLAPSE_ALL]: this.props.kbCollapseAll,
-			[TreeviewKeyActions.KB_DELETE]: this.props.kbDelete,
-			[TreeviewKeyActions.KB_EXPAND_ALL]: this.props.kbExpandAll
-		};
+		this.buildKeyMap({
+			kbAdd: this.handleAdd,
+			kbCollapseAll: this.handleNodeCollapse,
+			kbDelete: this.handleKeyboardDelete,
+			kbExpandAll: this.handleNodeExpand
+		});
 
 		// Internally the component manages a general tree struture to aid in
 		// adding/removing nodes from the given input tree structure.
@@ -756,35 +741,27 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 		return (
 			<Wrapper {...this.props}>
-				<HotKeys
-					className='ui-treeview-hotkeys-wrapper'
-					handlers={this._keyHandler}
-					keyMap={this._keyMap}
+				<TreeviewContainer
+					className='ui-treeview-container'
+					handlers={this.keyHandler}
+					keyMap={this.keyMap}
+					style={this.state.style}
 				>
-					<TreeviewContainer
-						className='ui-treeview-container'
-						style={this.state.style}
-					>
-						{this.props.direction === Direction.top
-							? toolbar
-							: null}
-						<TreeviewWrapper className={this.className}>
-							<SortableTreeView
-								generateNodeProps={this.customNodeProperties}
-								isVirtualized={this.props.isVirtualized}
-								onChange={this.handleChange}
-								rowHeight={this.rowHeight}
-								searchFinishCallback={this.handleSearchFinish}
-								searchFocusOffset={this.state.searchFocusIndex}
-								searchQuery={this.state.search}
-								treeData={this.props.treeData}
-							/>
-						</TreeviewWrapper>
-						{this.props.direction !== Direction.top
-							? toolbar
-							: null}
-					</TreeviewContainer>
-				</HotKeys>
+					{this.props.direction === Direction.top ? toolbar : null}
+					<TreeviewWrapper className={this.className}>
+						<SortableTreeView
+							generateNodeProps={this.customNodeProperties}
+							isVirtualized={this.props.isVirtualized}
+							onChange={this.handleChange}
+							rowHeight={this.rowHeight}
+							searchFinishCallback={this.handleSearchFinish}
+							searchFocusOffset={this.state.searchFocusIndex}
+							searchQuery={this.state.search}
+							treeData={this.props.treeData}
+						/>
+					</TreeviewWrapper>
+					{this.props.direction !== Direction.top ? toolbar : null}
+				</TreeviewContainer>
 			</Wrapper>
 		);
 	}

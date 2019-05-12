@@ -7,8 +7,10 @@
  * @module keybinding
  */
 
+import {KeyMapOptions} from "react-hotkeys";
+
 export interface KeyMap {
-	[key: string]: string;
+	[key: string]: string | KeyMapOptions;
 }
 
 export interface KeyHandler {

@@ -41,7 +41,7 @@ test("Test disabling of a ButtonCircle control", () => {
 
 test("Test making a ButtonCircle control invisible", () => {
 	const click = jest.fn();
-	const ctl = mount(<ButtonCircle onClick={click} visible={false} />);
+	const ctl = mount(<ButtonCircle onClick={click} hidden />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -49,7 +49,7 @@ test("Test making a ButtonCircle control invisible", () => {
 	ctl.find(".ui-button")
 		.first()
 		.simulate("click");
-	expect(click).not.toHaveBeenCalled();
+	expect(click).toHaveBeenCalled();
 });
 
 test("Test ButtonCircle click event", () => {

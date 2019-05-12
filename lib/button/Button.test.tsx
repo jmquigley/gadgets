@@ -55,7 +55,7 @@ test("Test disabling of a Button", () => {
 
 test("Test making a Button invisible", () => {
 	const click = jest.fn();
-	const ctl = mount(<Button onClick={click} visible={false} />);
+	const ctl = mount(<Button onClick={click} hidden />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -63,7 +63,7 @@ test("Test making a Button invisible", () => {
 	ctl.find(".ui-button")
 		.first()
 		.simulate("click");
-	expect(click).not.toHaveBeenCalled();
+	expect(click).toHaveBeenCalled();
 });
 
 test("Test Button click event", () => {

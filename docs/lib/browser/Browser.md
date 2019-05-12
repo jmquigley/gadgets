@@ -49,6 +49,13 @@ and the browser content.
 #### Properties
 - `home: {string} ('about:blank')` - The site visited when the user clicks on the
 "home" button in the toolbar.  If this is empty, then 'about:blank' is used.
+- `kbBack="alt+left" {string}` - Moves to the prior page if there is one.
+- `kbForward="alt+right" {string}` - Moves to the next page if there is one.
+- `kbHome="alt+home" {string}` - Go to the users home page
+- `kbNextSearch="f3" {string}` - Go to the next search term
+- `kbPreviousSearch="alt+f3" {string}` - Go to the prior search term
+- `kbRefresh="ctrl+r" {string}` - Reload the current webpage
+- `kbSnapshot="" {string}` - Takes a snapshot of the current page.
 - `notooltips: {boolean} (false)` - When set to true the tooltips will be suppresed.
 They are shown by default.
 - `uri: {string} ('about:blank')` - The site the user selects to visit when the control

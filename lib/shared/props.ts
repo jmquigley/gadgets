@@ -151,6 +151,7 @@ export interface BaseProps {
 	errorMessage?: string;
 	focus?: boolean;
 	height?: string;
+	hidden?: boolean;
 	id?: string;
 	left?: string;
 	location?: Location;
@@ -161,6 +162,7 @@ export interface BaseProps {
 	noborder?: boolean;
 	noedit?: boolean;
 	nohover?: boolean;
+	nopropagation?: boolean;
 	notheme?: boolean;
 	notooltip?: boolean;
 	obj?: string;
@@ -194,6 +196,7 @@ export function getDefaultBaseProps(): BaseProps {
 		errorMessage: null,
 		focus: false,
 		height: null,
+		hidden: false,
 		id: null,
 		left: null,
 		location: Location.none,
@@ -204,6 +207,7 @@ export function getDefaultBaseProps(): BaseProps {
 		noborder: false,
 		noedit: false,
 		nohover: false,
+		nopropagation: false,
 		notheme: false,
 		notooltip: false,
 		obj: "Unknown",
@@ -220,6 +224,19 @@ export function getDefaultBaseProps(): BaseProps {
 		width: null,
 		xcss: null
 	};
+}
+
+export const HiddenCSS: any = css`
+	display: none !important;
+	width: 0 !important;
+`;
+
+export function hidden(props: BaseProps) {
+	if (props && "hidden" in props && props.hidden) {
+		return HiddenCSS;
+	}
+
+	return "";
 }
 
 export const DisabledCSS: any = css`

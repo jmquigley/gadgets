@@ -11,10 +11,11 @@
   - [Editor](https://github.com/jmquigley/gadgets/blob/master/docs/lib/editor/Editor.md)
   - [Tab](https://github.com/jmquigley/gadgets/blob/master/docs/lib/tabs/TabContainer.md)
   - [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md)
+- Changing all "visible" props to "hidden" to match built in HTML attribute value.
 
 #### Bug Fixes:
 
-
+N/A
 
 ---
 

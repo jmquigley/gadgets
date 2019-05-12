@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test creation of a WebView instance 1`] = `
+<WebView
+  controlled={true}
+  direction="right"
+  disabled={false}
+  focus={false}
+  hidden={false}
+  innerRef={[Function]}
+  location="none"
+  noborder={false}
+  noedit={false}
+  nohover={false}
+  nopropagation={false}
+  notheme={false}
+  notooltip={false}
+  obj="WebView"
+  ripple={false}
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  visible={true}
+/>
+`;
+
+exports[`Test retrieval of the WebView props object 1`] = `
+Object {
+  "controlled": true,
+  "direction": "right",
+  "disabled": false,
+  "focus": false,
+  "hidden": false,
+  "innerRef": [Function],
+  "location": "none",
+  "noborder": false,
+  "noedit": false,
+  "nohover": false,
+  "nopropagation": false,
+  "notheme": false,
+  "notooltip": false,
+  "obj": "WebView",
+  "ripple": false,
+  "selected": false,
+  "sizing": "normal",
+  "style": Object {},
+  "testing": true,
+  "visible": true,
+}
+`;
+
+exports[`Test retrieval of the WebView props object 2`] = `
+Object {
+  "children": null,
+  "sizing": "normal",
+  "style": Object {},
+}
+`;

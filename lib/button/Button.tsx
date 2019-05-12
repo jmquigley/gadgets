@@ -32,10 +32,11 @@
  * @module Button
  */
 
-// const debug = require('debug')('gadgets.Button');
+// const debug = require("debug")("gadgets.Button");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import {HotKeys} from "react-hotkeys";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon";
 import {
@@ -45,7 +46,7 @@ import {
 	disabled,
 	getDefaultBaseProps,
 	getDefaultBaseState,
-	invisible,
+	hidden,
 	Wrapper
 } from "../shared";
 import styled, {css} from "../shared/themed-components";
@@ -54,6 +55,7 @@ import {tooltip} from "../tooltip";
 export interface ButtonProps extends BaseProps {
 	iconName?: string; // font awesome string
 	iconStyle?: string;
+	kbActivate?: string;
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
@@ -62,6 +64,8 @@ export function getDefaultButtonProps(): ButtonProps {
 		...getDefaultBaseProps(),
 		iconName: "bomb",
 		iconStyle: "",
+		kbActivate: "",
+		nopropagation: true,
 		onClick: nilEvent,
 		obj: "Button",
 		ripple: true
@@ -89,7 +93,7 @@ export const BaseButtonView: any = css`
 	width: 100%;
 `;
 
-const ButtonView: any = styled.div`
+const ButtonView: any = styled(HotKeys)`
 	${BaseButtonView}
 
 	flex: 1;
@@ -99,8 +103,11 @@ const ButtonView: any = styled.div`
 			${(props) => props.style.backgroundColor && "!important"};
 	}
 
+	${(props: ButtonProps) => hidden(props)}
+`;
+
+const StyledIcon: any = styled(Icon)`
 	${(props: ButtonProps) => disabled(props)}
-	${(props: ButtonProps) => invisible(props)}
 `;
 
 export class Button extends BaseComponent<ButtonProps, ButtonState> {
@@ -109,18 +116,21 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
 	constructor(props: ButtonProps) {
 		super(props, "ui-button", Button.defaultProps.style);
+
+		this.buildKeyMap({
+			kbActivate: this.handleClick
+		});
 	}
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-		if (
-			!this.props.disabled &&
-			this.props.visible &&
-			this.props.onClick != null
-		) {
+		if (this.props.nopropagation) {
+			e.stopPropagation();
+		}
+
+		if (!this.props.disabled) {
 			this.props.onClick(e);
 		}
-		e.stopPropagation();
 	}
 
 	public render() {
@@ -130,15 +140,16 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 			<Wrapper {...this.props}>
 				<ButtonView
 					className={this.className}
-					disabled={this.props.disabled}
+					handlers={this.keyHandler}
+					hidden={this.props.hidden}
 					id={this.id}
+					keyMap={this.keyMap}
 					onClick={this.handleClick}
-					ripple={this.props.ripple}
 					sizing={this.props.sizing}
 					style={this.state.style}
-					visible={this.props.visible}
 				>
-					<Icon
+					<StyledIcon
+						disabled={this.props.disabled}
 						className={this.props.iconStyle}
 						iconName={this.props.iconName}
 						sizing={this.props.sizing}

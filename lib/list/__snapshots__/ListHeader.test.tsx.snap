@@ -16,6 +16,7 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "hiddenLeftButton": false,
   "hiddenRightButton": false,
   "id": null,
@@ -30,6 +31,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": true,
+  "nopropagation": false,
   "notheme": false,
   "notooltip": false,
   "obj": "ListHeader",
@@ -85,6 +87,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   hiddenLeftButton={false}
   hiddenRightButton={false}
   id={null}
@@ -99,6 +102,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
   noborder={false}
   noedit={false}
   nohover={true}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
   obj="ListHeader"
@@ -145,6 +149,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     errorMessage={null}
     focus={false}
     height={null}
+    hidden={false}
     hiddenLeftButton={false}
     hiddenRightButton={false}
     id={null}
@@ -159,6 +164,7 @@ exports[`Test the creation of a ListHeader control with simple title 1`] = `
     noborder={false}
     noedit={false}
     nohover={true}
+    nopropagation={false}
     notheme={false}
     notooltip={false}
     obj="ListHeader"

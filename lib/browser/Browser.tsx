@@ -47,6 +47,13 @@
  * #### Properties
  * - `home: {string} ('about:blank')` - The site visited when the user clicks on the
  * "home" button in the toolbar.  If this is empty, then 'about:blank' is used.
+ * - `kbBack="alt+left" {string}` - Moves to the prior page if there is one.
+ * - `kbForward="alt+right" {string}` - Moves to the next page if there is one.
+ * - `kbHome="alt+home" {string}` - Go to the users home page
+ * - `kbNextSearch="f3" {string}` - Go to the next search term
+ * - `kbPreviousSearch="alt+f3" {string}` - Go to the prior search term
+ * - `kbRefresh="ctrl+r" {string}` - Reload the current webpage
+ * - `kbSnapshot="" {string}` - Takes a snapshot of the current page.
  * - `notooltips: {boolean} (false)` - When set to true the tooltips will be suppresed.
  * They are shown by default.
  * - `uri: {string} ('about:blank')` - The site the user selects to visit when the control
@@ -62,9 +69,11 @@
 const debug = require("debug")("gadgets.Browser");
 
 import autobind from "autobind-decorator";
+import {WebviewTag} from "electron";
 import {List} from "immutable";
 import * as React from "react";
-import {nilEvent} from "util.toolbox";
+import {HotKeys, KeyMapOptions} from "react-hotkeys";
+import {nilEvent, objFindKeyByValue} from "util.toolbox";
 import {Button} from "../button";
 import {Divider} from "../divider";
 import {
@@ -78,9 +87,17 @@ import {
 import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {Toolbar} from "../toolbar";
+import {WebView} from "./WebView";
 
 export interface BrowserProps extends BaseProps {
 	home?: string;
+	kbBack?: string | KeyMapOptions;
+	kbForward?: string | KeyMapOptions;
+	kbHome?: string;
+	kbNextSearch?: string;
+	kbPreviousSearch?: string;
+	kbRefresh?: string;
+	kbSnapshot?: string;
 	notooltips?: boolean;
 	onClip?: (
 		uri: string,
@@ -97,6 +114,13 @@ export function getDefaultBrowserProps(): BrowserProps {
 	return {
 		...getDefaultBaseProps(),
 		home: "about:blank",
+		kbBack: "alt+arrowleft",
+		kbForward: "alt+arrowright",
+		kbHome: "alt+home",
+		kbNextSearch: "f3",
+		kbPreviousSearch: "alt+f3",
+		kbRefresh: "alt+r",
+		kbSnapshot: "",
 		notooltips: false,
 		obj: "Browser",
 		onClip: nilEvent,
@@ -121,7 +145,7 @@ export function getDefaultBrowserState(): BrowserState {
 	};
 }
 
-const BrowserContainer: any = styled.div`
+const BrowserContainer: any = styled(HotKeys)`
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -141,14 +165,10 @@ const BrowserContainer: any = styled.div`
 	}
 `;
 
-const BrowserContent: any = styled.div`
+const BrowserContent: any = styled(WebView)`
 	display: flex;
 	border: solid 1px ${(props: BrowserProps) => props.theme.borderColor};
 	flex-grow: 1;
-
-	> webview {
-		width: 100%;
-	}
 `;
 
 const BrowserToolbar: any = styled.div`
@@ -184,13 +204,22 @@ const SearchTextField: any = styled(TextField)`
 `;
 
 export class Browser extends BaseComponent<BrowserProps, BrowserState> {
-	private _webview: any = null;
-	private _browser: HTMLDivElement = null;
-
+	private _webview: WebviewTag = null;
+	private _webViewHandlerEnabled: boolean = false;
 	public static readonly defaultProps: BrowserProps = getDefaultBrowserProps();
 
 	constructor(props: BrowserProps) {
 		super(props, "ui-browser", Browser.defaultProps.style);
+
+		this.buildKeyMap({
+			kbBack: this.handleBack,
+			kbForward: this.handleForward,
+			kbHome: this.handleHome,
+			kbNextSearch: this.handleNextSearch,
+			kbPreviousSearch: this.handlePreviousSearch,
+			kbRefresh: this.handleReload,
+			kbSnapshot: this.handleSnapshot
+		});
 
 		const uri: string = this.props.uri || this.props.home || "";
 		this.state = {
@@ -198,6 +227,41 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 			uri: uri,
 			uriHistory: List(uri)
 		};
+	}
+
+	/**
+	 * Keyboard events do not propagate outside of the webview instance.  This
+	 * method is a workaround for that problem.  Once the webview is mounted
+	 * the contents of the webview instance can be retrieved.  An event
+	 * handler can be placed on the contents to detect input events.  This
+	 * function then works as a proxy to intercept keyboard events within
+	 * the content of the webview.  Each pseudo keyevent is passed to a
+	 * special keyhandler that will interpret each keyup event and send it
+	 * to the handler defined for the component.  This function cannot be
+	 * called until the webview dom has finished loading or the call to
+	 * getWebContents() will fail.
+	 */
+	public enableWebViewHandler() {
+		if (!this._webViewHandlerEnabled && "getWebContents" in this._webview) {
+			this._webview
+				.getWebContents()
+				.on("before-input-event", (_event: any, input: any) => {
+					if (["keyUp"].includes(input.type)) {
+						const keyboardEvent = new KeyboardEvent(input.type, {
+							code: input.code,
+							key: input.key,
+							shiftKey: input.shift,
+							altKey: input.alt,
+							ctrlKey: input.control,
+							metaKey: input.meta,
+							repeat: input.isAutoRepeat
+						});
+
+						this.specialKeyHandler(keyboardEvent);
+					}
+				});
+			this._webViewHandlerEnabled = true;
+		}
 	}
 
 	@autobind
@@ -250,11 +314,6 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 				});
 			}
 		}
-	}
-
-	@autobind
-	private handleRef(ref: any) {
-		this._browser = ref;
 	}
 
 	@autobind
@@ -337,6 +396,17 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		}
 	}
 
+	@autobind
+	private handleWebViewRef(ref: any) {
+		this._webview = ref;
+
+		// Adds a special keyboard event handler to the webview
+		// component when the dom finishes loading.
+		this._webview.addEventListener("dom-ready", () => {
+			this.enableWebViewHandler();
+		});
+	}
+
 	private refreshPage() {
 		if (this._webview) {
 			debug(
@@ -344,18 +414,45 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 				this.state.uri,
 				this._webview
 			);
+
 			this._webview.src = this.state.uri;
 			this.props.onOpen(this.state.uri, this.state.uriHistory);
+			this.enableWebViewHandler();
+		}
+	}
+
+	/**
+	 * Custom key event processor for the webview component.  Each key up event
+	 * is sent from the webview to this function, where the parts of the event
+	 * are used to build an equivalent HotKeys combo reference.  That reference
+	 * is then used to find a keyboard handler definition to invoke.
+	 * @param e {KeyboardEvent} - A keyUp event from a webview instance.
+	 */
+	private specialKeyHandler(e: KeyboardEvent) {
+		const combo: string[] = [];
+
+		if (e.altKey) {
+			combo.push("alt");
+		}
+
+		if (e.ctrlKey) {
+			combo.push("ctrl");
+		}
+
+		if (e.key) {
+			combo.push(e.key.toLowerCase());
+		}
+
+		// reverse lookup of the constructed key combo to find an associated
+		// key handler.
+		const kb = objFindKeyByValue(this.keyMap, combo.join("+"));
+
+		if (kb && kb in this.props) {
+			this.keyHandler[kb](e);
 		}
 	}
 
 	public componentDidMount() {
-		// The webview is dynamically inserted into the div represented by the
-		// <div> in BrowserContent
-		this._webview = document.createElement("webview");
-		this._webview.setAttribute("id", this.props.id || "ui-browser-content");
-		this._webview.nodeintegration = true;
-		this._browser.appendChild(this._webview);
 		this.refreshPage();
 	}
 
@@ -364,7 +461,11 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 
 		return (
 			<Wrapper {...this.props}>
-				<BrowserContainer className={this.className}>
+				<BrowserContainer
+					className={this.className}
+					handlers={this.keyHandler}
+					keyMap={this.keyMap}
+				>
 					<BrowserToolbar className='ui-browser-toolbar'>
 						<BrowserToolbarButtons>
 							<Button
@@ -442,7 +543,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 					</BrowserToolbar>
 					<BrowserContent
 						className='ui-browser-content'
-						ref={this.handleRef}
+						innerRef={this.handleWebViewRef}
 					/>
 				</BrowserContainer>
 			</Wrapper>

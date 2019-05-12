@@ -123,8 +123,41 @@ export abstract class BaseComponent<
 		return this._id;
 	}
 
+	get keyHandler(): KeyHandler {
+		return this._keyHandler;
+	}
+
+	get keyMap(): KeyMap {
+		return this._keyMap;
+	}
+
 	get theme(): ThemeProps {
 		return this._theme;
+	}
+
+	/**
+	 * The input mappings structure is the name of the keyboaard mapping
+	 * property and the associated function handler pointer.  These are
+	 * mapped to their respective KeyMap and Handler objects.  These can
+	 * then be used by the HotKeys object in a component to map a
+	 * keyboard handler to that component.  The format of the input
+	 * object is:
+	 *
+	 *     mappings = {
+	 *         "kbActivate": this.handler
+	 *     }
+	 *
+	 * The key name in the interface must match the prop name for that
+	 * key binding.  See the <Button>
+	 *
+	 * @param mappings {KeyHanlder} - an object of key names and their
+	 * associated function mappings.
+	 */
+	protected buildKeyMap(mappings: KeyHandler) {
+		for (const key of Object.keys(mappings)) {
+			this._keyMap[key] = this.props[key];
+			this._keyHandler[key] = mappings[key];
+		}
 	}
 
 	public static font(sizing: Sizing = Sizing.normal): FontStyle {
@@ -147,6 +180,69 @@ export abstract class BaseComponent<
 		scale: number = 1.0
 	): string {
 		return calc(sizes[sizing].font.sizerem, `* ${scale}`);
+	}
+
+	/**
+	 * Each component has a getDerivedStateFromProps call.  This method is used
+	 * by that call to set state properties that are common to all components.  It
+	 * is checked for changes before the update will go through (so updates can be
+	 * avoided when not needed).  The method contains a 3rd parameter flag to
+	 * force this to return a new object instead of null.
+	 * @param props {P} - the set of props that will be updated
+	 * @param state {S} - the current state object when called
+	 * @param forceUpdate=false {boolean} - force the state to return an object for
+	 * update
+	 * @return {S} a new, mutated state that will be merged into the current state
+	 */
+	public static getDerivedStateFromProps(
+		props: any,
+		state: any,
+		forceUpdate: boolean = false
+	): any {
+		let newState: any = null;
+		let dirty: boolean = forceUpdate;
+
+		if (state && props) {
+			newState = {...state};
+
+			if ("style" in newState) {
+				newState.style = {
+					...BaseComponent.defaultStyles,
+					...newState.style,
+					...props.style
+				};
+
+				if (!isEqual(newState.style, state.style)) {
+					dirty = true;
+				}
+
+				if (props.color) {
+					newState.style["color"] = props.color;
+					dirty = true;
+				}
+
+				if (props.backgroundColor) {
+					newState.style["backgroundColor"] = props.backgroundColor;
+					dirty = true;
+				}
+
+				if (props.borderColor) {
+					newState.style["borderColor"] = props.borderColor;
+					dirty = true;
+				}
+			}
+
+			if ("sizing" in newState && props.sizing !== newState.sizing) {
+				newState.sizing = props.sizing;
+				dirty = true;
+			}
+		}
+
+		if (dirty) {
+			return newState;
+		} else {
+			return null;
+		}
 	}
 
 	public static lineHeightPX(sizing: Sizing = Sizing.normal): string {
@@ -219,20 +315,6 @@ export abstract class BaseComponent<
 		}
 	}
 
-	public static styling(sizing: Sizing = Sizing.normal): Styling {
-		return sizes[sizing];
-	}
-
-	/**
-	 * Returns the Sizing enum value associated with the given sizing.
-	 * @param sizing {Sizing} an optional parameter that allows for overriding
-	 * the default sizing when the class is created.
-	 * @returns a refernce to a Sizing enum value.
-	 */
-	public static type(sizing: Sizing = Sizing.normal): Sizing {
-		return sizes[sizing].type;
-	}
-
 	/**
 	 * Checks the previous and incoming props for sizing changes.  If the control
 	 * has children, then they are each updated with the sizing change.
@@ -261,67 +343,18 @@ export abstract class BaseComponent<
 		return nextProps.children;
 	}
 
+	public static styling(sizing: Sizing = Sizing.normal): Styling {
+		return sizes[sizing];
+	}
+
 	/**
-	 * Each component has a getDerivedStateFromProps call.  This method is used
-	 * by that call to set state properties that are common to all components.  It
-	 * is checked for changes before the update will go through (so updates can be
-	 * avoided when not needed).  The method contains a 3rd parameter flag to
-	 * force this to return a new object instead of null.
-	 * @param props {P} - the set of props that will be updated
-	 * @param state {S} - the current state object when called
-	 * @param forceUpdate=false {boolean} - force the state to return an object for
-	 * update
-	 * @return {S} a new, mutated state that will be merged into the current state
+	 * Returns the Sizing enum value associated with the given sizing.
+	 * @param sizing {Sizing} an optional parameter that allows for overriding
+	 * the default sizing when the class is created.
+	 * @returns a refernce to a Sizing enum value.
 	 */
-	public static getDerivedStateFromProps(
-		props: any,
-		state: any,
-		forceUpdate: boolean = false
-	): any {
-		let newState: any = null;
-		let dirty: boolean = forceUpdate;
-
-		if (state && props) {
-			newState = {...state};
-
-			if ("style" in newState) {
-				newState.style = {
-					...BaseComponent.defaultStyles,
-					...newState.style,
-					...props.style
-				};
-
-				if (!isEqual(newState.style, state.style)) {
-					dirty = true;
-				}
-
-				if (props.color) {
-					newState.style["color"] = props.color;
-					dirty = true;
-				}
-
-				if (props.backgroundColor) {
-					newState.style["backgroundColor"] = props.backgroundColor;
-					dirty = true;
-				}
-
-				if (props.borderColor) {
-					newState.style["borderColor"] = props.borderColor;
-					dirty = true;
-				}
-			}
-
-			if ("sizing" in newState && props.sizing !== newState.sizing) {
-				newState.sizing = props.sizing;
-				dirty = true;
-			}
-		}
-
-		if (dirty) {
-			return newState;
-		} else {
-			return null;
-		}
+	public static type(sizing: Sizing = Sizing.normal): Sizing {
+		return sizes[sizing].type;
 	}
 
 	/**

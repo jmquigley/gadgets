@@ -15,9 +15,11 @@ exports[`Test Button click event 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -27,6 +29,7 @@ exports[`Test Button click event 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -61,9 +64,11 @@ exports[`Test creation of a Button control 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -73,6 +78,7 @@ exports[`Test creation of a Button control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -94,55 +100,27 @@ exports[`Test creation of a Button control 1`] = `
 >
   <Button__ButtonView
     className="ui-button test-class ripple"
-    disabled={false}
+    handlers={
+      Object {
+        "kbActivate": [Function],
+      }
+    }
+    hidden={false}
     id="Button-0"
+    keyMap={
+      Object {
+        "kbActivate": "",
+      }
+    }
     onClick={[Function]}
-    ripple={true}
     sizing="normal"
     style={Object {}}
-    visible={true}
   >
-    <Icon
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
+    <Button__StyledIcon
       className=""
-      color={null}
-      controlled={true}
-      direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
       iconName="bomb"
-      id={null}
-      imageFile=""
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      notheme={false}
-      notooltip={false}
-      obj="Icon"
-      padding={null}
-      ripple={false}
-      selected={false}
       sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
     />
   </Button__ButtonView>
 </Wrapper>
@@ -163,9 +141,11 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="superpowers"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -175,6 +155,7 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -203,10 +184,19 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
 >
   <Button__ButtonView
     className="ui-button ripple"
-    disabled={false}
+    handlers={
+      Object {
+        "kbActivate": [Function],
+      }
+    }
+    hidden={false}
     id="Button-0"
+    keyMap={
+      Object {
+        "kbActivate": "",
+      }
+    }
     onClick={[Function]}
-    ripple={true}
     sizing="normal"
     style={
       Object {
@@ -216,49 +206,12 @@ exports[`Test creation of a Button control with custom icon, colors, and border 
         "color": "red",
       }
     }
-    visible={true}
   >
-    <Icon
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
+    <Button__StyledIcon
       className=""
-      color={null}
-      controlled={true}
-      direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
       iconName="superpowers"
-      id={null}
-      imageFile=""
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      notheme={false}
-      notooltip={false}
-      obj="Icon"
-      padding={null}
-      ripple={false}
-      selected={false}
       sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={null}
-      tooltip={null}
-      top={null}
-      visible={true}
-      width={null}
-      xcss={null}
     />
   </Button__ButtonView>
 </Wrapper>
@@ -279,9 +232,11 @@ exports[`Test disabling of a Button 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={false}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -291,6 +246,7 @@ exports[`Test disabling of a Button 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -325,9 +281,11 @@ exports[`Test making a Button invisible 1`] = `
   errorMessage={null}
   focus={false}
   height={null}
+  hidden={true}
   iconName="bomb"
   iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
   location="none"
   maxHeight={null}
@@ -337,6 +295,7 @@ exports[`Test making a Button invisible 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Button"
@@ -350,7 +309,7 @@ exports[`Test making a Button invisible 1`] = `
   theme={null}
   tooltip={null}
   top={null}
-  visible={false}
+  visible={true}
   width={null}
   xcss={null}
 />
@@ -372,9 +331,11 @@ Object {
   "errorMessage": null,
   "focus": false,
   "height": null,
+  "hidden": false,
   "iconName": "bomb",
   "iconStyle": "",
   "id": null,
+  "kbActivate": "",
   "left": null,
   "location": "none",
   "maxHeight": null,
@@ -384,6 +345,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
+  "nopropagation": true,
   "notheme": false,
   "notooltip": false,
   "obj": "Button",
