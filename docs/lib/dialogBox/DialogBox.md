@@ -48,13 +48,19 @@ If "no" then false.
 popup message box.
 
 #### Properties
-- `dialogType: DialogType (DialogType.info)` - The type of icon
+- `dialogType=DialogType.info {DialogType}` - The type of icon
 and color scheme for the popup.
-- `iconName: string (bomb)` - used with the custom type to set
+- `iconName="bomb" {string}` - used with the custom type to set
 a font awesome icon for this popup.
-- `message: string ('')` - the user defined message used by the
+- `kbCancel="esc" {string}` - Keyboard combo that invokes the no
+button.
+- `kbClose="esc" {string}` - Keyboard combo that invokes the no
+button.
+- `kbOk: "alt+k" {string}` - Keyboard combo that invokes the
+ok button
+- `message="" {string}` - the user defined message used by the
 popup window.  If the string contains newlines it will be
 broken up into `<p>` blocks for each line.
-- `show: boolean (false)` - When this value is true, then the
+- `show=false {boolean}` - When this value is true, then the
 popup is displayed.
 

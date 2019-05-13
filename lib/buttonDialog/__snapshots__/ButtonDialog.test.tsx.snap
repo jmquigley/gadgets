@@ -70,9 +70,14 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       border={null}
       borderColor={null}
       bottom={null}
-      className={null}
+      className="test-class"
       color={null}
       controlled={true}
+      dialogClasses={
+        Array [
+          "test-class-dialog",
+        ]
+      }
       direction="right"
       disabled={false}
       err={null}
@@ -85,7 +90,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       id={null}
       kbActivate=""
       left={null}
-      location="none"
+      location="bottom"
       maxHeight={null}
       maxWidth={null}
       minHeight={null}
@@ -96,7 +101,8 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       nopropagation={true}
       notheme={false}
       notooltip={false}
-      obj="Button"
+      notriangle={false}
+      obj="ButtonDialog"
       onClick={[Function]}
       padding={null}
       ripple={true}
@@ -112,10 +118,15 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       theme={null}
       tooltip={null}
       top={null}
+      triangleClasses={Array []}
       visible={true}
       width={null}
       xcss={null}
-    />
+    >
+      <p>
+        Dialog test
+      </p>
+    </Button>
     <ButtonDialog__ButtonDialogPopup
       className="ui-dialog-popup test-class-dialog"
       location="bottom"
@@ -219,9 +230,14 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       border={null}
       borderColor={null}
       bottom={null}
-      className={null}
+      className="test-class"
       color={null}
       controlled={true}
+      dialogClasses={
+        Array [
+          "test-class-dialog",
+        ]
+      }
       direction="right"
       disabled={false}
       err={null}
@@ -234,7 +250,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       id={null}
       kbActivate=""
       left={null}
-      location="none"
+      location="top"
       maxHeight={null}
       maxWidth={null}
       minHeight={null}
@@ -245,7 +261,8 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       nopropagation={true}
       notheme={false}
       notooltip={false}
-      obj="Button"
+      notriangle={false}
+      obj="ButtonDialog"
       onClick={[Function]}
       padding={null}
       ripple={true}
@@ -261,10 +278,15 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       theme={null}
       tooltip={null}
       top={null}
+      triangleClasses={Array []}
       visible={true}
       width={null}
       xcss={null}
-    />
+    >
+      <p>
+        Dialog test
+      </p>
+    </Button>
     <ButtonDialog__ButtonDialogPopup
       className="ui-dialog-popup test-class-dialog"
       location="top"

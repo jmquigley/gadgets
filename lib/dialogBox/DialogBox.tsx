@@ -46,14 +46,20 @@
  * popup message box.
  *
  * #### Properties
- * - `dialogType: DialogType (DialogType.info)` - The type of icon
+ * - `dialogType=DialogType.info {DialogType}` - The type of icon
  * and color scheme for the popup.
- * - `iconName: string (bomb)` - used with the custom type to set
+ * - `iconName="bomb" {string}` - used with the custom type to set
  * a font awesome icon for this popup.
- * - `message: string ('')` - the user defined message used by the
+ * - `kbCancel="esc" {string}` - Keyboard combo that invokes the no
+ * button.
+ * - `kbClose="esc" {string}` - Keyboard combo that invokes the no
+ * button.
+ * - `kbOk: "alt+k" {string}` - Keyboard combo that invokes the
+ * ok button
+ * - `message="" {string}` - the user defined message used by the
  * popup window.  If the string contains newlines it will be
  * broken up into `<p>` blocks for each line.
- * - `show: boolean (false)` - When this value is true, then the
+ * - `show=false {boolean}` - When this value is true, then the
  * popup is displayed.
  *
  * @module DialogBox
@@ -65,6 +71,7 @@ const ReactModal = require("react-modal");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import {HotKeys} from "react-hotkeys";
 import {nilEvent} from "util.toolbox";
 import {ButtonText} from "../buttonText";
 import {Icon} from "../icon";
@@ -93,6 +100,9 @@ export enum DialogBoxType {
 export interface DialogBoxProps extends BaseProps {
 	dialogType?: DialogBoxType;
 	iconName?: string;
+	kbCancel?: string;
+	kbClose?: string;
+	kbOk?: string;
 	message?: string;
 	onClose?: () => void;
 	onOpen?: () => void;
@@ -105,6 +115,9 @@ export function getDefaultDialogBoxProps(): DialogBoxProps {
 		...getDefaultBaseProps(),
 		dialogType: DialogBoxType.info,
 		iconName: "bomb",
+		kbCancel: "esc",
+		kbClose: "esc",
+		kbOk: "alt+k",
 		message: "",
 		obj: "DialogBox",
 		onClose: nilEvent,
@@ -190,6 +203,12 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 	constructor(props: DialogBoxProps) {
 		super(props, "ui-dialogbox", DialogBox.defaultProps.style);
+
+		this.buildKeyMap({
+			kbCancel: this.handleNo,
+			kbClose: this.handleNo,
+			kbOk: this.handleYes
+		});
 
 		this._icon = {
 			error: (
@@ -291,44 +310,48 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 
 		return (
 			<Wrapper {...this.props}>
-				<ReactModal
-					ariaHideApp={false}
-					contentLabel='DialogBox'
-					isOpen={this.state.showModal}
-					onAfterOpen={this.handleOpen}
-					onRequestClose={this.handleClose}
-					shouldCloseOnOverlayClick={false}
-					style={this._customStyle}
-				>
-					<DialogBoxView className={this.className}>
-						<DialogBoxIconView>
-							{this._icon[this.props.dialogType]}
-						</DialogBoxIconView>
+				<HotKeys handlers={this.keyHandler} keyMap={this.keyMap}>
+					<ReactModal
+						ariaHideApp={false}
+						contentLabel='DialogBox'
+						isOpen={this.state.showModal}
+						onAfterOpen={this.handleOpen}
+						onRequestClose={this.handleClose}
+						shouldCloseOnOverlayClick={false}
+						style={this._customStyle}
+					>
+						<DialogBoxView className={this.className}>
+							<DialogBoxIconView>
+								{this._icon[this.props.dialogType]}
+							</DialogBoxIconView>
 
-						<DialogBoxMessageContainerView>
-							<DialogBoxMessageView
-								dangerouslySetInnerHTML={{__html: this.message}}
-							/>
-							<ButtonBar>
-								<StyledButtonText
-									justify={Justify.center}
-									noicon
-									onClick={this.handleYes}
-									sizing={this.props.sizing}
-									text='Yes'
+							<DialogBoxMessageContainerView>
+								<DialogBoxMessageView
+									dangerouslySetInnerHTML={{
+										__html: this.message
+									}}
 								/>
-								<Spacer />
-								<StyledButtonText
-									justify={Justify.center}
-									noicon
-									onClick={this.handleNo}
-									sizing={this.props.sizing}
-									text='No'
-								/>
-							</ButtonBar>
-						</DialogBoxMessageContainerView>
-					</DialogBoxView>
-				</ReactModal>
+								<ButtonBar>
+									<StyledButtonText
+										justify={Justify.center}
+										noicon
+										onClick={this.handleYes}
+										sizing={this.props.sizing}
+										text='Yes'
+									/>
+									<Spacer />
+									<StyledButtonText
+										justify={Justify.center}
+										noicon
+										onClick={this.handleNo}
+										sizing={this.props.sizing}
+										text='No'
+									/>
+								</ButtonBar>
+							</DialogBoxMessageContainerView>
+						</DialogBoxView>
+					</ReactModal>
+				</HotKeys>
 			</Wrapper>
 		);
 	}

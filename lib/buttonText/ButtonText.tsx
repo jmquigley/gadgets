@@ -22,19 +22,19 @@
  * #### Style
  * - `ui-button` - A top level style placed on the control that constructs the
  * button.
- * - `ui-buttontext` - A top level style used to differentiate this from generic
- * buttons.
+ * - `ui-buttontext` - A top level style used to differentiate this from
+ * generic buttons.
  *
  * #### Properties
- * - `iconName: {string} ('bomb')` - The name of the font awesome icon used with this
- * button
- * - `justify: {Justify} (Justify.right)` - Determines if the button will be on the
+ * - `iconName="bomb" {string}` - The name of the font awesome icon used with
+ * this button.
+ * - `justify=Justify.right {Justify}` - Determines if the button will be on the
  * left, center, right.
- * - `noicon: {boolean} (false)` - Turns off the icon and only shows the text in the
- * center of the button.
- * - `sizing: {Sizing} (Sizing.normal)` - The size of this control set by the Sizing
- * class
- * - `text: {string} ('')` - The text string used by the button
+ * - `kbActivate="" {string}` - Invokes the keyboard handler for the button for
+ * the given sequence.
+ * - `noicon=false {boolean}` - Turns off the icon and only shows the text in
+ * the center of the button.
+ * - `text="" {string}` - The text string used by the button
  *
  * @module ButtonText
  */
@@ -43,6 +43,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import {HotKeys} from "react-hotkeys";
 import {nilEvent} from "util.toolbox";
 import {BaseButtonView} from "../button";
 import {getDefaultIconProps, Icon, IconProps} from "../icon";
@@ -60,6 +61,7 @@ import styled from "../shared/themed-components";
 
 export interface ButtonTextProps extends IconProps {
 	justify?: Justify;
+	kbActivate?: string;
 	noicon?: boolean;
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	text?: string;
@@ -69,6 +71,7 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 	return {
 		...getDefaultIconProps(),
 		justify: Justify.right,
+		kbActivate: "",
 		noicon: false,
 		obj: "ButtonText",
 		onClick: nilEvent,
@@ -95,6 +98,7 @@ const ButtonTextContent: any = styled.div`
 			return "left";
 		}
 	}};
+
 	${(props: ButtonTextProps) => props.sizing && fontStyle[props.sizing]};
 
 	span {
@@ -103,7 +107,7 @@ const ButtonTextContent: any = styled.div`
 	}
 `;
 
-const ButtonTextView: any = styled.div`
+const StyledButtonText: any = styled(HotKeys)`
 	${BaseButtonView}
 
 	&:not(.nohover):hover {
@@ -111,8 +115,11 @@ const ButtonTextView: any = styled.div`
 			${(props) => props.style.backgroundColor && "!important"};
 	}
 
-	${(props: ButtonTextProps) => disabled(props)}
 	${(props: ButtonTextProps) => hidden(props)}
+`;
+
+const StyledIcon: any = styled(Icon)`
+	${(props: ButtonTextProps) => disabled(props)}
 `;
 
 export class ButtonText extends BaseComponent<
@@ -124,6 +131,10 @@ export class ButtonText extends BaseComponent<
 
 	constructor(props: ButtonTextProps) {
 		super(props, "ui-button-text", ButtonText.defaultProps.style);
+
+		this.buildKeyMap({
+			kbActivate: this.handleClick
+		});
 	}
 
 	@autobind
@@ -161,7 +172,8 @@ export class ButtonText extends BaseComponent<
 		let icon = null;
 		if (!this.props.noicon && this.props.justify !== Justify.center) {
 			icon = (
-				<Icon
+				<StyledIcon
+					disabled={this.props.disabled}
 					iconName={this.props.iconName}
 					sizing={this.props.sizing}
 				/>
@@ -170,18 +182,18 @@ export class ButtonText extends BaseComponent<
 
 		return (
 			<Wrapper {...this.props}>
-				<ButtonTextView
-					disabled={this.props.disabled}
+				<StyledButtonText
 					className={this.className}
+					handlers={this.keyHandler}
 					hidden={this.props.hidden}
+					keyMap={this.keyMap}
 					style={this.state.style}
 					onClick={this.handleClick}
-					ripple={this.props.ripple}
 				>
 					{leftButton}
 					{icon}
 					{rightButton}
-				</ButtonTextView>
+				</StyledButtonText>
 			</Wrapper>
 		);
 	}

@@ -8,7 +8,11 @@
  *
  * ```javascript
  * import {ButtonDialog} from 'gadgets';
- * <ButtonDialog iconName="bars" sizing={Sizing.normal} onClick={someFunction}>
+ * <ButtonDialog
+ *     iconName="bars"
+ *     onClick={someFunction}
+ *     sizing={Sizing.normal}
+ * >
  *    ... dialog popup content
  * </ButtonDialog>
  * ```
@@ -22,13 +26,15 @@
  * - `ui-dialog-popup` - Exists on the hidden dialog window.
  *
  * #### Properties
- * - `dialogClasses: string[] ([])` - An array of CSS class strings that will be
+ * - `dialogClasses=[] {string[]}` - An array of CSS class strings that will be
  * applied to the dialog window.
- * - `location: Location (Location.bottom)` - Determines if the popup will be shown
+ * - `kbActivate="" {string}` - Invokes the keyboard handler for the button for the
+ * given sequence.
+ * - `location=Location.bottom {Location}` - Determines if the popup will be shown
  * above or below the button.  Only uses `Location.top` or `Location.bottom`.
- * - `notriangle: boolean (false)` - If true this will suppress the triangle pointer
+ * - `notriangle=false {boolean}` - If true this will suppress the triangle pointer
  * within the dialog popup.  The default is to show it.
- * - `triangleClasses: string[] ([])` - An array of CSS class strings that will be
+ * - `triangleClasses=[] {string[]}` - An array of CSS class strings that will be
  * applied to the dialog box triangle.
  *
  * @module ButtonDialog
@@ -243,11 +249,9 @@ export class ButtonDialog extends BaseComponent<
 			<Wrapper {...this.props}>
 				<ButtonDialogView className={this.className} id={this.id}>
 					<Button
-						disabled={this.props.disabled}
-						hidden={this.props.hidden}
+						{...this.props}
 						iconName={this.props.iconName}
 						onClick={this.handleClick}
-						sizing={this.props.sizing}
 						style={this.state.style}
 					/>
 					<ButtonDialogPopup

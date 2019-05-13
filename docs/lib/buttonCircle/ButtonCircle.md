@@ -14,6 +14,11 @@ import {ButtonCircle} from 'gadgets';
     iconName="times"
     sizing={Sizing.small}
     onClick={someFunction}
+    style={{
+        color: "green",
+        backgroundColor: "orange",
+        borderColor: "green"
+    }}
 />
 ```
 
@@ -26,12 +31,16 @@ user
 the control.
 
 #### Properties
-- `borderColor: string ('black')` - The color of the border around the
-circle.
-- `color: string ('black')` - the color of the button icon
-- `iconName: string ('bomb')` - the name of the font awesome icon used with
+- `iconName="bomb" {string}` - the name of the font awesome icon used with
 this button
+- `kbActivate="" {string}` - Invokes the keyboard handler for the button for the
+given sequence.
 - `sizing: Sizing (Sizing.normal)` - Allows one to change the size of the
 icon within the button.  See the shared props object for the `Sizing`
 enumeration.
+- `style {any}` - custom styles applied to the icon image within the circle
+  - `backgroundColor {string}` - The color of the background of the button
+  - `borderColor="black" {string}` - The color of the border around the
+  circle.
+  - `color="black" {string}` - the color of the button icon
 

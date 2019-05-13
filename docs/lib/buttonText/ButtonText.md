@@ -24,17 +24,17 @@ user
 #### Style
 - `ui-button` - A top level style placed on the control that constructs the
 button.
-- `ui-buttontext` - A top level style used to differentiate this from generic
-buttons.
+- `ui-buttontext` - A top level style used to differentiate this from
+generic buttons.
 
 #### Properties
-- `iconName: {string} ('bomb')` - The name of the font awesome icon used with this
-button
-- `justify: {Justify} (Justify.right)` - Determines if the button will be on the
+- `iconName="bomb" {string}` - The name of the font awesome icon used with
+this button.
+- `justify=Justify.right {Justify}` - Determines if the button will be on the
 left, center, right.
-- `noicon: {boolean} (false)` - Turns off the icon and only shows the text in the
-center of the button.
-- `sizing: {Sizing} (Sizing.normal)` - The size of this control set by the Sizing
-class
-- `text: {string} ('')` - The text string used by the button
+- `kbActivate="" {string}` - Invokes the keyboard handler for the button for
+the given sequence.
+- `noicon=false {boolean}` - Turns off the icon and only shows the text in
+the center of the button.
+- `text="" {string}` - The text string used by the button
 

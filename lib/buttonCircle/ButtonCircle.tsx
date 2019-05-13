@@ -12,6 +12,11 @@
  *     iconName="times"
  *     sizing={Sizing.small}
  *     onClick={someFunction}
+ *     style={{
+ *         color: "green",
+ *         backgroundColor: "orange",
+ *         borderColor: "green"
+ *     }}
  * />
  * ```
  *
@@ -24,14 +29,18 @@
  * the control.
  *
  * #### Properties
- * - `borderColor: string ('black')` - The color of the border around the
- * circle.
- * - `color: string ('black')` - the color of the button icon
- * - `iconName: string ('bomb')` - the name of the font awesome icon used with
+ * - `iconName="bomb" {string}` - the name of the font awesome icon used with
  * this button
+ * - `kbActivate="" {string}` - Invokes the keyboard handler for the button for the
+ * given sequence.
  * - `sizing: Sizing (Sizing.normal)` - Allows one to change the size of the
  * icon within the button.  See the shared props object for the `Sizing`
  * enumeration.
+ * - `style {any}` - custom styles applied to the icon image within the circle
+ *   - `backgroundColor {string}` - The color of the background of the button
+ *   - `borderColor="black" {string}` - The color of the border around the
+ *   circle.
+ *   - `color="black" {string}` - the color of the button icon
  *
  * @module ButtonCircle
  */
@@ -48,14 +57,7 @@ import {
 	getDefaultButtonProps,
 	getDefaultButtonState
 } from "../button";
-import {
-	BaseComponent,
-	// @ts-ignore
-	BaseState,
-	borderStyle,
-	Sizing,
-	Wrapper
-} from "../shared";
+import {BaseComponent, borderStyle, Sizing, Wrapper} from "../shared";
 import styled from "../shared/themed-components";
 
 export interface ButtonCircleProps extends ButtonProps {
@@ -89,7 +91,7 @@ const ButtonCircleInnerView: any = styled.div`
 	width: ${(props: ButtonCircleProps) => props.width};
 `;
 
-const ButtonCircleView: any = styled(Button)`
+const StyledButton: any = styled(Button)`
 	border-radius: 4em;
 	padding: ${(props: ButtonCircleProps) => {
 		switch (props.sizing) {
@@ -135,7 +137,7 @@ export class ButtonCircle extends BaseComponent<
 			<Wrapper {...this.props}>
 				<ButtonCircleContainerView className={this.className}>
 					<ButtonCircleInnerView height={size} width={size}>
-						<ButtonCircleView
+						<StyledButton
 							{...this.props}
 							iconName={this.props.iconName}
 							ripple

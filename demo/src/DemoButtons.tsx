@@ -110,6 +110,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<ButtonCircle
 						disabled={this.props["disabled"]}
 						iconName='times'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					/>
 				</td>
@@ -117,6 +119,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<ButtonCircle
 						disabled={this.props["disabled"]}
 						iconName='times'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						style={{
 							color: "green",
@@ -137,6 +141,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<ButtonDialog
 						disabled={this.props["disabled"]}
 						iconName='bars'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					>
 						dialog
@@ -146,6 +152,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<ButtonDialog
 						disabled={this.props["disabled"]}
 						iconName='bars'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						style={{color: "white", backgroundColor: "teal"}}
 					>
@@ -167,6 +175,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						iconNameOn='star'
 						fgColorOff='#ffcc00'
 						fgColorOn='#ffcc00'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					/>
 				</td>
@@ -179,6 +189,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						fgColorOff='black'
 						iconNameOff='star'
 						iconNameOn='star'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					/>
 				</td>
@@ -198,6 +210,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<ButtonText
 						disabled={this.props["disabled"]}
 						iconName='paper-plane'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						text='Text'
 					/>
@@ -206,6 +220,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 					<ButtonText
 						disabled={this.props["disabled"]}
 						iconName='paper-plane'
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						style={{color: "white", backgroundColor: "blue"}}
 						text='Text'
@@ -228,6 +244,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						disabled={this.props["disabled"]}
 						iconName='paper-plane'
 						justify={Justify.left}
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						text='Text'
 					/>
@@ -237,6 +255,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						disabled={this.props["disabled"]}
 						iconName='paper-plane'
 						justify={Justify.left}
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						style={{color: "white", backgroundColor: "red"}}
 						text='Text'
@@ -259,6 +279,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						disabled={this.props["disabled"]}
 						text='Text'
 						justify={Justify.center}
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 					/>
 				</td>
@@ -267,6 +289,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 						disabled={this.props["disabled"]}
 						text='Text'
 						justify={Justify.center}
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						style={{color: "white", backgroundColor: "red"}}
 					/>
@@ -286,6 +310,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 				<td>
 					<Button
 						disabled={this.props["disabled"]}
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						tooltip='sample tooltip'
 					/>
@@ -293,6 +319,8 @@ export default class DemoButtons extends React.Component<any, undefined> {
 				<td>
 					<Button
 						disabled={this.props["disabled"]}
+						kbActivate='alt+b'
+						onClick={this.handleActivate}
 						sizing={this.props["sizing"]}
 						style={{color: "white", backgroundColor: "red"}}
 						tooltip='sample tooltip'

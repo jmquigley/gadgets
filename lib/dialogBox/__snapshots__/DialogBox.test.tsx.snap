@@ -19,6 +19,9 @@ exports[`Test creation of a default DialogBox control 1`] = `
   hidden={false}
   iconName="bomb"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -52,78 +55,95 @@ exports[`Test creation of a default DialogBox control 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={false}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox test-class"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={false}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="info-circle"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "#5bc0de",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox test-class"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="info-circle"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "#5bc0de",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;
 
@@ -146,6 +166,9 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
   hidden={false}
   iconName="bomb"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -179,78 +202,95 @@ exports[`Test pressing the "yes" button on the default DialogBox 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={true}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="info-circle"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "#5bc0de",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="info-circle"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "#5bc0de",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<p>Testing click handler for yes</p>",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Testing click handler for yes</p>",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;
 
@@ -274,6 +314,9 @@ Object {
   "hidden": false,
   "iconName": "bomb",
   "id": null,
+  "kbCancel": "esc",
+  "kbClose": "esc",
+  "kbOk": "alt+k",
   "left": null,
   "location": "none",
   "maxHeight": null,
@@ -335,6 +378,9 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   hidden={false}
   iconName="car"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -372,78 +418,95 @@ exports[`Test the creation of an custom DialogBox 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={true}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="car"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "magenta",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="car"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "magenta",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<p>Sample info message</p>",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Sample info message</p>",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;
 
@@ -466,6 +529,9 @@ exports[`Test the creation of an error DialogBox 1`] = `
   hidden={false}
   iconName="bomb"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -499,78 +565,95 @@ exports[`Test the creation of an error DialogBox 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={true}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="times-circle"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "#d9534f",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="times-circle"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "#d9534f",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<p>Sample error message</p>",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Sample error message</p>",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;
 
@@ -593,6 +676,9 @@ exports[`Test the creation of an info DialogBox 1`] = `
   hidden={false}
   iconName="bomb"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -626,78 +712,95 @@ exports[`Test the creation of an info DialogBox 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={true}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="info-circle"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "#5bc0de",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="info-circle"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "#5bc0de",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<p>Sample info message</p>",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Sample info message</p>",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;
 
@@ -720,6 +823,9 @@ exports[`Test the creation of an success DialogBox 1`] = `
   hidden={false}
   iconName="bomb"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -753,78 +859,95 @@ exports[`Test the creation of an success DialogBox 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={true}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="check-circle"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "#5cb85c",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="check-circle"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "#5cb85c",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<p>Sample success message</p>",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Sample success message</p>",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;
 
@@ -847,6 +970,9 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   hidden={false}
   iconName="bomb"
   id={null}
+  kbCancel="esc"
+  kbClose="esc"
+  kbOk="alt+k"
   left={null}
   location="none"
   maxHeight={null}
@@ -880,77 +1006,94 @@ exports[`Test the creation of an warning DialogBox 1`] = `
   width={null}
   xcss={null}
 >
-  <Modal
-    ariaHideApp={false}
-    bodyOpenClassName="ReactModal__Body--open"
-    closeTimeoutMS={0}
-    contentLabel="DialogBox"
-    isOpen={true}
-    onAfterOpen={[Function]}
-    onRequestClose={[Function]}
-    parentSelector={[Function]}
-    portalClassName="ReactModalPortal"
-    role="dialog"
-    shouldCloseOnEsc={true}
-    shouldCloseOnOverlayClick={false}
-    shouldFocusAfterRender={true}
-    shouldReturnFocusAfterClose={true}
-    style={
+  <HotKeysEnabled
+    handlers={
       Object {
-        "content": Object {
-          "borderRadius": "0",
-          "bottom": "auto",
-          "left": "50%",
-          "marginRight": "-50%",
-          "padding": "15px",
-          "right": "auto",
-          "top": "40%",
-          "transform": "translate(-50%, -50%)",
-        },
+        "kbCancel": [Function],
+        "kbClose": [Function],
+        "kbOk": [Function],
+      }
+    }
+    keyMap={
+      Object {
+        "kbCancel": "esc",
+        "kbClose": "esc",
+        "kbOk": "alt+k",
       }
     }
   >
-    <DialogBox__DialogBoxView
-      className="ui-dialogbox"
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentLabel="DialogBox"
+      isOpen={true}
+      onAfterOpen={[Function]}
+      onRequestClose={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={false}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+      style={
+        Object {
+          "content": Object {
+            "borderRadius": "0",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "padding": "15px",
+            "right": "auto",
+            "top": "40%",
+            "transform": "translate(-50%, -50%)",
+          },
+        }
+      }
     >
-      <DialogBox__DialogBoxIconView>
-        <DialogBox__StyledIcon
-          iconName="exclamation-circle"
-          sizing="xxlarge"
-          style={
-            Object {
-              "color": "#f0ad4e",
+      <DialogBox__DialogBoxView
+        className="ui-dialogbox"
+      >
+        <DialogBox__DialogBoxIconView>
+          <DialogBox__StyledIcon
+            iconName="exclamation-circle"
+            sizing="xxlarge"
+            style={
+              Object {
+                "color": "#f0ad4e",
+              }
             }
-          }
-        />
-      </DialogBox__DialogBoxIconView>
-      <DialogBox__DialogBoxMessageContainerView>
-        <DialogBox__DialogBoxMessageView
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<p>Sample warning message</p>",
+          />
+        </DialogBox__DialogBoxIconView>
+        <DialogBox__DialogBoxMessageContainerView>
+          <DialogBox__DialogBoxMessageView
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<p>Sample warning message</p>",
+              }
             }
-          }
-        />
-        <DialogBox__ButtonBar>
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="Yes"
           />
-          <DialogBox__Spacer />
-          <DialogBox__StyledButtonText
-            justify={2}
-            noicon={true}
-            onClick={[Function]}
-            sizing="normal"
-            text="No"
-          />
-        </DialogBox__ButtonBar>
-      </DialogBox__DialogBoxMessageContainerView>
-    </DialogBox__DialogBoxView>
-  </Modal>
+          <DialogBox__ButtonBar>
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="Yes"
+            />
+            <DialogBox__Spacer />
+            <DialogBox__StyledButtonText
+              justify={2}
+              noicon={true}
+              onClick={[Function]}
+              sizing="normal"
+              text="No"
+            />
+          </DialogBox__ButtonBar>
+        </DialogBox__DialogBoxMessageContainerView>
+      </DialogBox__DialogBoxView>
+    </Modal>
+  </HotKeysEnabled>
 </Wrapper>
 `;

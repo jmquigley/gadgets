@@ -54,21 +54,23 @@ of the toggle.  True is on, false is off.
 - `ui-button-toggle` - Style applied to the `<i>` button control.
 
 #### Properties
-- `bgColorOff: {string} ('inherit')` - The background color when the
+- `bgColorOff="inherit" {string}` - The background color when the
 button is in the off position.
-- `bgColorOn: {string} ('inherit')` - The background color when the
+- `bgColorOn="inherit" {string}` - The background color when the
 button is in the on position
-- `fgColorOff: {string} ('gray')` - The foreground color when the
+- `fgColorOff="gray" {string}` - The foreground color when the
 button is in the off position
-- `fgColorOn: {string} ('black')` - the foreground color when the
+- `fgColorOn="black" {string}` - the foreground color when the
 button is in the on position
-- `iconNameOff: {string} ('bomb')` - the name of the font awesome icon
+- `iconNameOff="bomb" {string}` - the name of the font awesome icon
 associated with the button when it is off.
-- `iconNameOn: {string} ('bomb')` - the name of the font awesome icon
+- `iconNameOn="bomb" {string}` - the name of the font awesome icon
 associated with the button when it is on.
-- `initialToggle: {boolean} (false)` - the initial state of the button
+- `initialToggle=false {boolean}` - the initial state of the button
 This is different than selected, as it is only used when the button
 is created.  It is ignored after creation (where selected is not)
-- `selected: boolean (false)` - Sets the state of the button to
+- `kbActivate="" {string}` - Invokes the keyboard handler for the button for
+the given sequence.
+- `selected=false {boolean}` - Sets the state of the button to
 on (true) or off (false).
 
