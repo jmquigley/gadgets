@@ -1,5 +1,3 @@
-"use strict";
-
 import {defaultSize} from "./base";
 import {Sizes} from "./sizing";
 

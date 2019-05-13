@@ -2,7 +2,7 @@ import {BaseComponent, baseZIndex, defaultSize} from "./base";
 
 import {globalize} from "./helpers";
 
-import {KeyHandler, KeyMap} from "./keybinding";
+import {KeyHandler, KeyMap, parseKeyCombo} from "./keybinding";
 
 import {
 	BaseProps,
@@ -78,6 +78,7 @@ export {
 	lineHeightStyle,
 	Location,
 	locationStyle,
+	parseKeyCombo,
 	rectStyle,
 	setTheme,
 	Sizes,

@@ -54,10 +54,30 @@ toolbar component.
 - `ui-editor-quill` - a global style attached to the Quill editor component
 
 #### Properties
-- `content: {string} ('')` - the initial text content for the component
-- `defaultFont: {string} ('Fira Code')` - The name of the default editor font
-- `defaultFontSize: {number} (12)` - The size of the font in pixels (px)
-- `scheme: {Object} ({foreground: 'white', background: 'black'})` - the
+- `content=""" {string}` - the initial text content for the component
+- `defaultFont="Fira Code" {string}` - The name of the default editor font
+- `defaultFontSize=12 {number}` - The size of the font in pixels (px)
+- `kBold="ctrl+b" {string}` - keyboard combo for setting text to bold
+- `kbHeader1="ctrl+alt+1" {string}` - keyboard combo for heading 1
+- `kbHeader2="ctrl+alt+2" {string}` - keyboard combo for heading 2
+- `kbHeader3="ctrl+alt+3" {string}` - keyboard combo for heading 3
+- `kbHeader4="ctrl+alt+4" {string}` - keyboard combo for heading 4
+- `kbHeader5="ctrl+alt+5" {string}` - keyboard combo for heading 5
+- `kbHeader6="ctrl+alt+6" {string}` - keyboard combo for heading 6
+- `kbItalic="ctrl+i" {string}` - keyboard combo for setting italic text
+- `kbMono="ctrl+m" {string}` - keyboard combo for setting mono text
+- `kbRedo="ctrl+shift+z" {string}` - keyboard combo for redoing previous
+undo operations.
+- `kbRefresh="alt+r" {string}` - keyboard combo for refreshing the editor
+window.  There are still occasional problems reapplying syntax highlights
+so this will rescan the whole document and reapply formatting.
+- `kbStrikeThrough="ctrl+shift+t" {string}` keyboard combo for adding
+a line strike through in the text.
+- `kbUnderline="ctrl+u" {string}` - keyboard combo for adding an underline
+to the current text.
+- `kbUndo="ctrl+z" {string}` - keyboard combo for undoing the previous set
+of operations.
+- `scheme={foreground: "white", background: "black"} {Object}` - the
 color customizations used by the markup processor.  It contains the following
 keys:
 
@@ -99,7 +119,7 @@ keys:
   - `strikethrough`
   - `underline`
   - `wiki` - wiki name coloring in [[name | link]]
-- `useSmallButtons: {boolean} (false)` - if set to true, then the buttons
+- `useSmallButtons=false {boolean}` - if set to true, then the buttons
 on the toolbar will use sizing.SMALL, otherwise the sizing is set to the
 default for the component (which is typically Sizing.normal).
 

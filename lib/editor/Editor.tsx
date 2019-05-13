@@ -52,10 +52,30 @@
  * - `ui-editor-quill` - a global style attached to the Quill editor component
  *
  * #### Properties
- * - `content: {string} ('')` - the initial text content for the component
- * - `defaultFont: {string} ('Fira Code')` - The name of the default editor font
- * - `defaultFontSize: {number} (12)` - The size of the font in pixels (px)
- * - `scheme: {Object} ({foreground: 'white', background: 'black'})` - the
+ * - `content=""" {string}` - the initial text content for the component
+ * - `defaultFont="Fira Code" {string}` - The name of the default editor font
+ * - `defaultFontSize=12 {number}` - The size of the font in pixels (px)
+ * - `kBold="ctrl+b" {string}` - keyboard combo for setting text to bold
+ * - `kbHeader1="ctrl+alt+1" {string}` - keyboard combo for heading 1
+ * - `kbHeader2="ctrl+alt+2" {string}` - keyboard combo for heading 2
+ * - `kbHeader3="ctrl+alt+3" {string}` - keyboard combo for heading 3
+ * - `kbHeader4="ctrl+alt+4" {string}` - keyboard combo for heading 4
+ * - `kbHeader5="ctrl+alt+5" {string}` - keyboard combo for heading 5
+ * - `kbHeader6="ctrl+alt+6" {string}` - keyboard combo for heading 6
+ * - `kbItalic="ctrl+i" {string}` - keyboard combo for setting italic text
+ * - `kbMono="ctrl+m" {string}` - keyboard combo for setting mono text
+ * - `kbRedo="ctrl+shift+z" {string}` - keyboard combo for redoing previous
+ * undo operations.
+ * - `kbRefresh="alt+r" {string}` - keyboard combo for refreshing the editor
+ * window.  There are still occasional problems reapplying syntax highlights
+ * so this will rescan the whole document and reapply formatting.
+ * - `kbStrikeThrough="ctrl+shift+t" {string}` keyboard combo for adding
+ * a line strike through in the text.
+ * - `kbUnderline="ctrl+u" {string}` - keyboard combo for adding an underline
+ * to the current text.
+ * - `kbUndo="ctrl+z" {string}` - keyboard combo for undoing the previous set
+ * of operations.
+ * - `scheme={foreground: "white", background: "black"} {Object}` - the
  * color customizations used by the markup processor.  It contains the following
  * keys:
  *
@@ -97,7 +117,7 @@
  *   - `strikethrough`
  *   - `underline`
  *   - `wiki` - wiki name coloring in [[name | link]]
- * - `useSmallButtons: {boolean} (false)` - if set to true, then the buttons
+ * - `useSmallButtons=false {boolean}` - if set to true, then the buttons
  * on the toolbar will use sizing.SMALL, otherwise the sizing is set to the
  * default for the component (which is typically Sizing.normal).
  *
@@ -128,6 +148,7 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	InvisibleCSS,
+	parseKeyCombo,
 	Sizing,
 	Wrapper
 } from "../shared";
@@ -144,6 +165,20 @@ export interface EditorProps extends BaseProps {
 	defaultFont?: string;
 	defaultFontSize?: number;
 	foreground?: string;
+	kbBold?: string;
+	kbHeader1?: string;
+	kbHeader2?: string;
+	kbHeader3?: string;
+	kbHeader4?: string;
+	kbHeader5?: string;
+	kbHeader6?: string;
+	kbItalic?: string;
+	kbMono?: string;
+	kbRedo?: string;
+	kbRefresh?: string;
+	kbStrikeThrough?: string;
+	kbUnderline?: string;
+	kbUndo?: string;
 	onChange?: any;
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	onClickLink?: (match: Match) => void;
@@ -157,6 +192,20 @@ export function getDefaultEditorProps(): EditorProps {
 		content: "",
 		defaultFont: "Fira Code",
 		defaultFontSize: 12,
+		kbBold: "ctrl+b",
+		kbHeader1: "alt+ctrl+1",
+		kbHeader2: "alt+ctrl+2",
+		kbHeader3: "alt+ctrl+3",
+		kbHeader4: "alt+ctrl+4",
+		kbHeader5: "alt+ctrl+5",
+		kbHeader6: "alt+ctrl+6",
+		kbItalic: "ctrl+i",
+		kbMono: "ctrl+m",
+		kbRedo: "ctrl+shift+z",
+		kbRefresh: "alt+r",
+		kbStrikeThrough: "ctrl+shift+t",
+		kbUnderline: "ctrl+u",
+		kbUndo: "ctrl+z",
 		obj: "Editor",
 		onChange: nilEvent,
 		onClick: nilEvent,
@@ -211,23 +260,8 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	private _fontList: DropdownOption[] = [];
 	private _fontSizes: DropdownOption[] = [];
 	private _highlights: DropdownOption[] = [];
-	private _keybindings: QuillKeyBindings = {
-		tab: {
-			key: 9,
-			handler: function(textRange: any) {
-				this.quill.insertText(textRange.index, "    ");
-				return false;
-			}
-		},
-		"indent code-block": null,
-		"outdent code-block": null,
-		"code exit": null,
-		"embed left": null,
-		"embed right": null,
-		"embed left shift": null,
-		"embed right shift": null,
-		"list autofill": null
-	};
+	private _keybindings: QuillKeyBindings;
+
 	private _markup: Markup;
 	private _modes: DropdownOption[] = [];
 	private _editorStyles: ClassNames = new ClassNames("ui-editor-quill");
@@ -239,6 +273,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	constructor(props: EditorProps) {
 		super(props, "ui-editor", Editor.defaultProps.style);
 		debug('Editor key: "%s"', this.id);
+		this._keybindings = this.buildKeyboardHandler();
 	}
 
 	private buildFontList() {
@@ -264,6 +299,82 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		}));
 	}
 
+	private buildKeyboardHandler() {
+		return {
+			bold: {
+				...parseKeyCombo(this.props.kbBold),
+				handler: this.handleSetBold
+			},
+			header1: {
+				...parseKeyCombo(this.props.kbHeader1),
+				handler: this.handleSelect("1")
+			},
+			header2: {
+				...parseKeyCombo(this.props.kbHeader2),
+				handler: this.handleSelect("2")
+			},
+			header3: {
+				...parseKeyCombo(this.props.kbHeader3),
+				handler: this.handleSelect("3")
+			},
+			header4: {
+				...parseKeyCombo(this.props.kbHeader4),
+				handler: this.handleSelect("4")
+			},
+			header5: {
+				...parseKeyCombo(this.props.kbHeader5),
+				handler: this.handleSelect("5")
+			},
+			header6: {
+				...parseKeyCombo(this.props.kbHeader6),
+				handler: this.handleSelect("6")
+			},
+			italic: {
+				...parseKeyCombo(this.props.kbItalic),
+				handler: this.handleSetItalic
+			},
+			mono: {
+				...parseKeyCombo(this.props.kbMono),
+				handler: this.handleSetMono
+			},
+			redo: {
+				...parseKeyCombo(this.props.kbRedo),
+				handler: this.handleRedo
+			},
+			refresh: {
+				...parseKeyCombo(this.props.kbRefresh),
+				handler: this.handleRefresh
+			},
+			strikethrough: {
+				...parseKeyCombo(this.props.kbStrikeThrough),
+				handler: this.handleStrikeThrough
+			},
+			tab: {
+				key: 9,
+				handler: function(textRange: any) {
+					this.quill.insertText(textRange.index, "    ");
+					return false;
+				}
+			},
+			underline: {
+				...parseKeyCombo(this.props.kbUnderline),
+				handler: this.handleUnderline
+			},
+			undo: {
+				...parseKeyCombo(this.props.kbUndo),
+				handler: this.handleUndo
+			},
+			"indent code-block": null,
+			"outdent code-block": null,
+			"code exit": null,
+			"embed left": null,
+			"embed right": null,
+			"embed left shift": null,
+			"embed right shift": null,
+			"list autofill": null
+		};
+	}
+
 	private buildModes() {
 		this._modes = this._markup.modes.map((mode: string) => ({
 			value: mode,
@@ -274,8 +385,69 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	@autobind
 	private handleSelect(level: string) {
 		return () => {
-			this._markup.setHeader(level);
+			if (this._markup) {
+				this._markup.setHeader(level);
+			}
 		};
+	}
+
+	@autobind
+	private handleSetBold() {
+		debug("handleSetBold");
+
+		if (this._markup) {
+			debug("set bold");
+			this._markup.setBold();
+		}
+	}
+
+	@autobind
+	private handleSetItalic() {
+		if (this._markup) {
+			this._markup.setItalic();
+		}
+	}
+
+	@autobind
+	private handleSetMono() {
+		if (this._markup) {
+			this._markup.setMono();
+		}
+	}
+
+	@autobind
+	private handleRedo() {
+		if (this._markup) {
+			this._markup.redo();
+		}
+	}
+
+	@autobind
+	private handleRefresh() {
+		if (this._markup) {
+			this._markup.refresh();
+		}
+	}
+
+	@autobind
+	private handleStrikeThrough() {
+		if (this._markup) {
+			this._markup.setStrikeThrough();
+		}
+	}
+
+	@autobind
+	private handleUnderline() {
+		if (this._markup) {
+			this._markup.setUnderline();
+		}
+	}
+
+	@autobind
+	private handleUndo() {
+		if (this._markup) {
+			this._markup.undo();
+		}
 	}
 
 	public componentDidMount() {
@@ -321,6 +493,9 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		this.buildHighlights();
 		this.buildModes();
 
+		const keyboardHandler = this._editor.getModule("keyboard");
+		debug("keyboardHandler: %O", keyboardHandler);
+
 		// This lifecycle method occurs after render on the first instance.
 		// The component can't get some items from the component on the
 		// first render pass because its not mounted.  This will force a
@@ -360,28 +535,20 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 								: this.props.sizing
 						}
 					>
-						<Button
-							iconName='bold'
-							onClick={this._markup && this._markup.setBold}
-						/>
+						<Button iconName='bold' onClick={this.handleSetBold} />
 						<Button
 							iconName='italic'
-							onClick={this._markup && this._markup.setItalic}
+							onClick={this.handleSetItalic}
 						/>
 						<Button
 							iconName='underline'
-							onClick={this._markup && this._markup.setUnderline}
+							onClick={this.handleUnderline}
 						/>
 						<Button
 							iconName='strikethrough'
-							onClick={
-								this._markup && this._markup.setStrikeThrough
-							}
+							onClick={this.handleStrikeThrough}
 						/>
-						<Button
-							iconName='code'
-							onClick={this._markup && this._markup.setMono}
-						/>
+						<Button iconName='code' onClick={this.handleSetMono} />
 						<ButtonDialog iconName='header' notriangle>
 							<List sizing={Sizing.small} alternating noselect>
 								<ListItem
@@ -411,14 +578,8 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 							</List>
 						</ButtonDialog>
 						<Divider />
-						<Button
-							iconName='undo'
-							onClick={this._markup && this._markup.undo}
-						/>
-						<Button
-							iconName='repeat'
-							onClick={this._markup && this._markup.redo}
-						/>
+						<Button iconName='undo' onClick={this.handleUndo} />
+						<Button iconName='repeat' onClick={this.handleRedo} />
 						<Divider />
 						<Dropdown
 							defaultVal={this.props.defaultFont}
@@ -446,7 +607,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						/>
 						<Button
 							iconName='refresh'
-							onClick={this._markup && this._markup.refresh}
+							onClick={this.handleRefresh}
 						/>
 					</EditorToolbar>
 					<EditorView
