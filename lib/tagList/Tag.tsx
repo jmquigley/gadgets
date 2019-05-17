@@ -91,7 +91,7 @@ const DeleteButtonView: any = styled(ButtonCircle)`
 `;
 
 const TagView: any = styled.div`
-	border: solid 1px silver;
+	border: solid 1px ${(props: TagProps) => props.theme.borderColor};
 	border-radius: 3px;
 	cursor: default;
 	box-sizing: border-box;
@@ -99,7 +99,7 @@ const TagView: any = styled.div`
 	font-size: inherit;
 	opacity: 1;
 	margin: 0 1px;
-	padding: 0 3px;
+	padding: 2px 3px;
 	position: relative;
 
 	> span {

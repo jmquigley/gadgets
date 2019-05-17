@@ -5,22 +5,8 @@ const debug = require("debug")("DemoTabs");
 import autobind from "autobind-decorator";
 import * as loremIpsum from "lorem-ipsum";
 import * as React from "react";
-import {
-	Break,
-	ColorScheme,
-	Location,
-	styled,
-	Tab,
-	TabContainer
-} from "../../dist/bundle";
+import {Break, Location, Tab, TabContainer} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
-
-const TabStyledContainer: any = styled(StyledContainer)`
-	> h3 {
-		background-color: ${ColorScheme.c4};
-		margin: 10px 0 10px 1px;
-	}
-`;
 
 export default class DemoTabs extends React.Component<any, undefined> {
 	private randomText = loremIpsum({
@@ -57,7 +43,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 
 	public render() {
 		return (
-			<TabStyledContainer id='tabControl' title='Tabs'>
+			<StyledContainer id='tabControl' title='Tabs'>
 				<h3>Top</h3>
 				<TabContainer
 					disabled={this.props["disabled"]}
@@ -219,7 +205,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 						{this.randomText}
 					</Tab>
 				</TabContainer>
-			</TabStyledContainer>
+			</StyledContainer>
 		);
 	}
 }

@@ -47,10 +47,12 @@ The tag that is added is given to the callback as a parameter.
 - `ui-taglist` - style placed on the root div of the control
 
 #### Properties
-- `nosort: {boolean} (false)` - if set to true, then the tags will not be
+- `nosort=false {boolean}` - if set to true, then the tags will not be
 sorted when displayed, otherwise they are sorted.
-- `tags: {string[]} ([])` - the list of tag strings initially added to the
+- `placeholder="new" {string}` - the string placeholder in the input text
+for new tags.
+- `tags=[] {string[]}` - the list of tag strings initially added to the
 control.  This is only respected on creation of the control
-- `useinput: {boolean} (false)` - if set to true, then the user is allowed to
+- `useinput=false {boolean}` - if set to true, then the user is allowed to
 manipulate the tag list inline, otherwise the list is statically created.
 

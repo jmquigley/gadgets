@@ -18,6 +18,7 @@ module.exports = {
 		"<rootDir>/bin/setupDOM.js"
 	],
 	setupFilesAfterEnv: ["<rootDir>/bin/setupTestEnv.js"],
+	testEnvironment: "jest-environment-jsdom-fourteen",
 	testPathIgnorePatterns: [
 		"<rootDir>/bin/",
 		"<rootDir>/dist",

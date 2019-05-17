@@ -45,11 +45,13 @@
  * - `ui-taglist` - style placed on the root div of the control
  *
  * #### Properties
- * - `nosort: {boolean} (false)` - if set to true, then the tags will not be
+ * - `nosort=false {boolean}` - if set to true, then the tags will not be
  * sorted when displayed, otherwise they are sorted.
- * - `tags: {string[]} ([])` - the list of tag strings initially added to the
+ * - `placeholder="new" {string}` - the string placeholder in the input text
+ * for new tags.
+ * - `tags=[] {string[]}` - the list of tag strings initially added to the
  * control.  This is only respected on creation of the control
- * - `useinput: {boolean} (false)` - if set to true, then the user is allowed to
+ * - `useinput=false {boolean}` - if set to true, then the user is allowed to
  * manipulate the tag list inline, otherwise the list is statically created.
  *
  * @module TagList
@@ -60,6 +62,7 @@
 import autobind from "autobind-decorator";
 import {List} from "immutable";
 import * as React from "react";
+import {FontInfo, getFontInfo, getTextWidth} from "util.html";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon";
 import {
@@ -85,6 +88,7 @@ export interface TagListProps extends BaseProps {
 	onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 	onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 	onNew?: (tag: string) => void;
+	placeholder?: string;
 	tags?: string[];
 	useinput?: boolean;
 }
@@ -100,25 +104,28 @@ export function getDefaultTagListProps(): TagListProps {
 		onKeyDown: nilEvent,
 		onKeyPress: nilEvent,
 		onNew: nilEvent,
+		placeholder: "new",
 		tags: [],
 		useinput: false
 	};
 }
 
 export interface TagListState extends BaseState {
-	inputTextSize: number;
+	inputText: string;
 	tags?: List<string>;
 }
 
 export function getDefaultTagListState(): TagListState {
 	return {
 		...getDefaultBaseState(),
-		inputTextSize: 1,
+		inputText: "",
 		tags: null
 	};
 }
 
 const StyledIcon: any = styled(Icon)`
+	align-items: center;
+	display: inline-flex;
 	margin-right: 5px;
 `;
 
@@ -129,7 +136,7 @@ const StyledTextField: any = styled(TextField)`
 		border: none;
 
 		&::-webkit-input-placeholder {
-			color: silver;
+			color: ${(props: TagListProps) => props.theme.chevronColor};
 			opacity: 0.5;
 		}
 	}
@@ -154,12 +161,12 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 		this.state = {
 			...getDefaultTagListState(),
-			tags: List<string>(props.tags)
+			tags: List<string>(props.nosort ? props.tags : props.tags.sort())
 		};
 	}
 
 	private clearInput(e: HTMLInputElement) {
-		this.setState({inputTextSize: 0});
+		this.setState({inputText: ""});
 		e.value = "";
 	}
 
@@ -172,7 +179,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	@autobind
 	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		this.setState({
-			inputTextSize: (e.target as HTMLInputElement).value.length
+			inputText: (e.target as HTMLInputElement).value
 		});
 
 		this.props.onChange(e);
@@ -243,6 +250,19 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 		let textInputField = null;
 		if (this.props.useinput) {
+			const fontInfo: FontInfo = getFontInfo();
+			const font: string = `${fontInfo.weight} ${fontInfo.size}px ${
+				fontInfo.family[0]
+			}`.trim();
+
+			let width: number = 0;
+
+			if (this.state.inputText.length > 0) {
+				width = getTextWidth(this.state.inputText, font);
+			} else {
+				width = getTextWidth(this.props.placeholder, font);
+			}
+
 			const textFieldProps = {
 				disabled: this.props.disabled,
 				noborder: true,
@@ -250,16 +270,17 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				onChange: this.handleChange,
 				onKeyDown: this.handleKeyDown,
 				onKeyPress: this.handleKeyPress,
-				placeholder: "new",
-				size: this.state.inputTextSize,
+				placeholder: this.props.placeholder,
+				size: this.state.inputText.length,
 				sizing: this.props.sizing,
-				visible: this.props.visible
+				visible: this.props.visible,
+				width: `${width}px`
 			};
 
 			// This dynamically adds "value" to the text field input to
-			// reset it to blacnk space when the current tag is
+			// reset it to blank space when the current tag is
 			// empty.
-			if (this.state.inputTextSize < 1) {
+			if (this.state.inputText.length < 1) {
 				textFieldProps["value"] = "";
 			}
 

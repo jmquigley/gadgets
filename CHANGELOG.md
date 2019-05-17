@@ -13,7 +13,8 @@
 
 #### Bug Fixes:
 
-N/A
+- Fixed a bug in TagList where the input component did not resize as the user types.
+- The sort/nosort now works when a TagList is initialized.
 
 ---
 

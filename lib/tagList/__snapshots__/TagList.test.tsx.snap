@@ -38,14 +38,15 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
   onKeyPress={[MockFunction]}
   onNew={[MockFunction]}
   padding={null}
+  placeholder="new"
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   tags={
     Array [
-      "c",
       "b",
+      "c",
       "d",
     ]
   }
@@ -98,6 +99,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
   onKeyPress={[Function]}
   onNew={[Function]}
   padding={null}
+  placeholder="new"
   ripple={false}
   selected={false}
   sizing="normal"
@@ -158,6 +160,7 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
   onKeyPress={[Function]}
   onNew={[Function]}
   padding={null}
+  placeholder="new"
   ripple={false}
   selected={false}
   sizing="normal"
@@ -218,6 +221,7 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
   onKeyPress={[Function]}
   onNew={[Function]}
   padding={null}
+  placeholder="new"
   ripple={false}
   selected={false}
   sizing="normal"
@@ -278,6 +282,7 @@ exports[`Remove a tag from a TagList 1`] = `
   onKeyPress={[Function]}
   onNew={[Function]}
   padding={null}
+  placeholder="new"
   ripple={false}
   selected={false}
   sizing="normal"
@@ -339,6 +344,7 @@ exports[`Test creation of a simple TagList instance 1`] = `
   onKeyPress={[Function]}
   onNew={[Function]}
   padding={null}
+  placeholder="new"
   reset={false}
   ripple={false}
   selected={false}
@@ -408,6 +414,7 @@ Object {
   "onKeyPress": [Function],
   "onNew": [Function],
   "padding": null,
+  "placeholder": "new",
   "ripple": false,
   "selected": false,
   "sizing": "normal",
@@ -427,7 +434,7 @@ Object {
 exports[`Test retrieval of TagList props object 2`] = `
 Object {
   "children": null,
-  "inputTextSize": 1,
+  "inputText": "",
   "sizing": "normal",
   "style": Object {},
   "tags": null,
@@ -472,14 +479,15 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
   onKeyPress={[MockFunction]}
   onNew={[MockFunction]}
   padding={null}
+  placeholder="new"
   ripple={false}
   selected={false}
   sizing="normal"
   style={Object {}}
   tags={
     Array [
-      "c",
       "b",
+      "c",
       "d",
     ]
   }
