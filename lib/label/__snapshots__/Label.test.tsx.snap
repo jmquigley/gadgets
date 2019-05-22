@@ -27,7 +27,7 @@ exports[`Test a double click edit of the Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -82,7 +82,7 @@ exports[`Test cancelling a double click edit of the Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -137,7 +137,7 @@ exports[`Test creation of a Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -212,7 +212,7 @@ exports[`Test double click change to Label and blur to save 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -267,7 +267,7 @@ exports[`Test making the Label control invisible 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Label"
@@ -323,7 +323,7 @@ Object {
   "noborder": false,
   "noedit": false,
   "nohover": false,
-  "nopropagation": false,
+  "nopropagation": true,
   "notheme": false,
   "notooltip": false,
   "obj": "Label",
@@ -390,7 +390,7 @@ exports[`Test the disabling of the Label control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
   obj="Label"

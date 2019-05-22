@@ -87,6 +87,7 @@ export function getDefaultLabelProps(): LabelProps {
 		...getDefaultBaseProps(),
 		defaultText: "default",
 		noedit: false,
+		nopropagation: true,
 		obj: "Label",
 		onBlur: nilEvent,
 		onChange: nilEvent,
@@ -197,13 +198,13 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 
 	@autobind
 	private handleDoubleClick(e: React.MouseEvent<HTMLSpanElement>) {
-		if (!this.props.disabled) {
+		if (!this.props.disabled && !this.props.noedit) {
 			if (this.props.nopropagation) {
 				e.stopPropagation();
 				e.preventDefault();
 			}
 
-			if (!this.props.noedit && document != null && window != null) {
+			if (document != null && window != null) {
 				if ("caretRangeFromPoint" in document) {
 					const range = document.caretRangeFromPoint(
 						e.clientX,
@@ -218,11 +219,9 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 				}
 			}
 
-			if (!this.props.noedit) {
-				this.setState({editable: true}, () => {
-					this.props.onDoubleClick(e);
-				});
-			}
+			this.setState({editable: true}, () => {
+				this.props.onDoubleClick(e);
+			});
 		}
 	}
 

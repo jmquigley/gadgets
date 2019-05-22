@@ -281,6 +281,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 					<Item
 						{...this.props}
 						hiddenRightButton={true}
+						noedit
 						onClick={this.handleClick}
 						rightButton={closeButton}
 						title={this.props.title}

@@ -15,6 +15,7 @@
 
 - Fixed a bug in TagList where the input component did not resize as the user types.
 - The sort/nosort now works when a TagList is initialized.
+- Tab labels allowed editing inline.  This has a been fixed (they are static and should only be changed through properties)
 
 ---
 
