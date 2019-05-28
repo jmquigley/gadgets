@@ -94,6 +94,7 @@ import {
 	Sizes,
 	Sizing,
 	SortOrder,
+	Styles,
 	Styling,
 	Theme,
 	Wrapper
@@ -259,6 +260,7 @@ export {
 	Sizing,
 	Slider,
 	SortOrder,
+	Styles,
 	Styling,
 	Switch,
 	SwitchType,
