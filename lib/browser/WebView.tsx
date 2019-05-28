@@ -17,7 +17,7 @@
  * @module WebView
  */
 import autobind from "autobind-decorator";
-import _ from "lodash";
+import * as _ from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {

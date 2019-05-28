@@ -140,6 +140,7 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import {HotKeys} from "react-hotkeys";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
+import styled from "styled-components";
 import {GeneralTree, GeneralTreeItem} from "util.ds";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -162,7 +163,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {TitleLayout} from "../title";
 import {Toolbar} from "../toolbar";
@@ -174,6 +174,7 @@ export interface TreeviewData {
 	[key: string]: any;
 }
 
+export {NodeData, ExtendedNodeData};
 export type TreeItem = GeneralTreeItem<TreeviewData>;
 
 export interface TreeviewProps extends BaseProps {
@@ -394,7 +395,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		this.props.onInit([...this._td.treeData]);
 
 		if (selectedId) {
-			this.handleSelect(this._td.first);
+			this.props.onSelect(this._td.first);
 		}
 	}
 

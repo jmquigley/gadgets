@@ -26,6 +26,7 @@
 // const debug = require("debug")("gadgets.Break");
 
 import * as React from "react";
+import styled from "styled-components";
 import {sp} from "util.constants";
 import {roundUp} from "util.toolbox";
 import {
@@ -35,7 +36,6 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface BreakProps extends BaseProps {
 	fontSize?: string;

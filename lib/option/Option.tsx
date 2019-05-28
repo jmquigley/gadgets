@@ -57,6 +57,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {ButtonToggle} from "../buttonToggle";
 import {
@@ -70,7 +71,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {Title, TitleLayout} from "../title";
 
 export enum OptionType {

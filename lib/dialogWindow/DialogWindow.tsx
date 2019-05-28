@@ -54,6 +54,7 @@ const ReactModal = require("react-modal");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
 import {Icon} from "../icon";
@@ -67,7 +68,6 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface DialogWindowProps extends BaseProps {
 	icon?: string;

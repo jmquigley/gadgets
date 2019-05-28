@@ -39,6 +39,7 @@
 // const debug = require("debug")("gadgets.Accordion");
 
 import * as React from "react";
+import styled from "styled-components";
 import {Keys} from "util.keys";
 import {
 	BaseComponent,
@@ -49,7 +50,6 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export type AccordionProps = BaseProps;
 

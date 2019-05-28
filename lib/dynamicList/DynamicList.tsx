@@ -127,6 +127,7 @@ const debug = require("debug")("gadgets.DynamicList");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {sprintf} from "sprintf-js";
+import styled from "styled-components";
 import {sp} from "util.constants";
 import {trimHTML} from "util.html";
 import {Keys} from "util.keys";
@@ -149,7 +150,6 @@ import {
 	SortOrder,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {TitleLayout} from "../title";
 import {Toast, ToastLevel} from "../toast";

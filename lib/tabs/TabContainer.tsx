@@ -78,8 +78,9 @@
 // const debug = require("debug")("gadgets.TabContainer");
 
 import autobind from "autobind-decorator";
-import _ from "lodash";
+import * as _ from "lodash";
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {unitToNumber} from "util.calc";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -93,7 +94,6 @@ import {
 	Location,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 import {Tab} from "./Tab";
 
 export interface TabContainerProps extends BaseProps {

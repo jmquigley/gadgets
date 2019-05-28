@@ -57,8 +57,9 @@
 // const debug = require("debug")("gadgets.Tab");
 
 import autobind from "autobind-decorator";
-import _ from "lodash";
+import * as _ from "lodash";
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
 import {Item} from "../item";
@@ -75,7 +76,6 @@ import {
 	Location,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 
 export interface TabProps extends BaseProps {
 	href?: any;

@@ -57,6 +57,7 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import ReactDataGrid from "react-data-grid";
+import styled from "styled-components";
 import {
 	BaseComponent,
 	BaseProps,
@@ -70,7 +71,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface DatagridColumn {
 	key: string;

@@ -40,6 +40,7 @@
 // const debug = require("debug")("gadgets.Divider");
 
 import * as React from "react";
+import styled from "styled-components";
 import {
 	BaseComponent,
 	BaseProps,
@@ -49,7 +50,6 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export enum DividerType {
 	horizontal = "-",

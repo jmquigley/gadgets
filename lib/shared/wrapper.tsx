@@ -62,14 +62,14 @@
 
 "use strict";
 
-// const debug = require('debug')('gadgets.Wrapper');
+// const debug = require("debug")("gadgets.Wrapper");
 
 import * as React from "react";
+import styled, {ThemeProvider} from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {BaseComponent} from "./base";
 import {BaseProps, disabled, getDefaultBaseProps, invisible} from "./props";
 import {BaseState, getDefaultBaseState} from "./state";
-import styled, {ThemeProvider} from "./themed-components";
 
 export interface WrapperProps extends BaseProps {
 	children?: React.ReactChild;
@@ -181,7 +181,11 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 		if (this.props.notheme) {
 			return content;
 		} else {
-			return <ThemeProvider theme={this.theme}>{content}</ThemeProvider>;
+			return (
+				<ThemeProvider theme={this.props.theme}>
+					{content}
+				</ThemeProvider>
+			);
 		}
 	}
 }

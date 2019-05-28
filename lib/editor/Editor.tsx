@@ -131,6 +131,7 @@ const Quill = (global as any).Quill;
 import autobind from "autobind-decorator";
 import {Markup, MarkupMode} from "quill-markup";
 import * as React from "react";
+import styled from "styled-components";
 import {ClassNames} from "util.classnames";
 import {Match} from "util.matches";
 import {nilEvent} from "util.toolbox";
@@ -152,7 +153,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {Toolbar} from "../toolbar";
 
 export interface QuillKeyBindings {

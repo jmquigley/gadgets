@@ -44,6 +44,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {ClassNames} from "util.classnames";
 import {nilEvent} from "util.toolbox";
 import {
@@ -62,7 +63,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 import {tooltip} from "../tooltip";
 import {Triangle} from "../triangle";
 

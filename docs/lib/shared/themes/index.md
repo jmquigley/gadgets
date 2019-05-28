@@ -36,17 +36,17 @@ render(
 
 
 * [themes](#module_themes)
-    * [.getTheme(theme)](#module_themes.getTheme) ⇒ <code>ThemeProps</code>
+    * [.getTheme(theme)](#module_themes.getTheme) ⇒ <code>DefaultTheme</code>
     * [.getThemeList()](#module_themes.getThemeList) ⇒ <code>Array.&lt;string&gt;</code>
-    * [.setTheme(custom, theme)](#module_themes.setTheme) ⇒ <code>ThemeProps</code>
+    * [.setTheme(custom, theme)](#module_themes.setTheme) ⇒ <code>DefaultTheme</code>
 
 <a name="module_themes.getTheme"></a>
 
-### themes.getTheme(theme) ⇒ <code>ThemeProps</code>
+### themes.getTheme(theme) ⇒ <code>DefaultTheme</code>
 Retrieves the object representing the requested theme.
 
 **Kind**: static method of [<code>themes</code>](#module_themes)  
-**Returns**: <code>ThemeProps</code> - the key/value object that contains CSS settings  
+**Returns**: <code>DefaultTheme</code> - the key/value object that contains CSS settings  
 **Params**
 
 - theme <code>Theme</code> - a reference to the name of the theme that should be
@@ -60,12 +60,12 @@ selected and set within this module.
 themes that are available.  
 <a name="module_themes.setTheme"></a>
 
-### themes.setTheme(custom, theme) ⇒ <code>ThemeProps</code>
+### themes.setTheme(custom, theme) ⇒ <code>DefaultTheme</code>
 Sets the current internal theme to the requested name (if it exists)
 If the requested theme doesn't exist, then the `base` theme is set.
 
 **Kind**: static method of [<code>themes</code>](#module_themes)  
-**Returns**: <code>ThemeProps</code> - a reference to the current theme object  
+**Returns**: <code>DefaultTheme</code> - a reference to the current theme object  
 **Params**
 
 - custom <code>Object</code> - a custom theme object

@@ -62,6 +62,7 @@
 import autobind from "autobind-decorator";
 import {List} from "immutable";
 import * as React from "react";
+import styled from "styled-components";
 import {FontInfo, getFontInfo, getTextWidth} from "util.html";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon";
@@ -76,7 +77,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {Tag} from "./Tag";
 

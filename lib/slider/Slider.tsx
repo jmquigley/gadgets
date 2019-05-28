@@ -62,6 +62,7 @@
 import autobind from "autobind-decorator";
 import {debounce} from "lodash";
 import * as React from "react";
+import styled from "styled-components";
 import {Keys} from "util.keys";
 import {closestNumber, nilEvent} from "util.toolbox";
 import {
@@ -75,7 +76,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface SliderProps extends BaseProps {
 	max?: number;

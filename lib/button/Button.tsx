@@ -36,6 +36,7 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {HotKeys} from "react-hotkeys";
+import styled, {css} from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon";
 import {
@@ -48,7 +49,6 @@ import {
 	hidden,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 import {tooltip} from "../tooltip";
 
 export interface ButtonProps extends BaseProps {

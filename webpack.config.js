@@ -10,7 +10,6 @@ const webpack = require("webpack");
 const pkg = require("./package.json");
 
 const mode = process.env.NODE_ENV || "development";
-const externals = Object.keys(pkg.dependencies);
 
 const banner = new webpack.BannerPlugin({
 	banner:
@@ -136,7 +135,7 @@ module.exports = {
 		extensions: [".js", ".jsx", ".css"],
 		alias
 	},
-	externals,
+	externals: pkg.externals,
 	resolveLoader: {
 		modules: [path.join(__dirname, "node_modules")]
 	},

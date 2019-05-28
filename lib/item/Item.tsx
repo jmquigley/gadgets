@@ -3,6 +3,7 @@
 // const debug = require('debug')('gadgets.Item');
 
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
 import {
@@ -15,7 +16,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 import {Title, TitleLayout, TitleProps} from "../title";
 
 export interface ItemProps extends BaseProps, TitleProps {

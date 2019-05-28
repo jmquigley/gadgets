@@ -54,6 +54,7 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {sprintf} from "sprintf-js";
+import styled from "styled-components";
 import {calc} from "util.calc";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
@@ -69,7 +70,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {tooltip} from "../tooltip";
 
 export interface DropdownOption {

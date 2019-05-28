@@ -59,6 +59,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {
@@ -69,7 +70,7 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
+
 import {ListItem} from "./index";
 
 export interface ListProps extends BaseProps {

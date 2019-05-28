@@ -3,19 +3,22 @@
 ## v0.0.68
 #### Enhancements:
 
-- Added the [react-hotkeys]() library to the module to handle keyboard interactions for the following components:
+- Added the [react-hotkeys](https://github.com/greena13/react-hotkeys) library to the module to handle keyboard interactions for the following components:
   - [Browser](https://github.com/jmquigley/gadgets/blob/master/docs/lib/browser/Browser.md)
   - [Buttons](https://github.com/jmquigley/gadgets/blob/master/docs/lib/button/Button.md)
   - [DialogBox](https://github.com/jmquigley/gadgets/blob/master/docs/lib/dialogBox/DialogBox.md)
   - [Editor](https://github.com/jmquigley/gadgets/blob/master/docs/lib/editor/Editor.md)
   - [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md)
 - Changing all "visible" props to "hidden" to match built in HTML attribute value.
+- Simplified how the base theme is set in the application.  No longer requires a custom module (themed-components).  This module was removed.
 
 #### Bug Fixes:
 
 - Fixed a bug in TagList where the input component did not resize as the user types.
 - The sort/nosort now works when a TagList is initialized.
 - Tab labels allowed editing inline.  This has a been fixed (they are static and should only be changed through properties)
+- Fixed a problem where dts-bundle-generator was including @types files in the bundle for modules that will not be installed when this module is included in a project.
+- Fixed how typings are included in the package.  Removed the use of the dts bundler to use native typescript built typings.
 
 ---
 

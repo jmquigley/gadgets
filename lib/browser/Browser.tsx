@@ -73,6 +73,7 @@ import {WebviewTag} from "electron";
 import {List} from "immutable";
 import * as React from "react";
 import {HotKeys, KeyMapOptions} from "react-hotkeys";
+import styled from "styled-components";
 import {nilEvent, objFindKeyByValue} from "util.toolbox";
 import {Button} from "../button";
 import {Divider} from "../divider";
@@ -84,7 +85,6 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {TextField} from "../textField";
 import {Toolbar} from "../toolbar";
 import {WebView} from "./WebView";

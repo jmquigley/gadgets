@@ -1,9 +1,9 @@
 "use strict";
 
-import {Color, ColorScheme} from "../props";
-import {ThemeProps} from "./index";
+import {Color, ColorScheme} from "../colors";
+import {BaseThemeProps} from "./index";
 
-const theme: ThemeProps = {
+const theme: BaseThemeProps = {
 	backgroundColor: Color.white,
 	borderColor: Color.silver,
 	buttonColor: Color.gray,

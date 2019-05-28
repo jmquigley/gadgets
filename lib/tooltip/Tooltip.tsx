@@ -48,6 +48,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {
 	BaseComponent,
 	BaseProps,
@@ -61,7 +62,6 @@ import {
 	Location,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 import {Triangle} from "../triangle";
 
 export interface TooltipProps extends BaseProps {

@@ -53,6 +53,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
 import {
@@ -66,7 +67,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface LabelProps extends BaseProps {
 	defaultText?: string;

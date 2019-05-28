@@ -42,6 +42,7 @@
 import autobind from "autobind-decorator";
 import {debounce} from "lodash";
 import * as React from "react";
+import styled from "styled-components";
 import {unitToNumber} from "util.calc";
 import {splitNL} from "util.string";
 import {nilEvent} from "util.toolbox";
@@ -56,7 +57,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface TextAreaProps extends BaseProps {
 	onChange?: (e: React.ChangeEvent<HTMLDivElement>) => void;

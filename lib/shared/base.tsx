@@ -44,14 +44,15 @@
 // const debug = require("debug")("gadgets.shared.base");
 
 import {isEqual} from "lodash";
-import * as React from "react";
+import {Children, cloneElement, PureComponent} from "react";
+import {DefaultTheme} from "styled-components";
 import {calc} from "util.calc";
 import {ClassNames} from "util.classnames";
 import {getUUID} from "util.toolbox";
 import {KeyHandler, KeyMap} from "./keybinding";
 import {BaseProps, Styles} from "./props";
 import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
-import {getTheme, ThemeProps} from "./themes";
+// import {getTheme} from "./themes";
 
 require("./styles.css");
 
@@ -62,13 +63,13 @@ export let sizes: Sizes = Sizes.instance(defaultSize);
 export abstract class BaseComponent<
 	P extends BaseProps,
 	S
-> extends React.PureComponent<P, S> {
+> extends PureComponent<P, S> {
 	public static defaultStyles: any = {};
 
 	private _className: ClassNames = new ClassNames();
 	private _defaultClassName: string;
 	private _id: string;
-	private _theme: ThemeProps = null;
+	// private _theme: DefaultTheme = null;
 
 	protected _keyHandler: KeyHandler = {};
 	protected _keyMap: KeyMap = {};
@@ -95,12 +96,15 @@ export abstract class BaseComponent<
 				(this.props.testing ? "0" : getUUID());
 		}
 
+		/*
 		if (this.props.theme != null) {
 			this._theme = this.props.theme;
 		} else {
 			this._theme = getTheme();
 		}
+		*/
 
+		// this.props.theme = this.theme;
 		BaseComponent.defaultStyles = defaultStyles;
 	}
 
@@ -131,8 +135,8 @@ export abstract class BaseComponent<
 		return this._keyMap;
 	}
 
-	get theme(): ThemeProps {
-		return this._theme;
+	get theme(): DefaultTheme {
+		return this.props.theme;
 	}
 
 	/**
@@ -327,9 +331,9 @@ export abstract class BaseComponent<
 		if (props.children && nextProps.children) {
 			if (props.sizing !== nextProps.sizing) {
 				// debug('Children prop sizing change');
-				return React.Children.map(nextProps.children, (child: any) => {
+				return Children.map(nextProps.children, (child: any) => {
 					if (child.props && "sizing" in child.props) {
-						return React.cloneElement(child, {
+						return cloneElement(child, {
 							sizing: nextProps.sizing
 						});
 					} else {

@@ -127,6 +127,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
 import {ButtonCircle} from "../buttonCircle";
@@ -142,7 +143,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 import {tooltip} from "../tooltip";
 import {
 	validateEmail,

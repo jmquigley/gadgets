@@ -3,8 +3,8 @@
 // const debug = require("debug")("gadgets.ListFooter");
 
 import * as React from "react";
+import styled from "styled-components";
 import {BaseComponent, Wrapper} from "../shared";
-import styled from "../shared/themed-components";
 import {
 	getDefaultTitleProps,
 	getDefaultTitleState,

@@ -53,6 +53,7 @@
 import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
@@ -65,7 +66,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 import {Title, TitleLayout} from "../title";
 import {Option, OptionType} from "./Option";
 

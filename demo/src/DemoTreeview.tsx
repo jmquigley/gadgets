@@ -4,11 +4,11 @@ const debug = require("debug")("DemoTreeview");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {
 	Break,
 	Direction,
 	Option,
-	styled,
 	TreeItem,
 	Treeview,
 	TreeviewData

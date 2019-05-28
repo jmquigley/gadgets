@@ -56,6 +56,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {ClassNames} from "util.classnames";
 import {nilEvent} from "util.toolbox";
 import {
@@ -70,7 +71,6 @@ import {
 	rectStyle,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export enum SwitchType {
 	inny,

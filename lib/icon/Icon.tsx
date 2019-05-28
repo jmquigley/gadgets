@@ -50,6 +50,7 @@
 // const debug = require("debug")("gadgets.Icon");
 
 import * as React from "react";
+import styled from "styled-components";
 import {
 	BaseComponent,
 	BaseProps,
@@ -64,7 +65,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface IconProps extends BaseProps {
 	iconName?: string;
@@ -132,7 +132,6 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 				<Image
 					{...this.props}
 					className={this.className}
-					sizing={this.props.sizing}
 					src={this.props.imageFile}
 					style={this.state.style}
 				/>
@@ -142,7 +141,6 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 				<FontAwesome
 					{...this.props}
 					className={this.className}
-					sizing={this.props.sizing}
 					style={this.state.style}
 				/>
 			);

@@ -1,8 +1,9 @@
 "use strict";
 
 import * as React from "react";
+import styled from "styled-components";
 import {Keys} from "util.keys";
-import {Button, Container, ListItem, styled} from "../../";
+import {Button, Container, ListItem} from "../../";
 
 export const StyledContainer: any = styled(Container)`
 	display: flex;

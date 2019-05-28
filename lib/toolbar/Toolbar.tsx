@@ -53,6 +53,7 @@
 // const debug = require('debug')('gadgets.Toolbar');
 
 import * as React from "react";
+import styled from "styled-components";
 import {BinaryTree} from "util.ds";
 import {Keys} from "util.keys";
 import {
@@ -64,7 +65,6 @@ import {
 	Justify,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface ToolbarProps extends BaseProps {
 	justify?: Justify;

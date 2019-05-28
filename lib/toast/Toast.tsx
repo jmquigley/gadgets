@@ -88,6 +88,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled, {css} from "styled-components";
 import {calc} from "util.calc";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
@@ -104,7 +105,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled, {css} from "../shared/themed-components";
 
 export enum ToastLevel {
 	info,

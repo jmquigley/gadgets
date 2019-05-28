@@ -35,11 +35,13 @@
  * @module themes
  */
 
+import {DefaultTheme} from "styled-components";
+
 import {default as base} from "./base";
 import {default as dark} from "./dark";
 import {default as light} from "./light";
 
-export interface ThemeProps {
+export interface BaseThemeProps {
 	backgroundColor: string;
 	borderColor: string;
 	buttonColor: string;
@@ -64,6 +66,8 @@ export interface ThemeProps {
 	transitionDelay: string;
 }
 
+export type DefaultTheme = BaseThemeProps;
+
 export enum Theme {
 	base,
 	custom,
@@ -72,7 +76,7 @@ export enum Theme {
 }
 
 interface Themes {
-	[key: string]: ThemeProps;
+	[key: string]: DefaultTheme;
 }
 
 const themes: Themes = {
@@ -88,9 +92,9 @@ let currentTheme: Theme = Theme.base;
  * Retrieves the object representing the requested theme.
  * @param theme {Theme} a reference to the name of the theme that should be
  * selected and set within this module.
- * @return {ThemeProps} the key/value object that contains CSS settings
+ * @return {DefaultTheme} the key/value object that contains CSS settings
  */
-export function getTheme(theme: Theme = currentTheme): ThemeProps {
+export function getTheme(theme: Theme = currentTheme): DefaultTheme {
 	if (theme in Theme) {
 		return themes[theme];
 	} else {
@@ -115,9 +119,9 @@ export function getThemeList(): string[] {
  * @param custom {Object} a custom theme object
  * @param theme {Theme} a reference to the name of the theme that should be
  * selected and set within this module.
- * @return {ThemeProps} a reference to the current theme object
+ * @return {DefaultTheme} a reference to the current theme object
  */
-export function setTheme(custom: ThemeProps, theme: Theme = Theme.custom) {
+export function setTheme(custom: DefaultTheme, theme: Theme = Theme.custom) {
 	themes[Theme.custom] = custom;
 
 	if (theme in Theme) {

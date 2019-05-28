@@ -72,9 +72,11 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	BaseThemeProps,
 	Color,
 	ColorScheme,
 	defaultSize,
+	DefaultTheme,
 	Direction,
 	FontStyle,
 	getDefaultBaseProps,
@@ -94,7 +96,6 @@ import {
 	SortOrder,
 	Styling,
 	Theme,
-	ThemeProps,
 	Wrapper
 } from "./lib/shared";
 import {getDefaultSliderProps, Slider} from "./lib/slider";
@@ -131,22 +132,15 @@ import {getDefaultToastProps, Toast, ToastLevel} from "./lib/toast";
 import {getDefaultToolbarProps, Toolbar} from "./lib/toolbar";
 import {getDefaultTooltipProps, Tooltip} from "./lib/tooltip";
 import {
+	ExtendedNodeData,
 	getDefaultTreeviewProps,
+	NodeData,
 	TreeItem,
 	Treeview,
 	TreeviewData,
 	TreeviewProps
 } from "./lib/treeview";
 import {getDefaultTriangleProps, Triangle} from "./lib/triangle";
-
-// Themed component classes
-import styled, {
-	createGlobalStyle,
-	css,
-	keyframes,
-	ThemeProvider,
-	withTheme
-} from "./lib/shared/themed-components";
 
 const pkg = require("./package.json");
 const version = `v${JSON.stringify(pkg.version)}`;
@@ -158,6 +152,7 @@ export {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	BaseThemeProps,
 	Breadcrumbs,
 	Break,
 	Browser,
@@ -169,13 +164,12 @@ export {
 	Color,
 	ColorScheme,
 	Container,
-	createGlobalStyle,
 	Crumbs,
-	css,
 	Datagrid,
 	DatagridColumn,
 	DatagridRow,
 	defaultSize,
+	DefaultTheme,
 	DialogBox,
 	DialogBoxType,
 	DialogWindow,
@@ -187,6 +181,7 @@ export {
 	DynamicList,
 	DynamicListItem,
 	Editor,
+	ExtendedNodeData,
 	FontStyle,
 	getDefaultAccordionProps,
 	getDefaultAccordionItemProps,
@@ -242,7 +237,6 @@ export {
 	Icon,
 	Item,
 	Justify,
-	keyframes,
 	KeyHandler,
 	KeyMap,
 	Label,
@@ -252,6 +246,7 @@ export {
 	ListHeader,
 	ListItem,
 	Location,
+	NodeData,
 	Option,
 	OptionGroup,
 	OptionType,
@@ -264,7 +259,6 @@ export {
 	Sizing,
 	Slider,
 	SortOrder,
-	styled,
 	Styling,
 	Switch,
 	SwitchType,
@@ -276,8 +270,6 @@ export {
 	TextField,
 	TextFieldType,
 	Theme,
-	ThemeProps,
-	ThemeProvider,
 	Title,
 	TitleLayout,
 	Toast,
@@ -297,6 +289,5 @@ export {
 	Validator,
 	ValidatorFn,
 	version,
-	withTheme,
 	Wrapper
 };

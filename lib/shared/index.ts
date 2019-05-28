@@ -1,13 +1,13 @@
 import {BaseComponent, baseZIndex, defaultSize} from "./base";
 
+import {Color, ColorScheme} from "./colors";
+
 import {globalize} from "./helpers";
 
 import {KeyHandler, KeyMap, parseKeyCombo} from "./keybinding";
 
 import {
 	BaseProps,
-	Color,
-	ColorScheme,
 	Direction,
 	disabled,
 	DisabledCSS,
@@ -37,7 +37,14 @@ import {
 
 import {BaseState, getDefaultBaseState} from "./state";
 
-import {getTheme, getThemeList, setTheme, Theme, ThemeProps} from "./themes";
+import {
+	BaseThemeProps,
+	DefaultTheme,
+	getTheme,
+	getThemeList,
+	setTheme,
+	Theme
+} from "./themes";
 
 import {
 	getDefaultWrapperProps,
@@ -50,12 +57,14 @@ export {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	BaseThemeProps,
 	baseZIndex,
 	borderStyle,
 	boxStyle,
 	Color,
 	ColorScheme,
 	defaultSize,
+	DefaultTheme,
 	Direction,
 	disabled,
 	DisabledCSS,
@@ -87,7 +96,6 @@ export {
 	Styles,
 	Styling,
 	Theme,
-	ThemeProps,
 	Wrapper,
 	WrapperProps
 };

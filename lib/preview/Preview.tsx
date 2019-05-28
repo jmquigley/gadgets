@@ -41,6 +41,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {HTMLResults, MarkupFactory, MarkupMode} from "util.markup";
 import {nilEvent} from "util.toolbox";
 import {
@@ -53,7 +54,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export const PreviewMode = {
 	...MarkupMode

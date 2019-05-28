@@ -31,6 +31,7 @@
 // const debug = require("debug")("gadgets.Container");
 
 import * as React from "react";
+import styled from "styled-components";
 import {
 	BaseComponent,
 	BaseProps,
@@ -40,7 +41,6 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface ContainerProps extends BaseProps {
 	children?: any;

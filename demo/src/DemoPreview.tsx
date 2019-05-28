@@ -3,6 +3,7 @@ const debug = require("debug")("DemoPreview");
 import autobind from "autobind-decorator";
 import * as fs from "fs-extra";
 import * as React from "react";
+import styled from "styled-components";
 import {encoding} from "util.constants";
 import {join} from "util.join";
 import {
@@ -10,8 +11,7 @@ import {
 	Dropdown,
 	DropdownOption,
 	Preview,
-	PreviewMode,
-	styled
+	PreviewMode
 } from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
 

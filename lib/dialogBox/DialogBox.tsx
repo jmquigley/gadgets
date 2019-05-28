@@ -72,6 +72,7 @@ const ReactModal = require("react-modal");
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {HotKeys} from "react-hotkeys";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {ButtonText} from "../buttonText";
 import {Icon} from "../icon";
@@ -87,7 +88,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export enum DialogBoxType {
 	error = "error",

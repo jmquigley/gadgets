@@ -4,6 +4,7 @@ const debug = require("debug")("DemoButtons");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {
 	Button,
 	ButtonCircle,
@@ -11,8 +12,7 @@ import {
 	ButtonText,
 	ButtonToggle,
 	Icon,
-	Justify,
-	styled
+	Justify
 } from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
 

@@ -47,7 +47,7 @@
 
 const debug = require("debug")("gadgets.shared.sizing");
 
-import {css} from "./themed-components";
+import {css} from "styled-components";
 
 const instances = new Map();
 

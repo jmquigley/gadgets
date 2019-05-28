@@ -55,10 +55,11 @@
  * @module AccordionItem
  */
 
-// const debug = require('debug')('gadgets.AccordionItem');
+// const debug = require("debug")("gadgets.AccordionItem");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {getDefaultItemProps, Item, ItemProps} from "../item";
 import {
@@ -69,7 +70,6 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;

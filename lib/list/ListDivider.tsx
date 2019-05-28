@@ -27,8 +27,8 @@
 // const debug = require("debug")("gadgets.ListDivider");
 
 import * as React from "react";
+import styled from "styled-components";
 import {BaseComponent, Wrapper} from "../shared";
-import styled from "../shared/themed-components";
 import {
 	getDefaultListProps,
 	getDefaultListState,

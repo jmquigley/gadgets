@@ -9,9 +9,11 @@
  */
 
 import {configure} from "react-hotkeys";
+import "styled-components";
 import "util.obj-cycle";
 import "util.string";
 import {globalize} from "./shared/helpers";
+import {BaseThemeProps} from "./shared/themes";
 
 globalize("hljs", require("highlight.js"));
 globalize("Quill", require("quill"));
@@ -22,3 +24,13 @@ globalize("Quill", require("quill"));
 configure({
 	ignoreTags: []
 });
+
+/**
+ * Adds the custom theme properties to the default theme interface
+ * within styled components.  This makes all of the properties
+ * available by default.  This replaces the old method in the obsolete
+ * themed-components module.
+ */
+declare module "styled-components" {
+	export interface DefaultTheme extends BaseThemeProps {}
+}

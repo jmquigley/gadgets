@@ -63,6 +63,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {ButtonText} from "../buttonText";
@@ -79,7 +80,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface Crumbs {
 	name: string;

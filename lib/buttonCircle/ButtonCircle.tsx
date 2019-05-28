@@ -48,6 +48,7 @@
 // const debug = require("debug")("gadgets.ButtonCircle");
 
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseButtonView,
@@ -58,7 +59,6 @@ import {
 	getDefaultButtonState
 } from "../button";
 import {BaseComponent, borderStyle, Sizing, Wrapper} from "../shared";
-import styled from "../shared/themed-components";
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;

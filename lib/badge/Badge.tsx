@@ -41,6 +41,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
@@ -56,7 +57,6 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface BadgeProps extends BaseProps {
 	counter?: number;

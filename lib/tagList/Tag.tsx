@@ -36,6 +36,7 @@
 
 import autobind from "autobind-decorator";
 import * as React from "react";
+import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {ButtonCircle} from "../buttonCircle";
 import {Label} from "../label";
@@ -50,7 +51,6 @@ import {
 	invisible,
 	Wrapper
 } from "../shared";
-import styled from "../shared/themed-components";
 
 export interface TagProps extends BaseProps {
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
