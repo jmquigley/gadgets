@@ -19,6 +19,7 @@
 - Tab labels allowed editing inline.  This has a been fixed (they are static and should only be changed through properties)
 - Fixed a problem where dts-bundle-generator was including @types files in the bundle for modules that will not be installed when this module is included in a project.
 - Fixed how typings are included in the package.  Removed the use of the dts bundler to use native typescript built typings.
+- When a Treeview was updated with a new tree data strucuture it was not selecting an initial node.
 
 ---
 
