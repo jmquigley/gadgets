@@ -20,7 +20,7 @@ const debug = require('debug')('App')
      onRemove={(tab: any) => {
          debug(removing %o (id=${tab.props['id']})`, tab.props["title"]);
      }}
-     onSelect={(tab: any, previous: any) => {
+     onSelection={(tab: any, previous: any) => {
          debug(
              `selected: %o (id=${tab.props["id"]}), previous: %o (id=${
                  previous.props["id"]
@@ -46,7 +46,7 @@ be suppressed.
 #### Events
 - `onRemove(tab)` - When a tab is removed this event is invoked.  The
 callback will receive the tab instance that was removed.
-- `onSelect(tab, previousTab)` - When a `Tab` is selected this event is
+- `onSelection(tab, previousTab)` - When a `Tab` is selected this event is
 invoked.  The callback will receive a reference to the selected tab and the
 previous tab.  If there is no previous tab, then the selected and
 previous values are the same.

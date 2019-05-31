@@ -37,7 +37,7 @@ export default class DemoPager extends React.Component<any, undefined> {
 						initialPage={1}
 						totalItems={299}
 						sizing={this.props["sizing"]}
-						onSelect={this.handleSelect}
+						onSelection={this.handleSelect}
 					/>
 				</div>
 				<Break sizing={this.props["sizing"]} />
@@ -47,7 +47,7 @@ export default class DemoPager extends React.Component<any, undefined> {
 					<Pager
 						disabled={this.props["disabled"]}
 						initialPage={1}
-						onSelect={this.handleSelect}
+						onSelection={this.handleSelect}
 						onSort={this.handleSort}
 						pageSizes={[25, 50, 100, 500, 1000]}
 						pagesToDisplay={5}

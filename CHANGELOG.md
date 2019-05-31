@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.0.69
+#### Enhancements:
+
+- Changed all `onSelect` event handler to `onSelection` to avoid collision with built in HTML onselect.  Without this change the onselect event handler could be called at times where it is unexpected.
+- Added a `noscroll` option to disable the horizontal scrollbar in a [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md).
+
+#### Bug Fixes:
+
+-
+-
+
+---
+
 ## v0.0.68
 #### Enhancements:
 

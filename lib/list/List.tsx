@@ -37,7 +37,7 @@
  * ```
  *
  * #### Events
- * - `onSelect(title: string)` - When the user selects an item from the list
+ * - `onSelection(title: string)` - When the user selects an item from the list
  * this callback is invoked.  It is given the string title associated with
  * the item.
  *
@@ -77,7 +77,7 @@ export interface ListProps extends BaseProps {
 	alternating?: boolean;
 	children?: React.ReactNode;
 	noselect?: boolean;
-	onSelect?: (title: string) => void;
+	onSelection?: (title: string) => void;
 }
 
 export function getDefaultListProps(): ListProps {
@@ -87,7 +87,7 @@ export function getDefaultListProps(): ListProps {
 		children: null,
 		noselect: false,
 		obj: "List",
-		onSelect: nilEvent
+		onSelection: nilEvent
 	};
 }
 
@@ -140,7 +140,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 			},
 			() => {
 				if (item != null && "props" in item) {
-					this.props.onSelect(item["props"].title);
+					this.props.onSelection(item["props"].title);
 				}
 			}
 		);

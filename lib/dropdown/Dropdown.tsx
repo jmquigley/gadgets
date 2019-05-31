@@ -8,7 +8,7 @@
  * Items are placed into an array of structures of type `DropdownOption`.
  * Each option contains a value (the id)  and the dispay label.  This strucure
  * is used to build the `<option>` list under the `<select>`.  The user then
- * selects an option from this list.  The selection invoks an `onSelect`
+ * selects an option from this list.  The selection invokes an `onSelection`
  * callback.
  *
  * ## Screen:
@@ -28,13 +28,13 @@
  * <Dropdown iconName="cab" onClick={someFunction}
  *     defaultVal='val1'
  *     items={options}
- *     onSelect{(val: DropdownDataType) => {// process value}}
+ *     onSelection{(val: DropdownDataType) => {// process value}}
  * />
  * ```
  *
  * ## API
  * #### Events
- * - `onSelect(val: string)` - The value (id) of the item that was selected
+ * - `onSelection(val: string)` - The value (id) of the item that was selected
  * from the list.
  *
  * #### Styles
@@ -83,7 +83,7 @@ export interface DropdownProps extends BaseProps {
 	defaultVal?: string;
 	initialItem?: string;
 	items?: DropdownOption[];
-	onSelect?: (val: DropdownDataType) => void;
+	onSelection?: (val: DropdownDataType) => void;
 }
 
 export function getDefaultDropdownProps(): DropdownProps {
@@ -92,7 +92,7 @@ export function getDefaultDropdownProps(): DropdownProps {
 		initialItem: "",
 		items: [],
 		obj: "Dropdown",
-		onSelect: nilEvent
+		onSelection: nilEvent
 	};
 }
 
@@ -173,7 +173,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 					currentValue: String(val)
 				},
 				() => {
-					this.props.onSelect(val);
+					this.props.onSelection(val);
 				}
 			);
 		}

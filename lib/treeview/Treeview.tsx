@@ -89,7 +89,7 @@
  * - `onSearch(node: TreeItem)` - Invoked when a search is performed.  It returns
  * the current item found in the search.  This callback is also called when moving
  * to/from previous/next the title.
- * - `onSelect(node: TreeItem)` - Invoked when a tree item is selected.  The node
+ * - `onSelection(node: TreeItem)` - Invoked when a tree item is selected.  The node
  * selected is passed to the callback.  The node that was selected is also highlighted.
  * - `onUpdate(currentNode: TreeItem, previousNode: TreeItem, treeData: TreeItem[])` -
  * Invoked when the contents of a tree node (title) have been changed.  It passes
@@ -122,6 +122,9 @@
  * selected.
  * - `kbExpandAll="ctrl+=" {string}` - keyboard combination to expand all nodes.
  * - `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
+ * - `noscroll=false {boolean}` - turns off the scroll bars when the width/height
+ * of all nodes expands past the right or bottom edge of the display container.
+ * - `nosearch=false {boolean}` - turns off the search toolbar for the widget
  * - `selectNew=true {boolean}` - When a new node is added it is selected by
  * default (true).  If this property is false, then the parent remains selected
  * when a child node is added.
@@ -135,8 +138,8 @@
  */
 
 const debug = require("debug")("gadgets.Treeview");
-const debugRender = require("debug")("gadgets.Treeview:render");
 const debugCreate = require("debug")("gadgets.Treeview:create");
+const debugRender = require("debug")("gadgets.Treeview:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -189,6 +192,7 @@ export interface TreeviewProps extends BaseProps {
 	kbDelete: string;
 	kbExpandAll: string;
 	nodeWidth?: string;
+	noscroll?: boolean;
 	nosearch?: boolean;
 	onAdd?: (node: TreeItem, treeData: TreeItem[]) => void;
 	onChange?: (treeData: TreeItem[]) => void;
@@ -197,7 +201,7 @@ export interface TreeviewProps extends BaseProps {
 	onExpand?: (treeData: TreeItem[]) => void;
 	onInit?: (treeData: TreeItem[]) => void;
 	onSearch?: (node: TreeItem) => void;
-	onSelect?: (node: TreeItem) => void;
+	onSelection?: (node: TreeItem) => void;
 	onUpdate?: (
 		node: TreeItem,
 		previous: TreeItem,
@@ -222,6 +226,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		kbExpandAll: "ctrl+=",
 		minHeight: "15em",
 		nodeWidth: "20em",
+		noscroll: false,
 		nosearch: false,
 		obj: "Treeview",
 		onAdd: nilEvent,
@@ -231,7 +236,7 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		onExpand: nilEvent,
 		onInit: nilEvent,
 		onSearch: nilEvent,
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		onUpdate: nilEvent,
 		selectNew: true,
 		treeData: [],
@@ -260,8 +265,7 @@ export function getDefaultTreeviewState(): TreeviewState {
 
 const SortableTreeView: any = styled(SortableTree)`
 	${(props: TreeviewProps) => disabled(props)}
-	${(props: TreeviewProps) =>
-		props.sizing && fontStyle[props.sizing]}
+	${(props: TreeviewProps) => props.sizing && fontStyle[props.sizing]}
 
 	.rst__rowContents {
 		padding: 0 0 0 1px;
@@ -292,6 +296,12 @@ const SortableTreeView: any = styled(SortableTree)`
 	.rst__rowWrapper {
 		padding: 4px 0;
 	}
+
+	.rst__virtualScrollOverride {
+		overflow: ${(props: TreeviewProps) =>
+			props.noscroll ? "hidden" : "auto"} !important;
+	}
+}
 `;
 
 const SearchTextField: any = styled(TextField)`
@@ -345,7 +355,8 @@ const TreeviewContainer: any = styled(HotKeys)`
 const TreeviewWrapper: any = styled(Container)`
 	display: block;
 	flex: 1;
-	overflow: auto;
+	overflow: ${(props: TreeviewProps) =>
+		props.noscroll ? "hidden" : "auto"} !important;
 	z-index: 0;
 `;
 
@@ -397,7 +408,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		this.props.onInit([...this._td.treeData]);
 
 		if (selectedId) {
-			this.props.onSelect(this._td.first);
+			this.props.onSelection(this._td.first);
 		}
 
 		debugCreate("props: %O, state: %O", this.props, this.state);
@@ -444,7 +455,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 								if (
 									previousSelectedId !== this.state.selectedId
 								) {
-									this.handleSelect(node);
+									this.handleSelection(node);
 								}
 							}
 						);
@@ -494,7 +505,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 						selectedId: node.id
 					},
 					() => {
-						this.handleSelect(node);
+						this.handleSelection(node);
 					}
 				);
 			}
@@ -531,12 +542,12 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				);
 
 				this.props.onAdd(newNode, [...this._td.treeData]);
-				this.handleSelect(newNode);
+				this.handleSelection(newNode);
 			} else {
 				if (deletedNode.parentId == null) {
-					this.handleSelect(this._td.first);
+					this.handleSelection(this._td.first);
 				} else {
-					this.handleSelect(this._td.find(deletedNode.parentId));
+					this.handleSelection(this._td.find(deletedNode.parentId));
 				}
 			}
 		}
@@ -651,7 +662,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							this.props.onSearch(this.state.matches[
 								searchFocusIndex
 							].node as TreeItem);
-							this.props.onSelect(this.state.matches[
+							this.props.onSelection(this.state.matches[
 								searchFocusIndex
 							].node as TreeItem);
 						}
@@ -662,11 +673,11 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	@autobind
-	private handleSelect(node: TreeItem) {
+	private handleSelection(node: TreeItem) {
 		if (!this.props.disabled) {
-			debug("handleSelect -> node: %O", node);
+			debug("handleSelection -> node: %O", node);
 			this.setState({selectedId: node.id});
-			this.props.onSelect(node);
+			this.props.onSelection(node);
 		}
 	}
 
@@ -674,7 +685,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		this._td.treeData = this.props.treeData;
 
 		if (this._td.treeData.length > 0 && !this.state.selectedId) {
-			this.handleSelect(this._td.first);
+			this.handleSelection(this._td.first);
 		}
 	}
 
@@ -760,10 +771,11 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					style={this.state.style}
 				>
 					{this.props.direction === Direction.top ? toolbar : null}
-					<TreeviewWrapper className={this.className}>
+					<TreeviewWrapper {...this.props} className={this.className}>
 						<SortableTreeView
 							generateNodeProps={this.customNodeProperties}
 							isVirtualized={this.props.isVirtualized}
+							noscroll={this.props.noscroll}
 							onChange={this.handleChange}
 							rowHeight={this.rowHeight}
 							searchFinishCallback={this.handleSearchFinish}

@@ -90,7 +90,7 @@ class App extends React.Component<any, AppState> {
 						{value: Sizing.xlarge, label: "xlarge"},
 						{value: Sizing.xxlarge, label: "xxlarge"}
 					]}
-					onSelect={this.handleSizingChange}
+					onSelection={this.handleSizingChange}
 				/>
 				<Break sizing={this.state.sizing} />
 
@@ -98,7 +98,7 @@ class App extends React.Component<any, AppState> {
 
 				<Option
 					initialToggle={false}
-					onSelect={this.handleToggleDisable}
+					onSelection={this.handleToggleDisable}
 					text='disabled'
 				/>
 				<Break sizing={this.state.sizing} />

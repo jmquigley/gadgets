@@ -31,7 +31,7 @@
  *
  * ## API
  * #### Events
- * - `onSelect(toggle: boolean, text: string)` - When the option is clicked, then
+ * - `onSelection(toggle: boolean, text: string)` - When the option is clicked, then
  * the button display is changed (toggled).  The callback returns the current state of
  * the toggle and the text label associated with the option.  When the button is "clear",
  * it is off and "false" is sent to the callback.  When the button is "checked", it is
@@ -89,7 +89,7 @@ export enum OptionType {
 export interface OptionProps extends BaseProps {
 	initialToggle?: boolean;
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
-	onSelect?: (selected: boolean, text: string) => void;
+	onSelection?: (selected: boolean, text: string) => void;
 	optionType?: OptionType;
 	selected?: boolean;
 	text?: string;
@@ -101,7 +101,7 @@ export function getDefaultOptionProps(): OptionProps {
 		initialToggle: false,
 		obj: "Option",
 		onClick: nilEvent,
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		optionType: OptionType.square,
 		ripple: false,
 		selected: false,
@@ -210,7 +210,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 					},
 					() => {
 						this.props.onClick(e);
-						this.props.onSelect(
+						this.props.onSelection(
 							this.state.selected,
 							this.props.text
 						);
@@ -218,7 +218,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 				);
 			} else {
 				this.props.onClick(e);
-				this.props.onSelect(this.state.selected, this.props.text);
+				this.props.onSelection(this.state.selected, this.props.text);
 			}
 		}
 	}

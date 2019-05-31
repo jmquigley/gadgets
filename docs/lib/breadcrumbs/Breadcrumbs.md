@@ -26,7 +26,7 @@ import {Breadcrumbs} from 'gadgets';
         {name: 'name2', uri: 'http://www.example2.com'},
         {name: 'name3', uri: 'http://www.example3.com'}]
     }]
-    onSelect={(name: string, uri: string) => {
+    onSelection={(name: string, uri: string) => {
         debug('selected => name: %s, uri: %s', name, uri);
     }}
 />
@@ -34,7 +34,7 @@ import {Breadcrumbs} from 'gadgets';
 
 ## API
 #### Events
-- `onSelect(name: string, uri: string)` - When an item is selected this
+- `onSelection(name: string, uri: string)` - When an item is selected this
 callback is invoked.
 
 #### Styles

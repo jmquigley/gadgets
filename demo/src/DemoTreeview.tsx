@@ -21,6 +21,7 @@ interface DemoData extends TreeviewData {
 
 export interface DemoTreeviewState {
 	menuPosition: boolean;
+	noscroll: boolean;
 	selectNew: boolean;
 	treeData: DemoData[];
 }
@@ -39,6 +40,7 @@ export default class DemoTreeview extends React.Component<
 
 		this.state = {
 			menuPosition: false,
+			noscroll: false,
 			selectNew: false,
 			treeData: [
 				{
@@ -86,6 +88,11 @@ export default class DemoTreeview extends React.Component<
 			treeData
 		);
 		this.setState({treeData});
+	}
+
+	@autobind
+	private handleDisableScroll(selected: boolean) {
+		this.setState({noscroll: selected});
 	}
 
 	@autobind
@@ -141,14 +148,20 @@ export default class DemoTreeview extends React.Component<
 			<TreeviewStyledContainer id='treeviewExample' title='Treeview'>
 				<Option
 					disabled={this.props["disabled"]}
-					onSelect={this.handleMenuPosition}
+					onSelection={this.handleMenuPosition}
 					text='Select the option to put the menu on the bottom'
 				/>
 				<Break sizing={this.props["sizing"]} />
 				<Option
 					disabled={this.props["disabled"]}
-					onSelect={this.handleSelectNew}
+					onSelection={this.handleSelectNew}
 					text='Check this to select new node when created (default stays with parent)'
+				/>
+				<Break sizing={this.props["sizing"]} />
+				<Option
+					disabled={this.props["disabled"]}
+					onSelection={this.handleDisableScroll}
+					text='Check this to disable horizontal scrolling'
 				/>
 				<Break sizing={this.props["sizing"]} />
 
@@ -161,6 +174,7 @@ export default class DemoTreeview extends React.Component<
 					disabled={this.props["disabled"]}
 					height='640px'
 					isVirtualized={false}
+					noscroll={this.state.noscroll}
 					notooltip
 					onAdd={this.handleAdd}
 					onChange={this.handleChange}
@@ -169,7 +183,7 @@ export default class DemoTreeview extends React.Component<
 					onExpand={this.handleExpand}
 					onInit={this.handleInit}
 					onSearch={this.handleSearch}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					onUpdate={this.handleUpdate}
 					selectNew={this.state.selectNew}
 					sizing={this.props["sizing"]}

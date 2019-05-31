@@ -37,7 +37,7 @@
  *     onNew={(title: string) => {
  *         console.log(`Adding new item to list: ${title}`);
  *     }}
- *     onSelect={(title: string) => {
+ *     onSelection={(title: string) => {
  *         console.log(`Selected item: ${title}`);
  *     }}
  *     onUpdate={(previous: string, title: string) =>
@@ -80,7 +80,7 @@
  * - `onFocus` - Invoked when a list item is clicked.
  * - `onNew(title: string)` - This event is executed when an item is added to
  * the list.  The title of the new item is a parameter to the callback
- * - `onSelect(title: string)` - Invoked when a list item is selected. The title
+ * - `onSelection(title: string)` - Invoked when a list item is selected. The title
  * of the selected item is a parameter to the callback.
  * - `onSort(sortOrder: SortOrder)` - Invoked whne the list is sorted.  It will
  * give the selected order to the callback.
@@ -171,7 +171,7 @@ export interface DynamicListProps extends BaseProps {
 	onError?: (message: string) => void;
 	onFocus?: (e: React.FocusEvent<HTMLLIElement>) => void;
 	onNew?: (title: string, widget: any) => void;
-	onSelect?: (title: string) => void;
+	onSelection?: (title: string) => void;
 	onSort?: (sortOrder: SortOrder) => void;
 	onUpdate?: (previousTitle: string, title: string) => void;
 	pageSizes?: number[];
@@ -196,7 +196,7 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 		onError: nilEvent,
 		onFocus: nilEvent,
 		onNew: nilEvent,
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		onSort: nilEvent,
 		onUpdate: nilEvent,
 		pageSizes: defaultPageSizes,
@@ -396,7 +396,7 @@ export class DynamicList extends BaseComponent<
 				onClick={this.props.onClick}
 				onBlur={this.handleBlur}
 				onFocus={this.props.onFocus}
-				onSelect={this.handleSelect}
+				onSelection={this.handleSelect}
 				onUpdate={this.handleUpdate}
 				rightButton={
 					<StyledDeleteButton
@@ -561,7 +561,7 @@ export class DynamicList extends BaseComponent<
 	private handleSelect(title: string) {
 		if (this._selection !== title) {
 			this._selection = title;
-			this.props.onSelect(title);
+			this.props.onSelection(title);
 		} else {
 			this._selection = "";
 		}
@@ -682,7 +682,7 @@ export class DynamicList extends BaseComponent<
 				initialPageSize={nextState.pageSize}
 				key={this._pagerID}
 				onChangePageSize={this.handleNewPageSize}
-				onSelect={this.handlePageChange}
+				onSelection={this.handlePageChange}
 				onSort={this.handleSort}
 				pageSizes={nextProps.pageSizes}
 				sizing={Sizing.small}

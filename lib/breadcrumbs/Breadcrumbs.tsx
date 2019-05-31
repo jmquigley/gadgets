@@ -24,7 +24,7 @@
  *         {name: 'name2', uri: 'http://www.example2.com'},
  *         {name: 'name3', uri: 'http://www.example3.com'}]
  *     }]
- *     onSelect={(name: string, uri: string) => {
+ *     onSelection={(name: string, uri: string) => {
  *         debug('selected => name: %s, uri: %s', name, uri);
  *     }}
  * />
@@ -32,7 +32,7 @@
  *
  * ## API
  * #### Events
- * - `onSelect(name: string, uri: string)` - When an item is selected this
+ * - `onSelection(name: string, uri: string)` - When an item is selected this
  * callback is invoked.
  *
  * #### Styles
@@ -91,7 +91,7 @@ export interface BreadcrumbsProps extends BaseProps {
 	icon?: string;
 	items?: Crumbs[];
 	noicon?: boolean;
-	onSelect?: (name: string, uri: string) => void;
+	onSelection?: (name: string, uri: string) => void;
 }
 
 export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
@@ -101,7 +101,7 @@ export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
 		icon: "paperclip",
 		items: [],
 		obj: "Breadcrumbs",
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		ripple: false
 	};
 }
@@ -175,12 +175,16 @@ export class Breadcrumbs extends BaseComponent<
 		const self: any = this;
 
 		return () => {
-			self.props.onSelect(name, uri);
+			self.props.onSelection(name, uri);
 		};
 	}
 
 	public render() {
 		this.updateClassName();
+
+		// The onSelection event should not be passed down through the
+		// item and into the sub components.
+		const {onSelection, ...props} = this.props;
 
 		const components: any[] = [];
 		if (this.props.items.length >= 1) {
@@ -212,7 +216,7 @@ export class Breadcrumbs extends BaseComponent<
 		if (!this.props.noicon) {
 			icon = (
 				<IconView
-					{...this.props}
+					{...props}
 					className='ui-breadcrumbs-icon'
 					iconName={this.props.icon}
 					ripple={false}

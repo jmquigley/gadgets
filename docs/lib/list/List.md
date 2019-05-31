@@ -39,7 +39,7 @@ import {Button, Icon, List, ListItem, ListHeader} from 'gadgets';
 ```
 
 #### Events
-- `onSelect(title: string)` - When the user selects an item from the list
+- `onSelection(title: string)` - When the user selects an item from the list
 this callback is invoked.  It is given the string title associated with
 the item.
 

@@ -553,27 +553,27 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 							<List sizing={Sizing.small} alternating noselect>
 								<ListItem
 									title='h1'
-									onSelect={this.handleSelect("1")}
+									onSelection={this.handleSelect("1")}
 								/>
 								<ListItem
 									title='h2'
-									onSelect={this.handleSelect("2")}
+									onSelection={this.handleSelect("2")}
 								/>
 								<ListItem
 									title='h3'
-									onSelect={this.handleSelect("3")}
+									onSelection={this.handleSelect("3")}
 								/>
 								<ListItem
 									title='h4'
-									onSelect={this.handleSelect("4")}
+									onSelection={this.handleSelect("4")}
 								/>
 								<ListItem
 									title='h5'
-									onSelect={this.handleSelect("5")}
+									onSelection={this.handleSelect("5")}
 								/>
 								<ListItem
 									title='h6'
-									onSelect={this.handleSelect("6")}
+									onSelection={this.handleSelect("6")}
 								/>
 							</List>
 						</ButtonDialog>
@@ -584,23 +584,27 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						<Dropdown
 							defaultVal={this.props.defaultFont}
 							items={this._fontList}
-							onSelect={this._markup && this._markup.setFont}
+							onSelection={this._markup && this._markup.setFont}
 						/>
 						<Dropdown
 							defaultVal={this.props.defaultFontSize.toString()}
 							items={this._fontSizes}
-							onSelect={this._markup && this._markup.setFontSize}
+							onSelection={
+								this._markup && this._markup.setFontSize
+							}
 						/>
 						<Divider />
 						<Dropdown
 							defaultVal={"markdown"}
 							items={this._modes}
-							onSelect={this._markup && this._markup.setMode}
+							onSelection={this._markup && this._markup.setMode}
 						/>
 						<Dropdown
 							defaultVal={"solarized-light"}
 							items={this._highlights}
-							onSelect={this._markup && this._markup.setHighlight}
+							onSelection={
+								this._markup && this._markup.setHighlight
+							}
 							style={{
 								width: "6rem"
 							}}

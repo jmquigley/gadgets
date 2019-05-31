@@ -69,7 +69,7 @@ export default class DemoPreview extends React.Component<
 					defaultVal='markdown'
 					disabled={this.props["disabled"]}
 					items={this.items}
-					onSelect={this.handleMarkupModeDropdown}
+					onSelection={this.handleMarkupModeDropdown}
 					sizing={this.props["sizing"]}
 				/>
 				<Break sizing={this.props["sizing"]} />

@@ -31,7 +31,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 				<Breadcrumbs
 					disabled={this.props["disabled"]}
 					items={this._items}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				/>
 				<Break sizing={this.props["sizing"]} />
@@ -42,7 +42,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 					disabled={this.props["disabled"]}
 					icon='shower'
 					items={this._items}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				/>
 				<Break sizing={this.props["sizing"]} />
@@ -52,7 +52,7 @@ export default class DemoBrowser extends React.Component<any, undefined> {
 					disabled={this.props["disabled"]}
 					items={this._items}
 					noicon
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				/>
 			</StyledContainer>

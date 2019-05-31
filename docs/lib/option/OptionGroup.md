@@ -15,7 +15,7 @@ import {OptionGroup} from 'gadgets';
 <OptionGroup
     default="option1"
     disabled={this.props['disabled']}
-    onSelect={this.handleSelect}
+    onSelection={this.handleSelect}
     options={[
         'option1',
         'option2',
@@ -29,7 +29,7 @@ import {OptionGroup} from 'gadgets';
 ```
 
 #### Events
-- `onSelect(text: string)` - When an option is selected in the group this
+- `onSelection(text: string)` - When an option is selected in the group this
 callback is invoked.  The text value of the option is passed to the
 function.
 

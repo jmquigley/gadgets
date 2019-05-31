@@ -13,7 +13,7 @@
  * <OptionGroup
  *     default="option1"
  *     disabled={this.props['disabled']}
- *     onSelect={this.handleSelect}
+ *     onSelection={this.handleSelect}
  *     options={[
  *         'option1',
  *         'option2',
@@ -27,7 +27,7 @@
  * ```
  *
  * #### Events
- * - `onSelect(text: string)` - When an option is selected in the group this
+ * - `onSelection(text: string)` - When an option is selected in the group this
  * callback is invoked.  The text value of the option is passed to the
  * function.
  *
@@ -71,7 +71,7 @@ import {Option, OptionType} from "./Option";
 
 export interface OptionGroupProps extends BaseProps {
 	default?: string;
-	onSelect?: (text: string) => void;
+	onSelection?: (text: string) => void;
 	optionType?: OptionType;
 	options?: string[];
 	title?: string;
@@ -82,7 +82,7 @@ export function getDefaultOptionGroupProps(): OptionGroupProps {
 		...getDefaultBaseProps(),
 		obj: "OptionGroup",
 		default: "",
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		optionType: OptionType.square,
 		options: [],
 		title: ""
@@ -184,7 +184,7 @@ export class OptionGroup extends BaseComponent<
 					disabled={this.props.disabled}
 					initialToggle={toggle}
 					key={text}
-					onSelect={this.handleSelection}
+					onSelection={this.handleSelection}
 					optionType={this.props.optionType}
 					selected={toggle}
 					sizing={this.props.sizing}
@@ -215,7 +215,7 @@ export class OptionGroup extends BaseComponent<
 					options: this.handleOptions(this.props.options, text)
 				},
 				() => {
-					this.props.onSelect(text);
+					this.props.onSelection(text);
 				}
 			);
 		}

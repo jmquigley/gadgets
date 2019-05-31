@@ -49,7 +49,9 @@ test("Test making the Breadcrumbs invisible", () => {
 
 test("Test disabling the Breadcrumbs control", () => {
 	const select = jest.fn();
-	const ctl = mount(<Breadcrumbs disabled items={items} onSelect={select} />);
+	const ctl = mount(
+		<Breadcrumbs disabled items={items} onSelection={select} />
+	);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();
@@ -58,7 +60,7 @@ test("Test disabling the Breadcrumbs control", () => {
 
 test("Test Breadcrumbs select event", () => {
 	const select = jest.fn();
-	const ctl = mount(<Breadcrumbs items={items} onSelect={select} />);
+	const ctl = mount(<Breadcrumbs items={items} onSelection={select} />);
 
 	expect(ctl).toBeDefined();
 	expect(ctl).toMatchSnapshot();

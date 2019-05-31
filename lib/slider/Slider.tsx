@@ -3,7 +3,7 @@
  * be moved  along this horizontal line.  The line represents a min/max range.
  * The Slider value increases when the chevron is moved to the right and
  * decreases when moved to the left.  When the chevron is released the current
- * position is given via an onSelect callback.
+ * position is given via an onSelection callback.
  *
  * The min/max values must be >= 0.  The control width is represented by this
  * positive range.
@@ -20,7 +20,7 @@
  * <Slider
  *     max={100}
  *     min={0}
- *     onSelect={(val: number) => debug('slider select: %o', val)}
+ *     onSelection={(val: number) => debug('slider select: %o', val)}
  *     scale={2}
  *     snap
  *     ticks={5}
@@ -29,7 +29,7 @@
  *
  * ## API
  * #### Events
- * - `onSelect(val: number)` - When the user releases the slider chevron this
+ * - `onSelection(val: number)` - When the user releases the slider chevron this
  * callback is invoked and given the index where the chevron "landed"
  *
  * #### Styles
@@ -80,7 +80,7 @@ import {
 export interface SliderProps extends BaseProps {
 	max?: number;
 	min?: number;
-	onSelect?: (value: number) => void;
+	onSelection?: (value: number) => void;
 	scale?: number;
 	snap?: boolean;
 	startPosition?: number;
@@ -93,7 +93,7 @@ export function getDefaultSliderProps(): SliderProps {
 		max: 100,
 		min: 0,
 		obj: "Slider",
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		scale: 1,
 		snap: false,
 		startPosition: 0,
@@ -233,7 +233,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	@autobind
 	private handleMouseUp(e: any) {
 		if (!this.props.disabled) {
-			this.props.onSelect(Math.round(this.state.x / this.props.scale));
+			this.props.onSelection(Math.round(this.state.x / this.props.scale));
 
 			document.removeEventListener("mousemove", this._mouseMove);
 			document.removeEventListener("mouseup", this.handleMouseUp);

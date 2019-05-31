@@ -56,7 +56,7 @@ for (const optionType of ev.getNames(OptionType)) {
 
 test("Test disabling of the Option control", () => {
 	const click = jest.fn();
-	const ctl = mount(<Option onSelect={click} disabled={true} />);
+	const ctl = mount(<Option onSelection={click} disabled={true} />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -69,7 +69,7 @@ test("Test disabling of the Option control", () => {
 
 test("Test making the Option control invisible", () => {
 	const click = jest.fn();
-	const ctl = mount(<Option onSelect={click} visible={false} />);
+	const ctl = mount(<Option onSelection={click} visible={false} />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();
@@ -82,7 +82,7 @@ test("Test making the Option control invisible", () => {
 
 test("Test Option control click event", () => {
 	const click = jest.fn();
-	const ctl = mount(<Option onSelect={click} />);
+	const ctl = mount(<Option onSelection={click} />);
 
 	assert(ctl);
 	expect(ctl).toMatchSnapshot();

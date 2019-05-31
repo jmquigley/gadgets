@@ -24,7 +24,7 @@ export interface ListItemProps extends ItemProps {
 	onBlur?: (e: React.FocusEvent<HTMLLIElement>) => void;
 	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
 	onDoubleClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
-	onSelect?: (title: string) => void;
+	onSelection?: (title: string) => void;
 }
 
 export function getDefaultListItemProps(): ListItemProps {
@@ -38,7 +38,7 @@ export function getDefaultListItemProps(): ListItemProps {
 		onBlur: nilEvent,
 		onClick: nilEvent,
 		onDoubleClick: nilEvent,
-		onSelect: nilEvent
+		onSelection: nilEvent
 	};
 }
 
@@ -94,7 +94,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 				if (!this._preventClick) {
 					this.props.href.selectHandler(this);
 					this.props.onClick(e);
-					this.props.onSelect(this.props.title);
+					this.props.onSelection(this.props.title);
 				}
 			}, this._delay);
 		}
@@ -134,10 +134,14 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	public render() {
 		this.updateClassName();
 
+		// The onSelection event should not be passed down through the
+		// item and into the sub components.
+		const {onSelection, ...props} = this.props;
+
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...props}>
 				<Item
-					{...this.props}
+					{...props}
 					className={this.className}
 					ripple={this.state.toggleRipple}
 					onBlur={this.handleBlur}

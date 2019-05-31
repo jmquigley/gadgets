@@ -5,7 +5,7 @@ The Slider control creates a horizontal line overlapped by a chevron that can
 be moved  along this horizontal line.  The line represents a min/max range.
 The Slider value increases when the chevron is moved to the right and
 decreases when moved to the left.  When the chevron is released the current
-position is given via an onSelect callback.
+position is given via an onSelection callback.
 
 The min/max values must be >= 0.  The control width is represented by this
 positive range.
@@ -22,7 +22,7 @@ import {Slider} from 'gadgets';
 <Slider
     max={100}
     min={0}
-    onSelect={(val: number) => debug('slider select: %o', val)}
+    onSelection={(val: number) => debug('slider select: %o', val)}
     scale={2}
     snap
     ticks={5}
@@ -31,7 +31,7 @@ import {Slider} from 'gadgets';
 
 ## API
 #### Events
-- `onSelect(val: number)` - When the user releases the slider chevron this
+- `onSelection(val: number)` - When the user releases the slider chevron this
 callback is invoked and given the index where the chevron "landed"
 
 #### Styles

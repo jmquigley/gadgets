@@ -39,7 +39,7 @@ import {DynamicList} from 'gadgets';
     onNew={(title: string) => {
         console.log(`Adding new item to list: ${title}`);
     }}
-    onSelect={(title: string) => {
+    onSelection={(title: string) => {
         console.log(`Selected item: ${title}`);
     }}
     onUpdate={(previous: string, title: string) =>
@@ -82,7 +82,7 @@ component this callback is invoked.
 - `onFocus` - Invoked when a list item is clicked.
 - `onNew(title: string)` - This event is executed when an item is added to
 the list.  The title of the new item is a parameter to the callback
-- `onSelect(title: string)` - Invoked when a list item is selected. The title
+- `onSelection(title: string)` - Invoked when a list item is selected. The title
 of the selected item is a parameter to the callback.
 - `onSort(sortOrder: SortOrder)` - Invoked whne the list is sorted.  It will
 give the selected order to the callback.

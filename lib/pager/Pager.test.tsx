@@ -134,7 +134,11 @@ test("Test Pager getPages method with invalid totalItems (negative test)", () =>
 test("Test selection of the second page in the control", () => {
 	const select = jest.fn();
 	const ctl = mount(
-		<Pager onSelect={select} pageSizes={[10, 25, 100]} totalItems={3000} />
+		<Pager
+			onSelection={select}
+			pageSizes={[10, 25, 100]}
+			totalItems={3000}
+		/>
 	);
 
 	validate(ctl);
@@ -154,7 +158,7 @@ test("Test selection of the second page in the control", () => {
 test('Test pressing the "<<" (first) button', () => {
 	const select = jest.fn();
 	const ctl = mount(
-		<Pager initialPage={2} onSelect={select} totalItems={299} />
+		<Pager initialPage={2} onSelection={select} totalItems={299} />
 	);
 
 	validate(ctl);
@@ -176,7 +180,7 @@ test('Test pressing the "<<" (first) button', () => {
 test('Test pressing the "<" (previous) button', () => {
 	const select = jest.fn();
 	const ctl = mount(
-		<Pager initialPage={3} onSelect={select} totalItems={299} />
+		<Pager initialPage={3} onSelection={select} totalItems={299} />
 	);
 
 	validate(ctl);
@@ -197,7 +201,7 @@ test('Test pressing the "<" (previous) button', () => {
 
 test('Test pressing the ">" (next) button', () => {
 	const select = jest.fn();
-	const ctl = mount(<Pager onSelect={select} totalItems={299} />);
+	const ctl = mount(<Pager onSelection={select} totalItems={299} />);
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
@@ -217,7 +221,7 @@ test('Test pressing the ">" (next) button', () => {
 
 test('Test pressing the ">>" (last) button', () => {
 	const select = jest.fn();
-	const ctl = mount(<Pager onSelect={select} totalItems={299} />);
+	const ctl = mount(<Pager onSelection={select} totalItems={299} />);
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;
@@ -237,7 +241,7 @@ test('Test pressing the ">>" (last) button', () => {
 
 test('Test selecting dialog "50" to change the page size', async () => {
 	const select = jest.fn();
-	const ctl = mount(<Pager onSelect={select} totalItems={299} />);
+	const ctl = mount(<Pager onSelection={select} totalItems={299} />);
 
 	validate(ctl);
 	const pager = ctl.instance() as Pager;

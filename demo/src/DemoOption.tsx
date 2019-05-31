@@ -27,14 +27,14 @@ export default class DemoOption extends React.Component<any, undefined> {
 				<div className='option-display-group'>
 					<Option
 						disabled={this.props["disabled"]}
-						onSelect={this.handleSelect}
+						onSelection={this.handleSelect}
 						sizing={this.props["sizing"]}
 						optionType={OptionType[key]}
 					/>
 					<Option
 						disabled={this.props["disabled"]}
 						initialToggle={true}
-						onSelect={this.handleSelect}
+						onSelection={this.handleSelect}
 						optionType={OptionType[key]}
 						sizing={this.props["sizing"]}
 						text={key}

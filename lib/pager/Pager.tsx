@@ -28,7 +28,7 @@
  *     pageSizes={[25,50,100,500]}
  *     sizing={Sizing.normal}
  *     totalItems="2999"
- *     onSelect={
+ *     onSelection={
  *         (page: number) => {
  *             console.log(`Clicked on page: ${page}`);
  *         }
@@ -57,7 +57,7 @@
  * #### Events
  * - `onChangePageSize(pageSize: number)` - when the page size of the control
  * is change in the dialog box this event is invoked with the new size.
- * - `onSelect(page: number)` - When the control changes to a new page, this
+ * - `onSelection(page: number)` - When the control changes to a new page, this
  * event is invoked.  It will give the new page selection as a parameter.
  * - `onSort(sortOrder: SortOrder)` - When this callback is given, then the
  * dialog button will present an *ascending* and *descending* option.  When one
@@ -117,7 +117,7 @@ export interface PagerProps extends BaseProps {
 	initialPage?: number;
 	initialPageSize?: number;
 	onChangePageSize?: (size: number) => void;
-	onSelect?: (page: number) => void;
+	onSelection?: (page: number) => void;
 	onSort?: (sortOrder: SortOrder) => void;
 	pagesToDisplay?: number;
 	pageSizes?: number[];
@@ -132,7 +132,7 @@ export function getDefaultPagerProps(): PagerProps {
 		initialPageSize: defaultPageSize,
 		obj: "Pager",
 		onChangePageSize: nilEvent,
-		onSelect: nilEvent,
+		onSelection: nilEvent,
 		onSort: null,
 		pagesToDisplay: 3,
 		pageSizes: defaultPageSizes.slice(),
@@ -274,7 +274,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		}
 
 		this.setState({currentPage: page}, () => {
-			this.props.onSelect(page);
+			this.props.onSelection(page);
 		});
 	}
 
@@ -488,7 +488,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 							: this._iconBlank
 					}
 					noedit
-					onSelect={this.handleSortAscending}
+					onSelection={this.handleSortAscending}
 					title='Ascending'
 				/>
 			);
@@ -503,7 +503,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 							: this._iconBlank
 					}
 					noedit
-					onSelect={this.handleSortDescending}
+					onSelection={this.handleSortDescending}
 					title='Descending'
 				/>
 			);
@@ -528,7 +528,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					key={this._dialogKeys.at(idx++)}
 					leftButton={icon}
 					noedit
-					onSelect={this.handleDialogSelect}
+					onSelection={this.handleDialogSelect}
 					title={String(val)}
 				/>
 			);
@@ -540,7 +540,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				key={this._dialogKeys.at(idx++)}
 				leftButton={allFlag ? this._iconCheck : this._iconBlank}
 				noedit
-				onSelect={this.handleDialogSelect}
+				onSelection={this.handleDialogSelect}
 				title='all'
 			/>
 		);
@@ -553,7 +553,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
-					onSelect={this.moveToFront}
+					onSelection={this.moveToFront}
 					title='First'
 				/>
 				<ListItem
@@ -561,7 +561,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
-					onSelect={this.moveToEnd}
+					onSelection={this.moveToEnd}
 					title='Last'
 				/>
 				<ListItem
@@ -569,7 +569,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
-					onSelect={this.moveToNext}
+					onSelection={this.moveToNext}
 					title='Next'
 				/>
 				<ListItem
@@ -577,7 +577,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
-					onSelect={this.moveToPrevious}
+					onSelection={this.moveToPrevious}
 					title='Previous'
 				/>
 				<ListDivider />
@@ -674,7 +674,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 				this.currentPage = 1;
 			}
 
-			this.props.onSelect(this.currentPage);
+			this.props.onSelection(this.currentPage);
 			this.props.onChangePageSize(size);
 			this.rebuildButtons();
 		});

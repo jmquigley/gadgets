@@ -49,7 +49,7 @@ exports[`Creation of the Dropdown control 1`] = `
   notooltip={false}
   obj="Dropdown"
   onError={[Function]}
-  onSelect={[Function]}
+  onSelection={[Function]}
   padding={null}
   reset={false}
   ripple={false}
@@ -175,7 +175,7 @@ exports[`Disable the Dropdown control 1`] = `
   notheme={false}
   notooltip={false}
   obj="Dropdown"
-  onSelect={[MockFunction]}
+  onSelection={[MockFunction]}
   padding={null}
   ripple={false}
   selected={false}
@@ -264,7 +264,7 @@ exports[`Make the Dropdown control invisible 1`] = `
   notheme={false}
   notooltip={false}
   obj="Dropdown"
-  onSelect={[MockFunction]}
+  onSelection={[MockFunction]}
   padding={null}
   ripple={false}
   selected={false}
@@ -338,7 +338,7 @@ Object {
   "notheme": false,
   "notooltip": false,
   "obj": "Dropdown",
-  "onSelect": [Function],
+  "onSelection": [Function],
   "padding": null,
   "ripple": false,
   "selected": false,
@@ -434,7 +434,7 @@ exports[`Test the Dropdown click event 1`] = `
   notheme={false}
   notooltip={false}
   obj="Dropdown"
-  onSelect={[MockFunction]}
+  onSelection={[MockFunction]}
   padding={null}
   ripple={false}
   selected={false}

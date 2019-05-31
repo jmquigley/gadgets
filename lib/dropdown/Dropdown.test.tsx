@@ -42,7 +42,7 @@ test("Disable the Dropdown control", () => {
 			defaultVal='idstr2'
 			disabled
 			items={testData}
-			onSelect={change}
+			onSelection={change}
 		/>
 	);
 
@@ -60,7 +60,7 @@ test("Make the Dropdown control invisible", () => {
 		<Dropdown
 			defaultVal='idstr2'
 			items={testData}
-			onSelect={change}
+			onSelection={change}
 			visible={false}
 		/>
 	);
@@ -77,7 +77,7 @@ test("Make the Dropdown control invisible", () => {
 test("Test the Dropdown click event", () => {
 	const change = jest.fn();
 	const ctl = mount(
-		<Dropdown defaultVal='idstr1' items={testData} onSelect={change} />
+		<Dropdown defaultVal='idstr1' items={testData} onSelection={change} />
 	);
 
 	assert(ctl);

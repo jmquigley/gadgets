@@ -91,7 +91,7 @@ the tree is initialized.  This is only called once.
 - `onSearch(node: TreeItem)` - Invoked when a search is performed.  It returns
 the current item found in the search.  This callback is also called when moving
 to/from previous/next the title.
-- `onSelect(node: TreeItem)` - Invoked when a tree item is selected.  The node
+- `onSelection(node: TreeItem)` - Invoked when a tree item is selected.  The node
 selected is passed to the callback.  The node that was selected is also highlighted.
 - `onUpdate(currentNode: TreeItem, previousNode: TreeItem, treeData: TreeItem[])` -
 Invoked when the contents of a tree node (title) have been changed.  It passes
@@ -124,6 +124,9 @@ nodes.
 selected.
 - `kbExpandAll="ctrl+=" {string}` - keyboard combination to expand all nodes.
 - `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
+- `noscroll=false {boolean}` - turns off the horizontal scroll bar when the
+width of all nodes expands past the right side of the display
+- `nosearch=false {boolean}` - turns off the search toolbar for the widget
 - `selectNew=true {boolean}` - When a new node is added it is selected by
 default (true).  If this property is false, then the parent remains selected
 when a child node is added.

@@ -18,7 +18,7 @@
  *      onRemove={(tab: any) => {
  *          debug(removing %o (id=${tab.props['id']})`, tab.props["title"]);
  *      }}
- *      onSelect={(tab: any, previous: any) => {
+ *      onSelection={(tab: any, previous: any) => {
  *          debug(
  *              `selected: %o (id=${tab.props["id"]}), previous: %o (id=${
  *                  previous.props["id"]
@@ -44,7 +44,7 @@
  * #### Events
  * - `onRemove(tab)` - When a tab is removed this event is invoked.  The
  * callback will receive the tab instance that was removed.
- * - `onSelect(tab, previousTab)` - When a `Tab` is selected this event is
+ * - `onSelection(tab, previousTab)` - When a `Tab` is selected this event is
  * invoked.  The callback will receive a reference to the selected tab and the
  * previous tab.  If there is no previous tab, then the selected and
  * previous values are the same.
@@ -75,7 +75,9 @@
  * @module TabContainer
  */
 
-// const debug = require("debug")("gadgets.TabContainer");
+const debug = require("debug")("gadgets.TabContainer");
+const debugCreate = require("debug")("gadgets.TabContainer:create");
+const debugRender = require("debug")("gadgets.TabContainer:render");
 
 import autobind from "autobind-decorator";
 import * as _ from "lodash";
@@ -102,7 +104,7 @@ export interface TabContainerProps extends BaseProps {
 	noclose?: boolean;
 	nonavigation?: boolean;
 	onRemove?: (tab: Tab) => void;
-	onSelect?: (tab: Tab, previousTab: Tab) => void;
+	onSelection?: (tab: Tab, previousTab: Tab) => void;
 	tabWidth?: number;
 }
 
@@ -117,7 +119,7 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 			nonavigation: false,
 			obj: "TabContainer",
 			onRemove: nilEvent,
-			onSelect: nilEvent,
+			onSelection: nilEvent,
 			tabWidth: 100,
 			minHeight: "100px",
 			minWidth: "350px"
@@ -274,6 +276,8 @@ export class TabContainer extends BaseComponent<
 			...getDefaultTabContainerState(),
 			selectedTab: this._tabs.length > 0 ? this._tabs[0].props["id"] : ""
 		};
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	/**
@@ -342,10 +346,11 @@ export class TabContainer extends BaseComponent<
 	@autobind
 	private selectHandler(tab: Tab) {
 		if (this.state.selectedTab) {
+			debug("selectHandler -> tab: %O", tab);
 			const previous = this._getTab(this.state.selectedTab)[0];
 
 			this.selectedTab = tab.props["id"];
-			this.props.onSelect(tab, previous ? previous : tab);
+			this.props.onSelection(tab, previous ? previous : tab);
 		}
 	}
 
@@ -442,11 +447,13 @@ export class TabContainer extends BaseComponent<
 	public render() {
 		this.updateClassName();
 
+		debugRender("props: %O, state: %O", this.props, this.state);
+
 		let body = null;
 		const style = {};
 
 		// Removes non standard property to remove jest warning in test
-		const {onRemove, ...props} = this.props;
+		const {onRemove, onSelection, ...props} = this.props;
 
 		if (this._tabs.length > 0) {
 			this._tabs = this.updateChildren(props);

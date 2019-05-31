@@ -24,7 +24,7 @@ export default class DemoOptionGroup extends React.Component<any, undefined> {
 				<OptionGroup
 					default='option1'
 					disabled={this.props["disabled"]}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					options={[
 						"option1",
 						"option2",

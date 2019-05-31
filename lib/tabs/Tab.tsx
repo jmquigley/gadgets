@@ -55,6 +55,8 @@
  */
 
 // const debug = require("debug")("gadgets.Tab");
+const debugCreate = require("debug")("gadgets.Tab:create");
+const debugRender = require("debug")("gadgets.Tab:render");
 
 import autobind from "autobind-decorator";
 import * as _ from "lodash";
@@ -231,6 +233,8 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 			...getDefaultTabState(),
 			visible: this.props.visible
 		};
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -253,6 +257,8 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		let closeButton: any = null;
 		if (!this.props.noclose) {

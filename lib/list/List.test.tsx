@@ -80,10 +80,10 @@ test("Test a list with ListItem and selection", () => {
 	assert(li2.text() === "Item #2");
 });
 
-test("Test the onSelect handler within a list", async () => {
+test("Test the onSelection handler within a list", async () => {
 	const select = jest.fn();
 	const ctl = mount(
-		<List onSelect={select}>
+		<List onSelection={select}>
 			<ListItem title='Item #1' />
 			<ListItem title='Item #2' />
 		</List>
@@ -99,7 +99,7 @@ test("Test the onSelect handler within a list", async () => {
 	// When the item is clicked it is not selected immediately.  There is a wait
 	// handler within ListItem that attempts to detect double clicks.  This means
 	// We must want N seconds before safely checking that the item was clicked
-	// and that the onSelect callback was invoked.
+	// and that the onSelection callback was invoked.
 
 	await waitPromise(2)
 		.then(() => {

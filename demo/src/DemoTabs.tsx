@@ -49,7 +49,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					disabled={this.props["disabled"]}
 					maxTabs={5}
 					onRemove={this.handleRemove}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>
@@ -97,7 +97,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					location={Location.left}
 					maxTabs={3}
 					onRemove={this.handleRemove}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>
@@ -133,7 +133,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					location={Location.bottom}
 					maxTabs={5}
 					onRemove={this.handleRemove}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>
@@ -177,7 +177,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 					noclose
 					nonavigation
 					onRemove={this.handleRemove}
-					onSelect={this.handleSelect}
+					onSelection={this.handleSelect}
 					sizing={this.props["sizing"]}
 				>
 					<Tab title='tab #1' onClose={this.handleClose}>

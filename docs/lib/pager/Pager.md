@@ -30,7 +30,7 @@ import {Pager} from 'gadgets';
     pageSizes={[25,50,100,500]}
     sizing={Sizing.normal}
     totalItems="2999"
-    onSelect={
+    onSelection={
         (page: number) => {
             console.log(`Clicked on page: ${page}`);
         }
@@ -59,7 +59,7 @@ to a page by its number position.
 #### Events
 - `onChangePageSize(pageSize: number)` - when the page size of the control
 is change in the dialog box this event is invoked with the new size.
-- `onSelect(page: number)` - When the control changes to a new page, this
+- `onSelection(page: number)` - When the control changes to a new page, this
 event is invoked.  It will give the new page selection as a parameter.
 - `onSort(sortOrder: SortOrder)` - When this callback is given, then the
 dialog button will present an *ascending* and *descending* option.  When one

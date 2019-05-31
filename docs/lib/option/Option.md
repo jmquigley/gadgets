@@ -33,7 +33,7 @@ import {Option, OptionType} from 'gadgets';
 
 ## API
 #### Events
-- `onSelect(toggle: boolean, text: string)` - When the option is clicked, then
+- `onSelection(toggle: boolean, text: string)` - When the option is clicked, then
 the button display is changed (toggled).  The callback returns the current state of
 the toggle and the text label associated with the option.  When the button is "clear",
 it is off and "false" is sent to the callback.  When the button is "checked", it is
