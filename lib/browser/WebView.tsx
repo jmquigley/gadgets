@@ -17,7 +17,6 @@
  * @module WebView
  */
 import autobind from "autobind-decorator";
-import * as _ from "lodash";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
 import {
@@ -25,7 +24,8 @@ import {
 	BaseProps,
 	BaseState,
 	getDefaultBaseProps,
-	getDefaultBaseState
+	getDefaultBaseState,
+	sanitizeProps
 } from "../shared";
 
 export interface WebViewProps extends BaseProps {
@@ -33,14 +33,11 @@ export interface WebViewProps extends BaseProps {
 }
 
 export function getDefaultWebViewProps(): WebViewProps {
-	return _.omitBy(
-		{
-			...getDefaultBaseProps(),
-			innerRef: nilEvent,
-			obj: "WebView"
-		},
-		_.isNil
-	);
+	return sanitizeProps<WebViewProps>({
+		...getDefaultBaseProps(),
+		innerRef: nilEvent,
+		obj: "WebView"
+	});
 }
 
 export type WebViewState = BaseState;

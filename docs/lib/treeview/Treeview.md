@@ -124,8 +124,8 @@ nodes.
 selected.
 - `kbExpandAll="ctrl+=" {string}` - keyboard combination to expand all nodes.
 - `nodeWidth="20em" {string}` - the width of the text nodes that are displayed.
-- `noscroll=false {boolean}` - turns off the horizontal scroll bar when the
-width of all nodes expands past the right side of the display
+- `noscroll=false {boolean}` - turns off the scroll bars when the width/height
+of all nodes expands past the right or bottom edge of the display container.
 - `nosearch=false {boolean}` - turns off the search toolbar for the widget
 - `selectNew=true {boolean}` - When a new node is added it is selected by
 default (true).  If this property is false, then the parent remains selected

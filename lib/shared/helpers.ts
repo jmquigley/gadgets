@@ -1,4 +1,4 @@
-"use strict";
+import * as _ from "lodash";
 
 const debug = require("debug")("gadgets.shared.helpers");
 
@@ -27,4 +27,14 @@ export function globalize(
 	}
 
 	return ref;
+}
+
+/**
+ * Removes all null props from the given object.  This is used by the
+ * functions that retrieve default props for a component.
+ * @param props {T} - the props object for the given component
+ * @return {T} with nil props removed.
+ */
+export function sanitizeProps<T>(props: T): T {
+	return _.omitBy(props, _.isNil) as T;
 }

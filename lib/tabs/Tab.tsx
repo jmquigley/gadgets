@@ -59,7 +59,6 @@ const debugCreate = require("debug")("gadgets.Tab:create");
 const debugRender = require("debug")("gadgets.Tab:render");
 
 import autobind from "autobind-decorator";
-import * as _ from "lodash";
 import * as React from "react";
 import styled, {css} from "styled-components";
 import {nilEvent} from "util.toolbox";
@@ -76,6 +75,7 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Location,
+	sanitizeProps,
 	Wrapper
 } from "../shared";
 
@@ -90,23 +90,20 @@ export interface TabProps extends BaseProps {
 }
 
 export function getDefaultTabProps(): TabProps {
-	return _.omitBy(
-		{
-			...getDefaultBaseProps(),
-			href: {
-				selectHandler: nilEvent
-			},
-			minWidth: "120px",
-			noclose: false,
-			obj: "Tab",
-			onClick: nilEvent,
-			onClose: nilEvent,
-			orientation: Location.top,
-			selected: false,
-			title: ""
+	return sanitizeProps<TabProps>({
+		...getDefaultBaseProps(),
+		href: {
+			selectHandler: nilEvent
 		},
-		_.isNil
-	);
+		minWidth: "120px",
+		noclose: false,
+		obj: "Tab",
+		onClick: nilEvent,
+		onClose: nilEvent,
+		orientation: Location.top,
+		selected: false,
+		title: ""
+	});
 }
 
 export interface TabState extends BaseState {

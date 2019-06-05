@@ -42,6 +42,9 @@ bottom of the control.  It will suppress the navigation buttons.
 This example sets the max number of tabs to 3, so the fourth would
 be suppressed.
 
+The title value for a Tab component is unique within the container.  If
+the same title is given, then the last one is used.
+
 ## API
 #### Events
 - `onRemove(tab)` - When a tab is removed this event is invoked.  The
@@ -62,15 +65,17 @@ displayed by a selected tab.
 buttons within the tab bar.
 
 #### Properties
-- `children: {any} (null)` - the objects within the `TabContainer`.  This
-control will only use `Tab` components and ignore all others.
-- `maxTabs: {number} (5)` - the maximum number of tabs that will be shown
+- `location=Location.top {Location}` - The position of the Tabs within the
+container (.top, .bottom, .left, .right)
+- `maxTabs=5 {number}` - the maximum number of tabs that will be shown
 within the container.  This respects the order in which they are given
-to the control.
-- `noclose: {boolean} (false)` - if true, then the close buttons on each
+to the control.  If set to 0, then no maximum value is checked.
+- `noborder=false {boolean}` - If true, then the border is disabled around
+the content window, otherwise it is shown.
+- `noclose=false {boolean}` - if true, then the close buttons on each
 tab are suppressed, otherwise they are shown.
-- `nonavigation: {boolean} (false)` - if true, then the navigation
-chevron buttons are suppressed within the tab bar, otherwise they are shown
-- `tabWidth: {number} (75)` - the number of pixels for each `Tab`
-component within the container.
+- `nonavigation=false {boolean}` - if true, then the navigation chevron
+buttons are suppressed within the tab bar, otherwise they are shown
+- `tabWidth=75 {number}` - the number of pixels for each `Tab` component
+within the container.
 

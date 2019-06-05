@@ -43,6 +43,13 @@ const alias = {
 		"react-dom",
 		"cjs",
 		"react-dom.production.min.js"
+	),
+	"styled-components": path.resolve(
+		__dirname,
+		"node_modules",
+		"styled-components",
+		"dist",
+		"styled-components.min.js"
 	)
 };
 
@@ -197,6 +204,19 @@ module.exports = {
 				from: "node_modules/quill-markup/public/highlights/**/*.css",
 				to: "highlights",
 				flatten: true
+			},
+			{
+				from: "**/*.d.ts",
+				ignore: [
+					"bin/**/*",
+					"demo/**/*",
+					"dist/**/*",
+					"node_modules/**/*"
+				]
+			},
+			{
+				from: "index.d.ts",
+				to: "bundle.d.ts"
 			}
 		]),
 		new BundleAnalyzerPlugin({

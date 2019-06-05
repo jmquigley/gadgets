@@ -5,11 +5,12 @@
 
 - Changed all `onSelect` event handler to `onSelection` to avoid collision with built in HTML onselect.  Without this change the onselect event handler could be called at times where it is unexpected.
 - Added a `noscroll` option to disable the horizontal scrollbar in a [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md).
+- Removed custom bundler code since its functionality can all be done via webpack
 
 #### Bug Fixes:
 
--
--
+- Added an alias to styled-components in webpack config to fix watcher issue (where wrong version of of the library was included)
+- Fixed how the TabContainer handles cloning child Tab components and their underlying content.
 
 ---
 
@@ -32,7 +33,7 @@
 - Tab labels allowed editing inline.  This has a been fixed (they are static and should only be changed through properties)
 - Fixed a problem where dts-bundle-generator was including @types files in the bundle for modules that will not be installed when this module is included in a project.
 - Fixed how typings are included in the package.  Removed the use of the dts bundler to use native typescript built typings.
-- When a Treeview was updated with a new tree data strucuture it was not selecting an initial node.
+- When a Treeview was updated with a new tree data structure it was not selecting an initial node.
 
 ---
 
