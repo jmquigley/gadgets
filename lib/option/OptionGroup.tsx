@@ -49,11 +49,14 @@
  */
 
 // const debug = require('debug')('gadgets.OptionGroup');
+const debugCreate = require("debug")("gadgets.OptionGroup:create");
+const debugRender = require("debug")("gadgets.OptionGroup:render");
 
 import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
 import * as React from "react";
 import styled from "styled-components";
+import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
@@ -63,6 +66,7 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
+	sanitizeProps,
 	Sizing,
 	Wrapper
 } from "../shared";
@@ -78,7 +82,7 @@ export interface OptionGroupProps extends BaseProps {
 }
 
 export function getDefaultOptionGroupProps(): OptionGroupProps {
-	return {
+	return sanitizeProps<OptionGroupProps>({
 		...getDefaultBaseProps(),
 		obj: "OptionGroup",
 		default: "",
@@ -86,7 +90,7 @@ export function getDefaultOptionGroupProps(): OptionGroupProps {
 		optionType: OptionType.square,
 		options: [],
 		title: ""
-	};
+	});
 }
 
 export interface OptionGroupState extends BaseState {
@@ -163,15 +167,22 @@ export class OptionGroup extends BaseComponent<
 	OptionGroupProps,
 	OptionGroupState
 > {
+	private _keys: Keys;
 	private static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
 
 	constructor(props: OptionGroupProps) {
 		super(props, "ui-option-group", OptionGroup.defaultProps.style);
 
+		this._keys = new Keys({testing: this.props.testing});
 		this.state = {
 			...getDefaultOptionGroupState(),
-			options: this.handleOptions(this.props.options, this.props.default)
+			options: this.buildOptionState(
+				this.props.options,
+				this.props.default
+			)
 		};
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	private buildOptionList() {
@@ -183,7 +194,8 @@ export class OptionGroup extends BaseComponent<
 					controlled={false}
 					disabled={this.props.disabled}
 					initialToggle={toggle}
-					key={text}
+					key={this._keys.at(text)}
+					id={this._keys.at(text)}
 					onSelection={this.handleSelection}
 					optionType={this.props.optionType}
 					selected={toggle}
@@ -196,8 +208,24 @@ export class OptionGroup extends BaseComponent<
 		return options;
 	}
 
+	/**
+	 * Takes the current list of labels and generates an ordered map of
+	 * boolean values related to each label in the group.  The value that is
+	 * selected is set to true in the map where the remaining are false.
+	 * This state is then used to build the Option components for the
+	 * grouping with one option in the selected state.
+	 * @param labels {string[]} - the list of option labels in the group
+	 * @param selected {string} - the label string of the option that was
+	 * selected.  This is used to set on e option to true and the
+	 * remaining options to false.
+	 * @returns a new Map<string, boolean> structure with labels as the key
+	 * and its current selection status
+	 */
 	@autobind
-	private handleOptions(labels: string[], selected: string) {
+	private buildOptionState(
+		labels: string[],
+		selected: string
+	): OrderedMap<string, boolean> {
 		let options: OrderedMap<string, boolean> = OrderedMap();
 		for (const label of labels) {
 			options = options.set(label, label === selected);
@@ -212,7 +240,7 @@ export class OptionGroup extends BaseComponent<
 			toggle = toggle;
 			this.setState(
 				{
-					options: this.handleOptions(this.props.options, text)
+					options: this.buildOptionState(this.props.options, text)
 				},
 				() => {
 					this.props.onSelection(text);
@@ -223,6 +251,8 @@ export class OptionGroup extends BaseComponent<
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		return (
 			<Wrapper {...this.props}>
