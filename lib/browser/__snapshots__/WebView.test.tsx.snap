@@ -2,13 +2,28 @@
 
 exports[`Test creation of a WebView instance 1`] = `
 <WebView
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
   innerRef={[Function]}
+  left={null}
   location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
+  minWidth={null}
   noborder={false}
   noedit={false}
   nohover={false}
@@ -16,6 +31,7 @@ exports[`Test creation of a WebView instance 1`] = `
   notheme={false}
   notooltip={false}
   obj="WebView"
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -47,19 +63,39 @@ exports[`Test creation of a WebView instance 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test retrieval of the WebView props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "border": null,
+  "borderColor": null,
+  "bottom": null,
+  "children": null,
+  "className": null,
+  "color": null,
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
+  "errorMessage": null,
   "focus": false,
+  "height": null,
   "hidden": false,
+  "id": null,
   "innerRef": [Function],
+  "left": null,
   "location": "none",
+  "maxHeight": null,
+  "maxWidth": null,
+  "minHeight": null,
+  "minWidth": null,
   "noborder": false,
   "noedit": false,
   "nohover": false,
@@ -67,6 +103,7 @@ Object {
   "notheme": false,
   "notooltip": false,
   "obj": "WebView",
+  "padding": null,
   "ripple": false,
   "selected": false,
   "sizing": "normal",
@@ -96,7 +133,11 @@ Object {
     "tooltipForegroundColor": "#ffffff",
     "transitionDelay": "0.33s",
   },
+  "tooltip": null,
+  "top": null,
   "visible": true,
+  "width": null,
+  "xcss": null,
 }
 `;
 

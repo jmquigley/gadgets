@@ -177,9 +177,9 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 							);
 
 						case "ButtonText":
-							(style["border"] = `solid 1px ${
-								this.theme.borderColor
-							}`),
+							(style[
+								"border"
+							] = `solid 1px ${this.theme.borderColor}`),
 								delete style["width"];
 							break;
 

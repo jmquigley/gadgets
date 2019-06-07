@@ -1,6 +1,8 @@
 // TODO: add Item documentation
 
 // const debug = require('debug')('gadgets.Item');
+const debugCreate = require("debug")("gadgets.Item:create");
+const debugRender = require("debug")("gadgets.Item:render");
 
 import * as React from "react";
 import styled, {css} from "styled-components";
@@ -147,10 +149,13 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 
 	constructor(props: ItemProps) {
 		super(props, "ui-item", Item.defaultProps.style);
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		let leftButton: any = null;
 		let rightButton: any = null;

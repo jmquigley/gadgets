@@ -5,12 +5,13 @@
 
 - Changed all `onSelect` event handler to `onSelection` to avoid collision with built in HTML onselect.  Without this change the onselect event handler could be called at times where it is unexpected.
 - Added a `noscroll` option to disable the horizontal scrollbar in a [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md).
-- Removed custom bundler code since its functionality can all be done via webpack
+- Removed custom bundler code since its functionality can all be done via webpack.
 
 #### Bug Fixes:
 
 - Added an alias to styled-components in webpack config to fix watcher issue (where wrong version of of the library was included)
 - Fixed how the TabContainer handles cloning child Tab components and their underlying content.
+- Fixed getDefaultBaseState to properly clone the default settings.
 
 ---
 

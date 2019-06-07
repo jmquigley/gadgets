@@ -99,7 +99,6 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	Location,
-	sanitizeProps,
 	Wrapper
 } from "../shared";
 import {Tab} from "./Tab";
@@ -115,7 +114,7 @@ export interface TabContainerProps extends BaseProps {
 }
 
 export function getDefaultTabContainerProps(): TabContainerProps {
-	return sanitizeProps<TabContainerProps>({
+	return {
 		...getDefaultBaseProps(),
 		location: Location.top,
 		maxTabs: 5,
@@ -128,7 +127,7 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 		tabWidth: 100,
 		minHeight: "100px",
 		minWidth: "350px"
-	});
+	};
 }
 
 export interface TabContainerState extends BaseState {

@@ -21,9 +21,7 @@ test("Test retrieval of Toolbar props object", () => {
 });
 
 [Justify.left, Justify.right, Justify.center].forEach((justify: Justify) => {
-	test(`Test creation of a Toolbar instance with ${
-		Justify[justify]
-	} justification`, () => {
+	test(`Test creation of a Toolbar instance with ${Justify[justify]} justification`, () => {
 		const ctl = shallow(
 			<Toolbar justify={justify} sizing={Sizing.small}>
 				<Button iconName='car' />

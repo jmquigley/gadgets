@@ -42,20 +42,22 @@
  * AccordionItem. This exists around the inner `<div>`
  *
  * #### Properties
- * - `initialToggle: boolean` - The initial state of the content.  If true, then
+ * - `initialToggle {boolean}` - The initial state of the content.  If true, then
  * the content is shown, otherwise it is hidden.  Set initially to false.
- * - `leftButton: Button (null)` - An instance of a button control placed to the
+ * - `leftButton=null {Button}` - An instance of a button control placed to the
  * left of the title.
- * - `nocollapse: boolean (false)` - When this is set to true, then this
+ * - `nocollapse=false {boolean}` - When this is set to true, then this
  * Accordion item will not expand/contract when the title bar is clicked.  This
  * is false by default.
- * - `rightButton: Button (null)` - An instance of a button control placed to
+ * - `rightButton=null {Button}` - An instance of a button control placed to
  * the right of the title.
  *
  * @module AccordionItem
  */
 
 // const debug = require("debug")("gadgets.AccordionItem");
+const debugCreate = require("debug")("gadgets.AccordionItem:create");
+const debugRender = require("debug")("gadgets.AccordionItem:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -137,6 +139,8 @@ export class AccordionItem extends BaseComponent<
 			...getDefaultAccordionItemState(),
 			toggle: this.props.initialToggle
 		};
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -162,6 +166,8 @@ export class AccordionItem extends BaseComponent<
 		let content = null;
 
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		if (this.props.children != null && this.state.toggle) {
 			content = (

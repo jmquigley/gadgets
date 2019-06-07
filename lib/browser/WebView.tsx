@@ -24,8 +24,7 @@ import {
 	BaseProps,
 	BaseState,
 	getDefaultBaseProps,
-	getDefaultBaseState,
-	sanitizeProps
+	getDefaultBaseState
 } from "../shared";
 
 export interface WebViewProps extends BaseProps {
@@ -33,11 +32,11 @@ export interface WebViewProps extends BaseProps {
 }
 
 export function getDefaultWebViewProps(): WebViewProps {
-	return sanitizeProps<WebViewProps>({
+	return {
 		...getDefaultBaseProps(),
 		innerRef: nilEvent,
 		obj: "WebView"
-	});
+	};
 }
 
 export type WebViewState = BaseState;
@@ -65,8 +64,15 @@ export class WebView extends BaseComponent<WebViewProps, WebViewState> {
 		this.updateClassName();
 
 		const {
+			backgroundColor,
+			borderColor,
 			controlled,
+			errorMessage,
 			focus,
+			maxHeight,
+			maxWidth,
+			minHeight,
+			minWidth,
 			noborder,
 			noedit,
 			nohover,

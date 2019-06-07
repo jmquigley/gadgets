@@ -2,7 +2,7 @@ import {BaseComponent, baseZIndex, defaultSize} from "./base";
 
 import {Color, ColorScheme} from "./colors";
 
-import {globalize, sanitizeProps} from "./helpers";
+import {globalize} from "./helpers";
 
 import {KeyHandler, KeyMap, parseKeyCombo} from "./keybinding";
 
@@ -89,7 +89,6 @@ export {
 	locationStyle,
 	parseKeyCombo,
 	rectStyle,
-	sanitizeProps,
 	setTheme,
 	Sizes,
 	Sizing,

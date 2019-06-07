@@ -75,7 +75,6 @@ import {
 	getDefaultBaseState,
 	invisible,
 	Location,
-	sanitizeProps,
 	Wrapper
 } from "../shared";
 
@@ -90,7 +89,7 @@ export interface TabProps extends BaseProps {
 }
 
 export function getDefaultTabProps(): TabProps {
-	return sanitizeProps<TabProps>({
+	return {
 		...getDefaultBaseProps(),
 		href: {
 			selectHandler: nilEvent
@@ -103,7 +102,7 @@ export function getDefaultTabProps(): TabProps {
 		orientation: Location.top,
 		selected: false,
 		title: ""
-	});
+	};
 }
 
 export interface TabState extends BaseState {

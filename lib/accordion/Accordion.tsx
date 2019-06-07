@@ -30,13 +30,15 @@
  * level of the control.
  *
  * #### Properties
- * - `children: React.ReactNode (null)` - the children nodes contained within
+ * - `children=null {React.ReactNode}` - the children nodes contained within
  * this container.	Generally this will be `AccordionItem` controls.
  *
  * @module Accordion
  */
 
 // const debug = require("debug")("gadgets.Accordion");
+const debugCreate = require("debug")("gadgets.Accordion:create");
+const debugRender = require("debug")("gadgets.Accordion:render");
 
 import * as React from "react";
 import styled from "styled-components";
@@ -87,10 +89,14 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	constructor(props: AccordionProps) {
 		super(props, "ui-accordion", Accordion.defaultProps.style);
 		this.keys = new Keys({testing: this.props.testing});
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		let idx: number = 0;
 		const children = React.Children.map(

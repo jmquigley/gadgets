@@ -251,9 +251,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		let textInputField = null;
 		if (this.props.useinput) {
 			const fontInfo: FontInfo = getFontInfo();
-			const font: string = `${fontInfo.weight} ${fontInfo.size}px ${
-				fontInfo.family[0]
-			}`.trim();
+			const font: string = `${fontInfo.weight} ${fontInfo.size}px ${fontInfo.family[0]}`.trim();
 
 			let width: number = 0;
 

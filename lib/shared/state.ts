@@ -1,5 +1,6 @@
 "use strict";
 
+import {cloneDeep} from "lodash";
 import {Sizing} from "./sizing";
 
 export interface BaseState {
@@ -9,9 +10,9 @@ export interface BaseState {
 }
 
 export function getDefaultBaseState(): BaseState {
-	return {
+	return cloneDeep({
 		children: null,
 		sizing: Sizing.normal,
 		style: {}
-	};
+	});
 }

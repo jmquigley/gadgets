@@ -6234,14 +6234,28 @@ exports[`Creation of the OptionGroup control of type (9) 1`] = `
 
 exports[`Test disabling of the OptionGroup control 1`] = `
 <OptionGroup
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
   className="test-class"
+  color={null}
   controlled={true}
   default="option1"
   direction="right"
   disabled={true}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
+  minWidth={null}
   noborder={false}
   noedit={false}
   nohover={false}
@@ -6258,6 +6272,7 @@ exports[`Test disabling of the OptionGroup control 1`] = `
       "option3",
     ]
   }
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -6290,19 +6305,39 @@ exports[`Test disabling of the OptionGroup control 1`] = `
     }
   }
   title="test options"
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test retrieval of OptionGroup props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "border": null,
+  "borderColor": null,
+  "bottom": null,
+  "children": null,
+  "className": null,
+  "color": null,
   "controlled": true,
   "default": "",
   "direction": "right",
   "disabled": false,
+  "err": null,
+  "errorMessage": null,
   "focus": false,
+  "height": null,
   "hidden": false,
+  "id": null,
+  "left": null,
   "location": "none",
+  "maxHeight": null,
+  "maxWidth": null,
+  "minHeight": null,
+  "minWidth": null,
   "noborder": false,
   "noedit": false,
   "nohover": false,
@@ -6313,6 +6348,7 @@ Object {
   "onSelection": [Function],
   "optionType": 0,
   "options": Array [],
+  "padding": null,
   "ripple": false,
   "selected": false,
   "sizing": "normal",
@@ -6343,7 +6379,11 @@ Object {
     "transitionDelay": "0.33s",
   },
   "title": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
+  "width": null,
+  "xcss": null,
 }
 `;
 

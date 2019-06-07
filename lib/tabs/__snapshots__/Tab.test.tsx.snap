@@ -2,17 +2,31 @@
 
 exports[`Test disabling of a Tab 1`] = `
 <Tab
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
   href={
     Object {
       "selectHandler": [MockFunction],
     }
   }
+  id={null}
+  left={null}
   location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
   minWidth="120px"
   noborder={false}
   noclose={false}
@@ -25,6 +39,7 @@ exports[`Test disabling of a Tab 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   orientation="top"
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -57,23 +72,41 @@ exports[`Test disabling of a Tab 1`] = `
     }
   }
   title="tab title"
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test making a Tab invisible 1`] = `
 <Tab
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
   href={
     Object {
       "selectHandler": [Function],
     }
   }
+  id={null}
+  left={null}
   location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
   minWidth="120px"
   noborder={false}
   noclose={false}
@@ -86,6 +119,7 @@ exports[`Test making a Tab invisible 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   orientation="top"
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -118,21 +152,40 @@ exports[`Test making a Tab invisible 1`] = `
     }
   }
   title="tab title"
+  tooltip={null}
+  top={null}
   visible={false}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test retrieval of Tab props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "border": null,
+  "borderColor": null,
+  "bottom": null,
+  "children": null,
+  "className": null,
+  "color": null,
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
+  "errorMessage": null,
   "focus": false,
+  "height": null,
   "hidden": false,
   "href": Object {
     "selectHandler": [Function],
   },
+  "id": null,
+  "left": null,
   "location": "none",
+  "maxHeight": null,
+  "maxWidth": null,
+  "minHeight": null,
   "minWidth": "120px",
   "noborder": false,
   "noclose": false,
@@ -145,6 +198,7 @@ Object {
   "onClick": [Function],
   "onClose": [Function],
   "orientation": "top",
+  "padding": null,
   "ripple": false,
   "selected": false,
   "sizing": "normal",
@@ -175,7 +229,11 @@ Object {
     "transitionDelay": "0.33s",
   },
   "title": "",
+  "tooltip": null,
+  "top": null,
   "visible": true,
+  "width": null,
+  "xcss": null,
 }
 `;
 
@@ -190,17 +248,31 @@ Object {
 
 exports[`Test the click handler in the Tab instance 1`] = `
 <Tab
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
   href={
     Object {
       "selectHandler": [MockFunction],
     }
   }
+  id={null}
+  left={null}
   location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
   minWidth="120px"
   noborder={false}
   noclose={false}
@@ -213,6 +285,7 @@ exports[`Test the click handler in the Tab instance 1`] = `
   onClick={[Function]}
   onClose={[Function]}
   orientation="top"
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -245,23 +318,41 @@ exports[`Test the click handler in the Tab instance 1`] = `
     }
   }
   title="tab title"
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test the close click handler on a Tab instance 1`] = `
 <Tab
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
   href={
     Object {
       "hiddenTabHandler": [MockFunction],
     }
   }
+  id={null}
+  left={null}
   location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
   minWidth="120px"
   noborder={false}
   noclose={false}
@@ -274,6 +365,7 @@ exports[`Test the close click handler on a Tab instance 1`] = `
   onClick={[Function]}
   onClose={[MockFunction]}
   orientation="top"
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -306,7 +398,11 @@ exports[`Test the close click handler on a Tab instance 1`] = `
     }
   }
   title="tab title"
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
@@ -399,6 +495,7 @@ exports[`Test the creation of a Tab instance 1`] = `
     sizing="normal"
     style={Object {}}
     visible={true}
+    width={null}
   >
     <Item
       backgroundColor={null}

@@ -66,7 +66,6 @@ import {
 	getDefaultBaseProps,
 	getDefaultBaseState,
 	invisible,
-	sanitizeProps,
 	Sizing,
 	Wrapper
 } from "../shared";
@@ -82,7 +81,7 @@ export interface OptionGroupProps extends BaseProps {
 }
 
 export function getDefaultOptionGroupProps(): OptionGroupProps {
-	return sanitizeProps<OptionGroupProps>({
+	return {
 		...getDefaultBaseProps(),
 		obj: "OptionGroup",
 		default: "",
@@ -90,7 +89,7 @@ export function getDefaultOptionGroupProps(): OptionGroupProps {
 		optionType: OptionType.square,
 		options: [],
 		title: ""
-	});
+	};
 }
 
 export interface OptionGroupState extends BaseState {

@@ -2,13 +2,26 @@
 
 exports[`Create an empty TabContainer instance 1`] = `
 <TabContainer
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="top"
+  maxHeight={null}
   maxTabs={5}
+  maxWidth={null}
   minHeight="100px"
   minWidth="350px"
   noborder={false}
@@ -22,6 +35,7 @@ exports[`Create an empty TabContainer instance 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelection={[Function]}
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -54,19 +68,36 @@ exports[`Create an empty TabContainer instance 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test TabContainer retrieval functions 1`] = `
 <TabContainer
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="top"
+  maxHeight={null}
   maxTabs={5}
+  maxWidth={null}
   minHeight="100px"
   minWidth="350px"
   noborder={false}
@@ -80,6 +111,7 @@ exports[`Test TabContainer retrieval functions 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelection={[Function]}
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -112,19 +144,36 @@ exports[`Test TabContainer retrieval functions 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test disabling the TabContainer instance 1`] = `
 <TabContainer
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={true}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="top"
+  maxHeight={null}
   maxTabs={5}
+  maxWidth={null}
   minHeight="100px"
   minWidth="350px"
   noborder={false}
@@ -138,6 +187,7 @@ exports[`Test disabling the TabContainer instance 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelection={[Function]}
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -170,7 +220,11 @@ exports[`Test disabling the TabContainer instance 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
@@ -249,14 +303,26 @@ exports[`Test making the TabContainer invisible 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    border={null}
+    borderColor={null}
+    bottom={null}
     className="ui-tab-container"
+    color={null}
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
+    errorMessage={null}
     focus={false}
+    height={null}
     hidden={false}
+    id={null}
+    left={null}
     location="top"
+    maxHeight={null}
     maxTabs={5}
+    maxWidth={null}
     minHeight="120px"
     minWidth="500px"
     noborder={false}
@@ -268,6 +334,7 @@ exports[`Test making the TabContainer invisible 1`] = `
     notheme={false}
     notooltip={false}
     obj="TabContainer"
+    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
@@ -300,17 +367,33 @@ exports[`Test making the TabContainer invisible 1`] = `
         "transitionDelay": "0.33s",
       }
     }
+    tooltip={null}
+    top={null}
     visible={false}
+    width={null}
+    xcss={null}
   >
     <TabContainer__TabBarView
+      backgroundColor={null}
+      border={null}
+      borderColor={null}
+      bottom={null}
       className="ui-tab-bar"
+      color={null}
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
+      errorMessage={null}
       focus={false}
+      height={null}
       hidden={false}
+      id={null}
+      left={null}
       location="top"
+      maxHeight={null}
       maxTabs={5}
+      maxWidth={null}
       minHeight="100px"
       minWidth="350px"
       noborder={false}
@@ -322,6 +405,7 @@ exports[`Test making the TabContainer invisible 1`] = `
       notheme={false}
       notooltip={false}
       obj="TabContainer"
+      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
@@ -354,13 +438,26 @@ exports[`Test making the TabContainer invisible 1`] = `
           "transitionDelay": "0.33s",
         }
       }
+      tooltip={null}
+      top={null}
       visible={false}
+      width={null}
+      xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -369,7 +466,11 @@ exports[`Test making the TabContainer invisible 1`] = `
           }
         }
         id="0"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -382,6 +483,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="top"
+        padding={null}
         ripple={false}
         selected={true}
         sizing="normal"
@@ -414,14 +516,26 @@ exports[`Test making the TabContainer invisible 1`] = `
           }
         }
         title="tab #1"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -430,7 +544,11 @@ exports[`Test making the TabContainer invisible 1`] = `
           }
         }
         id="1"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -443,6 +561,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="top"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -475,14 +594,26 @@ exports[`Test making the TabContainer invisible 1`] = `
           }
         }
         title="tab #2"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -491,7 +622,11 @@ exports[`Test making the TabContainer invisible 1`] = `
           }
         }
         id="2"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -504,6 +639,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="top"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -536,18 +672,33 @@ exports[`Test making the TabContainer invisible 1`] = `
           }
         }
         title="tab #3"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <TabContainer__TabNavigationView
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
         className="ui-tab-navigation"
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
+        id={null}
+        left={null}
         location="top"
+        maxHeight={null}
         maxTabs={5}
+        maxWidth={null}
         minHeight="100px"
         minWidth="350px"
         noborder={false}
@@ -559,6 +710,7 @@ exports[`Test making the TabContainer invisible 1`] = `
         notheme={false}
         notooltip={false}
         obj="TabContainer"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -591,7 +743,11 @@ exports[`Test making the TabContainer invisible 1`] = `
             "transitionDelay": "0.33s",
           }
         }
+        tooltip={null}
+        top={null}
         visible={false}
+        width={null}
+        xcss={null}
       >
         <Button
           backgroundColor={null}
@@ -750,13 +906,26 @@ exports[`Test making the TabContainer invisible 1`] = `
 
 exports[`Test removing the first item from the TabContainer 1`] = `
 <TabContainer
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="top"
+  maxHeight={null}
   maxTabs={5}
+  maxWidth={null}
   minHeight="100px"
   minWidth="350px"
   noborder={false}
@@ -770,6 +939,7 @@ exports[`Test removing the first item from the TabContainer 1`] = `
   obj="TabContainer"
   onRemove={[MockFunction]}
   onSelection={[Function]}
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -802,19 +972,37 @@ exports[`Test removing the first item from the TabContainer 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test retrieval of Tabs props object 1`] = `
 Object {
+  "backgroundColor": null,
+  "border": null,
+  "borderColor": null,
+  "bottom": null,
+  "children": null,
+  "className": null,
+  "color": null,
   "controlled": true,
   "direction": "right",
   "disabled": false,
+  "err": null,
+  "errorMessage": null,
   "focus": false,
+  "height": null,
   "hidden": false,
+  "id": null,
+  "left": null,
   "location": "top",
+  "maxHeight": null,
   "maxTabs": 5,
+  "maxWidth": null,
   "minHeight": "100px",
   "minWidth": "350px",
   "noborder": false,
@@ -828,6 +1016,7 @@ Object {
   "obj": "TabContainer",
   "onRemove": [Function],
   "onSelection": [Function],
+  "padding": null,
   "ripple": false,
   "selected": false,
   "sizing": "normal",
@@ -858,7 +1047,11 @@ Object {
     "tooltipForegroundColor": "#ffffff",
     "transitionDelay": "0.33s",
   },
+  "tooltip": null,
+  "top": null,
   "visible": true,
+  "width": null,
+  "xcss": null,
 }
 `;
 
@@ -873,13 +1066,26 @@ Object {
 
 exports[`Test selecting the first tab within the TabContainer 1`] = `
 <TabContainer
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="top"
+  maxHeight={null}
   maxTabs={5}
+  maxWidth={null}
   minHeight="100px"
   minWidth="350px"
   noborder={false}
@@ -893,6 +1099,7 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelection={[MockFunction]}
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -925,19 +1132,36 @@ exports[`Test selecting the first tab within the TabContainer 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
 exports[`Test the TabContainer with the previous and next buttons 1`] = `
 <TabContainer
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
   controlled={true}
   direction="right"
   disabled={false}
+  err={null}
+  errorMessage={null}
   focus={false}
+  height={null}
   hidden={false}
+  id={null}
+  left={null}
   location="top"
+  maxHeight={null}
   maxTabs={5}
+  maxWidth={null}
   minHeight="100px"
   minWidth="350px"
   noborder={false}
@@ -951,6 +1175,7 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
   obj="TabContainer"
   onRemove={[Function]}
   onSelection={[MockFunction]}
+  padding={null}
   ripple={false}
   selected={false}
   sizing="normal"
@@ -983,7 +1208,11 @@ exports[`Test the TabContainer with the previous and next buttons 1`] = `
       "transitionDelay": "0.33s",
     }
   }
+  tooltip={null}
+  top={null}
   visible={true}
+  width={null}
+  xcss={null}
 />
 `;
 
@@ -1062,14 +1291,26 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    border={null}
+    borderColor={null}
+    bottom={null}
     className="ui-tab-container"
+    color={null}
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
+    errorMessage={null}
     focus={false}
+    height={null}
     hidden={false}
+    id={null}
+    left={null}
     location="bottom"
+    maxHeight={null}
     maxTabs={5}
+    maxWidth={null}
     minHeight="120px"
     minWidth="500px"
     noborder={false}
@@ -1081,6 +1322,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
     notheme={false}
     notooltip={false}
     obj="TabContainer"
+    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
@@ -1113,7 +1355,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         "transitionDelay": "0.33s",
       }
     }
+    tooltip={null}
+    top={null}
     visible={true}
+    width={null}
+    xcss={null}
   >
     <TabContainer__TabContentView
       className="ui-tab-content"
@@ -1123,14 +1369,26 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       #1
     </TabContainer__TabContentView>
     <TabContainer__TabBarView
+      backgroundColor={null}
+      border={null}
+      borderColor={null}
+      bottom={null}
       className="ui-tab-bar"
+      color={null}
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
+      errorMessage={null}
       focus={false}
+      height={null}
       hidden={false}
+      id={null}
+      left={null}
       location="bottom"
+      maxHeight={null}
       maxTabs={5}
+      maxWidth={null}
       minHeight="100px"
       minWidth="350px"
       noborder={false}
@@ -1142,6 +1400,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
       notheme={false}
       notooltip={false}
       obj="TabContainer"
+      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
@@ -1174,13 +1433,26 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           "transitionDelay": "0.33s",
         }
       }
+      tooltip={null}
+      top={null}
       visible={true}
+      width={null}
+      xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -1189,7 +1461,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           }
         }
         id="0"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -1202,6 +1478,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="bottom"
+        padding={null}
         ripple={false}
         selected={true}
         sizing="normal"
@@ -1234,14 +1511,26 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           }
         }
         title="tab #1"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -1250,7 +1539,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           }
         }
         id="1"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -1263,6 +1556,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="bottom"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -1295,14 +1589,26 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           }
         }
         title="tab #2"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -1311,7 +1617,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           }
         }
         id="2"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -1324,6 +1634,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="bottom"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -1356,18 +1667,33 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
           }
         }
         title="tab #3"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <TabContainer__TabNavigationView
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
         className="ui-tab-navigation"
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
+        id={null}
+        left={null}
         location="bottom"
+        maxHeight={null}
         maxTabs={5}
+        maxWidth={null}
         minHeight="100px"
         minWidth="350px"
         noborder={false}
@@ -1379,6 +1705,7 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
         notheme={false}
         notooltip={false}
         obj="TabContainer"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -1411,7 +1738,11 @@ exports[`Test the creation of a TabContainer instance (bottom) 1`] = `
             "transitionDelay": "0.33s",
           }
         }
+        tooltip={null}
+        top={null}
         visible={true}
+        width={null}
+        xcss={null}
       >
         <Button
           backgroundColor={null}
@@ -1636,14 +1967,26 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    border={null}
+    borderColor={null}
+    bottom={null}
     className="ui-tab-container"
+    color={null}
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
+    errorMessage={null}
     focus={false}
+    height={null}
     hidden={false}
+    id={null}
+    left={null}
     location="left"
+    maxHeight={null}
     maxTabs={5}
+    maxWidth={null}
     minHeight="120px"
     minWidth="500px"
     noborder={false}
@@ -1655,6 +1998,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
     notheme={false}
     notooltip={false}
     obj="TabContainer"
+    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
@@ -1687,17 +2031,33 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         "transitionDelay": "0.33s",
       }
     }
+    tooltip={null}
+    top={null}
     visible={true}
+    width={null}
+    xcss={null}
   >
     <TabContainer__TabBarView
+      backgroundColor={null}
+      border={null}
+      borderColor={null}
+      bottom={null}
       className="ui-tab-bar"
+      color={null}
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
+      errorMessage={null}
       focus={false}
+      height={null}
       hidden={false}
+      id={null}
+      left={null}
       location="left"
+      maxHeight={null}
       maxTabs={5}
+      maxWidth={null}
       minHeight="100px"
       minWidth="350px"
       noborder={false}
@@ -1709,6 +2069,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
       notheme={false}
       notooltip={false}
       obj="TabContainer"
+      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
@@ -1741,13 +2102,26 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           "transitionDelay": "0.33s",
         }
       }
+      tooltip={null}
+      top={null}
       visible={true}
+      width={null}
+      xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -1756,7 +2130,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           }
         }
         id="0"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -1769,6 +2147,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="left"
+        padding={null}
         ripple={false}
         selected={true}
         sizing="normal"
@@ -1801,14 +2180,26 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           }
         }
         title="tab #1"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -1817,7 +2208,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           }
         }
         id="1"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -1830,6 +2225,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="left"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -1862,14 +2258,26 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           }
         }
         title="tab #2"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -1878,7 +2286,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           }
         }
         id="2"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -1891,6 +2303,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="left"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -1923,18 +2336,33 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
           }
         }
         title="tab #3"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <TabContainer__TabNavigationView
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
         className="ui-tab-navigation"
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
+        id={null}
+        left={null}
         location="left"
+        maxHeight={null}
         maxTabs={5}
+        maxWidth={null}
         minHeight="100px"
         minWidth="350px"
         noborder={false}
@@ -1946,6 +2374,7 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
         notheme={false}
         notooltip={false}
         obj="TabContainer"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -1978,7 +2407,11 @@ exports[`Test the creation of a TabContainer instance (left) 1`] = `
             "transitionDelay": "0.33s",
           }
         }
+        tooltip={null}
+        top={null}
         visible={true}
+        width={null}
+        xcss={null}
       >
         <Button
           backgroundColor={null}
@@ -2210,14 +2643,26 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    border={null}
+    borderColor={null}
+    bottom={null}
     className="ui-tab-container"
+    color={null}
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
+    errorMessage={null}
     focus={false}
+    height={null}
     hidden={false}
+    id={null}
+    left={null}
     location="right"
+    maxHeight={null}
     maxTabs={5}
+    maxWidth={null}
     minHeight="120px"
     minWidth="500px"
     noborder={false}
@@ -2229,6 +2674,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
     notheme={false}
     notooltip={false}
     obj="TabContainer"
+    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
@@ -2261,7 +2707,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         "transitionDelay": "0.33s",
       }
     }
+    tooltip={null}
+    top={null}
     visible={true}
+    width={null}
+    xcss={null}
   >
     <TabContainer__TabContentView
       className="ui-tab-content"
@@ -2271,14 +2721,26 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       #1
     </TabContainer__TabContentView>
     <TabContainer__TabBarView
+      backgroundColor={null}
+      border={null}
+      borderColor={null}
+      bottom={null}
       className="ui-tab-bar"
+      color={null}
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
+      errorMessage={null}
       focus={false}
+      height={null}
       hidden={false}
+      id={null}
+      left={null}
       location="right"
+      maxHeight={null}
       maxTabs={5}
+      maxWidth={null}
       minHeight="100px"
       minWidth="350px"
       noborder={false}
@@ -2290,6 +2752,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
       notheme={false}
       notooltip={false}
       obj="TabContainer"
+      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
@@ -2322,13 +2785,26 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           "transitionDelay": "0.33s",
         }
       }
+      tooltip={null}
+      top={null}
       visible={true}
+      width={null}
+      xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -2337,7 +2813,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           }
         }
         id="0"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -2350,6 +2830,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="right"
+        padding={null}
         ripple={false}
         selected={true}
         sizing="normal"
@@ -2382,14 +2863,26 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           }
         }
         title="tab #1"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -2398,7 +2891,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           }
         }
         id="1"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -2411,6 +2908,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="right"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -2443,14 +2941,26 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           }
         }
         title="tab #2"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -2459,7 +2969,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           }
         }
         id="2"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -2472,6 +2986,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="right"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -2504,18 +3019,33 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
           }
         }
         title="tab #3"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <TabContainer__TabNavigationView
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
         className="ui-tab-navigation"
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
+        id={null}
+        left={null}
         location="right"
+        maxHeight={null}
         maxTabs={5}
+        maxWidth={null}
         minHeight="100px"
         minWidth="350px"
         noborder={false}
@@ -2527,6 +3057,7 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
         notheme={false}
         notooltip={false}
         obj="TabContainer"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -2559,7 +3090,11 @@ exports[`Test the creation of a TabContainer instance (right) 1`] = `
             "transitionDelay": "0.33s",
           }
         }
+        tooltip={null}
+        top={null}
         visible={true}
+        width={null}
+        xcss={null}
       >
         <Button
           backgroundColor={null}
@@ -2784,14 +3319,26 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
   xcss={null}
 >
   <TabContainer__TabContainerView
+    backgroundColor={null}
+    border={null}
+    borderColor={null}
+    bottom={null}
     className="ui-tab-container"
+    color={null}
     controlled={true}
     direction="right"
     disabled={false}
+    err={null}
+    errorMessage={null}
     focus={false}
+    height={null}
     hidden={false}
+    id={null}
+    left={null}
     location="top"
+    maxHeight={null}
     maxTabs={5}
+    maxWidth={null}
     minHeight="120px"
     minWidth="500px"
     noborder={false}
@@ -2803,6 +3350,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
     notheme={false}
     notooltip={false}
     obj="TabContainer"
+    padding={null}
     ripple={false}
     selected={false}
     sizing="normal"
@@ -2835,17 +3383,33 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         "transitionDelay": "0.33s",
       }
     }
+    tooltip={null}
+    top={null}
     visible={true}
+    width={null}
+    xcss={null}
   >
     <TabContainer__TabBarView
+      backgroundColor={null}
+      border={null}
+      borderColor={null}
+      bottom={null}
       className="ui-tab-bar"
+      color={null}
       controlled={true}
       direction="right"
       disabled={false}
+      err={null}
+      errorMessage={null}
       focus={false}
+      height={null}
       hidden={false}
+      id={null}
+      left={null}
       location="top"
+      maxHeight={null}
       maxTabs={5}
+      maxWidth={null}
       minHeight="100px"
       minWidth="350px"
       noborder={false}
@@ -2857,6 +3421,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
       notheme={false}
       notooltip={false}
       obj="TabContainer"
+      padding={null}
       ripple={false}
       selected={false}
       sizing="normal"
@@ -2889,13 +3454,26 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           "transitionDelay": "0.33s",
         }
       }
+      tooltip={null}
+      top={null}
       visible={true}
+      width={null}
+      xcss={null}
     >
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -2904,7 +3482,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           }
         }
         id="0"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -2917,6 +3499,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="top"
+        padding={null}
         ripple={false}
         selected={true}
         sizing="normal"
@@ -2949,14 +3532,26 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           }
         }
         title="tab #1"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -2965,7 +3560,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           }
         }
         id="1"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -2978,6 +3577,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="top"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -3010,14 +3610,26 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           }
         }
         title="tab #2"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <Tab
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
+        className={null}
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
         href={
           Object {
@@ -3026,7 +3638,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           }
         }
         id="2"
+        left={null}
         location="none"
+        maxHeight={null}
+        maxWidth={null}
+        minHeight={null}
         minWidth="120px"
         noborder={false}
         noclose={false}
@@ -3039,6 +3655,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         onClick={[Function]}
         onClose={[Function]}
         orientation="top"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -3071,18 +3688,33 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
           }
         }
         title="tab #3"
+        tooltip={null}
+        top={null}
         visible={true}
         width="100px"
+        xcss={null}
       />
       <TabContainer__TabNavigationView
+        backgroundColor={null}
+        border={null}
+        borderColor={null}
+        bottom={null}
         className="ui-tab-navigation"
+        color={null}
         controlled={true}
         direction="right"
         disabled={false}
+        err={null}
+        errorMessage={null}
         focus={false}
+        height={null}
         hidden={false}
+        id={null}
+        left={null}
         location="top"
+        maxHeight={null}
         maxTabs={5}
+        maxWidth={null}
         minHeight="100px"
         minWidth="350px"
         noborder={false}
@@ -3094,6 +3726,7 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
         notheme={false}
         notooltip={false}
         obj="TabContainer"
+        padding={null}
         ripple={false}
         selected={false}
         sizing="normal"
@@ -3126,7 +3759,11 @@ exports[`Test the creation of a TabContainer instance (top) 1`] = `
             "transitionDelay": "0.33s",
           }
         }
+        tooltip={null}
+        top={null}
         visible={true}
+        width={null}
+        xcss={null}
       >
         <Button
           backgroundColor={null}

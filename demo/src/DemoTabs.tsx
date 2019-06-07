@@ -33,9 +33,7 @@ export default class DemoTabs extends React.Component<any, undefined> {
 	@autobind
 	private handleSelect(tab: any, previous: any) {
 		debug(
-			`selected: %o (id=${tab.props["id"]}), previous: %o (id=${
-				previous.props["id"]
-			})`,
+			`selected: %o (id=${tab.props["id"]}), previous: %o (id=${previous.props["id"]})`,
 			tab.props["title"],
 			previous.props["title"]
 		);

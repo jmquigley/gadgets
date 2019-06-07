@@ -44,13 +44,13 @@ the toggle (true if visible, otherwise false)
 AccordionItem. This exists around the inner `<div>`
 
 #### Properties
-- `initialToggle: boolean` - The initial state of the content.  If true, then
+- `initialToggle {boolean}` - The initial state of the content.  If true, then
 the content is shown, otherwise it is hidden.  Set initially to false.
-- `leftButton: Button (null)` - An instance of a button control placed to the
+- `leftButton=null {Button}` - An instance of a button control placed to the
 left of the title.
-- `nocollapse: boolean (false)` - When this is set to true, then this
+- `nocollapse=false {boolean}` - When this is set to true, then this
 Accordion item will not expand/contract when the title bar is clicked.  This
 is false by default.
-- `rightButton: Button (null)` - An instance of a button control placed to
+- `rightButton=null {Button}` - An instance of a button control placed to
 the right of the title.
 
