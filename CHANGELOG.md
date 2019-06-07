@@ -6,6 +6,10 @@
 - Changed all `onSelect` event handler to `onSelection` to avoid collision with built in HTML onselect.  Without this change the onselect event handler could be called at times where it is unexpected.
 - Added a `noscroll` option to disable the horizontal scrollbar in a [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md).
 - Removed custom bundler code since its functionality can all be done via webpack.
+- Added the [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver) to handle import spam.
+- Added a `super.render()` to base.  There are a few functions common to all render methods in the library and this will be used to wrap it.
+- Moved debugging output functions to base.  The create/render debug output is now handled in the base class so all child components do not need to implement them.
+- Added state initialization to the base class super for all child modules.  This ensures that the initial state information is available for the create debug output when a component is created.
 
 #### Bug Fixes:
 

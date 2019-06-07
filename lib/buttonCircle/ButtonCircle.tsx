@@ -46,6 +46,8 @@
  */
 
 // const debug = require("debug")("gadgets.ButtonCircle");
+const debugCreate = require("debug")("gadgets.ButtonCircle:create");
+const debugRender = require("debug")("gadgets.ButtonCircle:render");
 
 import * as React from "react";
 import styled from "styled-components";
@@ -126,10 +128,13 @@ export class ButtonCircle extends BaseComponent<
 
 	constructor(props: ButtonCircleProps) {
 		super(props, "ui-button-circle", ButtonCircle.defaultProps.style);
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		const size: string = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 

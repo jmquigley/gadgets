@@ -32,6 +32,8 @@
  */
 
 // const debug = require("debug")("gadgets.Button");
+const debugCreate = require("debug")("gadgets.Button:create");
+const debugRender = require("debug")("gadgets.Button:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -119,6 +121,8 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		this.buildKeyMap({
 			kbActivate: this.handleClick
 		});
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -134,6 +138,8 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		return (
 			<Wrapper {...this.props}>

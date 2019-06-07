@@ -32,7 +32,7 @@ container)
 badge and the child component that it decorates.
 
 #### Properties
-- `counter: {number} (0)` - The number value displayed by the badge
-- `suppress: {boolean} (false)` - If this is set to true, then numbers less
+- `counter=0 {number}` - The number value displayed by the badge
+- `suppress=false {boolean}` - If this is set to true, then numbers less
 than 1 are not shown, otherwise all values are shown.
 

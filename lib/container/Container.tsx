@@ -19,9 +19,9 @@
  * - `ui-container` - placed on the root `<div>` tag
  *
  * #### Properties
- * - `children: React.ReactNode (null)` - The child components that exist
+ * - `children=null {React.ReactNode}` - The child components that exist
  * within the Container.
- * - `title: {string} ('')` - if a title is given, then an `<h1>` block is
+ * - `title="" {string}` - if a title is given, then an `<h1>` block is
  * created in front of the section with the given title.  By default there is
  * no title.
  *
@@ -29,6 +29,8 @@
  */
 
 // const debug = require("debug")("gadgets.Container");
+const debugCreate = require("debug")("gadgets.Container:create");
+const debugRender = require("debug")("gadgets.Container:render");
 
 import * as React from "react";
 import styled from "styled-components";
@@ -79,10 +81,13 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 
 	constructor(props: ContainerProps) {
 		super(props, "ui-container", Container.defaultProps.style);
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		let title: any = null;
 		if (this.props.title) {

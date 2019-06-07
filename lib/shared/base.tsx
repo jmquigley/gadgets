@@ -41,8 +41,9 @@
  * @module BaseComponent
  */
 
-// const debug = require("debug")("gadgets.shared.base");
+const debug = require("debug");
 
+import {isDebug} from "globals";
 import {isEqual} from "lodash";
 import {Children, cloneElement, PureComponent} from "react";
 import {DefaultTheme} from "styled-components";
@@ -52,7 +53,6 @@ import {getUUID} from "util.toolbox";
 import {KeyHandler, KeyMap} from "./keybinding";
 import {BaseProps, Styles} from "./props";
 import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
-// import {getTheme} from "./themes";
 
 require("./styles.css");
 
@@ -64,12 +64,17 @@ export abstract class BaseComponent<
 	P extends BaseProps,
 	S
 > extends PureComponent<P, S> {
+	public state: S;
+
+	private _debug: any = null;
+	private _debugCreate: any = null;
+	private _debugRender: any = null;
+
 	public static defaultStyles: any = {};
 
 	private _className: ClassNames = new ClassNames();
 	private _defaultClassName: string;
 	private _id: string;
-	// private _theme: DefaultTheme = null;
 
 	protected _keyHandler: KeyHandler = {};
 	protected _keyMap: KeyMap = {};
@@ -77,9 +82,15 @@ export abstract class BaseComponent<
 	constructor(
 		props: P,
 		defaultClassName: string,
-		defaultStyles: Styles = {}
+		defaultStyles: Styles = {},
+		state: S = {} as S
 	) {
 		super(props);
+		this.state = state || ({} as S);
+
+		this._debug = debug(`gadgets.${this.props.obj || "base"}`);
+		this._debugCreate = debug(`gadgets.${this.props.obj || "base"}:create`);
+		this._debugRender = debug(`gadgets.${this.props.obj || "base"}:render`);
 
 		this._defaultClassName = defaultClassName;
 		this._className = new ClassNames(defaultClassName);
@@ -96,16 +107,12 @@ export abstract class BaseComponent<
 				(this.props.testing ? "0" : getUUID());
 		}
 
-		/*
-		if (this.props.theme != null) {
-			this._theme = this.props.theme;
-		} else {
-			this._theme = getTheme();
-		}
-		*/
-
 		// this.props.theme = this.theme;
 		BaseComponent.defaultStyles = defaultStyles;
+
+		if (isDebug()) {
+			this._debugCreate("props: %O, state: %O", this.props, this.state);
+		}
 	}
 
 	get className(): string {
@@ -161,6 +168,12 @@ export abstract class BaseComponent<
 		for (const key of Object.keys(mappings)) {
 			this._keyMap[key] = this.props[key];
 			this._keyHandler[key] = mappings[key];
+		}
+	}
+
+	protected debug(...args: any[]) {
+		if (isDebug()) {
+			this._debug(args);
 		}
 	}
 
@@ -316,6 +329,14 @@ export abstract class BaseComponent<
 
 			default:
 				return sizes[Sizing.normal];
+		}
+	}
+
+	public render(): any {
+		this.updateClassName();
+
+		if (isDebug()) {
+			this._debugRender("props: %O, state: %O", this.props, this.state);
 		}
 	}
 

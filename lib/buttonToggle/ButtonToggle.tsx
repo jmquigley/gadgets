@@ -76,6 +76,8 @@
  */
 
 // const debug = require('debug')('gadgets.ButtonToggle');
+const debugCreate = require("debug")("gadgets.ButtonToggle:create");
+const debugRender = require("debug")("gadgets.ButtonToggle:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -143,6 +145,8 @@ export class ButtonToggle extends BaseComponent<
 			...getDefaultButtonToggleState(),
 			toggle: this.props.initialToggle
 		};
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -190,6 +194,8 @@ export class ButtonToggle extends BaseComponent<
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		return (
 			<Wrapper {...this.props}>

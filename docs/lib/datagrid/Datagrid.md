@@ -45,9 +45,9 @@ underlying control.
 - `ui-datagrid` - Root style applied to the wrapper around the data grid control
 
 #### Properties
-- `columns: {DatagridColumn[]} ([])` - the column descriptor array.  There is
+- `columns=[] {DatagridColumn[]}` - the column descriptor array.  There is
 on entry in the array per column.
-- `rows: {DatagridRow[]} ([])` - the rows that will be displayed.  Each array
+- `rows=[] {DatagridRow[]}` - the rows that will be displayed.  Each array
 entry is an object that maps 1 for 1 to the keys names in the columns
 descriptor array.
 

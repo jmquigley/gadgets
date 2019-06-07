@@ -30,14 +30,12 @@
  * badge and the child component that it decorates.
  *
  * #### Properties
- * - `counter: {number} (0)` - The number value displayed by the badge
- * - `suppress: {boolean} (false)` - If this is set to true, then numbers less
+ * - `counter=0 {number}` - The number value displayed by the badge
+ * - `suppress=false {boolean}` - If this is set to true, then numbers less
  * than 1 are not shown, otherwise all values are shown.
  *
  * @module Badge
  */
-
-// const debug = require("debug")("gadgets.Badge");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -112,10 +110,14 @@ const BadgeContainerView: any = styled.div`
 
 export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
-	public state: BadgeState = getDefaultBadgeState();
 
 	constructor(props: BadgeProps) {
-		super(props, "ui-badge", Badge.defaultProps.style);
+		super(
+			props,
+			"ui-badge",
+			Badge.defaultProps.style,
+			getDefaultBadgeState()
+		);
 		this.props.onUpdate(this.props.counter);
 	}
 
@@ -134,7 +136,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		let badge = null;
 		if (

@@ -43,9 +43,9 @@
  * - `ui-datagrid` - Root style applied to the wrapper around the data grid control
  *
  * #### Properties
- * - `columns: {DatagridColumn[]} ([])` - the column descriptor array.  There is
+ * - `columns=[] {DatagridColumn[]}` - the column descriptor array.  There is
  * on entry in the array per column.
- * - `rows: {DatagridRow[]} ([])` - the rows that will be displayed.  Each array
+ * - `rows=[] {DatagridRow[]}` - the rows that will be displayed.  Each array
  * entry is an object that maps 1 for 1 to the keys names in the columns
  * descriptor array.
  *
@@ -53,6 +53,8 @@
  */
 
 // const debug = require("debug")("gadgets.Datagrid");
+const debugCreate = require("debug")("gadgets.Datagrid:create");
+const debugRender = require("debug")("gadgets.Datagrid:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -130,6 +132,7 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 
 	constructor(props: DatagridProps) {
 		super(props, "ui-datagrid", Datagrid.defaultProps.style);
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	/** @return the height of the row in pixels (number) */
@@ -161,6 +164,8 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 	}
 
 	public render() {
+		debugRender("props: %O, state: %O", this.props, this.state);
+
 		const {minHeight, minWidth, ...props} = this.props;
 
 		return (

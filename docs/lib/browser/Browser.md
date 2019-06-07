@@ -47,7 +47,7 @@ and the browser content.
 - `ui-browser-toolbar` - placed on the root `<div>` around the toolbar control.
 
 #### Properties
-- `home: {string} ('about:blank')` - The site visited when the user clicks on the
+- `home=about:blank {string}` - The site visited when the user clicks on the
 "home" button in the toolbar.  If this is empty, then 'about:blank' is used.
 - `kbBack="alt+left" {string}` - Moves to the prior page if there is one.
 - `kbForward="alt+right" {string}` - Moves to the next page if there is one.
@@ -56,12 +56,12 @@ and the browser content.
 - `kbPreviousSearch="alt+f3" {string}` - Go to the prior search term
 - `kbRefresh="ctrl+r" {string}` - Reload the current webpage
 - `kbSnapshot="" {string}` - Takes a snapshot of the current page.
-- `notooltips: {boolean} (false)` - When set to true the tooltips will be suppresed.
+- `notooltips=false {boolean}` - When set to true the tooltips will be suppresed.
 They are shown by default.
-- `uri: {string} ('about:blank')` - The site the user selects to visit when the control
+- `uri=about:blank {string}` - The site the user selects to visit when the control
 is created. If this is empty, then the home directory is used.  If the home directory
 is empty, then the site is set to 'about:blank'
-- `useparser: {boolean} (false)` - If true, then the onClip() event will take the
+- `useparser=false {boolean}` - If true, then the onClip() event will take the
 HTML string and parse it into its DOM elements.  By default this is false because it
 is a performance hit to parse it.
 

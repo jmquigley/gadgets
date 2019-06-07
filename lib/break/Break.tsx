@@ -24,6 +24,8 @@
  */
 
 // const debug = require("debug")("gadgets.Break");
+const debugCreate = require("debug")("gadgets.Break:create");
+const debugRender = require("debug")("gadgets.Break:render");
 
 import * as React from "react";
 import styled from "styled-components";
@@ -65,10 +67,13 @@ export class Break extends BaseComponent<BreakProps, BaseState> {
 
 	constructor(props: BaseProps) {
 		super(props, "ui-break");
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		const totalBreaks: number = roundUp(
 			this.props.n > 0 ? this.props.n : 1

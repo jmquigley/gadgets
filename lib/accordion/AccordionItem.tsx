@@ -55,10 +55,6 @@
  * @module AccordionItem
  */
 
-// const debug = require("debug")("gadgets.AccordionItem");
-const debugCreate = require("debug")("gadgets.AccordionItem:create");
-const debugRender = require("debug")("gadgets.AccordionItem:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
@@ -134,13 +130,10 @@ export class AccordionItem extends BaseComponent<
 	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props, "ui-accordionitem", AccordionItem.defaultProps.style);
-		this.state = {
+		super(props, "ui-accordionitem", AccordionItem.defaultProps.style, {
 			...getDefaultAccordionItemState(),
-			toggle: this.props.initialToggle
-		};
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
+			toggle: props.initialToggle
+		});
 	}
 
 	@autobind
@@ -163,11 +156,9 @@ export class AccordionItem extends BaseComponent<
 	}
 
 	public render() {
+		super.render();
+
 		let content = null;
-
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
 
 		if (this.props.children != null && this.state.toggle) {
 			content = (

@@ -45,21 +45,23 @@
  * default.  This is used to style that first icon.
  *
  * #### Properties
- * - `chevron: {string} ('chevron-right)` - The font awesome icon used as a
+ * - `chevron="chevron-right" {string}` - The font awesome icon used as a
  * divider between path elements in the component.
- * - `icon: {string} ('paperclip')` - The font awesome icon placed at the
+ * - `icon="paperclip" {string}` - The font awesome icon placed at the
  * front of the component path list.
- * - `items: {Crumbs[]} ([])` - An array of name/uri pairs that represent the
+ * - `items=[] {Crumbs[]}` - An array of name/uri pairs that represent the
  * path locations that will be displayed.  They are displayed in the order
  * of the array.  The data type is a Crumbs interface that contains name (as
  * as string) and uri (as a string).
- * - `noicon {boolean} (false)` - Suppresses the icon on the front of the
+ * - `noicon=false {boolean}` - Suppresses the icon on the front of the
  * list when true.
  *
  * @module Breadcrumbs
  */
 
 // const debug = require('debug')('gadgets.Breadcrumbs');
+const debugCreate = require("debug")("gadgets.Breadcrumbs:create");
+const debugRender = require("debug")("gadgets.Breadcrumbs:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -168,6 +170,8 @@ export class Breadcrumbs extends BaseComponent<
 			testing: this.props.testing,
 			testingPrefix: "icon"
 		});
+
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -181,6 +185,8 @@ export class Breadcrumbs extends BaseComponent<
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		// The onSelection event should not be passed down through the
 		// item and into the sub components.

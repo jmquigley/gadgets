@@ -41,6 +41,8 @@
  */
 
 // const debug = require("debug")("gadgets.ButtonDialog");
+const debugCreate = require("debug")("gadgets.ButtonDialog:create");
+const debugRender = require("debug")("gadgets.ButtonDialog:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -175,6 +177,7 @@ export class ButtonDialog extends BaseComponent<
 
 	constructor(props: ButtonDialogProps) {
 		super(props, "ui-button-dialog", ButtonDialog.defaultProps.style);
+		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -208,6 +211,8 @@ export class ButtonDialog extends BaseComponent<
 
 	public render() {
 		this.updateClassName();
+
+		debugRender("props: %O, state: %O", this.props, this.state);
 
 		this._dialogClasses.add(this.props.dialogClasses.slice());
 		this._triangleClasses.add(this.props.triangleClasses.slice());

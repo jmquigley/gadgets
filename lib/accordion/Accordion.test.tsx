@@ -1,4 +1,4 @@
-"use strict";
+const debug = require("debug")("gadgets.test.Accordion");
 
 import {shallow} from "enzyme";
 import assert from "power-assert";
@@ -17,6 +17,8 @@ test("Test retrieval of Accordion props object", () => {
 	const state = getDefaultAccordionState();
 	assert(state);
 	expect(state).toMatchSnapshot();
+
+	debug("props: %O, state: %O", props, state);
 });
 
 test("Test the creation of a Accordion control container", () => {
