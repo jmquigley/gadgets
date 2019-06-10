@@ -38,21 +38,19 @@
  * #### Properties
  * - `initialToggle: {boolean} (false)` - The initial on/off state for the
  * toggle.
- * - `innyScale: {number} (0.6)` - the percent sizing of the circle button
+ * - `innyScale=0.6 {number}` - the percent sizing of the circle button
  * font size when using the Inny type.
- * - `noripple: {boolean} (false)` - Turns off the ripple effect that occurs
+ * - `noripple=false {boolean}` - Turns off the ripple effect that occurs
  * when the circular button is pressed.
- * - `outyScale: {number} (1.25)` - the percent sizing of the circle button
+ * - `outyScale=1.25 {number}` - the percent sizing of the circle button
  * font size when using the Outy type.
- * - `sliderScale: {number} (1.25)` - the percent sizing of the slider portion
+ * - `sliderScale=1.25 {number}` - the percent sizing of the slider portion
  * of the control as a percent of the font sizing.
- * - `switchType: {SwitchType} (SwitchType.outy)` - Sets the visual form for
+ * - `switchType=SwitchType.outy {SwitchType}` - Sets the visual form for
  * control.  There are two types: `inny` and `outy`.
  *
  * @module Switch
  */
-
-// const debug = require("debug")("gadgets.Switch");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -91,7 +89,6 @@ export function getDefaultSwitchProps(): SwitchProps {
 		...getDefaultBaseProps(),
 		initialToggle: false,
 		innyScale: 0.6,
-		obj: "Switch",
 		onClick: nilEvent,
 		outyScale: 1.25,
 		sliderScale: 1.25,
@@ -147,17 +144,16 @@ const SliderContainerView: any = styled.div`
 `;
 
 export class Switch extends BaseComponent<SwitchProps, SwitchState> {
-	public static defaultProps: SwitchProps = getDefaultSwitchProps();
+	public static readonly defaultProps: SwitchProps = getDefaultSwitchProps();
+
 	private _buttonStyles: ClassNames = new ClassNames("ui-switch-button");
 	private _sliderStyles: ClassNames = new ClassNames("ui-switch-slider");
 
 	constructor(props: SwitchProps) {
-		super(props, "ui-switch", Switch.defaultProps.style);
-
-		this.state = {
+		super("ui-switch", Switch, props, {
 			...getDefaultSwitchState(),
-			toggle: this.props.initialToggle
-		};
+			toggle: props.initialToggle
+		});
 	}
 
 	@autobind
@@ -170,7 +166,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		this._buttonStyles.onIf(this.props.ripple && !this.props.disabled)(
 			"ripple"

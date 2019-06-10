@@ -43,12 +43,12 @@ on and true is sent to the callback.
 - `ui-option` - Style applied to the root `<div>` of the control.
 
 #### Properties
-- `initialToggle: {boolean} (false)` - the initial state of the button
+- `initialToggle=false {boolean}` - the initial state of the button
 This is different than selected, as it is only used when the button
 is created.  It is ignored after creation (where selected is not)
-- `optionType: {OptionType} (OptionType.square)` - An enumerated type that will
+- `optionType=OptionType.square {OptionType}` - An enumerated type that will
 determine what icons will be displayed.  They are listed above.
-- `selected: {boolean} (false)` - determines the initial state of the
+- `selected=false {boolean}` - determines the initial state of the
 control.  If true, then the control is "checked", otherwise it is "off"
-- `text: {string} ('')` - text string to the right of the control
+- `text="" {string}` - text string to the right of the control
 

@@ -53,8 +53,7 @@ export type AccordionProps = BaseProps;
 
 export function getDefaultAccordionProps(): AccordionProps {
 	return {
-		...getDefaultBaseProps(),
-		obj: "Accordion"
+		...getDefaultBaseProps()
 	};
 }
 
@@ -82,12 +81,7 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	private keys: Keys = null;
 
 	constructor(props: AccordionProps) {
-		super(
-			props,
-			"ui-accordion",
-			Accordion.defaultProps.style,
-			getDefaultAccordionState()
-		);
+		super("ui-accordion", Accordion, props, getDefaultAccordionState());
 		this.keys = new Keys({testing: this.props.testing});
 	}
 

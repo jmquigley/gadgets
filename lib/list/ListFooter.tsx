@@ -1,6 +1,27 @@
-// TODO: add documenation for ListFooter
-
-// const debug = require("debug")("gadgets.ListFooter");
+/**
+ * A special title block that can be placed at the bottom of a List
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {List, ListFooter} from 'gadgets';
+ * <List>
+ *     <ListFooter title"footer string" />
+ * </List>
+ * ```
+ *
+ * #### Events
+ * See `Title` component
+ *
+ * #### Styles
+ * - `ui-list-footer` - A class style on the title block of the
+ * component.
+ *
+ * #### Properties
+ * See `Title` component
+ *
+ * @module ListFooter
+ */
 
 import * as React from "react";
 import styled from "styled-components";
@@ -20,7 +41,6 @@ export function getDefaultListFooterProps(): TitleProps {
 	return {
 		...getDefaultTitleProps(),
 		layout: TitleLayout.even,
-		obj: "ListFooter",
 		title: ""
 	};
 }
@@ -45,15 +65,14 @@ export class ListFooter extends BaseComponent<
 	ListFooterProps,
 	ListFooterState
 > {
-	public static defaultProps: ListFooterProps = getDefaultListFooterProps();
-	public state: ListFooterState = getDefaultListFooterState();
+	public static readonly defaultProps: ListFooterProps = getDefaultListFooterProps();
 
 	constructor(props: ListFooterProps) {
-		super(props, "ui-list-footer", ListFooter.defaultProps.style);
+		super("ui-list-footer", ListFooter, props, getDefaultListFooterState());
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

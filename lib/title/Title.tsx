@@ -56,15 +56,13 @@
  *  This is the `<div>` around the given widget.
  *
  * #### Properties
- * - `layout: {TitleLayout} (TitleLayout.dominant)` - The structure of the
+ * - `layout=TitleLayout.dominant {TitleLayout}` - The structure of the
  * title/widget within the component.
- * - `widget: {any} (null)` - The given user defined widget control that is
+ * - `widget=null {any}` - The given user defined widget control that is
  * injected into the title.
  *
  * @module Title
  */
-
-// const debug = require('debug')('gadgets.Title');
 
 import * as React from "react";
 import styled, {css} from "styled-components";
@@ -106,7 +104,6 @@ export function getDefaultTitleProps(): TitleProps {
 	return {
 		...getDefaultBaseProps(),
 		layout: TitleLayout.dominant,
-		obj: "Title",
 		onClick: nilEvent,
 		onUpdate: nilEvent,
 		ripple: true,
@@ -229,14 +226,13 @@ const StyledLabel: any = styled(Label)`
 
 export class Title extends BaseComponent<TitleProps, TitleState> {
 	public static defaultProps: TitleProps = getDefaultTitleProps();
-	public state: TitleState = getDefaultTitleState();
 
 	constructor(props: TitleProps) {
-		super(props, "ui-title-bar", Title.defaultProps.style);
+		super("ui-title-bar", Title, props, getDefaultTitleState());
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		let title: any = null;
 		let titleView: any = null;

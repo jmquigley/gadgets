@@ -37,20 +37,16 @@
  * - `ui-option-group-title` - The style applied to the `title` property
  *
  * #### Properties
- * - `default: {string}: ('')` - The default option selected when the control
+ * - `default="" {string}` - The default option selected when the control
  * is created.
- * - `optionType: {OptionType} (square)` - The Option component has 10 distinct
- * graphics.  This option sets that choice.
- * - `options: {string[]} []` - an array of of strings that represent the
- * option choices.
- * - `title: {string} ('')` - a string that represents the option group title
+ * - `optionType=OptionType.square {OptionType}` - The Option component has 10
+ * distinct graphics.  This option sets that choice.
+ * - `options=[] {string[]}` - an array of of strings that represent the option
+ * choices.
+ * - `title="" {string}` - a string that represents the option group title
  *
  * @module OptionGroup
  */
-
-// const debug = require('debug')('gadgets.OptionGroup');
-const debugCreate = require("debug")("gadgets.OptionGroup:create");
-const debugRender = require("debug")("gadgets.OptionGroup:render");
 
 import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
@@ -83,7 +79,6 @@ export interface OptionGroupProps extends BaseProps {
 export function getDefaultOptionGroupProps(): OptionGroupProps {
 	return {
 		...getDefaultBaseProps(),
-		obj: "OptionGroup",
 		default: "",
 		onSelection: nilEvent,
 		optionType: OptionType.square,
@@ -166,22 +161,17 @@ export class OptionGroup extends BaseComponent<
 	OptionGroupProps,
 	OptionGroupState
 > {
+	public static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
+
 	private _keys: Keys;
-	private static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
 
 	constructor(props: OptionGroupProps) {
-		super(props, "ui-option-group", OptionGroup.defaultProps.style);
+		super("ui-option-group", OptionGroup, props, {
+			...getDefaultOptionGroupState(),
+			options: OptionGroup.buildOptionState(props.options, props.default)
+		});
 
 		this._keys = new Keys({testing: this.props.testing});
-		this.state = {
-			...getDefaultOptionGroupState(),
-			options: this.buildOptionState(
-				this.props.options,
-				this.props.default
-			)
-		};
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	private buildOptionList() {
@@ -220,8 +210,7 @@ export class OptionGroup extends BaseComponent<
 	 * @returns a new Map<string, boolean> structure with labels as the key
 	 * and its current selection status
 	 */
-	@autobind
-	private buildOptionState(
+	private static buildOptionState(
 		labels: string[],
 		selected: string
 	): OrderedMap<string, boolean> {
@@ -239,7 +228,10 @@ export class OptionGroup extends BaseComponent<
 			toggle = toggle;
 			this.setState(
 				{
-					options: this.buildOptionState(this.props.options, text)
+					options: OptionGroup.buildOptionState(
+						this.props.options,
+						text
+					)
 				},
 				() => {
 					this.props.onSelection(text);
@@ -249,9 +241,7 @@ export class OptionGroup extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

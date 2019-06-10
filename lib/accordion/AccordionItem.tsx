@@ -84,7 +84,6 @@ export function getDefaultAccordionItemProps(): AccordionItemProps {
 		initialToggle: false,
 		leftButton: null,
 		nocollapse: false,
-		obj: "AccordionItem",
 		onClick: nilEvent,
 		onUpdate: nilEvent,
 		rightButton: null
@@ -127,10 +126,10 @@ export class AccordionItem extends BaseComponent<
 	AccordionItemProps,
 	AccordionItemState
 > {
-	public static defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
+	public static readonly defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
 
 	constructor(props: AccordionItemProps) {
-		super(props, "ui-accordionitem", AccordionItem.defaultProps.style, {
+		super("ui-accordionitem", AccordionItem, props, {
 			...getDefaultAccordionItemState(),
 			toggle: props.initialToggle
 		});

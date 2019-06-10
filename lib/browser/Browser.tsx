@@ -66,10 +66,6 @@
  * @module Browser
  */
 
-const debug = require("debug")("gadgets.Browser");
-const debugCreate = require("debug")("gadgets.Browser:create");
-const debugRender = require("debug")("gadgets.Browser:render");
-
 import autobind from "autobind-decorator";
 import {WebviewTag} from "electron";
 import {List} from "immutable";
@@ -124,7 +120,6 @@ export function getDefaultBrowserProps(): BrowserProps {
 		kbRefresh: "alt+r",
 		kbSnapshot: "",
 		notooltips: false,
-		obj: "Browser",
 		onClip: nilEvent,
 		onOpen: nilEvent,
 		uri: "about:blank",
@@ -206,12 +201,17 @@ const SearchTextField: any = styled(TextField)`
 `;
 
 export class Browser extends BaseComponent<BrowserProps, BrowserState> {
-	private _webview: WebviewTag = null;
-	private _webViewHandlerEnabled: boolean = false;
 	public static readonly defaultProps: BrowserProps = getDefaultBrowserProps();
 
+	private _webview: WebviewTag = null;
+	private _webViewHandlerEnabled: boolean = false;
+
 	constructor(props: BrowserProps) {
-		super(props, "ui-browser", Browser.defaultProps.style);
+		super("ui-browser", Browser, props, {
+			...getDefaultBrowserState(),
+			uri: props.uri || props.home || "",
+			uriHistory: List(props.uri || props.home || "")
+		});
 
 		this.buildKeyMap({
 			kbBack: this.handleBack,
@@ -222,15 +222,6 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 			kbRefresh: this.handleReload,
 			kbSnapshot: this.handleSnapshot
 		});
-
-		const uri: string = this.props.uri || this.props.home || "";
-		this.state = {
-			...getDefaultBrowserState(),
-			uri: uri,
-			uriHistory: List(uri)
-		};
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	/**
@@ -413,7 +404,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 
 	private refreshPage() {
 		if (this._webview) {
-			debug(
+			this.debug(
 				"Loading URI: %s for webview: %O",
 				this.state.uri,
 				this._webview
@@ -461,9 +452,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

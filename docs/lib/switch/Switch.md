@@ -40,14 +40,14 @@ This changes color when the state is updated (turned on/off)
 #### Properties
 - `initialToggle: {boolean} (false)` - The initial on/off state for the
 toggle.
-- `innyScale: {number} (0.6)` - the percent sizing of the circle button
+- `innyScale=0.6 {number}` - the percent sizing of the circle button
 font size when using the Inny type.
-- `noripple: {boolean} (false)` - Turns off the ripple effect that occurs
+- `noripple=false {boolean}` - Turns off the ripple effect that occurs
 when the circular button is pressed.
-- `outyScale: {number} (1.25)` - the percent sizing of the circle button
+- `outyScale=1.25 {number}` - the percent sizing of the circle button
 font size when using the Outy type.
-- `sliderScale: {number} (1.25)` - the percent sizing of the slider portion
+- `sliderScale=1.25 {number}` - the percent sizing of the slider portion
 of the control as a percent of the font sizing.
-- `switchType: {SwitchType} (SwitchType.outy)` - Sets the visual form for
+- `switchType=SwitchType.outy {SwitchType}` - Sets the visual form for
 control.  There are two types: `inny` and `outy`.
 

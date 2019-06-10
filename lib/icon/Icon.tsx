@@ -36,18 +36,16 @@
  * - `ui-icon` - applied to the top level container for the icon or image.
  *
  * #### Properties
- * - `iconName: string (bomb)` - The name of the font awesome icon that
+ * - `iconName="bomb" {string}` - The name of the font awesome icon that
  * will be used in this icon.  This option is mutually exclusive to imageFile
- * - `imageFile: string ('')` - The path to an image file that will be used
+ * - `imageFile="" {string}` - The path to an image file that will be used
  * in this icon.  This option is mutually exclusive to iconName.
- * - `sizing: Sizing (Sizing.normal)` - There are seven icon sizes that can
+ * - `sizing=Sizing.normal {Sizing}` - There are seven icon sizes that can
  * be used. See the shared props documentation for the enumerations used for
  * each sizing.
  *
  * @module Icon
  */
-
-// const debug = require("debug")("gadgets.Icon");
 
 import * as React from "react";
 import styled from "styled-components";
@@ -76,7 +74,6 @@ export function getDefaultIconProps(): IconProps {
 		...getDefaultBaseProps(),
 		iconName: "bomb",
 		imageFile: "",
-		obj: "Icon",
 		sizing: Sizing.normal
 	};
 }
@@ -104,13 +101,14 @@ const Image: any = styled.img`
 
 export class Icon extends BaseComponent<IconProps, IconState> {
 	public static readonly defaultProps: IconProps = getDefaultIconProps();
-	public state: IconState = getDefaultIconState();
 
 	constructor(props: IconProps) {
-		super(props, "ui-icon", Icon.defaultProps.style);
+		super("ui-icon", Icon, props, getDefaultIconState());
 	}
 
 	public render() {
+		super.render({noclassnameupdate: true});
+
 		let faClassList: string[] = null;
 		if (!this.props.imageFile) {
 			faClassList = [

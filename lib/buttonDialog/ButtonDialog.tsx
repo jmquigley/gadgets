@@ -40,10 +40,6 @@
  * @module ButtonDialog
  */
 
-// const debug = require("debug")("gadgets.ButtonDialog");
-const debugCreate = require("debug")("gadgets.ButtonDialog:create");
-const debugRender = require("debug")("gadgets.ButtonDialog:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import styled, {css} from "styled-components";
@@ -81,7 +77,6 @@ export function getDefaultButtonDialogProps(): ButtonDialogProps {
 		dialogClasses: [],
 		location: Location.bottom,
 		notriangle: false,
-		obj: "ButtonDialog",
 		onClick: nilEvent,
 		style: {
 			backgroundColor: "inherit",
@@ -171,18 +166,23 @@ export class ButtonDialog extends BaseComponent<
 	ButtonDialogState
 > {
 	public static readonly defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
-	public state: ButtonDialogState = getDefaultButtonDialogState();
+
 	private _dialogClasses: ClassNames = new ClassNames("ui-dialog-popup");
 	private _triangleClasses: ClassNames = new ClassNames("ui-dialog-triangle");
 
 	constructor(props: ButtonDialogProps) {
-		super(props, "ui-button-dialog", ButtonDialog.defaultProps.style);
-		debugCreate("props: %O, state: %O", this.props, this.state);
+		super(
+			"ui-button-dialog",
+			ButtonDialog,
+			props,
+			getDefaultButtonDialogState()
+		);
 	}
 
 	@autobind
 	private handleClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (!this.props.disabled && !this.props.hidden) {
+			this.debug("handleClick -> %O", e);
 			this.setState({visible: !this.state.visible});
 			this.props.onClick(e);
 		}
@@ -210,9 +210,9 @@ export class ButtonDialog extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
-		debugRender("props: %O, state: %O", this.props, this.state);
+		this.debug("children: %O", this.props.children);
 
 		this._dialogClasses.add(this.props.dialogClasses.slice());
 		this._triangleClasses.add(this.props.triangleClasses.slice());
@@ -251,10 +251,9 @@ export class ButtonDialog extends BaseComponent<
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper>
 				<ButtonDialogView className={this.className} id={this.id}>
 					<Button
-						{...this.props}
 						iconName={this.props.iconName}
 						onClick={this.handleClick}
 						style={this.state.style}

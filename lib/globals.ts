@@ -8,13 +8,10 @@
  * @module globals
  */
 
-const pkg = require("../package.json");
-
 import {configure} from "react-hotkeys";
 import "styled-components";
 import "util.obj-cycle";
 import "util.string";
-import {isNode} from "util.toolbox";
 import {globalize} from "./shared/helpers";
 import {BaseThemeProps} from "./shared/themes";
 
@@ -36,27 +33,4 @@ configure({
  */
 declare module "styled-components" {
 	export interface DefaultTheme extends BaseThemeProps {}
-}
-
-/**
- * Checks the environment for the debug flag environment variable.  If it is
- * defined, then it will resolve to true.  If it doesn't, exists, then the
- * package.json debug flag is checked.  If it exists it is returned as the
- * debug flag.  If it doesn't exist, then false is returned and debugging
- * is turned off.
- *
- * The name of the environment variable for debugging is DEBUG_GADGETS if
- * in a node environment.
- * @return true if debugging is turned on, otherwise false.
- */
-export function isDebug(): boolean {
-	if (isNode() && "DEBUG_GADGETS" in process.env) {
-		return true;
-	}
-
-	if (pkg.debug) {
-		return pkg.debug;
-	}
-
-	return false;
 }

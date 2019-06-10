@@ -65,21 +65,21 @@ invoked.  It takes no parameters.
 - `ui-toast` - second level style placed on the content `<div>`.
 
 #### Properties
-- `usebottom {boolean} (false)` - If this is true, then the message will be
+- `usebottom=false {boolean}` - If this is true, then the message will be
 drawn at the bottom of the container where the message generated,
 otherwise the message is written to the top of the container.
-- `decay {boolean} (true)` - There are two types of Toast messages: decay and
+- `decay=true {boolean}` - There are two types of Toast messages: decay and
 persistent.  The decay type, when this property is true, will automatically
 disapper after *duration*  seconds.  The persistent type will stay within
 the container until the user presses the close button (X).
-- `duration {number} (3)` - The number of seconds the message will appear when
+- `duration=3 {number}` - The number of seconds the message will appear when
 using a message type of *decay* (see type below). e.g. "5" = five seconds.
-- `level {ToastLevel} (ToastLevel.info)` - The logging level of message that
+- `level=ToastLevel.info {ToastLevel}` - The logging level of message that
 will be printed.  This works like log4js levels and contains four basic
 types: info, warning, error, and custom.  Each type has a special color scheme
 associated with it (info is blue, warning is yellow, error is red).  An enumeration
 named `ToastLevel` holds the value for each type (ToastLevel.info,
 ToastLevel.warning, ToastLevel.error, ToastLevel.custom).
-- `show {boolean} (false)` - when set to true, the toast message is shown within
+- `show=false {boolean}` - when set to true, the toast message is shown within
 the container for the duration of its delay.  When false it is not shown.
 

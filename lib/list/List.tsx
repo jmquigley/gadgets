@@ -46,16 +46,14 @@
  * list.
  *
  * #### Properties
- * - `alternating: {boolean} (false)` - Makes every other `<li>` entry within the
+ * - `alternating=false {boolean}` - Makes every other `<li>` entry within the
  * list grey to make viewing the list easier.  This is off by default.
- * - `noselect: {boolean} (false)` - If set to true then the item that has been
+ * - `noselect=false {boolean}` - If set to true then the item that has been
  * selected within the list will not be highlighted.  it's a way to turn of list
  * selection.
  *
  * @module List
  */
-
-// const debug = require('debug')('gadgets.List');
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -70,8 +68,7 @@ import {
 	getDefaultBaseState,
 	Wrapper
 } from "../shared";
-
-import {ListItem} from "./index";
+import {ListItem} from "./ListItem";
 
 export interface ListProps extends BaseProps {
 	alternating?: boolean;
@@ -86,7 +83,6 @@ export function getDefaultListProps(): ListProps {
 		alternating: false,
 		children: null,
 		noselect: false,
-		obj: "List",
 		onSelection: nilEvent
 	};
 }
@@ -113,16 +109,13 @@ const ListView: any = styled.ul`
 `;
 
 export class List extends BaseComponent<ListProps, ListState> {
-	public static defaultProps: ListProps = getDefaultListProps();
-	public state: ListState = getDefaultListState();
+	public static readonly defaultProps: ListProps = getDefaultListProps();
 
 	constructor(props: ListProps) {
-		super(props, "ui-list", List.defaultProps.style);
-
-		this.state = {
+		super("ui-list", List, props, {
 			...getDefaultListState(),
-			keys: new Keys({testing: this.props.testing})
-		};
+			keys: new Keys({testing: props.testing})
+		});
 	}
 
 	@autobind
@@ -166,7 +159,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		let children: any = null;
 		const selectedKey =

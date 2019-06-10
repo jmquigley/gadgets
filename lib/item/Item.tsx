@@ -1,8 +1,40 @@
-// TODO: add Item documentation
+/**
+ * A wrapper for the li component.  An item can have three parts:
+ *
+ * - Title block
+ *   - Title String
+ *   - Optional Widget
+ * - Left Button
+ * - Right Button
+ *
+ * This serves as a reusable component for List, Accordion, and DynamicList
+ *
+ * ## Screen:
+ * See the List, Accordion, or DynamicList
+ *
+ * ## Examples:
+ *
+ * ```javascript
+ *
+ *
+ * ```
+ *
+ * ## API
+ * #### Events
+ * -
+ *
+ * #### Styles
+ * - `ui-item` - A global style placed on the `<li>` element.
+ *
+ * #### Properties
+ * - `hiddenLeftButton=false {boolean}` - The state of the left button is set
+ * to hidden and shown when hovering over the `li`.
+ *
+ * @module Item
+ *
+ */
 
-// const debug = require('debug')('gadgets.Item');
-const debugCreate = require("debug")("gadgets.Item:create");
-const debugRender = require("debug")("gadgets.Item:render");
+// TODO: add Item documentation
 
 import * as React from "react";
 import styled, {css} from "styled-components";
@@ -47,7 +79,6 @@ export function getDefaultItemProps(): ItemProps {
 		hiddenRightButton: false,
 		layout: TitleLayout.dominant,
 		leftButton: null,
-		obj: "Item",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onClick: nilEvent,
@@ -144,18 +175,14 @@ const ItemViewButton: any = styled.div`
 `;
 
 export class Item extends BaseComponent<ItemProps, ItemState> {
-	public static defaultProps: ItemProps = getDefaultItemProps();
-	public state: ItemState = getDefaultItemState();
+	public static readonly defaultProps: ItemProps = getDefaultItemProps();
 
 	constructor(props: ItemProps) {
-		super(props, "ui-item", Item.defaultProps.style);
-		debugCreate("props: %O, state: %O", this.props, this.state);
+		super("ui-item", Item, props, getDefaultItemState());
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		let leftButton: any = null;
 		let rightButton: any = null;

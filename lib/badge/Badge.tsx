@@ -68,7 +68,6 @@ export function getDefaultBadgeProps(): BadgeProps {
 		...getDefaultBaseProps(),
 		counter: 0,
 		location: Location.topRight,
-		obj: "Badge",
 		onClick: nilEvent,
 		onUpdate: nilEvent,
 		sizing: Sizing.normal,
@@ -112,12 +111,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
 
 	constructor(props: BadgeProps) {
-		super(
-			props,
-			"ui-badge",
-			Badge.defaultProps.style,
-			getDefaultBadgeState()
-		);
+		super("ui-badge", Badge, props, getDefaultBadgeState());
 		this.props.onUpdate(this.props.counter);
 	}
 

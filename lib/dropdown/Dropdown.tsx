@@ -26,7 +26,7 @@
  * ];
  *
  * <Dropdown iconName="cab" onClick={someFunction}
- *     defaultVal='val1'
+ *     initialValue='val1'
  *     items={options}
  *     onSelection{(val: DropdownDataType) => {// process value}}
  * />
@@ -39,17 +39,16 @@
  *
  * #### Styles
  * - `ui-dropdown` - A global style placed on the `<select>` element.
+ * - `ui-dropdown-container` - a div container that wraps the dropdown component.
  *
  * #### Properties
- * - `initialItem: {string} ('')` - The initial id value from the list of
+ * - `initialValue="" {string}` - The initial id value from the list of
  * provided items.
- * - `items: {DropdownOption[]} ([])` - An array of items used to build
+ * - `items=[] {DropdownOption[]}` - An array of items used to build
  * the list (see example above for construction).
  *
  * @module Dropdown
  */
-
-// const debug = require("debug")("gadgets.Dropdown");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -66,6 +65,7 @@ import {
 	fontStyle,
 	getDefaultBaseProps,
 	getDefaultBaseState,
+	getTheme,
 	invisible,
 	Sizing,
 	Wrapper
@@ -80,8 +80,7 @@ export interface DropdownOption {
 export type DropdownDataType = string | number;
 
 export interface DropdownProps extends BaseProps {
-	defaultVal?: string;
-	initialItem?: string;
+	initialValue?: string;
 	items?: DropdownOption[];
 	onSelection?: (val: DropdownDataType) => void;
 }
@@ -89,9 +88,8 @@ export interface DropdownProps extends BaseProps {
 export function getDefaultDropdownProps(): DropdownProps {
 	return {
 		...getDefaultBaseProps(),
-		initialItem: "",
+		initialValue: "",
 		items: [],
-		obj: "Dropdown",
 		onSelection: nilEvent
 	};
 }
@@ -133,35 +131,34 @@ const chevronSVG: string = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0
 
 const chevronImage: string = `url("data:image/svg+xml;utf8,${chevronSVG}")`;
 
-export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
-	private _keys: Keys;
+function getChevronStyle(sizing: Sizing) {
+	const theme = getTheme();
+	const color = theme.chevronColor.replace("#", "");
+	const height = BaseComponent.fontSizePX(sizing);
+	const width = calc(height, "* 1.5");
 
+	const chevron = sprintf(chevronImage, width, height, color);
+
+	return {
+		backgroundImage: chevron,
+		paddingRight: width,
+		paddingLeft: calc(width, "* 0.4")
+	};
+}
+
+export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
 
-	constructor(props: DropdownProps) {
-		super(props, "ui-dropdown", Dropdown.defaultProps.style);
+	private _keys: Keys;
 
-		this.state = {
+	constructor(props: DropdownProps) {
+		super("ui-dropdown", Dropdown, props, {
 			...getDefaultDropdownState(),
-			currentValue: this.props.defaultVal,
-			style: this.getChevronStyle(props.sizing)
-		};
+			currentValue: props.initialValue,
+			style: getChevronStyle(props.sizing)
+		});
 
 		this._keys = new Keys({testing: this.props.testing});
-	}
-
-	private getChevronStyle(sizing: Sizing) {
-		const color = this.theme.chevronColor.replace("#", "");
-		const height = BaseComponent.fontSizePX(sizing);
-		const width = calc(height, "* 1.5");
-
-		const chevron = sprintf(chevronImage, width, height, color);
-
-		return {
-			backgroundImage: chevron,
-			paddingRight: width,
-			paddingLeft: calc(width, "* 0.4")
-		};
 	}
 
 	@autobind
@@ -182,13 +179,13 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public componentDidUpdate(prevProps: DropdownProps) {
 		if (prevProps.sizing !== this.props.sizing) {
 			this.setState({
-				style: this.getChevronStyle(this.props.sizing)
+				style: getChevronStyle(this.props.sizing)
 			});
 		}
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const options: any[] = this.props.items.map(({value, label}, idx) => (
 			<option key={this._keys.at(idx)} value={value}>

@@ -31,10 +31,6 @@
  * @module Button
  */
 
-// const debug = require("debug")("gadgets.Button");
-const debugCreate = require("debug")("gadgets.Button:create");
-const debugRender = require("debug")("gadgets.Button:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {HotKeys} from "react-hotkeys";
@@ -68,7 +64,6 @@ export function getDefaultButtonProps(): ButtonProps {
 		kbActivate: "",
 		nopropagation: true,
 		onClick: nilEvent,
-		obj: "Button",
 		ripple: true
 	};
 }
@@ -113,16 +108,13 @@ const StyledIcon: any = styled(Icon)`
 
 export class Button extends BaseComponent<ButtonProps, ButtonState> {
 	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
-	public state: ButtonState = getDefaultButtonState();
 
 	constructor(props: ButtonProps) {
-		super(props, "ui-button", Button.defaultProps.style);
+		super("ui-button", Button, props, getDefaultButtonState());
 
 		this.buildKeyMap({
 			kbActivate: this.handleClick
 		});
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -137,9 +129,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

@@ -123,8 +123,6 @@
  * @module TextField
  */
 
-// const debug = require("debug")("gadgets.TextField");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import styled, {css} from "styled-components";
@@ -203,7 +201,6 @@ export function getDefaultTextFieldProps(): TextFieldProps {
 		noborder: false,
 		noripple: true,
 		nospinner: false,
-		obj: "TextField",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onClear: nilEvent,
@@ -327,19 +324,13 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 	private _validators: Validator[] = null;
 
 	constructor(props: TextFieldProps) {
-		super(props, "ui-textfield", TextField.defaultProps.style);
-		this._validators = props.validators.slice();
-
-		let value: string = this.props.initialValue;
-		if (props.value) {
-			value = props.value;
-		}
-
-		this.state = {
+		super("ui-textfield", TextField, props, {
 			...getDefaultTextFieldState(),
-			previousValue: this.props.initialValue,
-			value
-		};
+			previousValue: props.initialValue,
+			value: props.value || props.initialValue
+		});
+
+		this._validators = props.validators.slice();
 
 		if (textTypes.includes(props.type) && props.usevalidation) {
 			if ("maxLength" in props && props["maxLength"]) {
@@ -476,7 +467,7 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		// Strip out props that the input control cannot recognize or use
 		const {validators, onClear, onValidation, ...props} = this.props;

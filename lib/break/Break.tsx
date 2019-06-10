@@ -23,10 +23,6 @@
  * @module Break
  */
 
-// const debug = require("debug")("gadgets.Break");
-const debugCreate = require("debug")("gadgets.Break:create");
-const debugRender = require("debug")("gadgets.Break:render");
-
 import * as React from "react";
 import styled from "styled-components";
 import {sp} from "util.constants";
@@ -48,8 +44,7 @@ export function getDefaultBreakProps(): BreakProps {
 	return {
 		...getDefaultBaseProps(),
 		fontSize: "1.0rem",
-		n: 1,
-		obj: "Break"
+		n: 1
 	};
 }
 
@@ -62,18 +57,14 @@ const BreakView: any = styled.p`
 `;
 
 export class Break extends BaseComponent<BreakProps, BaseState> {
-	public static defaultProps: BreakProps = getDefaultBreakProps();
-	public state: BaseState = getDefaultBaseState();
+	public static readonly defaultProps: BreakProps = getDefaultBreakProps();
 
 	constructor(props: BaseProps) {
-		super(props, "ui-break");
-		debugCreate("props: %O, state: %O", this.props, this.state);
+		super("ui-break", Break, props, getDefaultBaseState());
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		const totalBreaks: number = roundUp(
 			this.props.n > 0 ? this.props.n : 1

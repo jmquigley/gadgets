@@ -6,7 +6,7 @@ exports[`Test creation of a Pager control 1`] = `
   border={null}
   borderColor={null}
   bottom={null}
-  className="test-class"
+  className={null}
   color={null}
   controlled={true}
   direction="right"
@@ -17,8 +17,6 @@ exports[`Test creation of a Pager control 1`] = `
   height={null}
   hidden={false}
   id={null}
-  initialPage={1}
-  initialPageSize={25}
   left={null}
   location="none"
   maxHeight={null}
@@ -31,23 +29,17 @@ exports[`Test creation of a Pager control 1`] = `
   nopropagation={false}
   notheme={false}
   notooltip={false}
-  obj="Pager"
   onError={[Function]}
-  onSelection={[Function]}
   padding={null}
-  pageSizes={
-    Array [
-      25,
-      50,
-      100,
-    ]
-  }
-  pagesToDisplay={3}
   reset={false}
   ripple={false}
   selected={false}
   sizing="normal"
-  style={Object {}}
+  style={
+    Object {
+      "whiteSpace": "pre-wrap",
+    }
+  }
   testing={true}
   theme={
     Object {
@@ -77,8 +69,6 @@ exports[`Test creation of a Pager control 1`] = `
   }
   tooltip={null}
   top={null}
-  totalItems={0}
-  useinput={false}
   visible={true}
   width={null}
   xcss={null}
@@ -88,215 +78,19 @@ exports[`Test creation of a Pager control 1`] = `
     style={Object {}}
   >
     <Pager__StyledButton
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
       iconName="angle-double-left"
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
       onClick={[Function]}
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Pager__StyledButton
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
       iconName="angle-left"
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
       onClick={[Function]}
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Pager__StyledButtonText
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
       className=" ui-pager-selected"
-      color={null}
-      controlled={true}
-      direction="right"
       disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
       justify={2}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
       noicon={true}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
       onClick={[Function]}
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
       sizing="normal"
       style={
         Object {
@@ -304,371 +98,29 @@ exports[`Test creation of a Pager control 1`] = `
           "color": "#ffe11a",
         }
       }
-      testing={true}
       text="1"
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Pager__StyledButtonText
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
       disabled={true}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
       justify={2}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
       noicon={true}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
       sizing="normal"
-      style={Object {}}
-      testing={true}
       text=""
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Pager__StyledButtonText
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
       disabled={true}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
       justify={2}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
       noicon={true}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
       sizing="normal"
-      style={Object {}}
-      testing={true}
       text=""
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Pager__StyledButton
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
       iconName="angle-right"
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
       onClick={[Function]}
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Pager__StyledButton
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
       iconName="angle-double-right"
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
-      left={null}
-      location="none"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
-      obj="Pager"
       onClick={[Function]}
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
-      sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     />
     <Divider
       backgroundColor={null}
@@ -699,7 +151,6 @@ exports[`Test creation of a Pager control 1`] = `
       nopropagation={false}
       notheme={false}
       notooltip={false}
-      obj="Divider"
       padding={null}
       ripple={false}
       selected={false}
@@ -767,7 +218,6 @@ exports[`Test creation of a Pager control 1`] = `
       nopropagation={false}
       notheme={false}
       notooltip={false}
-      obj="Divider"
       padding={null}
       ripple={false}
       selected={false}
@@ -807,86 +257,10 @@ exports[`Test creation of a Pager control 1`] = `
       xcss={null}
     />
     <Pager__StyledButtonDialog
-      backgroundColor={null}
-      border={null}
-      borderColor={null}
-      bottom={null}
-      className="test-class"
-      color={null}
-      controlled={true}
-      direction="right"
-      disabled={false}
-      err={null}
-      errorMessage={null}
-      focus={false}
-      height={null}
-      hidden={false}
       iconName="ellipsis-v"
-      id={null}
-      initialPage={1}
-      initialPageSize={25}
-      left={null}
       location="top"
-      maxHeight={null}
-      maxWidth={null}
-      minHeight={null}
-      minWidth={null}
-      noborder={false}
-      noedit={false}
-      nohover={false}
-      nopropagation={false}
-      notheme={false}
-      notooltip={false}
       notriangle={true}
-      obj="Pager"
-      onSelection={[Function]}
-      padding={null}
-      pageSizes={
-        Array [
-          25,
-          50,
-          100,
-        ]
-      }
-      pagesToDisplay={3}
-      ripple={false}
-      selected={false}
       sizing="normal"
-      style={Object {}}
-      testing={true}
-      theme={
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#c0c0c0",
-          "buttonColor": "#666666",
-          "chevronColor": "#cccccc",
-          "color": "#000000",
-          "fontFamily": "OpenSans, Georgia, serif",
-          "headerBackgroundColor": "#004358",
-          "headerForegroundColor": "#ffffff",
-          "headerHoverColor": "#ffe11a",
-          "hoverColor": "#c0c0c0",
-          "inputBorderColor": "#c0c0c0",
-          "itemHoverColor": "#bedb39",
-          "outlineColor": "#51cbee",
-          "searchFocus": "#51cbee",
-          "searchMatch": "#fd7400",
-          "selectedBackgroundColor": "#1f8a70",
-          "selectedForegroundColor": "#ffe11a",
-          "titleBarBackgroundColor": "#004358",
-          "titleBarForegroundColor": "#ffe11a",
-          "tooltipBackgroundColor": "#708090",
-          "tooltipForegroundColor": "#ffffff",
-          "transitionDelay": "0.33s",
-        }
-      }
-      tooltip={null}
-      top={null}
-      totalItems={0}
-      useinput={false}
-      visible={true}
-      width={null}
-      xcss={null}
     >
       <Pager__DialogListView
         noselect={true}
@@ -897,7 +271,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -916,8 +290,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -951,7 +323,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -1002,7 +373,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -1014,14 +384,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -1058,9 +420,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="First"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -1071,7 +431,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -1090,8 +450,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -1125,7 +483,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -1176,7 +533,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -1188,14 +544,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -1232,9 +580,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="Last"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -1245,7 +591,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -1264,8 +610,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -1299,7 +643,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -1350,7 +693,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -1362,14 +704,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -1406,9 +740,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="Next"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -1419,7 +751,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -1438,8 +770,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -1473,7 +803,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -1524,7 +853,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -1536,14 +864,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -1580,9 +900,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="Previous"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -1618,7 +936,6 @@ exports[`Test creation of a Pager control 1`] = `
           noselect={false}
           notheme={false}
           notooltip={false}
-          obj="ListDivider"
           onSelection={[Function]}
           padding={null}
           ripple={false}
@@ -1663,7 +980,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -1682,8 +999,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -1717,7 +1032,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -1772,7 +1086,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -1784,14 +1097,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -1828,9 +1133,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="25"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -1841,7 +1144,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -1860,8 +1163,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -1895,7 +1196,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -1946,7 +1246,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -1958,14 +1257,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -2002,9 +1293,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="50"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -2015,7 +1304,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -2034,8 +1323,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -2069,7 +1356,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -2120,7 +1406,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -2132,14 +1417,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -2176,9 +1453,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="100"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -2189,7 +1464,7 @@ exports[`Test creation of a Pager control 1`] = `
           border={null}
           borderColor={null}
           bottom={null}
-          className="test-class"
+          className={null}
           color={null}
           controlled={true}
           direction="right"
@@ -2208,8 +1483,6 @@ exports[`Test creation of a Pager control 1`] = `
             }
           }
           id={null}
-          initialPage={1}
-          initialPageSize={25}
           layout={5}
           left={null}
           leftButton={
@@ -2243,7 +1516,6 @@ exports[`Test creation of a Pager control 1`] = `
               nopropagation={false}
               notheme={false}
               notooltip={false}
-              obj="Icon"
               padding={null}
               ripple={false}
               selected={false}
@@ -2294,7 +1566,6 @@ exports[`Test creation of a Pager control 1`] = `
           nopropagation={false}
           notheme={false}
           notooltip={false}
-          obj="Pager"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
@@ -2306,14 +1577,6 @@ exports[`Test creation of a Pager control 1`] = `
           onSelection={[Function]}
           onUpdate={[Function]}
           padding={null}
-          pageSizes={
-            Array [
-              25,
-              50,
-              100,
-            ]
-          }
-          pagesToDisplay={3}
           rightButton={null}
           ripple={false}
           selected={false}
@@ -2350,9 +1613,7 @@ exports[`Test creation of a Pager control 1`] = `
           title="all"
           tooltip={null}
           top={null}
-          totalItems={0}
           useedit={false}
-          useinput={false}
           visible={true}
           widget={null}
           width={null}
@@ -2396,7 +1657,6 @@ Object {
   "nopropagation": false,
   "notheme": false,
   "notooltip": false,
-  "obj": "Pager",
   "onChangePageSize": [Function],
   "onSelection": [Function],
   "onSort": null,

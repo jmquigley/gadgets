@@ -66,8 +66,8 @@ export default class DemoPreview extends React.Component<
 		return (
 			<PreviewStyledContainer id='previewExample' title='Preview'>
 				<Dropdown
-					defaultVal='markdown'
 					disabled={this.props["disabled"]}
+					initialValue='markdown'
 					items={this.items}
 					onSelection={this.handleMarkupModeDropdown}
 					sizing={this.props["sizing"]}

@@ -137,10 +137,6 @@
  * @module Treeview
  */
 
-const debug = require("debug")("gadgets.Treeview");
-const debugCreate = require("debug")("gadgets.Treeview:create");
-const debugRender = require("debug")("gadgets.Treeview:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {HotKeys} from "react-hotkeys";
@@ -228,7 +224,6 @@ export function getDefaultTreeviewProps(): TreeviewProps {
 		nodeWidth: "20em",
 		noscroll: false,
 		nosearch: false,
-		obj: "Treeview",
 		onAdd: nilEvent,
 		onChange: nilEvent,
 		onCollapse: nilEvent,
@@ -377,7 +372,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	private _td: GeneralTree<TreeItem>;
 
 	constructor(props: TreeviewProps) {
-		super(props, "ui-treeview", Treeview.defaultProps.style);
+		super("ui-treeview", Treeview, props);
 
 		this._keys = new Keys({testing: this.props.testing});
 
@@ -410,8 +405,6 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		if (selectedId) {
 			this.props.onSelection(this._td.first);
 		}
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	get rowHeight() {
@@ -675,7 +668,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	@autobind
 	private handleSelection(node: TreeItem) {
 		if (!this.props.disabled) {
-			debug("handleSelection -> node: %O", node);
+			this.debug("handleSelection -> node: %O", node);
 			this.setState({selectedId: node.id});
 			this.props.onSelection(node);
 		}
@@ -690,9 +683,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		const {searchFocusIndex, searchFoundCount} = this.state;
 

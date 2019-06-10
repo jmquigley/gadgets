@@ -28,7 +28,7 @@ let options: DropdownOption[] = [
 ];
 
 <Dropdown iconName="cab" onClick={someFunction}
-    defaultVal='val1'
+    initialValue='val1'
     items={options}
     onSelection{(val: DropdownDataType) => {// process value}}
 />
@@ -41,10 +41,11 @@ from the list.
 
 #### Styles
 - `ui-dropdown` - A global style placed on the `<select>` element.
+- `ui-dropdown-container` - a div container that wraps the dropdown component.
 
 #### Properties
-- `initialItem: {string} ('')` - The initial id value from the list of
+- `initialValue="" {string}` - The initial id value from the list of
 provided items.
-- `items: {DropdownOption[]} ([])` - An array of items used to build
+- `items=[] {DropdownOption[]}` - An array of items used to build
 the list (see example above for construction).
 

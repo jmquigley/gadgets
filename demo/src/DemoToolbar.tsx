@@ -57,7 +57,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					<Option optionType={OptionType.dot} text='test' />
 					<Switch />
 					<TextField placeholder='test' size={4} maxLength={4} />
-					<Dropdown defaultVal='idstr1' items={this.items} />
+					<Dropdown initialValue='idstr1' items={this.items} />
 				</Toolbar>
 				<Break sizing={this.props["sizing"]} />
 
@@ -81,7 +81,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					<Option optionType={OptionType.dot} text='test' />
 					<Switch />
 					<TextField placeholder='test' size={4} maxLength={4} />
-					<Dropdown defaultVal='idstr1' items={this.items} />
+					<Dropdown initialValue='idstr1' items={this.items} />
 				</Toolbar>
 				<Break sizing={this.props["sizing"]} />
 
@@ -105,7 +105,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					<Option optionType={OptionType.dot} text='test' />
 					<Switch />
 					<TextField placeholder='test' size={4} maxLength={4} />
-					<Dropdown defaultVal='idstr1' items={this.items} />
+					<Dropdown initialValue='idstr1' items={this.items} />
 				</Toolbar>
 				<Break sizing={this.props["sizing"]} />
 

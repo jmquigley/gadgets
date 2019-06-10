@@ -39,11 +39,11 @@ the component.
 - `ui-option-group-title` - The style applied to the `title` property
 
 #### Properties
-- `default: {string}: ('')` - The default option selected when the control
+- `default="" {string}` - The default option selected when the control
 is created.
-- `optionType: {OptionType} (square)` - The Option component has 10 distinct
-graphics.  This option sets that choice.
-- `options: {string[]} []` - an array of of strings that represent the
-option choices.
-- `title: {string} ('')` - a string that represents the option group title
+- `optionType=OptionType.square {OptionType}` - The Option component has 10
+distinct graphics.  This option sets that choice.
+- `options=[] {string[]}` - an array of of strings that represent the option
+choices.
+- `title="" {string}` - a string that represents the option group title
 

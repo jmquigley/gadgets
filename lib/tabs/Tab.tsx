@@ -38,7 +38,7 @@
  * `Tab` component.
  *
  * #### Properties
- * - `href: {any}` - This is a general object used to pass references from
+ * - `href {any}` - This is a general object used to pass references from
  * the parent to the child.  It includes the following attributes:
  *   - `selectHandler` - a function reference back to the container that is
  *     invoked to tell the container that this tab was selected.
@@ -53,10 +53,6 @@
  *
  * @module Tab
  */
-
-// const debug = require("debug")("gadgets.Tab");
-const debugCreate = require("debug")("gadgets.Tab:create");
-const debugRender = require("debug")("gadgets.Tab:render");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -96,7 +92,6 @@ export function getDefaultTabProps(): TabProps {
 		},
 		minWidth: "120px",
 		noclose: false,
-		obj: "Tab",
 		onClick: nilEvent,
 		onClose: nilEvent,
 		orientation: Location.top,
@@ -220,17 +215,14 @@ const TabView: any = styled.div`
 
 export class Tab extends BaseComponent<TabProps, TabState> {
 	public static readonly defaultProps: TabProps = getDefaultTabProps();
+
 	public state: TabState = getDefaultTabState();
 
 	constructor(props: TabProps) {
-		super(props, "ui-tab", Tab.defaultProps.style);
-
-		this.state = {
+		super("ui-tab", Tab, props, {
 			...getDefaultTabState(),
-			visible: this.props.visible
-		};
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
+			visible: props.visible
+		});
 	}
 
 	@autobind
@@ -252,9 +244,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		let closeButton: any = null;
 		if (!this.props.noclose) {

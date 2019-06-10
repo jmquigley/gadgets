@@ -31,9 +31,9 @@ N/A
 - `ui-triangle` - global style placed on the `<svg>` root element
 
 #### Properties
-- `direction: {Direction} (Direction.up)` - Determines the direction the
+- `direction=Direction.up {Direction}` - Determines the direction the
 triangle will point.
-- `nobase: {boolean} (false)` - When set to true, then the side opposite the
+- `nobase=false {boolean}` - When set to true, then the side opposite the
 "pointer" angle will not have a line drawn.  The typical triangle has a
 border on all three sides drawn.  This will exclude this side.  This is
 used when overlaying a triangle on the edge of another control.

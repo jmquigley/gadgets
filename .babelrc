@@ -5,7 +5,6 @@
 		"babel-plugin-styled-components",
 		"@babel/transform-runtime",
 		["@babel/proposal-decorators", {"legacy": true}],
-		["@babel/proposal-class-properties", {"loose": true}],
-		["babel-plugin-module-resolver", {"root": ["./lib"]}]
+		["@babel/proposal-class-properties", {"loose": true}]
 	]
 }

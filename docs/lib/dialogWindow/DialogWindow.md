@@ -38,12 +38,12 @@ the whole component.
 content given to the window.
 
 #### Properties
-- `height {string} ('400px')` - the height, in pixels, of the dialog area
-- `icon {string} ('window-restore')` - A font awesome icon that will be on
+- `height="400px" {string}` - the height, in pixels, of the dialog area
+- `icon="window-restore" {string}` - A font awesome icon that will be on
 the right side of the title bar
-- `show {boolean} (false)` - when set to true the window is shown, otherwise
+- `show=false {boolean}` - when set to true the window is shown, otherwise
 it is hidden.
-- `title {string} ('Dialog Window')` - A text string shown within the title
+- `title="Dialog Window" {string}` - A text string shown within the title
 bar of the dialog window
-- `width {string} ('400px')` - the width, in pixels, of the dialog area
+- `width="400px" {string}` - the width, in pixels, of the dialog area
 

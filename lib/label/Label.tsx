@@ -38,18 +38,16 @@
  * - `ui-label` - Applied to the surrounding `<span>` element for all labels
  *
  * #### Properties
- * - `defaultText: {string} ('default')` - If the text is fully deleted from the
+ * - `defaultText="default" {string}` - If the text is fully deleted from the
  * label, then this text is put in as a placeholder.
- * - `focus: {boolean} (false)` - If true, then this control is given the focus
- * - `noedit: {boolean} (false)` - If true, then the control can't be edited
- * - `text: {string} ('')` - the text value associated with the label.
- * - `useedit: {boolean} (false)` - If true, then the control is initially placed in
+ * - `focus=false: {boolean}` - If true, then this control is given the focus
+ * - `noedit=false {boolean}` - If true, then the control can't be edited
+ * - `text="" {string}` - the text value associated with the label.
+ * - `useedit=false {boolean}` - If true, then the control is initially placed in
  * edit mode.
  *
  * @module Label
  */
-
-// const debug = require('debug')('gadgets.Label');
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -88,7 +86,6 @@ export function getDefaultLabelProps(): LabelProps {
 		defaultText: "default",
 		noedit: false,
 		nopropagation: true,
-		obj: "Label",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onClick: nilEvent,
@@ -134,17 +131,17 @@ const LabelView: any = styled.span`
 
 export class Label extends BaseComponent<LabelProps, LabelState> {
 	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
+
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
-		super(props, "ui-label", Label.defaultProps.style);
-		this.state = {
+		super("ui-label", Label, props, {
 			...getDefaultLabelState(),
 			editable: props.useedit,
 			originalText: String(props.text),
 			previousText: String(props.text),
 			text: String(props.text)
-		};
+		});
 	}
 
 	get label() {
@@ -279,7 +276,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

@@ -57,8 +57,6 @@
  * @module TagList
  */
 
-// const debug = require("debug")("gadgets.TagList");
-
 import autobind from "autobind-decorator";
 import {List} from "immutable";
 import * as React from "react";
@@ -154,15 +152,12 @@ const TagListView: any = styled.div`
 
 export class TagList extends BaseComponent<TagListProps, TagListState> {
 	public static readonly defaultProps: TagListProps = getDefaultTagListProps();
-	public state: TagListState = getDefaultTagListState();
 
 	constructor(props: TagListProps) {
-		super(props, "ui-taglist", TagList.defaultProps.style);
-
-		this.state = {
+		super("ui-taglist", TagList, props, {
 			...getDefaultTagListState(),
 			tags: List<string>(props.nosort ? props.tags : props.tags.sort())
-		};
+		});
 	}
 
 	private clearInput(e: HTMLInputElement) {
@@ -232,7 +227,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const tags = this.state.tags.map((tag: string) => {
 			return (

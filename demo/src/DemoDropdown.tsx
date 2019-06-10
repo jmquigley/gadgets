@@ -30,7 +30,7 @@ export default class DemoDropdown extends React.Component<any, undefined> {
 		return (
 			<StyledContainer id='dropdownExample' title='Dropdown'>
 				<Dropdown
-					defaultVal='idstr2'
+					initialValue='idstr2'
 					disabled={this.props["disabled"]}
 					items={this.items}
 					onSelection={this.handleDebugDropdown}

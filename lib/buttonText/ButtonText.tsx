@@ -39,10 +39,6 @@
  * @module ButtonText
  */
 
-// const debug = require("debug")("gadgets.ButtonText");
-const debugCreate = require("debug")("gadgets.ButtonText:create");
-const debugRender = require("debug")("gadgets.ButtonText:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {HotKeys} from "react-hotkeys";
@@ -75,7 +71,6 @@ export function getDefaultButtonTextProps(): ButtonTextProps {
 		justify: Justify.right,
 		kbActivate: "",
 		noicon: false,
-		obj: "ButtonText",
 		onClick: nilEvent,
 		ripple: true,
 		text: ""
@@ -129,16 +124,13 @@ export class ButtonText extends BaseComponent<
 	ButtonTextState
 > {
 	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
-	public state: ButtonTextState = getDefaultButtonTextState();
 
 	constructor(props: ButtonTextProps) {
-		super(props, "ui-button-text", ButtonText.defaultProps.style);
+		super("ui-button-text", ButtonText, props, getDefaultButtonTextState());
 
 		this.buildKeyMap({
 			kbActivate: this.handleClick
 		});
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -153,9 +145,7 @@ export class ButtonText extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		let leftButton = null;
 		let rightButton = null;

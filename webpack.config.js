@@ -3,6 +3,7 @@ const {leader} = require("util.leader");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 	.BundleAnalyzerPlugin;
 const path = require("path");
@@ -132,6 +133,15 @@ module.exports = {
 		),
 		path.resolve(__dirname, "index.js")
 	],
+	optimization: {
+		minimizer: [
+			new TerserPlugin({
+				terserOptions: {
+					mangle: false
+				}
+			})
+		]
+	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js",

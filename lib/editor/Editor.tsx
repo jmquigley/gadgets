@@ -124,8 +124,6 @@
  * @module Editor
  */
 
-const debug = require("debug")("gadgets.Editor");
-
 const Quill = (global as any).Quill;
 
 import autobind from "autobind-decorator";
@@ -206,7 +204,6 @@ export function getDefaultEditorProps(): EditorProps {
 		kbStrikeThrough: "ctrl+shift+t",
 		kbUnderline: "ctrl+u",
 		kbUndo: "ctrl+z",
-		obj: "Editor",
 		onChange: nilEvent,
 		onClick: nilEvent,
 		onClickLink: nilEvent,
@@ -255,6 +252,8 @@ const EditorToolbar: any = styled(Toolbar)`
 `;
 
 export class Editor extends BaseComponent<EditorProps, EditorState> {
+	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
+
 	private _custom: any;
 	private _editor: any;
 	private _fontList: DropdownOption[] = [];
@@ -267,12 +266,10 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	private _editorStyles: ClassNames = new ClassNames("ui-editor-quill");
 	private _toolbarStyles: ClassNames = new ClassNames("ui-editor-toolbar");
 
-	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
-	public state: EditorState = getDefaultEditorState();
-
 	constructor(props: EditorProps) {
-		super(props, "ui-editor", Editor.defaultProps.style);
-		debug('Editor key: "%s"', this.id);
+		super("ui-editor", Editor, props, getDefaultEditorState());
+
+		this.debug('Editor key: "%s"', this.id);
 		this._keybindings = this.buildKeyboardHandler();
 	}
 
@@ -393,10 +390,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 
 	@autobind
 	private handleSetBold() {
-		debug("handleSetBold");
-
 		if (this._markup) {
-			debug("set bold");
 			this._markup.setBold();
 		}
 	}
@@ -494,7 +488,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		this.buildModes();
 
 		const keyboardHandler = this._editor.getModule("keyboard");
-		debug("keyboardHandler: %O", keyboardHandler);
+		this.debug("keyboardHandler: %O", keyboardHandler);
 
 		// This lifecycle method occurs after render on the first instance.
 		// The component can't get some items from the component on the
@@ -504,7 +498,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		if (this._editor) {
 			if (this.props.disabled) {
@@ -582,12 +576,12 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						<Button iconName='repeat' onClick={this.handleRedo} />
 						<Divider />
 						<Dropdown
-							defaultVal={this.props.defaultFont}
+							initialValue={this.props.defaultFont}
 							items={this._fontList}
 							onSelection={this._markup && this._markup.setFont}
 						/>
 						<Dropdown
-							defaultVal={this.props.defaultFontSize.toString()}
+							initialValue={this.props.defaultFontSize.toString()}
 							items={this._fontSizes}
 							onSelection={
 								this._markup && this._markup.setFontSize
@@ -595,12 +589,12 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						/>
 						<Divider />
 						<Dropdown
-							defaultVal={"markdown"}
+							initialValue={"markdown"}
 							items={this._modes}
 							onSelection={this._markup && this._markup.setMode}
 						/>
 						<Dropdown
-							defaultVal={"solarized-light"}
+							initialValue={"solarized-light"}
 							items={this._highlights}
 							onSelection={
 								this._markup && this._markup.setHighlight

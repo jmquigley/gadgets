@@ -28,16 +28,14 @@
  * is the only element in the component.
  *
  * #### Properties
- * - `dividerType {DividerType} (Divider.none)` - determines if a divide
+ * - `dividerType=Divider.none {DividerType}` - determines if a divide
  * character will be placed within the control.
- * - `sizing {Sizing} (Sizing.normal)` - Sets the actual box size of the
+ * - `sizing=Sizing.normal {Sizing}` - Sets the actual box size of the
  * element.  When used with a `Toolbar` this property is not needed as
  * the toolbar handled the sizing.
  *
  * @module Divider
  */
-
-// const debug = require("debug")("gadgets.Divider");
 
 import * as React from "react";
 import styled from "styled-components";
@@ -64,8 +62,7 @@ export interface DividerProps extends BaseProps {
 export function getDefaultDividerProps(): DividerProps {
 	return {
 		...getDefaultBaseProps(),
-		dividerType: DividerType.none,
-		obj: "Divider"
+		dividerType: DividerType.none
 	};
 }
 
@@ -86,13 +83,14 @@ const DividerView: any = styled.div`
 
 export class Divider extends BaseComponent<DividerProps, DividerState> {
 	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
-	public state: DividerState = getDefaultDividerState();
 
 	constructor(props: DividerProps) {
-		super(props, "ui-divider", Divider.defaultProps.style);
+		super("ui-divider", Divider, props, getDefaultDividerState());
 	}
 
 	public render() {
+		super.render();
+
 		return (
 			<Wrapper {...this.props}>
 				<DividerView

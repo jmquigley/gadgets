@@ -185,7 +185,6 @@ export function getDefaultBaseProps(): BaseProps {
 		nopropagation: false,
 		notheme: false,
 		notooltip: false,
-		obj: "Unknown",
 		padding: null,
 		ripple: false,
 		selected: false,

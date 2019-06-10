@@ -34,13 +34,13 @@ None
 (text) of the tooltip.
 
 #### Properties
-- `color: string ('white')` - the color of the tooltip text
-- `backgroundColor: string ('gray')` - the color of the containing
+- `color="white" {string}` - the color of the tooltip text
+- `backgroundColor="gray" {string}` - the color of the containing
 box
-- `location: Location (Location.middleRight)` - when the tooltip is
+- `location=Location.middleRight {Location}` - when the tooltip is
 displayed this is the side of the parent control where it will be
 displayed.
-- `parent: {string} ('')` - The id of the component where this tooltip
+- `parent="" {string}` - The id of the component where this tooltip
 will be applied.
 
 <a name="module_Tooltip.tooltip"></a>

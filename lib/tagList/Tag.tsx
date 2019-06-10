@@ -26,13 +26,11 @@
  * - `ui-tag` - placed on the root `<div>` of the control.
  *
  * #### Properties
- * - `usedelete: {boolean} (false)`- if true then the delete button will be
+ * - `usedelete=false {boolean}`- if true then the delete button will be
  * shown when the mouse enters the tag, otherwise this is suppressed.
  *
  * @module Tag
  */
-
-// const debug = require("debug")("gadgets.Tag");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -63,7 +61,6 @@ export interface TagProps extends BaseProps {
 export function getDefaultTagProps(): TagProps {
 	return {
 		...getDefaultBaseProps(),
-		obj: "Tag",
 		onClick: nilEvent,
 		onDelete: nilEvent,
 		onMouseOut: nilEvent,
@@ -113,12 +110,12 @@ const TagView: any = styled.div`
 export const StyledLabel: any = styled(Label)``;
 
 export class Tag extends BaseComponent<TagProps, TagState> {
-	private tag: string;
 	public static readonly defaultProps: TagProps = getDefaultTagProps();
-	public state: TagState = getDefaultTagState();
+
+	private tag: string;
 
 	constructor(props: TagProps) {
-		super(props, "ui-tag", Tag.defaultProps.style);
+		super("ui-tag", Tag, props, getDefaultTagState());
 	}
 
 	@autobind
@@ -147,7 +144,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const {onDelete, ...props} = this.props;
 

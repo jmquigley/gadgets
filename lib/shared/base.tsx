@@ -1,19 +1,6 @@
 /**
  * The base class for all components in the library.  This enables each module
- * to guarantee certain variables will be present through inheritance.  These
- * variables include:
- *
- * - `classes` - an array of CSS classnames that will be used on the root
- * element of the control
- * - `inlineStyles` - an object that holds user defined style overrides
- * - `locationStyle` - There are 9 locations within a region: topLeft, top,
- * topRight, middleLeft, middle, middleRight, bottomLeft, bottom, bottomRight.
- * The location prop is used to specify the CSS used to calculte this position
- * in a control using transform and relative coordinates.
- * - `styles` - an object that represent the styles in the CSS module associated
- * to this control.
- * - `sizes` - Sizing class that has computed sizes from the base (normal) size
- * font styles for the application.
+ * to guarantee certain variables will be present through inheritance.
  *
  * The values of these variables are computed automatically for any component
  * that inherits from BaseComponent (controlled by props).  This class inherits
@@ -43,15 +30,15 @@
 
 const debug = require("debug");
 
-import {isDebug} from "globals";
 import {isEqual} from "lodash";
 import {Children, cloneElement, PureComponent} from "react";
 import {DefaultTheme} from "styled-components";
 import {calc} from "util.calc";
 import {ClassNames} from "util.classnames";
 import {getUUID} from "util.toolbox";
+import {isDebug} from "./helpers";
 import {KeyHandler, KeyMap} from "./keybinding";
-import {BaseProps, Styles} from "./props";
+import {BaseProps} from "./props";
 import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
 
 require("./styles.css");
@@ -60,37 +47,40 @@ export const baseZIndex: number = 9999;
 export const defaultSize: number = 16;
 export let sizes: Sizes = Sizes.instance(defaultSize);
 
+interface RenderOptions {
+	noclassnameupdate?: boolean;
+}
+
 export abstract class BaseComponent<
 	P extends BaseProps,
 	S
 > extends PureComponent<P, S> {
-	public state: S;
-
+	private _className: ClassNames = new ClassNames();
+	private _componentName: string;
 	private _debug: any = null;
 	private _debugCreate: any = null;
 	private _debugRender: any = null;
-
-	public static defaultStyles: any = {};
-
-	private _className: ClassNames = new ClassNames();
 	private _defaultClassName: string;
+	public static defaultStyles: any = {};
 	private _id: string;
-
 	protected _keyHandler: KeyHandler = {};
 	protected _keyMap: KeyMap = {};
+	public state: S;
 
-	constructor(
-		props: P,
-		defaultClassName: string,
-		defaultStyles: Styles = {},
-		state: S = {} as S
-	) {
+	constructor(defaultClassName: string, cls: any, props: P, state: S = null) {
 		super(props);
 		this.state = state || ({} as S);
 
-		this._debug = debug(`gadgets.${this.props.obj || "base"}`);
-		this._debugCreate = debug(`gadgets.${this.props.obj || "base"}:create`);
-		this._debugRender = debug(`gadgets.${this.props.obj || "base"}:render`);
+		this._componentName = cls.name || "Unknown";
+		BaseComponent.defaultStyles = cls.defaultProps.style || {};
+
+		this._debug = debug(`gadgets.${this._componentName || "base"}`);
+		this._debugCreate = debug(
+			`gadgets.${this._componentName || "base"}:create`
+		);
+		this._debugRender = debug(
+			`gadgets.${this._componentName || "base"}:render`
+		);
 
 		this._defaultClassName = defaultClassName;
 		this._className = new ClassNames(defaultClassName);
@@ -102,13 +92,10 @@ export abstract class BaseComponent<
 			this._id = this.props.id;
 		} else {
 			this._id =
-				this.constructor.name +
+				this._componentName +
 				"-" +
 				(this.props.testing ? "0" : getUUID());
 		}
-
-		// this.props.theme = this.theme;
-		BaseComponent.defaultStyles = defaultStyles;
 
 		if (isDebug()) {
 			this._debugCreate("props: %O, state: %O", this.props, this.state);
@@ -117,6 +104,10 @@ export abstract class BaseComponent<
 
 	get className(): string {
 		return this._className.value;
+	}
+
+	get componentName(): string {
+		return this._componentName;
 	}
 
 	get defaultClassName(): string {
@@ -173,7 +164,7 @@ export abstract class BaseComponent<
 
 	protected debug(...args: any[]) {
 		if (isDebug()) {
-			this._debug(args);
+			this._debug(...args);
 		}
 	}
 
@@ -332,8 +323,19 @@ export abstract class BaseComponent<
 		}
 	}
 
-	public render(): any {
-		this.updateClassName();
+	/**
+	 * Called by the child render methods as the first call.  This is used to
+	 * update base items before the child class performs its render operation.
+	 */
+	public render(options: RenderOptions = {}): any {
+		options = {
+			noclassnameupdate: false,
+			...options
+		};
+
+		if (!options.noclassnameupdate) {
+			this.updateClassName();
+		}
 
 		if (isDebug()) {
 			this._debugRender("props: %O, state: %O", this.props, this.state);

@@ -82,18 +82,45 @@ To just attempt to run the application without building use (assuming the app wa
 $ yarn start
 ```
 
+### Development
+#### Building
+
+The build process happens in two steps:
+
+1. Typescript Compilation (first)
+2. Webpack vial babel-loader (second)
+
+The Typescript build converts all of the .ts and .tsx files into their .js and .jsx counterparts, while also generating typing information (.d.ts).  It uses the [tsc compiler](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to generate this code.  The second part uses webpack to take these converted files and generate a webpack bundle.  During the bundle creation the generated typings are placed into the dist directory with the generated bundle.  This process is followed instead of using a webpack loader to handle the typescript compilation (such as [ts-loader](https://github.com/TypeStrong/ts-loader).  The webpack build can't generate typings via the loader and use the copy webpack plugin at the same time.  This happens because the copy plugin tries to copy files in parallel while they are being generated.  This leads to errors and warnings in the build for missing files that are not yet generated.  In the future this may be changed to use a loader and the [webpack-shell-plugin](https://www.npmjs.com/package/webpack-shell-plugin) instead of the webpack copy plugin, but the current solution didn't require custom code to perform the copy.  This two part solution works, but does lead to the following complication.
+
 To change the code while electron is running and use `CMD + R` to refresh electron (in two terminals):
+
 ```
 $ yarn watch:types.    # starts the typescript compiler in terminal 1
 $ yarn watch:webpack   # starts the webpack watcher in terminal 2
 ```
 
-This starts two separate watchers.  It will watch for changes in the typescript files first.  When detected the typescript compiler will build from `.tsx` to `.jsx`.  The webpack watcher will then see this and rebuild the bundle with the second watcher.
+This starts two separate watchers.  It will watch for changes in the typescript files first.  When detected the typescript compiler will build from `.ts/.tsx` to `.js/.jsx`.  The webpack watcher will then see this and rebuild the bundle with the second watcher.
 
 This library was created for use in the [Electron UI](
 https://electron.atom.io/) and has been tested to work with the most recent version of Chromium in Electron.  It contains a custom set of [React](https://facebook.github.io/react/) widgets and composite components used to create a desktop application.  The build uses [Typescript](https://www.typescriptlang.org/) and [Wepback](https://webpack.github.io/) to create the package.  Once built it contains a distribution bundle (`bundle.js`) and a CSS file (`styles.css`) that can be included within another project.  The library also makes use of [styled components](https://www.styled-components.com/).
 
 Click on the each documented element below to see a picture of the component (where applicable).  To see a live demo, build the application (listed above).  It will run a demo electron application demonstrating each component.  The demo application also contains samples that demonstrate how the components are used.
+
+#### Debugging
+The library use the [debug](https://www.npmjs.com/package/debug) module to print information to log.  To see debugging information set the environment variable `DEBUG_GADGETS` to `true`.  Also, set a string qualifier to the `DEBUG` environment varaible to turn on messages for a component (this is needed by the debug module).  All of the components have their own namespace that follows the convention:
+
+    "gadgets.{component}[:{action}]"
+
+Where *component* is the React name for the component, i.e. `Accordion`, `List`, etc...  The *:action* is either empty, `:create`, or `:render`.  e.g.
+
+    "gadgets.Accordion:render"
+
+Will print debugging information when the `render()` method is called.  This includes the `props` and `state` at the time the render operation started.  Wildcards can also be used:
+
+    'gadgets.*:create`
+
+When the constructor is called to create each instance of a component, the *create* message will displayed in the console.  It will contain references to the initial props and state.  With the wildcard above this will display the create message for every component as it is created.
+
 
 ## Widgets
 The module contains the following widgets (click on each header to see attribute/event details for each):

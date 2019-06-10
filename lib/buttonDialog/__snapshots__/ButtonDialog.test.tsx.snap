@@ -6,14 +6,9 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   border={null}
   borderColor={null}
   bottom={null}
-  className="test-class"
+  className={null}
   color={null}
   controlled={true}
-  dialogClasses={
-    Array [
-      "test-class-dialog",
-    ]
-  }
   direction="right"
   disabled={false}
   err={null}
@@ -21,12 +16,9 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   focus={false}
   height={null}
   hidden={false}
-  iconName="bomb"
-  iconStyle=""
   id={null}
-  kbActivate=""
   left={null}
-  location="bottom"
+  location="none"
   maxHeight={null}
   maxWidth={null}
   minHeight={null}
@@ -34,22 +26,18 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={true}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
-  notriangle={false}
-  obj="ButtonDialog"
-  onClick={[Function]}
   onError={[Function]}
   padding={null}
   reset={false}
-  ripple={true}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
     Object {
-      "backgroundColor": "inherit",
-      "color": "inherit",
+      "whiteSpace": "pre-wrap",
     }
   }
   testing={true}
@@ -81,7 +69,6 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   }
   tooltip={null}
   top={null}
-  triangleClasses={Array []}
   visible={true}
   width={null}
   xcss={null}
@@ -95,14 +82,9 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       border={null}
       borderColor={null}
       bottom={null}
-      className="test-class"
+      className={null}
       color={null}
       controlled={true}
-      dialogClasses={
-        Array [
-          "test-class-dialog",
-        ]
-      }
       direction="right"
       disabled={false}
       err={null}
@@ -115,7 +97,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       id={null}
       kbActivate=""
       left={null}
-      location="bottom"
+      location="none"
       maxHeight={null}
       maxWidth={null}
       minHeight={null}
@@ -126,8 +108,6 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       nopropagation={true}
       notheme={false}
       notooltip={false}
-      notriangle={false}
-      obj="ButtonDialog"
       onClick={[Function]}
       padding={null}
       ripple={true}
@@ -168,15 +148,10 @@ exports[`Test creation of a ButtonDialog control 1`] = `
       }
       tooltip={null}
       top={null}
-      triangleClasses={Array []}
       visible={true}
       width={null}
       xcss={null}
-    >
-      <p>
-        Dialog test
-      </p>
-    </Button>
+    />
     <ButtonDialog__ButtonDialogPopup
       className="ui-dialog-popup test-class-dialog"
       location="bottom"
@@ -216,14 +191,9 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   border={null}
   borderColor={null}
   bottom={null}
-  className="test-class"
+  className={null}
   color={null}
   controlled={true}
-  dialogClasses={
-    Array [
-      "test-class-dialog",
-    ]
-  }
   direction="right"
   disabled={false}
   err={null}
@@ -231,12 +201,9 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   focus={false}
   height={null}
   hidden={false}
-  iconName="bomb"
-  iconStyle=""
   id={null}
-  kbActivate=""
   left={null}
-  location="top"
+  location="none"
   maxHeight={null}
   maxWidth={null}
   minHeight={null}
@@ -244,22 +211,18 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={true}
+  nopropagation={false}
   notheme={false}
   notooltip={false}
-  notriangle={false}
-  obj="ButtonDialog"
-  onClick={[Function]}
   onError={[Function]}
   padding={null}
   reset={false}
-  ripple={true}
+  ripple={false}
   selected={false}
   sizing="normal"
   style={
     Object {
-      "backgroundColor": "inherit",
-      "color": "inherit",
+      "whiteSpace": "pre-wrap",
     }
   }
   testing={true}
@@ -291,7 +254,6 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   }
   tooltip={null}
   top={null}
-  triangleClasses={Array []}
   visible={true}
   width={null}
   xcss={null}
@@ -305,14 +267,9 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       border={null}
       borderColor={null}
       bottom={null}
-      className="test-class"
+      className={null}
       color={null}
       controlled={true}
-      dialogClasses={
-        Array [
-          "test-class-dialog",
-        ]
-      }
       direction="right"
       disabled={false}
       err={null}
@@ -325,7 +282,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       id={null}
       kbActivate=""
       left={null}
-      location="top"
+      location="none"
       maxHeight={null}
       maxWidth={null}
       minHeight={null}
@@ -336,8 +293,6 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       nopropagation={true}
       notheme={false}
       notooltip={false}
-      notriangle={false}
-      obj="ButtonDialog"
       onClick={[Function]}
       padding={null}
       ripple={true}
@@ -378,15 +333,10 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
       }
       tooltip={null}
       top={null}
-      triangleClasses={Array []}
       visible={true}
       width={null}
       xcss={null}
-    >
-      <p>
-        Dialog test
-      </p>
-    </Button>
+    />
     <ButtonDialog__ButtonDialogPopup
       className="ui-dialog-popup test-class-dialog"
       location="top"
@@ -454,7 +404,6 @@ exports[`Test making the ButtonDialog hidden 1`] = `
   notheme={false}
   notooltip={false}
   notriangle={false}
-  obj="ButtonDialog"
   onClick={[Function]}
   padding={null}
   ripple={true}
@@ -537,7 +486,6 @@ Object {
   "notheme": false,
   "notooltip": false,
   "notriangle": false,
-  "obj": "ButtonDialog",
   "onClick": [Function],
   "padding": null,
   "ripple": true,
@@ -624,7 +572,6 @@ exports[`Test the disabling of the ButtonDialog control 1`] = `
   notheme={false}
   notooltip={false}
   notriangle={false}
-  obj="ButtonDialog"
   onClick={[Function]}
   padding={null}
   ripple={true}

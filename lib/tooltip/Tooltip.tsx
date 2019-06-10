@@ -32,19 +32,17 @@
  * (text) of the tooltip.
  *
  * #### Properties
- * - `color: string ('white')` - the color of the tooltip text
- * - `backgroundColor: string ('gray')` - the color of the containing
+ * - `color="white" {string}` - the color of the tooltip text
+ * - `backgroundColor="gray" {string}` - the color of the containing
  * box
- * - `location: Location (Location.middleRight)` - when the tooltip is
+ * - `location=Location.middleRight {Location}` - when the tooltip is
  * displayed this is the side of the parent control where it will be
  * displayed.
- * - `parent: {string} ('')` - The id of the component where this tooltip
+ * - `parent="" {string}` - The id of the component where this tooltip
  * will be applied.
  *
  * @module Tooltip
  */
-
-// const debug = require('debug')('gadgets.Tooltip');
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -74,7 +72,6 @@ export function getDefaultTooltipProps(): TooltipProps {
 	return {
 		...getDefaultBaseProps(),
 		location: Location.top,
-		obj: "Tooltip",
 		parent: null,
 		style: {
 			color: theme.tooltipForegroundColor,
@@ -276,10 +273,9 @@ const TooltipView: any = styled.div`
 
 export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	public static readonly defaultProps: TooltipProps = getDefaultTooltipProps();
-	public state: TooltipState = getDefaultTooltipState();
 
 	constructor(props: TooltipProps) {
-		super(props, "ui-tooltip", Tooltip.defaultProps.style);
+		super("ui-tooltip", Tooltip, props, getDefaultTooltipState());
 	}
 
 	@autobind
@@ -309,7 +305,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		let direction: Direction = Direction.left;
 

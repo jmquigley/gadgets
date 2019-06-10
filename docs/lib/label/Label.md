@@ -40,11 +40,11 @@ to the callback.
 - `ui-label` - Applied to the surrounding `<span>` element for all labels
 
 #### Properties
-- `defaultText: {string} ('default')` - If the text is fully deleted from the
+- `defaultText="default" {string}` - If the text is fully deleted from the
 label, then this text is put in as a placeholder.
-- `focus: {boolean} (false)` - If true, then this control is given the focus
-- `noedit: {boolean} (false)` - If true, then the control can't be edited
-- `text: {string} ('')` - the text value associated with the label.
-- `useedit: {boolean} (false)` - If true, then the control is initially placed in
+- `focus=false: {boolean}` - If true, then this control is given the focus
+- `noedit=false {boolean}` - If true, then the control can't be edited
+- `text="" {string}` - the text value associated with the label.
+- `useedit=false {boolean}` - If true, then the control is initially placed in
 edit mode.
 

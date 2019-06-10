@@ -65,8 +65,6 @@
  * @module DialogBox
  */
 
-// const debug = require('debug')('gadgets.DialogBox');
-
 const ReactModal = require("react-modal");
 
 import autobind from "autobind-decorator";
@@ -119,7 +117,6 @@ export function getDefaultDialogBoxProps(): DialogBoxProps {
 		kbClose: "esc",
 		kbOk: "alt+k",
 		message: "",
-		obj: "DialogBox",
 		onClose: nilEvent,
 		onOpen: nilEvent,
 		onSelection: nilEvent,
@@ -183,8 +180,7 @@ const StyledIcon: any = styled(Icon)`
 `;
 
 export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
-	public static defaultProps: DialogBoxProps = getDefaultDialogBoxProps();
-	public state: DialogBoxState = getDefaultDialogBoxState();
+	public static readonly defaultProps: DialogBoxProps = getDefaultDialogBoxProps();
 
 	private _customStyle: any = {
 		content: {
@@ -202,7 +198,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	private _icon: any = {};
 
 	constructor(props: DialogBoxProps) {
-		super(props, "ui-dialogbox", DialogBox.defaultProps.style);
+		super("ui-dialogbox", DialogBox, props, getDefaultDialogBoxState());
 
 		this.buildKeyMap({
 			kbCancel: this.handleNo,
@@ -306,7 +302,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

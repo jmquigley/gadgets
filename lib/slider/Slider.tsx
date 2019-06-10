@@ -41,23 +41,21 @@
  * is attached to each.  The ticks are a `div` container
  *
  * #### Properties
- * - `max: {number} (100)` - The maximum size of the range, counting by 1's
- * - `min: {number} (0)` - The starting point for the range
- * - `scale: {number} (1)` - A sizing (width) multiplier for the range.  It doens't
+ * - `max=100 {number}` - The maximum size of the range, counting by 1's
+ * - `min=0 {number}` - The starting point for the range
+ * - `scale=1 {number}` - A sizing (width) multiplier for the range.  It doens't
  * change the counting range, but just the drawing size.  A scale of 2 with the
  * default min/max would yield a width of 200px, but the range would still be 0-100
- * - `snap: {boolean} (false)` - When the ticks option is used this will determine
+ * - `snap=false {boolean}` - When the ticks option is used this will determine
  * if the chevron slider will be forced to fall on one of the tick marks.
- * - `startPosition: {number} (0)` - the range start position between min/max
- * - ticks: {number} (0)` - A visual number of "stopping" points along the slider
+ * - `startPosition=0 {number}` - the range start position between min/max
+ * - ticks=0 {number}` - A visual number of "stopping" points along the slider
  * These are divided evenly into the range of the slider.  e.g. a setting of 5
  * would show 5 tick marks along the slider.  These positions are also used as a
  * landing point when snap is set to true.
  *
  * @module Slider
  */
-
-// const debug = require('debug')('gadgets.Slider');
 
 import autobind from "autobind-decorator";
 import {debounce} from "lodash";
@@ -92,7 +90,6 @@ export function getDefaultSliderProps(): SliderProps {
 		...getDefaultBaseProps(),
 		max: 100,
 		min: 0,
-		obj: "Slider",
 		onSelection: nilEvent,
 		scale: 1,
 		snap: false,
@@ -162,11 +159,12 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	private _tickKeys: Keys;
 
 	constructor(props: SliderProps) {
-		super(props, "ui-slider", Slider.defaultProps.style);
+		super("ui-slider", Slider, props, {
+			...getDefaultSliderState(),
+			x: props.startPosition
+		});
 
 		this._tickKeys = new Keys({testing: this.props.testing});
-		this.state = {...getDefaultSliderState(), x: this.props.startPosition};
-
 		this._sliderSize = BaseComponent.fontSize();
 		this._mouseMove = debounce(this.handleMouseMove, this._mouseDelay);
 	}
@@ -252,7 +250,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const width: number = Math.round(
 			(this.props.max - this.props.min) * this.props.scale

@@ -70,14 +70,14 @@ type.
 - `ui-pager` - The top level style for the control on the `<div>` container.
 
 #### Properties
-- `initialPage: number (1)` - The page to start with in the list display.
-- `pagesToDisplay: number (3)` - The number of page buttons to show with
+- `initialPage=1 {number}` - The page to start with in the list display.
+- `pagesToDisplay=3 {number}` - The number of page buttons to show with
 the control.
-- `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+- `pageSizes=[25, 50, 100] {number[]}` - A list of page number sizes that
 can be used by the pager.  It is used against the total items to
 determine the total number of pages in the control display.
-- `totalItems: number (0)` - The total number of items represented by the
+- `totalItems=0 {number}` - The total number of items represented by the
 control.
-- `useinput: boolean (false)` - If this is true, then a text input is shown
+- `useinput=false {boolean}` - If this is true, then a text input is shown
 with the control that allows the user to jump to a specific page.
 

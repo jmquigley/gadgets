@@ -24,8 +24,6 @@
  * @module ListDivider
  */
 
-// const debug = require("debug")("gadgets.ListDivider");
-
 import * as React from "react";
 import styled from "styled-components";
 import {BaseComponent, Wrapper} from "../shared";
@@ -43,8 +41,7 @@ export interface ListDividerProps extends ListProps {
 export function getDefaultListDividerProps(): ListDividerProps {
 	return {
 		...getDefaultListProps(),
-		color: "lightgray",
-		obj: "ListDivider"
+		color: "lightgray"
 	};
 }
 
@@ -70,11 +67,15 @@ export class ListDivider extends BaseComponent<
 	ListDividerProps,
 	ListDividerState
 > {
-	public static defaultProps: ListDividerProps = getDefaultListDividerProps();
-	public state: ListState = getDefaultListDividerState();
+	public static readonly defaultProps: ListDividerProps = getDefaultListDividerProps();
 
 	constructor(props: ListDividerProps) {
-		super(props, "ui-list-divider", ListDivider.defaultProps.style);
+		super(
+			"ui-list-divider",
+			ListDivider,
+			props,
+			getDefaultListDividerState()
+		);
 	}
 
 	public static getDerivedStateFromProps(
@@ -96,7 +97,7 @@ export class ListDivider extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

@@ -46,11 +46,11 @@
  * the thrown Error.
  *
  * #### Properties
- * - `children: {React.ReactNode} (null)` - The underlying components that are
+ * - `children=null {React.ReactNode}` - The underlying components that are
  * surrounded by this wrapper.
- * - `err: {any} (null)` - A custom react component that can be used as the
+ * - `err=null {any}` - A custom react component that can be used as the
  * error output.  This is used to override the default error output.
- * - `reset: {boolean} (false)` - After a component is wrapped, and an error is
+ * - `reset=false {boolean}` - After a component is wrapped, and an error is
  * thrown, the state of *error* will be permanent within the component.  Passing
  * reset as a prop to the wrapper allows the Error condition to be reset.  This
  * would be used if there is a facility in place within the component to
@@ -59,10 +59,6 @@
  *
  * @module Wrapper
  */
-
-"use strict";
-
-// const debug = require("debug")("gadgets.Wrapper");
 
 import * as React from "react";
 import styled, {ThemeProvider} from "styled-components";
@@ -109,10 +105,9 @@ const WrapperView: any = styled.div`
 
 export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 	public static defaultProps: WrapperProps = getDefaultWrapperProps();
-	public state: WrapperState = getDefaultWrapperState();
 
 	constructor(props: WrapperProps) {
-		super(props, "ui-error", Wrapper.defaultProps.style);
+		super("ui-error", Wrapper, props, getDefaultWrapperState());
 	}
 
 	public componentDidCatch(error: any = null, errorInfo: any = null) {
@@ -149,7 +144,7 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		let content: any = null;
 

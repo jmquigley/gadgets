@@ -22,17 +22,20 @@ package for parsing content into a proper HTML document.
 
 ## API
 #### Events
-- `onChange(content: string, html: string)` - invoked when the content is changed in the control.
-It will contain the content parsed and the resulting HTML, both as strings.
+- `onChange(content: string, html: string)` - invoked when the content is
+changed in the control. It will contain the content parsed and the
+resulting HTML, both as strings.
 
 #### Styles
-- `ui-preview` - Applied to the div container surrounding the webview component
-- `ui-preview-content` - Applied to the underlying webview component.  This is an id
+- `ui-preview` - Applied to the div container surrounding the webview
+component
+- `ui-preview-content` - Applied to the underlying webview component.  This
+is an id
 
 #### Properties
-- `content {string}` - The markup document content as a string
-- `css {string}` - The CSS that will be applied to the parsed content HTML.
-- `mode {PreviewMode}` - The markup format of the given content.  It has three
-possible values: `PreviewMode.asciidoc`, `PreviewMoode.markdown`,
-`PreviewMode.restructuredtext}`
+- `content="" {string}` - The markup document content as a string
+- `css="" {string}` - The CSS that will be applied to the parsed content HTML.
+- `mode=PreviewMode.markdown {PreviewMode}` - The markup format of the given
+content.  It has three possible values: `PreviewMode.asciidoc`,
+`PreviewMoode.markdown`, `PreviewMode.restructuredtext}`
 

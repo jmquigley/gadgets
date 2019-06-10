@@ -1,12 +1,30 @@
-// TODO: add documenation for ListHeader
-
-//
-// Generates a single header element that will be contained within a
-// List.  This resolved to the `<li>` tag with special CSS selectors
-// for a header.
-//
-
-// const debug = require("debug")("gadgets.ListHeader");
+/**
+ * A special Item block that can be placed at the top of a List
+ * Generates a single header element that will be contained within a
+ * List.  This resolved to the `<li>` tag with special CSS selectors
+ * for a header.
+ *
+ * #### Examples:
+ *
+ * ```javascript
+ * import {List, ListHeader} from 'gadgets';
+ * <List>
+ *     <ListHeader title"header string" />
+ * </List>
+ * ```
+ *
+ * #### Events
+ * See `Item` component
+ *
+ * #### Styles
+ * - `ui-list-header` - A class style on the item block of the
+ * component.
+ *
+ * #### Properties
+ * See `Item` component
+ *
+ * @module ListFooter
+ */
 
 import * as React from "react";
 import {
@@ -25,8 +43,7 @@ export interface ListHeaderProps extends ItemProps {
 export function getDefaultListHeaderProps(): ListHeaderProps {
 	return {
 		...getDefaultItemProps(),
-		nohover: true,
-		obj: "ListHeader"
+		nohover: true
 	};
 }
 
@@ -40,14 +57,15 @@ export class ListHeader extends BaseComponent<
 	ListHeaderProps,
 	ListHeaderState
 > {
-	public static defaultProps: ListHeaderProps = getDefaultListHeaderProps();
-	public state: ListHeaderState = getDefaultItemState();
+	public static readonly defaultProps: ListHeaderProps = getDefaultListHeaderProps();
 
 	constructor(props: ListHeaderProps) {
-		super(props, "ui-list-header", ListHeader.defaultProps.style);
+		super("ui-list-header", ListHeader, props, getDefaultItemState());
 	}
 
 	public render() {
+		super.render();
+
 		return (
 			<Wrapper {...this.props}>
 				<Item

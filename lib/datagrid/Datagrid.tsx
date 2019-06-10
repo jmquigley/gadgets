@@ -52,10 +52,6 @@
  * @module Datagrid
  */
 
-// const debug = require("debug")("gadgets.Datagrid");
-const debugCreate = require("debug")("gadgets.Datagrid:create");
-const debugRender = require("debug")("gadgets.Datagrid:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import ReactDataGrid from "react-data-grid";
@@ -94,8 +90,7 @@ export function getDefaultDatagridProps(): DatagridProps {
 	return {
 		...getDefaultBaseProps(),
 		columns: [],
-		rows: [],
-		obj: "Datagrid"
+		rows: []
 	};
 }
 
@@ -128,11 +123,9 @@ const DatagridWrapper: any = styled.div`
 
 export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 	public static readonly defaultProps: DatagridProps = getDefaultDatagridProps();
-	public state: DatagridState = getDefaultDatagridState();
 
 	constructor(props: DatagridProps) {
-		super(props, "ui-datagrid", Datagrid.defaultProps.style);
-		debugCreate("props: %O, state: %O", this.props, this.state);
+		super("ui-datagrid", Datagrid, props, getDefaultDatagridState());
 	}
 
 	/** @return the height of the row in pixels (number) */
@@ -164,7 +157,7 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 	}
 
 	public render() {
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		const {minHeight, minWidth, ...props} = this.props;
 

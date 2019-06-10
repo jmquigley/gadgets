@@ -43,14 +43,12 @@
  * placed on this div.
  *
  * #### Properties
- * - `justify: {Justify} (Justify.left)` - The toolbar can be placed to the left
+ * - `justify=Justify.left {Justify}` - The toolbar can be placed to the left
  * (default), center, or right within its container.  The property sets that
  * location.
  *
  * @module Toolbar
  */
-
-// const debug = require('debug')('gadgets.Toolbar');
 
 import * as React from "react";
 import styled from "styled-components";
@@ -73,8 +71,7 @@ export interface ToolbarProps extends BaseProps {
 export function getDefaultToolbarProps(): ToolbarProps {
 	return {
 		...getDefaultBaseProps(),
-		justify: Justify.left,
-		obj: "Toolbar"
+		justify: Justify.left
 	};
 }
 
@@ -123,7 +120,6 @@ const ToolbarElementView: any = styled.div`
 
 export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 	public static readonly defaultProps: ToolbarProps = getDefaultToolbarProps();
-	public state: ToolbarState = getDefaultToolbarState();
 
 	private _keys: Keys;
 	private static readonly _whitelist = new BinaryTree([
@@ -144,19 +140,25 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 	]);
 
 	constructor(props: ToolbarProps) {
-		super(props, "ui-toolbar", Toolbar.defaultProps.style);
+		super("ui-toolbar", Toolbar, props, getDefaultToolbarState());
 		this._keys = new Keys({testing: this.props.testing});
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
-		const components: any = [];
+		const components: React.ReactElement[] = [];
 
 		React.Children.forEach(
 			this.props.children,
 			(child: any, idx: number) => {
-				if (Toolbar._whitelist.contains(child["props"].obj)) {
+				const componentName = child["type"].name;
+				this.debug("child component: %s (%O)", componentName, child);
+
+				if (
+					componentName &&
+					Toolbar._whitelist.contains(componentName)
+				) {
 					const style = Object.assign({}, child["props"].style, {
 						color: this.theme.buttonColor,
 						display: "flex",
@@ -167,7 +169,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 						margin: "0 2px"
 					});
 
-					switch (child["props"].obj) {
+					switch (componentName) {
 						case "Button":
 						case "ButtonDialog":
 						case "ButtonToggle":
@@ -205,7 +207,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 							break;
 					}
 
-					if (child["props"].obj === "ButtonCircle") {
+					if (componentName === "ButtonCircle") {
 						delete style["border"];
 					}
 

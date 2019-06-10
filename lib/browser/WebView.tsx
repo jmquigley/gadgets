@@ -34,8 +34,7 @@ export interface WebViewProps extends BaseProps {
 export function getDefaultWebViewProps(): WebViewProps {
 	return {
 		...getDefaultBaseProps(),
-		innerRef: nilEvent,
-		obj: "WebView"
+		innerRef: nilEvent
 	};
 }
 
@@ -49,10 +48,9 @@ export function getDefaultWebViewState(): WebViewState {
 
 export class WebView extends BaseComponent<WebViewProps, WebViewState> {
 	public static readonly defaultProps: WebViewProps = getDefaultWebViewProps();
-	public state: WebViewState = getDefaultWebViewState();
 
 	constructor(props: any) {
-		super(props, "ui-webview", WebView.defaultProps.style);
+		super("ui-webview", WebView, props, getDefaultWebViewState());
 	}
 
 	@autobind
@@ -61,7 +59,7 @@ export class WebView extends BaseComponent<WebViewProps, WebViewState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const {
 			backgroundColor,

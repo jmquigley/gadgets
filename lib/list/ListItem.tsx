@@ -1,11 +1,34 @@
-// TODO: add documentation for ListItem
-
-//
-// Generates elements that will be contained within a List.  This resolved
-// to the `<li>` tag.
-//
-
-// const debug = require("debug")("gadgets.ListItem");
+/**
+ * Generates elements that will be contained within a `List`.  This resolved
+ * to the `<li>` tag.  It uses the `Item` shared component.
+ *
+ * See the `List` component for screen and example usage.
+ *
+ * ## API
+ * #### Events
+ * - `onBlur(e: React.FocusEvent<HTMLLIElement>)` - Called when the ListItem
+ * loses focus.
+ * - `onClick(e: React.MouseEvent<HTMLLIElement>)` - Invoked when the ListItem
+ * is clicked by the mouse.
+ * - `onDoubleClick(e: React.MouseEvent<HTMLLIElement>)` Invoked when the
+ * ListItem is double clicked by the mouse.
+ * - `onSelection(title: string)` - When the ListItem is clicked this is also
+ * invoked to return the title string associated with this ListItem
+ *
+ * #### Styles
+ * - `ui-listitem` - A global style placed on the `<li>` element.
+ *
+ * #### Properties
+ * - `href={selectHandler: nilEvent, sizing: Sizing.normal} {boolean}` - The
+ * parent List component passes this object to each child to share parent
+ * variables.  It contains the following fields:
+ *   - `selectHandler {(item: ListItem) => void}` - invoked by the child when
+ *     it is selected to notify the parent that it was selected.
+ *   - `sizing {Sizing}` - The sizing of the parent so that it can react to
+ *     change in size of the parent component.
+ *
+ * @module ListItem
+ */
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -19,8 +42,13 @@ import {
 } from "../item";
 import {BaseComponent, Sizing, Wrapper} from "../shared";
 
+export interface ListItemHREF {
+	selectHandler: (item: ListItem) => void;
+	sizing: Sizing;
+}
+
 export interface ListItemProps extends ItemProps {
-	href?: any; // holds a function injected by the parent for selection
+	href?: ListItemHREF;
 	onBlur?: (e: React.FocusEvent<HTMLLIElement>) => void;
 	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
 	onDoubleClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
@@ -34,7 +62,6 @@ export function getDefaultListItemProps(): ListItemProps {
 			selectHandler: nilEvent,
 			sizing: Sizing.normal
 		},
-		obj: "ListItem",
 		onBlur: nilEvent,
 		onClick: nilEvent,
 		onDoubleClick: nilEvent,
@@ -54,15 +81,14 @@ export function getDefaultListItemState(): ListItemState {
 }
 
 export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
-	public static defaultProps: ListItemProps = getDefaultListItemProps();
-	public state: ListItemState = getDefaultListItemState();
+	public static readonly defaultProps: ListItemProps = getDefaultListItemProps();
 
 	private _delay = 250; // double click delay
 	private _preventClick: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super(props, "ui-listitem", ListItem.defaultProps.style);
+		super("ui-listitem", ListItem, props, getDefaultListItemState());
 	}
 
 	get preventClick(): boolean {
@@ -132,7 +158,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		// The onSelection event should not be passed down through the
 		// item and into the sub components.

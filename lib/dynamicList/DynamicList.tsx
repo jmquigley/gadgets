@@ -95,34 +95,32 @@
  * surrounds the list and the *toast* for error message handling.
  *
  * #### Properties
- * - `errorMessage: {string} ('')` - A message the will be temporarily displayed
+ * - `errorMessage="" {string}` - A message the will be temporarily displayed
  * within the control.  When this message is first set it will be shown and
  * then decay.  It will then invoke the onError callback.
- * - `errorMessageDuration: {number} (5)` - the time in seconds that the
+ * - `errorMessageDuration=5 {number}` - the time in seconds that the
  * error message string will be shown within the control before fading away.
  * Set to five seconds by default.
- * - `items: DynamicListItem ({}}` - An object that holds unique title and
+ * - `items={} {DynamicListItem}` - An object that holds unique title and
  * widgets in the format `{[title]: {left: widget, right: widget}`.  Each item in
  * the object represents a list item.  A widget, like a button or Option, can
  * be used as supporting widgets in the list.
- * - `layout: TitleLayout (TitleLayout.dominant)` - How the title/widget
+ * - `layout=TitleLayout.dominant {TitleLayout}` - How the title/widget
  * will be displayed in the list item (seee the Title control).
- * - `nocollapse: boolean (false)` - Determines if the list can be
+ * - `nocollapse=false {boolean}` - Determines if the list can be
  * "rolled up" when the header is clicked.  The default behavior is to
  * allow.  IF this is set to false, then the list can't be collapsed.
- * - `noselect {boolean} (false)` - when true the selection highlight is
+ * - `noselect=false {boolean}` - when true the selection highlight is
  * disabled and removed.
- * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+ * - `pageSizes=[25, 50, 100] number[]` - A list of page number sizes that
  * can be used by the pager.  It is used against the total items to
  * determine the total number of pages in the control display.
- * - `sortOrder: SortOrder (SortOrder.ascending)` - The list sort order.  Can
+ * - `sortOrder=SortOrder.ascending {SortOrder}` - The list sort order.  Can
  * be either ascending or descending.
- * - `title: string ('')` - This string value is in the header of the control.
+ * - `title="" {string}` - This string value is in the header of the control.
  *
  * @module DynamicList
  */
-
-const debug = require("debug")("gadgets.DynamicList");
 
 import autobind from "autobind-decorator";
 import * as React from "react";
@@ -189,7 +187,6 @@ export function getDefaultDynamicListProps(): DynamicListProps {
 		layout: TitleLayout.dominant,
 		nocollapse: false,
 		noselect: false,
-		obj: "DynamicList",
 		onBlur: nilEvent,
 		onClick: nilEvent,
 		onDelete: nilEvent,
@@ -274,7 +271,7 @@ export class DynamicList extends BaseComponent<
 	DynamicListProps,
 	DynamicListState
 > {
-	public static defaultProps: DynamicListProps = getDefaultDynamicListProps();
+	public static readonly defaultProps: DynamicListProps = getDefaultDynamicListProps();
 
 	private readonly _baseMessage: string =
 		'Are you sure you want to delete "%s"?';
@@ -293,7 +290,11 @@ export class DynamicList extends BaseComponent<
 	private _startSearch: boolean = true;
 
 	constructor(props: DynamicListProps) {
-		super(props, "ui-dynamiclist", DynamicList.defaultProps.style);
+		super("ui-dynamiclist", DynamicList, props, {
+			...getDefaultDynamicListState(),
+			pageSize: props.pageSizes[0],
+			sortOrder: props.sortOrder
+		});
 
 		this._fillerKeys = new Keys({testing: this.props.testing});
 		this._footerID = this._fillerKeys.at(this._fillerIdx++);
@@ -302,13 +303,6 @@ export class DynamicList extends BaseComponent<
 		for (const [title, widgets] of Object.entries(this.props.items)) {
 			this._listItems[title] = this.createListItem(title, widgets);
 		}
-
-		this.state = {
-			...getDefaultDynamicListState(),
-			pageSize: this.props.pageSizes[0],
-			sortOrder: this.props.sortOrder,
-			totalItems: Object.keys(this._listItems).length
-		};
 
 		this._emptyListItem = (
 			<ListItem
@@ -629,10 +623,6 @@ export class DynamicList extends BaseComponent<
 		}
 
 		if (props.errorMessage) {
-			debug(
-				"getDerivedStateFromProps -> errorMessage: %o",
-				props.errorMessage
-			);
 			newState.errorMessage = props.errorMessage;
 			newState.showError = true;
 		}
@@ -713,7 +703,8 @@ export class DynamicList extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
+
 		this._updateWidgets(this.props, this.state);
 
 		for (const [title, widgets] of Object.entries(this.props.items)) {

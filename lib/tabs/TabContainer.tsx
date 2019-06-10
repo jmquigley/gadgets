@@ -80,10 +80,6 @@
  * @module TabContainer
  */
 
-const debug = require("debug")("gadgets.TabContainer");
-const debugCreate = require("debug")("gadgets.TabContainer:create");
-const debugRender = require("debug")("gadgets.TabContainer:render");
-
 import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
 import * as React from "react";
@@ -121,7 +117,6 @@ export function getDefaultTabContainerProps(): TabContainerProps {
 		noborder: false,
 		noclose: false,
 		nonavigation: false,
-		obj: "TabContainer",
 		onRemove: nilEvent,
 		onSelection: nilEvent,
 		tabWidth: 100,
@@ -265,16 +260,16 @@ export class TabContainer extends BaseComponent<
 	TabContainerProps,
 	TabContainerState
 > {
+	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
+
 	private _keys: Keys;
 	private _removedTabs: any = [];
 	private _tabContent: any = null;
 	private _tabMap: OrderedMap<string, Tabs> = OrderedMap();
 	private _tabs: any = [];
 
-	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
-
 	constructor(props: TabContainerProps) {
-		super(props, "ui-tab-container", TabContainer.defaultProps.style);
+		super("ui-tab-container", TabContainer, props);
 
 		this._keys = new Keys({testing: this.props.testing});
 
@@ -288,8 +283,6 @@ export class TabContainer extends BaseComponent<
 			...getDefaultTabContainerState(),
 			selectedTab: this._tabs.length > 0 ? this._tabs[0].props["id"] : ""
 		};
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	/**
@@ -479,7 +472,7 @@ export class TabContainer extends BaseComponent<
 	@autobind
 	private selectHandler(tab: Tab) {
 		if (this.state.selectedTab) {
-			debug("selectHandler -> tab: %O", tab);
+			this.debug("selectHandler -> tab: %O", tab);
 			const previous = this._getTab(this.state.selectedTab)[0];
 
 			this.selectedTab = tab.props["id"];
@@ -488,9 +481,7 @@ export class TabContainer extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		let body = null;
 		const style = {};

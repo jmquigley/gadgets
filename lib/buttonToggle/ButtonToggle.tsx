@@ -75,10 +75,6 @@
  * @module ButtonToggle
  */
 
-// const debug = require('debug')('gadgets.ButtonToggle');
-const debugCreate = require("debug")("gadgets.ButtonToggle:create");
-const debugRender = require("debug")("gadgets.ButtonToggle:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
@@ -113,7 +109,6 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 		iconNameOff: "bomb",
 		iconNameOn: "bomb",
 		initialToggle: false,
-		obj: "ButtonToggle",
 		onClick: nilEvent,
 		onToggle: nilEvent,
 		ripple: false,
@@ -136,17 +131,13 @@ export class ButtonToggle extends BaseComponent<
 	ButtonToggleProps,
 	ButtonToggleState
 > {
-	public static defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
+	public static readonly defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
 	constructor(props: ButtonToggleProps) {
-		super(props, "ui-button-toggle", ButtonToggle.defaultProps.style);
-
-		this.state = {
+		super("ui-button-toggle", ButtonToggle, props, {
 			...getDefaultButtonToggleState(),
-			toggle: this.props.initialToggle
-		};
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
+			toggle: props.initialToggle
+		});
 	}
 
 	@autobind
@@ -193,9 +184,7 @@ export class ButtonToggle extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		return (
 			<Wrapper {...this.props}>

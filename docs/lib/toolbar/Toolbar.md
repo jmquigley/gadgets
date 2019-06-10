@@ -45,7 +45,7 @@ div to set its left/right/center justification.  This global style is
 placed on this div.
 
 #### Properties
-- `justify: {Justify} (Justify.left)` - The toolbar can be placed to the left
+- `justify=Justify.left {Justify}` - The toolbar can be placed to the left
 (default), center, or right within its container.  The property sets that
 location.
 

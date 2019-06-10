@@ -59,10 +59,6 @@
  * @module Breadcrumbs
  */
 
-// const debug = require('debug')('gadgets.Breadcrumbs');
-const debugCreate = require("debug")("gadgets.Breadcrumbs:create");
-const debugRender = require("debug")("gadgets.Breadcrumbs:render");
-
 import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
@@ -102,7 +98,6 @@ export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
 		chevron: "chevron-right",
 		icon: "paperclip",
 		items: [],
-		obj: "Breadcrumbs",
 		onSelection: nilEvent,
 		ripple: false
 	};
@@ -154,13 +149,17 @@ export class Breadcrumbs extends BaseComponent<
 	BreadcrumbsState
 > {
 	public static readonly defaultProps: BreadcrumbsProps = getDefaultBreadcrumbsProps();
-	public state: BreadcrumbsState = getDefaultBreadcrumbsState();
 
 	private _nameKeys: Keys;
 	private _iconKeys: Keys;
 
 	constructor(props: BreadcrumbsProps) {
-		super(props, "ui-breadcrumbs", Breadcrumbs.defaultProps.style);
+		super(
+			"ui-breadcrumbs",
+			Breadcrumbs,
+			props,
+			getDefaultBreadcrumbsState()
+		);
 
 		this._nameKeys = new Keys({
 			testing: this.props.testing,
@@ -170,8 +169,6 @@ export class Breadcrumbs extends BaseComponent<
 			testing: this.props.testing,
 			testingPrefix: "icon"
 		});
-
-		debugCreate("props: %O, state: %O", this.props, this.state);
 	}
 
 	@autobind
@@ -184,9 +181,7 @@ export class Breadcrumbs extends BaseComponent<
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		// The onSelection event should not be passed down through the
 		// item and into the sub components.

@@ -28,6 +28,6 @@ value of the tag is given to the callback as a parameter.
 - `ui-tag` - placed on the root `<div>` of the control.
 
 #### Properties
-- `usedelete: {boolean} (false)`- if true then the delete button will be
+- `usedelete=false {boolean}`- if true then the delete button will be
 shown when the mouse enters the tag, otherwise this is suppressed.
 

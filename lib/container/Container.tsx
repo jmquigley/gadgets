@@ -28,10 +28,6 @@
  * @module Container
  */
 
-// const debug = require("debug")("gadgets.Container");
-const debugCreate = require("debug")("gadgets.Container:create");
-const debugRender = require("debug")("gadgets.Container:render");
-
 import * as React from "react";
 import styled from "styled-components";
 import {
@@ -53,7 +49,6 @@ export function getDefaultContainerProps(): ContainerProps {
 	return {
 		...getDefaultBaseProps(),
 		children: null,
-		obj: "Container",
 		title: ""
 	};
 }
@@ -76,18 +71,14 @@ const ContainerView: any = styled.div`
 `;
 
 export class Container extends BaseComponent<ContainerProps, ContainerState> {
-	public static defaultProps: ContainerProps = getDefaultContainerProps();
-	public state: ContainerState = getDefaultContainerState();
+	public static readonly defaultProps: ContainerProps = getDefaultContainerProps();
 
 	constructor(props: ContainerProps) {
-		super(props, "ui-container", Container.defaultProps.style);
-		debugCreate("props: %O, state: %O", this.props, this.state);
+		super("ui-container", Container, props, getDefaultContainerState());
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		let title: any = null;
 		if (this.props.title) {

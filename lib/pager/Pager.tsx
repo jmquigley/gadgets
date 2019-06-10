@@ -68,21 +68,19 @@
  * - `ui-pager` - The top level style for the control on the `<div>` container.
  *
  * #### Properties
- * - `initialPage: number (1)` - The page to start with in the list display.
- * - `pagesToDisplay: number (3)` - The number of page buttons to show with
+ * - `initialPage=1 {number}` - The page to start with in the list display.
+ * - `pagesToDisplay=3 {number}` - The number of page buttons to show with
  * the control.
- * - `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+ * - `pageSizes=[25, 50, 100] {number[]}` - A list of page number sizes that
  * can be used by the pager.  It is used against the total items to
  * determine the total number of pages in the control display.
- * - `totalItems: number (0)` - The total number of items represented by the
+ * - `totalItems=0 {number}` - The total number of items represented by the
  * control.
- * - `useinput: boolean (false)` - If this is true, then a text input is shown
+ * - `useinput=false {boolean}` - If this is true, then a text input is shown
  * with the control that allows the user to jump to a specific page.
  *
  * @module Pager
  */
-
-// const debug = require("debug")("gadgets.Pager");
 
 import autobind from "autobind-decorator";
 import {sortBy} from "lodash";
@@ -130,7 +128,6 @@ export function getDefaultPagerProps(): PagerProps {
 		...getDefaultBaseProps(),
 		initialPage: 1,
 		initialPageSize: defaultPageSize,
-		obj: "Pager",
 		onChangePageSize: nilEvent,
 		onSelection: nilEvent,
 		onSort: null,
@@ -208,7 +205,7 @@ const StyledTextField: any = styled(TextField)`
 `;
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
-	public static defaultProps: PagerProps = getDefaultPagerProps();
+	public static readonly defaultProps: PagerProps = getDefaultPagerProps();
 
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
@@ -225,7 +222,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	private _pageSizes: number[] = defaultPageSizes.slice();
 
 	constructor(props: PagerProps) {
-		super(props, "ui-pager", Pager.defaultProps.style);
+		super("ui-pager", Pager, props);
 
 		this._dialogKeys = new Keys({testing: this.props.testing});
 		this._fillerKeys = new Keys({testing: this.props.testing});
@@ -404,7 +401,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			if (page !== 0 && this._buttons[page] == null) {
 				this._buttons[page] = (
 					<StyledButtonText
-						{...props}
 						justify={Justify.center}
 						key={String(page)}
 						noicon
@@ -451,7 +447,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			} else {
 				this._buttonsDisplay.push(
 					<StyledButtonText
-						{...props}
 						justify={Justify.center}
 						key={this._fillerKeys.at(this._fillerIdx++)}
 						noicon
@@ -480,7 +475,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		) {
 			sortOptions.push(
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={
 						nextState.currentSort === SortOrder.ascending
@@ -495,7 +489,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 			sortOptions.push(
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={
 						nextState.currentSort === SortOrder.descending
@@ -524,7 +517,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 			items.push(
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={icon}
 					noedit
@@ -536,7 +528,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 
 		items.push(
 			<ListItem
-				{...nextProps}
 				key={this._dialogKeys.at(idx++)}
 				leftButton={allFlag ? this._iconCheck : this._iconBlank}
 				noedit
@@ -549,7 +540,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 			<DialogListView sizing={nextProps.sizing} noselect>
 				{sortOptions}
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
@@ -557,7 +547,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					title='First'
 				/>
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
@@ -565,7 +554,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					title='Last'
 				/>
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
@@ -573,7 +561,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					title='Next'
 				/>
 				<ListItem
-					{...nextProps}
 					key={this._dialogKeys.at(idx++)}
 					leftButton={this._iconBlank}
 					noedit
@@ -751,7 +738,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const props = this.sanitizeProps(this.props);
 
@@ -759,27 +746,25 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.createDialog(props, this.state);
 		this.createInputPageField(props);
 
+		this.debug("dialog => %O", this._dialog);
+
 		return (
-			<Wrapper {...props}>
+			<Wrapper>
 				<PagerView className={this.className} style={this.state.style}>
 					<StyledButton
-						{...props}
 						iconName='angle-double-left'
 						onClick={this.moveToFront}
 					/>
 					<StyledButton
-						{...props}
 						iconName='angle-left'
 						onClick={this.moveToPrevious}
 					/>
 					{this._buttonsDisplay}
 					<StyledButton
-						{...props}
 						iconName='angle-right'
 						onClick={this.moveToNext}
 					/>
 					<StyledButton
-						{...props}
 						iconName='angle-double-right'
 						onClick={this.moveToEnd}
 					/>
@@ -787,7 +772,6 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 					{this._inputPageField}
 					<Divider />
 					<StyledButtonDialog
-						{...props}
 						iconName='ellipsis-v'
 						location={Location.top}
 						notriangle

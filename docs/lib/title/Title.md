@@ -58,8 +58,8 @@ N/A
  This is the `<div>` around the given widget.
 
 #### Properties
-- `layout: {TitleLayout} (TitleLayout.dominant)` - The structure of the
+- `layout=TitleLayout.dominant {TitleLayout}` - The structure of the
 title/widget within the component.
-- `widget: {any} (null)` - The given user defined widget control that is
+- `widget=null {any}` - The given user defined widget control that is
 injected into the title.
 

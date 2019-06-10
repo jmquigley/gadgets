@@ -97,27 +97,27 @@ list.
 surrounds the list and the *toast* for error message handling.
 
 #### Properties
-- `errorMessage: {string} ('')` - A message the will be temporarily displayed
+- `errorMessage="" {string}` - A message the will be temporarily displayed
 within the control.  When this message is first set it will be shown and
 then decay.  It will then invoke the onError callback.
-- `errorMessageDuration: {number} (5)` - the time in seconds that the
+- `errorMessageDuration=5 {number}` - the time in seconds that the
 error message string will be shown within the control before fading away.
 Set to five seconds by default.
-- `items: DynamicListItem ({}}` - An object that holds unique title and
+- `items={} {DynamicListItem}` - An object that holds unique title and
 widgets in the format `{[title]: {left: widget, right: widget}`.  Each item in
 the object represents a list item.  A widget, like a button or Option, can
 be used as supporting widgets in the list.
-- `layout: TitleLayout (TitleLayout.dominant)` - How the title/widget
+- `layout=TitleLayout.dominant {TitleLayout}` - How the title/widget
 will be displayed in the list item (seee the Title control).
-- `nocollapse: boolean (false)` - Determines if the list can be
+- `nocollapse=false {boolean}` - Determines if the list can be
 "rolled up" when the header is clicked.  The default behavior is to
 allow.  IF this is set to false, then the list can't be collapsed.
-- `noselect {boolean} (false)` - when true the selection highlight is
+- `noselect=false {boolean}` - when true the selection highlight is
 disabled and removed.
-- `pageSizes: number[] ([25, 50, 100])` - A list of page number sizes that
+- `pageSizes=[25, 50, 100] number[]` - A list of page number sizes that
 can be used by the pager.  It is used against the total items to
 determine the total number of pages in the control display.
-- `sortOrder: SortOrder (SortOrder.ascending)` - The list sort order.  Can
+- `sortOrder=SortOrder.ascending {SortOrder}` - The list sort order.  Can
 be either ascending or descending.
-- `title: string ('')` - This string value is in the header of the control.
+- `title="" {string}` - This string value is in the header of the control.
 

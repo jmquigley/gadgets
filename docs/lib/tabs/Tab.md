@@ -40,7 +40,7 @@ A reference to the closed tab is passed to the callback.
 `Tab` component.
 
 #### Properties
-- `href: {any}` - This is a general object used to pass references from
+- `href {any}` - This is a general object used to pass references from
 the parent to the child.  It includes the following attributes:
   - `selectHandler` - a function reference back to the container that is
     invoked to tell the container that this tab was selected.

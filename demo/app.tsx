@@ -80,7 +80,7 @@ class App extends React.Component<any, AppState> {
 				</p>
 
 				<Dropdown
-					defaultVal='normal'
+					initialValue='normal'
 					items={[
 						{value: Sizing.xxsmall, label: "xxsmall"},
 						{value: Sizing.xsmall, label: "xsmall"},

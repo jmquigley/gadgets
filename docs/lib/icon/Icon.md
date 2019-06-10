@@ -38,11 +38,11 @@ None
 - `ui-icon` - applied to the top level container for the icon or image.
 
 #### Properties
-- `iconName: string (bomb)` - The name of the font awesome icon that
+- `iconName="bomb" {string}` - The name of the font awesome icon that
 will be used in this icon.  This option is mutually exclusive to imageFile
-- `imageFile: string ('')` - The path to an image file that will be used
+- `imageFile="" {string}` - The path to an image file that will be used
 in this icon.  This option is mutually exclusive to iconName.
-- `sizing: Sizing (Sizing.normal)` - There are seven icon sizes that can
+- `sizing=Sizing.normal {Sizing}` - There are seven icon sizes that can
 be used. See the shared props documentation for the enumerations used for
 each sizing.
 

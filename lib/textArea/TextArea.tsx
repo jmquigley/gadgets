@@ -37,8 +37,6 @@
  * @module TextArea
  */
 
-// const debug = require("debug")("gadgets.TextArea");
-
 import autobind from "autobind-decorator";
 import {debounce} from "lodash";
 import * as React from "react";
@@ -69,7 +67,6 @@ export interface TextAreaProps extends BaseProps {
 export function getDefaultTextAreaProps(): TextAreaProps {
 	return {
 		...getDefaultBaseProps(),
-		obj: "TextArea",
 		onChange: nilEvent,
 		onUpdate: nilEvent,
 		padding: "4px",
@@ -117,17 +114,15 @@ export class TextArea extends BaseComponent<TextAreaProps, TextAreaState> {
 	private _debounceUpdate: any = null;
 
 	constructor(props: TextAreaProps) {
-		super(props, "ui-textarea", TextArea.defaultProps.style);
+		super("ui-textarea", TextArea, props, {
+			...getDefaultTextAreaState(),
+			value: props.value
+		});
 
 		this._debounceUpdate = debounce(
 			this.props.onUpdate,
 			this.props.updateDelay
 		);
-
-		this.state = {
-			...getDefaultTextAreaState(),
-			value: this.props.value
-		};
 	}
 
 	@autobind
@@ -185,7 +180,7 @@ export class TextArea extends BaseComponent<TextAreaProps, TextAreaState> {
 	}
 
 	public render() {
-		this.updateClassName();
+		super.render();
 
 		const {onUpdate, ...props} = this.props;
 

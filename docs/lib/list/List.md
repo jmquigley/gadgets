@@ -48,9 +48,9 @@ the item.
 list.
 
 #### Properties
-- `alternating: {boolean} (false)` - Makes every other `<li>` entry within the
+- `alternating=false {boolean}` - Makes every other `<li>` entry within the
 list grey to make viewing the list easier.  This is off by default.
-- `noselect: {boolean} (false)` - If set to true then the item that has been
+- `noselect=false {boolean}` - If set to true then the item that has been
 selected within the list will not be highlighted.  it's a way to turn of list
 selection.
 

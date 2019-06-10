@@ -18,7 +18,7 @@ exports[`Creation of the Dropdown control 1`] = `
   height={null}
   hidden={false}
   id={null}
-  initialItem=""
+  initialValue=""
   items={
     Array [
       Object {
@@ -47,7 +47,6 @@ exports[`Creation of the Dropdown control 1`] = `
   nopropagation={false}
   notheme={false}
   notooltip={false}
-  obj="Dropdown"
   onError={[Function]}
   onSelection={[Function]}
   padding={null}
@@ -105,7 +104,7 @@ exports[`Creation of the Dropdown control 1`] = `
           "paddingRight": "24px",
         }
       }
-      value="idstr2"
+      value=""
     >
       <option
         value="idstr1"
@@ -145,7 +144,7 @@ exports[`Disable the Dropdown control 1`] = `
   height={null}
   hidden={false}
   id={null}
-  initialItem=""
+  initialValue=""
   items={
     Array [
       Object {
@@ -174,7 +173,6 @@ exports[`Disable the Dropdown control 1`] = `
   nopropagation={false}
   notheme={false}
   notooltip={false}
-  obj="Dropdown"
   onSelection={[MockFunction]}
   padding={null}
   ripple={false}
@@ -234,7 +232,7 @@ exports[`Make the Dropdown control invisible 1`] = `
   height={null}
   hidden={false}
   id={null}
-  initialItem=""
+  initialValue=""
   items={
     Array [
       Object {
@@ -263,7 +261,6 @@ exports[`Make the Dropdown control invisible 1`] = `
   nopropagation={false}
   notheme={false}
   notooltip={false}
-  obj="Dropdown"
   onSelection={[MockFunction]}
   padding={null}
   ripple={false}
@@ -323,7 +320,7 @@ Object {
   "height": null,
   "hidden": false,
   "id": null,
-  "initialItem": "",
+  "initialValue": "",
   "items": Array [],
   "left": null,
   "location": "none",
@@ -337,7 +334,6 @@ Object {
   "nopropagation": false,
   "notheme": false,
   "notooltip": false,
-  "obj": "Dropdown",
   "onSelection": [Function],
   "padding": null,
   "ripple": false,
@@ -404,7 +400,7 @@ exports[`Test the Dropdown click event 1`] = `
   height={null}
   hidden={false}
   id={null}
-  initialItem=""
+  initialValue=""
   items={
     Array [
       Object {
@@ -433,7 +429,6 @@ exports[`Test the Dropdown click event 1`] = `
   nopropagation={false}
   notheme={false}
   notooltip={false}
-  obj="Dropdown"
   onSelection={[MockFunction]}
   padding={null}
   ripple={false}

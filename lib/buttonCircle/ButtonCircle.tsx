@@ -45,10 +45,6 @@
  * @module ButtonCircle
  */
 
-// const debug = require("debug")("gadgets.ButtonCircle");
-const debugCreate = require("debug")("gadgets.ButtonCircle:create");
-const debugRender = require("debug")("gadgets.ButtonCircle:render");
-
 import * as React from "react";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
@@ -69,7 +65,6 @@ export interface ButtonCircleProps extends ButtonProps {
 export function getDefaultButtonCircleProps(): ButtonProps {
 	return {
 		...getDefaultButtonProps(),
-		obj: "ButtonCircle",
 		onClick: nilEvent,
 		ripple: false
 	};
@@ -123,18 +118,19 @@ export class ButtonCircle extends BaseComponent<
 	ButtonCircleProps,
 	ButtonCircleState
 > {
-	public static defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
-	public state: ButtonCircleState = getDefaultButtonCircleState();
+	public static readonly defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
 
 	constructor(props: ButtonCircleProps) {
-		super(props, "ui-button-circle", ButtonCircle.defaultProps.style);
-		debugCreate("props: %O, state: %O", this.props, this.state);
+		super(
+			"ui-button-circle",
+			ButtonCircle,
+			props,
+			getDefaultButtonCircleState()
+		);
 	}
 
 	public render() {
-		this.updateClassName();
-
-		debugRender("props: %O, state: %O", this.props, this.state);
+		super.render();
 
 		const size: string = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 

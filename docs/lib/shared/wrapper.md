@@ -48,11 +48,11 @@ thrown from the component.
 the thrown Error.
 
 #### Properties
-- `children: {React.ReactNode} (null)` - The underlying components that are
+- `children=null {React.ReactNode}` - The underlying components that are
 surrounded by this wrapper.
-- `err: {any} (null)` - A custom react component that can be used as the
+- `err=null {any}` - A custom react component that can be used as the
 error output.  This is used to override the default error output.
-- `reset: {boolean} (false)` - After a component is wrapped, and an error is
+- `reset=false {boolean}` - After a component is wrapped, and an error is
 thrown, the state of *error* will be permanent within the component.  Passing
 reset as a prop to the wrapper allows the Error condition to be reset.  This
 would be used if there is a facility in place within the component to
