@@ -513,7 +513,7 @@ export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<TextfieldContainerView
 					className='ui-textfield-container'
 					id={this.id}

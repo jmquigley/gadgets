@@ -515,7 +515,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		);
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<EditorContainer
 					className={this.className}
 					style={this.state.style}

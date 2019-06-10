@@ -6,9 +6,14 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   border={null}
   borderColor={null}
   bottom={null}
-  className={null}
+  className="test-class"
   color={null}
   controlled={true}
+  dialogClasses={
+    Array [
+      "test-class-dialog",
+    ]
+  }
   direction="right"
   disabled={false}
   err={null}
@@ -16,28 +21,35 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   focus={false}
   height={null}
   hidden={false}
+  iconName="bomb"
+  iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
-  location="none"
+  location="bottom"
   maxHeight={null}
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  name="ButtonDialog"
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
+  notriangle={false}
+  onClick={[Function]}
   onError={[Function]}
   padding={null}
   reset={false}
-  ripple={false}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={
     Object {
-      "whiteSpace": "pre-wrap",
+      "backgroundColor": "inherit",
+      "color": "inherit",
     }
   }
   testing={true}
@@ -69,6 +81,7 @@ exports[`Test creation of a ButtonDialog control 1`] = `
   }
   tooltip={null}
   top={null}
+  triangleClasses={Array []}
   visible={true}
   width={null}
   xcss={null}
@@ -191,9 +204,14 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   border={null}
   borderColor={null}
   bottom={null}
-  className={null}
+  className="test-class"
   color={null}
   controlled={true}
+  dialogClasses={
+    Array [
+      "test-class-dialog",
+    ]
+  }
   direction="right"
   disabled={false}
   err={null}
@@ -201,28 +219,35 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   focus={false}
   height={null}
   hidden={false}
+  iconName="bomb"
+  iconStyle=""
   id={null}
+  kbActivate=""
   left={null}
-  location="none"
+  location="top"
   maxHeight={null}
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  name="ButtonDialog"
   noborder={false}
   noedit={false}
   nohover={false}
-  nopropagation={false}
+  nopropagation={true}
   notheme={false}
   notooltip={false}
+  notriangle={false}
+  onClick={[Function]}
   onError={[Function]}
   padding={null}
   reset={false}
-  ripple={false}
+  ripple={true}
   selected={false}
   sizing="normal"
   style={
     Object {
-      "whiteSpace": "pre-wrap",
+      "backgroundColor": "inherit",
+      "color": "inherit",
     }
   }
   testing={true}
@@ -254,6 +279,7 @@ exports[`Test creation of a ButtonDialog control on top 1`] = `
   }
   tooltip={null}
   top={null}
+  triangleClasses={Array []}
   visible={true}
   width={null}
   xcss={null}

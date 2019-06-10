@@ -194,7 +194,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		));
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<DropdownContainerView
 					className='ui-dropdown-container'
 					sizing={this.props.sizing}

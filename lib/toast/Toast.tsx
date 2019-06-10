@@ -288,7 +288,7 @@ export class Toast extends BaseComponent<ToastProps, ToastState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ToastView
 					usebottom={this.props.usebottom}
 					className={this.className}

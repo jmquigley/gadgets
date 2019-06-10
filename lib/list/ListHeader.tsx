@@ -67,7 +67,7 @@ export class ListHeader extends BaseComponent<
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<Item
 					{...this.props}
 					className={this.className}

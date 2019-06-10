@@ -258,7 +258,7 @@ export class Tab extends BaseComponent<TabProps, TabState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<TabView
 					disabled={this.props.disabled}
 					className={this.className}

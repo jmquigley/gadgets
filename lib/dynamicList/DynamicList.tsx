@@ -712,7 +712,7 @@ export class DynamicList extends BaseComponent<
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<DynamicListContainer
 					className='ui-dynamiclist-container'
 					disabled={this.props.disabled}

@@ -155,7 +155,7 @@ export class Badge extends BaseComponent<BadgeProps, BadgeState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<BadgeContainerView className='ui-badge-container'>
 					{this.props.children}
 					{badge}

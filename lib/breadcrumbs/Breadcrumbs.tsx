@@ -226,7 +226,7 @@ export class Breadcrumbs extends BaseComponent<
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<BreadcrumbsView className={this.className}>
 					{icon}
 					{components}

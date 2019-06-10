@@ -181,7 +181,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<PreviewWrapper
 					className={this.className}
 					disabled={this.props.disabled}

@@ -145,7 +145,11 @@ export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
 			);
 		}
 
-		return <Wrapper {...this.props}>{triangle}</Wrapper>;
+		return (
+			<Wrapper {...this.props} name={this.name}>
+				{triangle}
+			</Wrapper>
+		);
 	}
 }
 

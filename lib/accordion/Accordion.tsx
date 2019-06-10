@@ -102,7 +102,7 @@ export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 		);
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<AccordionView
 					className={this.className}
 					sizing={this.props.sizing}

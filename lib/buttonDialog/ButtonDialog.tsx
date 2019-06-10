@@ -125,6 +125,7 @@ const ButtonDialogView: any = styled.div`
 	box-sizing: border-box;
 	display: flex;
 	height: inherit;
+	overflow: visible;
 	position: relative;
 	width: inherit;
 `;
@@ -251,7 +252,7 @@ export class ButtonDialog extends BaseComponent<
 		}
 
 		return (
-			<Wrapper>
+			<Wrapper {...this.props} name={this.name}>
 				<ButtonDialogView className={this.className} id={this.id}>
 					<Button
 						iconName={this.props.iconName}

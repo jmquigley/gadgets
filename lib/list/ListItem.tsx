@@ -165,7 +165,7 @@ export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
 		const {onSelection, ...props} = this.props;
 
 		return (
-			<Wrapper {...props}>
+			<Wrapper {...props} name={this.name}>
 				<Item
 					{...props}
 					className={this.className}

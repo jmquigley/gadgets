@@ -335,7 +335,7 @@ export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<TooltipView
 					className={this.className}
 					location={this.props.location}

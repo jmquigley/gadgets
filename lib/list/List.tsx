@@ -180,7 +180,7 @@ export class List extends BaseComponent<ListProps, ListState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ListView
 					alternating={this.props.alternating}
 					className={this.className}

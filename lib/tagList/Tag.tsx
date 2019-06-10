@@ -172,7 +172,7 @@ export class Tag extends BaseComponent<TagProps, TagState> {
 		}
 
 		return (
-			<Wrapper {...props}>
+			<Wrapper {...props} name={this.name}>
 				<TagView
 					className={this.className}
 					onMouseOut={this.handleMouseOut}

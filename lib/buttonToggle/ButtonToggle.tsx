@@ -187,7 +187,7 @@ export class ButtonToggle extends BaseComponent<
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<Button
 					{...this.props}
 					className={this.className}

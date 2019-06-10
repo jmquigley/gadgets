@@ -183,7 +183,7 @@ export class DialogWindow extends BaseComponent<
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ReactModal
 					ariaHideApp={false}
 					contentLabel={this.props.title}

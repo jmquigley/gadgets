@@ -749,7 +749,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.debug("dialog => %O", this._dialog);
 
 		return (
-			<Wrapper>
+			<Wrapper {...props} name={this.name}>
 				<PagerView className={this.className} style={this.state.style}>
 					<StyledButton
 						iconName='angle-double-left'

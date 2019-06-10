@@ -6,7 +6,7 @@ exports[`Test creation of a Pager control 1`] = `
   border={null}
   borderColor={null}
   bottom={null}
-  className={null}
+  className="test-class"
   color={null}
   controlled={true}
   direction="right"
@@ -17,12 +17,15 @@ exports[`Test creation of a Pager control 1`] = `
   height={null}
   hidden={false}
   id={null}
+  initialPage={1}
+  initialPageSize={25}
   left={null}
   location="none"
   maxHeight={null}
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  name="Pager"
   noborder={false}
   noedit={false}
   nohover={false}
@@ -30,16 +33,21 @@ exports[`Test creation of a Pager control 1`] = `
   notheme={false}
   notooltip={false}
   onError={[Function]}
+  onSelection={[Function]}
   padding={null}
+  pageSizes={
+    Array [
+      25,
+      50,
+      100,
+    ]
+  }
+  pagesToDisplay={3}
   reset={false}
   ripple={false}
   selected={false}
   sizing="normal"
-  style={
-    Object {
-      "whiteSpace": "pre-wrap",
-    }
-  }
+  style={Object {}}
   testing={true}
   theme={
     Object {
@@ -69,6 +77,8 @@ exports[`Test creation of a Pager control 1`] = `
   }
   tooltip={null}
   top={null}
+  totalItems={0}
+  useinput={false}
   visible={true}
   width={null}
   xcss={null}

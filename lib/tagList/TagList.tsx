@@ -95,7 +95,6 @@ export function getDefaultTagListProps(): TagListProps {
 	return {
 		...getDefaultBaseProps(),
 		nosort: false,
-		obj: "TagList",
 		onBlur: nilEvent,
 		onChange: nilEvent,
 		onDelete: nilEvent,
@@ -281,7 +280,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<TagListView
 					className={this.className}
 					sizing={this.props.sizing}

@@ -92,7 +92,7 @@ export class Divider extends BaseComponent<DividerProps, DividerState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<DividerView
 					className={this.className}
 					style={this.state.style}

@@ -279,7 +279,7 @@ export class Label extends BaseComponent<LabelProps, LabelState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<LabelView
 					className={this.className}
 					contentEditable={this.state.editable}

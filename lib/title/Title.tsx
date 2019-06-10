@@ -309,7 +309,7 @@ export class Title extends BaseComponent<TitleProps, TitleState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<TitleView
 					className={this.className}
 					disabled={this.props.disabled}

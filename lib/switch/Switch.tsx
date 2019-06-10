@@ -194,7 +194,7 @@ export class Switch extends BaseComponent<SwitchProps, SwitchState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<SliderContainerView
 					className={this.className}
 					height={BaseComponent.fontSizePX(

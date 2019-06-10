@@ -214,7 +214,7 @@ export class Item extends BaseComponent<ItemProps, ItemState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ItemView
 					id={this.props.id}
 					className={this.className}

@@ -231,7 +231,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 		);
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ToolbarView className={this.className}>
 					<ToolbarGroupView
 						className='ui-toolbar-group'

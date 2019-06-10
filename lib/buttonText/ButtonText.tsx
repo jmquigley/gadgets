@@ -177,7 +177,7 @@ export class ButtonText extends BaseComponent<
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<StyledButtonText
 					className={this.className}
 					handlers={this.keyHandler}

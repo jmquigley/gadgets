@@ -27,7 +27,7 @@ test("Test creation of a default Wrapper", () => {
 	const errinfo = {componentStack: "test stack"};
 
 	const ctl = mount(
-		<Wrapper className='test-class' onError={errfn} reset>
+		<Wrapper className='test-class' name='TestName' onError={errfn} reset>
 			<h1>test header</h1>
 		</Wrapper>
 	);
@@ -47,7 +47,12 @@ test("Test disabling the Wrapper", () => {
 	const errfn = jest.fn();
 
 	const ctl = mount(
-		<Wrapper className='test-class' disabled={true} onError={errfn}>
+		<Wrapper
+			className='test-class'
+			disabled={true}
+			name='TestName'
+			onError={errfn}
+		>
 			<h1>test header</h1>
 		</Wrapper>
 	);

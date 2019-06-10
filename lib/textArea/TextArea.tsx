@@ -192,7 +192,7 @@ export class TextArea extends BaseComponent<TextAreaProps, TextAreaState> {
 		const maxHeight = lineHeight * totalRows + padding * 2;
 
 		return (
-			<Wrapper {...props}>
+			<Wrapper {...props} name={this.name}>
 				<TextAreaView
 					{...props}
 					className={this.className}

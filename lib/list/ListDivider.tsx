@@ -100,7 +100,7 @@ export class ListDivider extends BaseComponent<
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ListDividerView className={this.className}>
 					<hr style={this.state.style} />
 				</ListDividerView>

@@ -579,7 +579,11 @@ export class TabContainer extends BaseComponent<
 			);
 		}
 
-		return <Wrapper {...props}>{body}</Wrapper>;
+		return (
+			<Wrapper {...props} name={this.name}>
+				{body}
+			</Wrapper>
+		);
 	}
 }
 

@@ -69,6 +69,7 @@ import {BaseState, getDefaultBaseState} from "./state";
 
 export interface WrapperProps extends BaseProps {
 	children?: React.ReactChild;
+	name?: string;
 	onError?: any;
 	reset?: boolean;
 }
@@ -77,6 +78,7 @@ export function getDefaultWrapperProps(): WrapperProps {
 	return {
 		...getDefaultBaseProps(),
 		children: null,
+		name: "Unknown",
 		onError: nilEvent,
 		reset: false,
 		style: {
@@ -150,12 +152,12 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 
 		if (this.state.errorInfo && !this.props.disabled) {
 			let errobj: any = this.props.err;
+			const errmsg = "Error in component: ${this.props.name}";
+
 			if (errobj == null) {
 				errobj = (
 					<WrapperView className={this.className}>
-						<span className='ui-error-message'>
-							Error in component '{this.props.obj}'
-						</span>
+						<span className='ui-error-message'>{errmsg}</span>
 						<details
 							className='ui-error-stack'
 							style={this.state.style}

@@ -162,7 +162,7 @@ export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
 		const {minHeight, minWidth, ...props} = this.props;
 
 		return (
-			<Wrapper {...props}>
+			<Wrapper {...props} name={this.name}>
 				<DatagridWrapper
 					{...props}
 					className={this.className}

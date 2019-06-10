@@ -132,7 +132,7 @@ export class Button extends BaseComponent<ButtonProps, ButtonState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ButtonView
 					className={this.className}
 					handlers={this.keyHandler}

@@ -144,7 +144,11 @@ export class Icon extends BaseComponent<IconProps, IconState> {
 			);
 		}
 
-		return <Wrapper {...this.props}>{icon}</Wrapper>;
+		return (
+			<Wrapper {...this.props} name={this.name}>
+				{icon}
+			</Wrapper>
+		);
 	}
 }
 

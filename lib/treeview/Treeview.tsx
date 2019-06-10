@@ -754,7 +754,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<TreeviewContainer
 					className='ui-treeview-container'
 					handlers={this.keyHandler}

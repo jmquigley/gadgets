@@ -56,7 +56,7 @@ export abstract class BaseComponent<
 	S
 > extends PureComponent<P, S> {
 	private _className: ClassNames = new ClassNames();
-	private _componentName: string;
+	private _name: string;
 	private _debug: any = null;
 	private _debugCreate: any = null;
 	private _debugRender: any = null;
@@ -71,16 +71,12 @@ export abstract class BaseComponent<
 		super(props);
 		this.state = state || ({} as S);
 
-		this._componentName = cls.name || "Unknown";
+		this._name = cls.name || "Unknown";
 		BaseComponent.defaultStyles = cls.defaultProps.style || {};
 
-		this._debug = debug(`gadgets.${this._componentName || "base"}`);
-		this._debugCreate = debug(
-			`gadgets.${this._componentName || "base"}:create`
-		);
-		this._debugRender = debug(
-			`gadgets.${this._componentName || "base"}:render`
-		);
+		this._debug = debug(`gadgets.${this._name || "base"}`);
+		this._debugCreate = debug(`gadgets.${this._name || "base"}:create`);
+		this._debugRender = debug(`gadgets.${this._name || "base"}:render`);
 
 		this._defaultClassName = defaultClassName;
 		this._className = new ClassNames(defaultClassName);
@@ -92,9 +88,7 @@ export abstract class BaseComponent<
 			this._id = this.props.id;
 		} else {
 			this._id =
-				this._componentName +
-				"-" +
-				(this.props.testing ? "0" : getUUID());
+				this._name + "-" + (this.props.testing ? "0" : getUUID());
 		}
 
 		if (isDebug()) {
@@ -104,10 +98,6 @@ export abstract class BaseComponent<
 
 	get className(): string {
 		return this._className.value;
-	}
-
-	get componentName(): string {
-		return this._componentName;
 	}
 
 	get defaultClassName(): string {
@@ -131,6 +121,10 @@ export abstract class BaseComponent<
 
 	get keyMap(): KeyMap {
 		return this._keyMap;
+	}
+
+	get name(): string {
+		return this._name;
 	}
 
 	get theme(): DefaultTheme {

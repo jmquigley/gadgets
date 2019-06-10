@@ -249,7 +249,7 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<OptionView
 					className={this.className}
 					onClick={this.handleClick}

@@ -455,7 +455,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<BrowserContainer
 					className={this.className}
 					handlers={this.keyHandler}

@@ -305,7 +305,7 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<HotKeys handlers={this.keyHandler} keyMap={this.keyMap}>
 					<ReactModal
 						ariaHideApp={false}

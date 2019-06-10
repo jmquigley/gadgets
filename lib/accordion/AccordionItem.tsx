@@ -171,7 +171,7 @@ export class AccordionItem extends BaseComponent<
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<AccordionItemView
 					className={this.className}
 					style={this.state.style}

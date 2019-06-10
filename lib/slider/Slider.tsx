@@ -272,7 +272,7 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<SliderContainer
 					className={this.className}
 					disabled={this.props.disabled}

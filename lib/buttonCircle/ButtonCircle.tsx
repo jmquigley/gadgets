@@ -135,7 +135,7 @@ export class ButtonCircle extends BaseComponent<
 		const size: string = BaseComponent.fontSizePX(this.props.sizing, 1.5);
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ButtonCircleContainerView className={this.className}>
 					<ButtonCircleInnerView height={size} width={size}>
 						<StyledButton

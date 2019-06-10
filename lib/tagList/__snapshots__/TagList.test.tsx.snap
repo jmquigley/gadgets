@@ -30,7 +30,6 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
   nosort={false}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[Function]}
@@ -116,7 +115,6 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
   nosort={false}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[Function]}
@@ -202,7 +200,6 @@ exports[`Create a new static TagList with 3 tags (a, b, c) 1`] = `
   nosort={false}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[Function]}
@@ -288,7 +285,6 @@ exports[`Create a new static TagList with 3 tags (c, b, a) with no sorting 1`] =
   nosort={true}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[Function]}
@@ -374,7 +370,6 @@ exports[`Remove a tag from a TagList 1`] = `
   nosort={false}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[MockFunction]}
@@ -453,6 +448,7 @@ exports[`Test creation of a simple TagList instance 1`] = `
   maxWidth={null}
   minHeight={null}
   minWidth={null}
+  name="TagList"
   noborder={false}
   noedit={false}
   nohover={false}
@@ -460,7 +456,6 @@ exports[`Test creation of a simple TagList instance 1`] = `
   nosort={false}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[Function]}
@@ -556,7 +551,6 @@ Object {
   "nosort": false,
   "notheme": false,
   "notooltip": false,
-  "obj": "TagList",
   "onBlur": [Function],
   "onChange": [Function],
   "onDelete": [Function],
@@ -644,7 +638,6 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
   nosort={false}
   notheme={false}
   notooltip={false}
-  obj="TagList"
   onBlur={[Function]}
   onChange={[Function]}
   onDelete={[Function]}

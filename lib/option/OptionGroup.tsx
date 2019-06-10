@@ -244,7 +244,7 @@ export class OptionGroup extends BaseComponent<
 		super.render();
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<StyledOptionGroup
 					className={this.className}
 					sizing={this.props.sizing}

@@ -86,7 +86,7 @@ export class Container extends BaseComponent<ContainerProps, ContainerState> {
 		}
 
 		return (
-			<Wrapper {...this.props}>
+			<Wrapper {...this.props} name={this.name}>
 				<ContainerView
 					className={this.className}
 					key={this.props.id}
