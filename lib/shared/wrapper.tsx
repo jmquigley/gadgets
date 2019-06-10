@@ -50,6 +50,8 @@
  * surrounded by this wrapper.
  * - `err=null {any}` - A custom react component that can be used as the
  * error output.  This is used to override the default error output.
+ * - `name="Unknown" {string}` - the name of the component where this Wrapper
+ * object is used.
  * - `reset=false {boolean}` - After a component is wrapped, and an error is
  * thrown, the state of *error* will be permanent within the component.  Passing
  * reset as a prop to the wrapper allows the Error condition to be reset.  This

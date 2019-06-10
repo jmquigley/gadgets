@@ -10,12 +10,14 @@
 - Added a `super.render()` to base.  There are a few functions common to all render methods in the library and this will be used to wrap it.
 - Moved debugging output functions to base.  The create/render debug output is now handled in the base class so all child components do not need to implement them.
 - Added state initialization to the base class super for all child modules.  This ensures that the initial state information is available for the create debug output when a component is created.
+- Removed the `obj` prop and now use the constructor name.  The [Wrapper](https://github.com/jmquigley/gadgets/blob/master/docs/lib/shared/wrapper.md) was also updated to accept the compnent name.
 
 #### Bug Fixes:
 
 - Added an alias to styled-components in webpack config to fix watcher issue (where wrong version of of the library was included)
 - Fixed how the TabContainer handles cloning child Tab components and their underlying content.
 - Fixed getDefaultBaseState to properly clone the default settings.
+- The Pager menu was not displaying and has been fixed.  Related to missing overflow css setting.
 
 ---
 
