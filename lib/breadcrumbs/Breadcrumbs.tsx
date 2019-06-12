@@ -62,7 +62,6 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
-import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {ButtonText} from "../buttonText";
 import {Icon} from "../icon";
@@ -150,9 +149,6 @@ export class Breadcrumbs extends BaseComponent<
 > {
 	public static readonly defaultProps: BreadcrumbsProps = getDefaultBreadcrumbsProps();
 
-	private _nameKeys: Keys;
-	private _iconKeys: Keys;
-
 	constructor(props: BreadcrumbsProps) {
 		super(
 			"ui-breadcrumbs",
@@ -160,15 +156,6 @@ export class Breadcrumbs extends BaseComponent<
 			props,
 			getDefaultBreadcrumbsState()
 		);
-
-		this._nameKeys = new Keys({
-			testing: this.props.testing,
-			testingPrefix: "name"
-		});
-		this._iconKeys = new Keys({
-			testing: this.props.testing,
-			testingPrefix: "icon"
-		});
 	}
 
 	@autobind
@@ -194,7 +181,7 @@ export class Breadcrumbs extends BaseComponent<
 					<ButtonText
 						className='ui-breadcrumbs-name'
 						justify={Justify.center}
-						key={this._nameKeys.at(idx)}
+						key={this.keys.at(`name-${idx}`)}
 						onClick={this.buttonSelector(name, uri)}
 						text={name}
 					/>
@@ -203,7 +190,7 @@ export class Breadcrumbs extends BaseComponent<
 					<ChevronIconView
 						className='ui-breadcrumbs-chevron'
 						iconName={this.props.chevron}
-						key={this._iconKeys.at(idx)}
+						key={this.keys.at(`icon-${idx}`)}
 						ripple={false}
 					/>
 				);

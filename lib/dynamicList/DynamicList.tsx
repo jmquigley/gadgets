@@ -280,7 +280,7 @@ export class DynamicList extends BaseComponent<
 	private _fillerIdx: number = 0;
 	private _footer: any = null;
 	private _footerID: string;
-	private _keys: string[] = [];
+	private _keyList: string[] = [];
 	private _listItems: any = {};
 	private _pager: any = null;
 	private _pagerID: string;
@@ -325,12 +325,12 @@ export class DynamicList extends BaseComponent<
 			listItems.push(this._emptyListItem);
 		}
 
-		for (const key of this._keys) {
+		for (const key of this._keyList) {
 			listItems.push(this._listItems[key]);
 		}
 
 		// Adds filler for the last items when it is smaller than the page size
-		for (let i = 0; i < this.state.pageSize - this._keys.length; i++) {
+		for (let i = 0; i < this.state.pageSize - this._keyList.length; i++) {
 			listItems.push(
 				<ListItem
 					disabled
@@ -650,20 +650,20 @@ export class DynamicList extends BaseComponent<
 		const end: number = start + nextState.pageSize;
 
 		if (nextState.search !== "") {
-			this._keys = Object.keys(this._listItems)
+			this._keyList = Object.keys(this._listItems)
 				.filter((val: string) => {
 					return val.indexOf(nextState.search) === -1 ? false : true;
 				})
 				.sort();
 		} else {
-			this._keys = Object.keys(this._listItems).sort();
+			this._keyList = Object.keys(this._listItems).sort();
 		}
 
 		if (nextState.sortOrder === SortOrder.descending) {
-			this._keys = this._keys.reverse();
+			this._keyList = this._keyList.reverse();
 		}
 
-		this._keys = this._keys.slice(start, end);
+		this._keyList = this._keyList.slice(start, end);
 
 		this._pager = (
 			<Pager

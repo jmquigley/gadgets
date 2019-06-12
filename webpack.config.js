@@ -10,8 +10,8 @@ const path = require("path");
 const webpack = require("webpack");
 const pkg = require("./package.json");
 
+const argv = require("yargs").boolean("disable-bundle-analyzer").argv;
 const mode = process.env.NODE_ENV || "development";
-
 const banner = new webpack.BannerPlugin({
 	banner:
 		"Gadgets v" +
@@ -170,8 +170,7 @@ module.exports = {
 					{
 						loader: "css-loader",
 						options: {
-							importLoaders: 1,
-							localIdentName: "[folder]_[local]-[hash:base64:5]"
+							importLoaders: 1
 						}
 					},
 					"postcss-loader"
@@ -231,38 +230,48 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [
-		banner,
-		constants,
-		new CircularDependencyPlugin({
-			exclude: /node_modules/,
-			failOnError: true
-		}),
-		new MiniCssExtractPlugin({filename: "styles.css"}),
-		new webpack.optimize.ModuleConcatenationPlugin(),
-		new CopyWebpackPlugin([
-			{
-				from: "node_modules/quill-markup/public/highlights/**/*.css",
-				to: "highlights",
-				flatten: true
-			},
-			{
-				from: "**/*.d.ts",
-				ignore: [
-					"bin/**/*",
-					"demo/**/*",
-					"dist/**/*",
-					"node_modules/**/*"
-				]
-			},
-			{
-				from: "index.d.ts",
-				to: "bundle.d.ts"
-			}
-		]),
-		new BundleAnalyzerPlugin({
-			analyzerMode: "static",
-			reportFilename: "bundle.report.html"
-		})
-	]
+	plugins: (function(argv) {
+		let plugins = [
+			banner,
+			constants,
+			new CircularDependencyPlugin({
+				exclude: /node_modules/,
+				failOnError: true
+			}),
+			new MiniCssExtractPlugin({filename: "styles.css"}),
+			new webpack.optimize.ModuleConcatenationPlugin(),
+			new CopyWebpackPlugin([
+				{
+					from:
+						"node_modules/quill-markup/public/highlights/**/*.css",
+					to: "highlights",
+					flatten: true
+				},
+				{
+					from: "**/*.d.ts",
+					ignore: [
+						"bin/**/*",
+						"demo/**/*",
+						"dist/**/*",
+						"node_modules/**/*"
+					]
+				},
+				{
+					from: "index.d.ts",
+					to: "bundle.d.ts"
+				}
+			])
+		];
+
+		if (!argv.disableBundleAnalyzer) {
+			plugins.push(
+				new BundleAnalyzerPlugin({
+					analyzerMode: "static",
+					reportFilename: "bundle.report.html"
+				})
+			);
+		}
+
+		return plugins;
+	})(argv)
 };

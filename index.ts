@@ -70,6 +70,7 @@ import {getDefaultPagerProps, Pager} from "./lib/pager";
 import {getDefaultPreviewProps, Preview, PreviewMode} from "./lib/preview";
 import {
 	BaseComponent,
+	BaseOptions,
 	BaseProps,
 	BaseState,
 	BaseThemeProps,
@@ -90,6 +91,7 @@ import {
 	KeyMap,
 	Location,
 	parseKeyCombo,
+	RenderOptions,
 	setTheme,
 	Sizes,
 	Sizing,
@@ -139,7 +141,8 @@ import {
 	TreeItem,
 	Treeview,
 	TreeviewData,
-	TreeviewProps
+	TreeviewProps,
+	TreeviewSelectedId
 } from "./lib/treeview";
 import {getDefaultTriangleProps, Triangle} from "./lib/triangle";
 
@@ -151,6 +154,7 @@ export {
 	AccordionItem,
 	Badge,
 	BaseComponent,
+	BaseOptions,
 	BaseProps,
 	BaseState,
 	BaseThemeProps,
@@ -255,6 +259,7 @@ export {
 	Pager,
 	Preview,
 	PreviewMode,
+	RenderOptions,
 	setTheme,
 	Sizes,
 	Sizing,
@@ -282,6 +287,7 @@ export {
 	Treeview,
 	TreeviewData,
 	TreeviewProps,
+	TreeviewSelectedId,
 	Triangle,
 	validateEmail,
 	validateMaxLength,

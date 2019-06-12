@@ -53,7 +53,6 @@
 import * as React from "react";
 import styled from "styled-components";
 import {BinaryTree} from "util.ds";
-import {Keys} from "util.keys";
 import {
 	BaseComponent,
 	BaseProps,
@@ -121,7 +120,6 @@ const ToolbarElementView: any = styled.div`
 export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 	public static readonly defaultProps: ToolbarProps = getDefaultToolbarProps();
 
-	private _keys: Keys;
 	private static readonly _whitelist = new BinaryTree([
 		"Button",
 		"ButtonCircle",
@@ -141,7 +139,6 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 
 	constructor(props: ToolbarProps) {
 		super("ui-toolbar", Toolbar, props, getDefaultToolbarState());
-		this._keys = new Keys({testing: this.props.testing});
 	}
 
 	public render() {
@@ -220,7 +217,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 
 					components.push(
 						<ToolbarElementView
-							key={this._keys.at(idx)}
+							key={this.keys.at(idx)}
 							style={style}
 						>
 							{newChild}

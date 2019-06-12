@@ -11,7 +11,8 @@ import {
 	Option,
 	TreeItem,
 	Treeview,
-	TreeviewData
+	TreeviewData,
+	TreeviewSelectedId
 } from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
 
@@ -22,6 +23,7 @@ interface DemoData extends TreeviewData {
 export interface DemoTreeviewState {
 	menuPosition: boolean;
 	noscroll: boolean;
+	selectedId: TreeviewSelectedId;
 	selectNew: boolean;
 	treeData: DemoData[];
 }
@@ -41,6 +43,7 @@ export default class DemoTreeview extends React.Component<
 		this.state = {
 			menuPosition: false,
 			noscroll: false,
+			selectedId: null,
 			selectNew: false,
 			treeData: [
 				{
@@ -119,6 +122,7 @@ export default class DemoTreeview extends React.Component<
 	@autobind
 	private handleSelect(node: TreeItem) {
 		debug("selecting node %o: %O", node.title, node);
+		this.setState({selectedId: node.id});
 	}
 
 	@autobind
@@ -185,6 +189,7 @@ export default class DemoTreeview extends React.Component<
 					onSearch={this.handleSearch}
 					onSelection={this.handleSelect}
 					onUpdate={this.handleUpdate}
+					selectedId={this.state.selectedId}
 					selectNew={this.state.selectNew}
 					sizing={this.props["sizing"]}
 					treeData={this.state.treeData}

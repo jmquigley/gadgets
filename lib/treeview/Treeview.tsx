@@ -125,6 +125,9 @@
  * - `noscroll=false {boolean}` - turns off the scroll bars when the width/height
  * of all nodes expands past the right or bottom edge of the display container.
  * - `nosearch=false {boolean}` - turns off the search toolbar for the widget
+ * - `selectedId=null {number|string}` - the id value of the node that should
+ * be selected.  Only use this if the parent component that will wrap this one
+ * needs to control what is selected in the component.
  * - `selectNew=true {boolean}` - When a new node is added it is selected by
  * default (true).  If this property is false, then the parent remains selected
  * when a child node is added.
@@ -143,7 +146,6 @@ import {HotKeys} from "react-hotkeys";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
 import styled from "styled-components";
 import {GeneralTree, GeneralTreeItem} from "util.ds";
-import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
 import {Container} from "../container";
@@ -167,6 +169,8 @@ import {
 import {TextField} from "../textField";
 import {TitleLayout} from "../title";
 import {Toolbar} from "../toolbar";
+
+export type TreeviewSelectedId = string | number;
 
 export interface TreeviewData {
 	title?: string;
@@ -203,6 +207,7 @@ export interface TreeviewProps extends BaseProps {
 		previous: TreeItem,
 		treeData: TreeItem[]
 	) => void;
+	selectedId?: TreeviewSelectedId;
 	selectNew: boolean;
 	treeData: TreeItem[];
 	usehidden?: boolean;
@@ -244,7 +249,7 @@ export interface TreeviewState extends BaseState {
 	search?: string;
 	searchFocusIndex?: number;
 	searchFoundCount?: number;
-	selectedId?: string | number;
+	selectedId?: TreeviewSelectedId;
 }
 
 export function getDefaultTreeviewState(): TreeviewState {
@@ -356,6 +361,8 @@ const TreeviewWrapper: any = styled(Container)`
 `;
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
+	public static defaultProps: TreeviewProps = getDefaultTreeviewProps();
+
 	private _rowHeights = {
 		[Sizing.xxsmall]: 45,
 		[Sizing.xsmall]: 45,
@@ -365,16 +372,16 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		[Sizing.xlarge]: 80,
 		[Sizing.xxlarge]: 90
 	};
-
-	public static defaultProps: TreeviewProps = getDefaultTreeviewProps();
-	public state: TreeviewState = getDefaultTreeviewState();
-	private _keys: Keys;
 	private _td: GeneralTree<TreeItem>;
+	private _toolbar: any;
 
 	constructor(props: TreeviewProps) {
-		super("ui-treeview", Treeview, props);
+		super("ui-treeview", Treeview, props, {
+			...getDefaultTreeviewState(),
+			selectedId: "selectedId" in props ? props.selectedId : null
+		});
 
-		this._keys = new Keys({testing: this.props.testing});
+		this._toolbar = this.buildToolbar();
 
 		this.buildKeyMap({
 			kbAdd: this.handleAdd,
@@ -390,25 +397,82 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			testing: this.props.testing
 		});
 
-		let selectedId: string | number = null;
-		if (!this._td.empty) {
-			selectedId = this._td.first.id;
-		}
-
-		this.state = {
-			...getDefaultTreeviewState(),
-			selectedId
-		};
-
 		this.props.onInit([...this._td.treeData]);
-
-		if (selectedId) {
-			this.props.onSelection(this._td.first);
-		}
 	}
 
 	get rowHeight() {
 		return this._rowHeights[this.props.sizing];
+	}
+
+	private buildToolbar() {
+		const buttonStyles = {
+			backgroundColor: this.theme.backgroundColor,
+			borderColor: this.theme.buttonColor,
+			color: this.theme.buttonColor
+		};
+		const {searchFocusIndex, searchFoundCount} = this.state;
+		let toolbar: any = null;
+
+		if (!this.props.nosearch) {
+			toolbar = (
+				<StyledToolbar
+					className='ui-treeview-toolbar'
+					direction={this.props.direction}
+					sizing={this.props.sizing}
+				>
+					<Button
+						iconName='plus'
+						notooltip={this.props.notooltip}
+						onClick={this.handleAdd}
+						style={buttonStyles}
+					/>
+					<Divider />
+					<Button
+						iconName='angle-double-down'
+						notooltip={this.props.notooltip}
+						onClick={this.handleNodeExpand}
+						style={buttonStyles}
+					/>
+					<Button
+						iconName='angle-double-up'
+						notooltip={this.props.notooltip}
+						onClick={this.handleNodeCollapse}
+						style={buttonStyles}
+					/>
+					<Divider />
+					<SearchTextField
+						obj='TextField'
+						onChange={this.handleSearch}
+						onClear={this.clearSearch}
+						placeholder='search'
+						style={buttonStyles}
+						useclear
+						value={this.state.search}
+					/>
+					<Divider />
+					<Button
+						iconName='caret-left'
+						notooltip={this.props.notooltip}
+						onClick={this.handlePreviousMatch}
+						style={buttonStyles}
+					/>
+					<Button
+						iconName='caret-right'
+						notooltip={this.props.notooltip}
+						onClick={this.handleNextMatch}
+						style={buttonStyles}
+					/>
+					<Divider />
+					<Label
+						text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0}
+					/>
+					<Label text=' / ' />
+					<Label text={searchFoundCount} />
+				</StyledToolbar>
+			);
+		}
+
+		return toolbar;
 	}
 
 	@autobind
@@ -425,41 +489,40 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 	private customNodeProperties(ext: ExtendedNodeData) {
 		const treeIndex: number = ext.treeIndex;
 		const node: TreeItem = ext.node as TreeItem;
+		const self = this;
+
+		function handleCustomClick(clickedNode: TreeItem) {
+			return () => {
+				self.debug("handleCustomClick -> %O", clickedNode);
+				self.clearSearch();
+				self.handleSelection(clickedNode);
+			};
+		}
+
+		function handleCustomDelete(deletedNode: TreeItem) {
+			return () => {
+				self.handleDelete(deletedNode);
+			};
+		}
 
 		// overrides the string title to use Item in its place.  This allows for
 		// the + add a new node under this one or to remove the current node
-		return {
+		const newNode = {
 			title: (
 				<StyledItem
 					hiddenRightButton={this.props.usehidden}
-					id={this._keys.at(treeIndex)}
-					key={this._keys.at(treeIndex)}
+					id={this.keys.at(treeIndex)}
+					key={this.keys.at(treeIndex)}
 					layout={TitleLayout.none}
 					noripple
-					onClick={() => {
-						const previousSelectedId: string | number = this.state
-							.selectedId;
-						this.clearSearch();
-						this.setState(
-							{
-								selectedId: node.id
-							},
-							() => {
-								if (
-									previousSelectedId !== this.state.selectedId
-								) {
-									this.handleSelection(node);
-								}
-							}
-						);
-					}}
+					onClick={handleCustomClick(node)}
 					onUpdate={(_previous: string, title: string) => {
 						this.handleNodeUpdate(title, node);
 					}}
 					rightButton={
 						<StyledButton
 							iconName='times'
-							onClick={() => this.handleDelete(node)}
+							onClick={handleCustomDelete(node)}
 						/>
 					}
 					selected={node.id === this.state.selectedId}
@@ -469,6 +532,10 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 			),
 			className: node.id === this.state.selectedId ? "ui-selected" : ""
 		};
+
+		this.debug("customNodeProperties -> %O, node: %O", newNode, node);
+
+		return newNode;
 	}
 
 	@autobind
@@ -674,84 +741,32 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		}
 	}
 
-	public componentDidUpdate() {
+	public componentDidUpdate(
+		prevProps: TreeviewProps,
+		prevState: TreeviewState
+	) {
+		this.debug(
+			"componentDidUpdate -> prevProps: %O, prevState: %O",
+			prevProps,
+			prevState
+		);
+
 		this._td.treeData = this.props.treeData;
 
 		if (this._td.treeData.length > 0 && !this.state.selectedId) {
 			this.handleSelection(this._td.first);
 		}
+
+		if (
+			prevProps.nosearch !== this.props.nosearch ||
+			prevProps.direction !== this.props.direction
+		) {
+			this._toolbar = this.buildToolbar();
+		}
 	}
 
 	public render() {
 		super.render();
-
-		const {searchFocusIndex, searchFoundCount} = this.state;
-
-		const buttonStyles = {
-			backgroundColor: this.theme.backgroundColor,
-			borderColor: this.theme.buttonColor,
-			color: this.theme.buttonColor
-		};
-
-		let toolbar: any = null;
-		if (!this.props.nosearch) {
-			toolbar = (
-				<StyledToolbar
-					className='ui-treeview-toolbar'
-					direction={this.props.direction}
-					sizing={this.props.sizing}
-				>
-					<Button
-						iconName='plus'
-						notooltip={this.props.notooltip}
-						onClick={this.handleAdd}
-						style={buttonStyles}
-					/>
-					<Divider />
-					<Button
-						iconName='angle-double-down'
-						notooltip={this.props.notooltip}
-						onClick={this.handleNodeExpand}
-						style={buttonStyles}
-					/>
-					<Button
-						iconName='angle-double-up'
-						notooltip={this.props.notooltip}
-						onClick={this.handleNodeCollapse}
-						style={buttonStyles}
-					/>
-					<Divider />
-					<SearchTextField
-						obj='TextField'
-						onChange={this.handleSearch}
-						onClear={this.clearSearch}
-						placeholder='search'
-						style={buttonStyles}
-						useclear
-						value={this.state.search}
-					/>
-					<Divider />
-					<Button
-						iconName='caret-left'
-						notooltip={this.props.notooltip}
-						onClick={this.handlePreviousMatch}
-						style={buttonStyles}
-					/>
-					<Button
-						iconName='caret-right'
-						notooltip={this.props.notooltip}
-						onClick={this.handleNextMatch}
-						style={buttonStyles}
-					/>
-					<Divider />
-					<Label
-						text={searchFoundCount > 0 ? searchFocusIndex + 1 : 0}
-					/>
-					<Label text=' / ' />
-					<Label text={searchFoundCount} />
-				</StyledToolbar>
-			);
-		}
 
 		return (
 			<Wrapper {...this.props} name={this.name}>
@@ -761,7 +776,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					keyMap={this.keyMap}
 					style={this.state.style}
 				>
-					{this.props.direction === Direction.top ? toolbar : null}
+					{this.props.direction === Direction.top
+						? this._toolbar
+						: null}
 					<TreeviewWrapper {...this.props} className={this.className}>
 						<SortableTreeView
 							generateNodeProps={this.customNodeProperties}
@@ -775,7 +792,9 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 							treeData={this.props.treeData}
 						/>
 					</TreeviewWrapper>
-					{this.props.direction !== Direction.top ? toolbar : null}
+					{this.props.direction !== Direction.top
+						? this._toolbar
+						: null}
 				</TreeviewContainer>
 			</Wrapper>
 		);

@@ -1,4 +1,10 @@
-import {BaseComponent, baseZIndex, defaultSize} from "./base";
+import {
+	BaseComponent,
+	BaseOptions,
+	baseZIndex,
+	defaultSize,
+	RenderOptions
+} from "./base";
 
 import {Color, ColorScheme} from "./colors";
 
@@ -55,6 +61,7 @@ import {
 
 export {
 	BaseComponent,
+	BaseOptions,
 	BaseProps,
 	BaseState,
 	BaseThemeProps,
@@ -89,6 +96,7 @@ export {
 	locationStyle,
 	parseKeyCombo,
 	rectStyle,
+	RenderOptions,
 	setTheme,
 	Sizes,
 	Sizing,

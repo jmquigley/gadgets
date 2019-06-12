@@ -55,7 +55,6 @@ import * as React from "react";
 import {sprintf} from "sprintf-js";
 import styled from "styled-components";
 import {calc} from "util.calc";
-import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
@@ -149,16 +148,12 @@ function getChevronStyle(sizing: Sizing) {
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
 
-	private _keys: Keys;
-
 	constructor(props: DropdownProps) {
 		super("ui-dropdown", Dropdown, props, {
 			...getDefaultDropdownState(),
 			currentValue: props.initialValue,
 			style: getChevronStyle(props.sizing)
 		});
-
-		this._keys = new Keys({testing: this.props.testing});
 	}
 
 	@autobind
@@ -188,7 +183,7 @@ export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
 		super.render();
 
 		const options: any[] = this.props.items.map(({value, label}, idx) => (
-			<option key={this._keys.at(idx)} value={value}>
+			<option key={this.keys.at(idx)} value={value}>
 				{label}
 			</option>
 		));

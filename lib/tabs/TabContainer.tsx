@@ -85,7 +85,6 @@ import {OrderedMap} from "immutable";
 import * as React from "react";
 import styled, {css} from "styled-components";
 import {unitToNumber} from "util.calc";
-import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button";
 import {
@@ -262,7 +261,6 @@ export class TabContainer extends BaseComponent<
 > {
 	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
 
-	private _keys: Keys;
 	private _removedTabs: any = [];
 	private _tabContent: any = null;
 	private _tabMap: OrderedMap<string, Tabs> = OrderedMap();
@@ -270,8 +268,6 @@ export class TabContainer extends BaseComponent<
 
 	constructor(props: TabContainerProps) {
 		super("ui-tab-container", TabContainer, props);
-
-		this._keys = new Keys({testing: this.props.testing});
 
 		// Initialize all of the tabs given to the container.  This will assign
 		// the id/key and remove any child that is not a Tab.
@@ -343,7 +339,7 @@ export class TabContainer extends BaseComponent<
 				id = this._tabMap[title]["component"]["props"]["id"];
 				this._tabMap[title]["content"] = content;
 			} else {
-				id = this._keys.next();
+				id = this.keys.at(title);
 				this._tabMap[title] = {content};
 			}
 
@@ -355,7 +351,18 @@ export class TabContainer extends BaseComponent<
 
 			// This sets the currently displayed content within the container
 			if (selected && !props.disabled) {
-				this._tabContent = this._tabMap[title]["content"];
+				this._tabContent = (
+					<TabContentView
+						className='ui-tab-content'
+						key={this.keys.at(`content-${title}`)}
+						location={props.location}
+						noborder={props.noborder}
+					>
+						{this._tabMap[title]["content"]}
+					</TabContentView>
+				);
+
+				this.debug("Tab content: %O", this._tabContent);
 			}
 
 			// Clone each given Tab child component and add properties
@@ -372,7 +379,7 @@ export class TabContainer extends BaseComponent<
 				noclose: props.noclose,
 				orientation: props.location,
 				sizing: props.sizing,
-				selected: selected,
+				selected,
 				width: `${props.tabWidth}px`
 			});
 
@@ -532,16 +539,6 @@ export class TabContainer extends BaseComponent<
 			</TabBarView>
 		);
 
-		const tabContent = (
-			<TabContentView
-				className='ui-tab-content'
-				location={props.location}
-				noborder={props.noborder}
-			>
-				{this._tabContent}
-			</TabContentView>
-		);
-
 		// The number +2 below represents an extra tab component and the
 		// navigation buttons for sizing purposes.
 		const sizingFactor = this._tabs.length + 2;
@@ -562,7 +559,7 @@ export class TabContainer extends BaseComponent<
 					minWidth={`${minWidth}px`}
 				>
 					{tabBar}
-					{tabContent}
+					{this._tabContent}
 				</TabContainerView>
 			);
 		} else {
@@ -573,7 +570,7 @@ export class TabContainer extends BaseComponent<
 					minHeight={`${minHeight}px`}
 					minWidth={`${minWidth}px`}
 				>
-					{tabContent}
+					{this._tabContent}
 					{tabBar}
 				</TabContainerView>
 			);

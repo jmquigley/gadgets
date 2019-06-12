@@ -127,6 +127,9 @@ selected.
 - `noscroll=false {boolean}` - turns off the scroll bars when the width/height
 of all nodes expands past the right or bottom edge of the display container.
 - `nosearch=false {boolean}` - turns off the search toolbar for the widget
+- `selectedId=null {number|string}` - the id value of the node that should
+be selected.  Only use this if the parent component that will wrap this one
+needs to control what is selected in the component.
 - `selectNew=true {boolean}` - When a new node is added it is selected by
 default (true).  If this property is false, then the parent remains selected
 when a child node is added.

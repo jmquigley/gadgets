@@ -52,7 +52,6 @@ import autobind from "autobind-decorator";
 import {OrderedMap} from "immutable";
 import * as React from "react";
 import styled from "styled-components";
-import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
@@ -163,15 +162,11 @@ export class OptionGroup extends BaseComponent<
 > {
 	public static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
 
-	private _keys: Keys;
-
 	constructor(props: OptionGroupProps) {
 		super("ui-option-group", OptionGroup, props, {
 			...getDefaultOptionGroupState(),
 			options: OptionGroup.buildOptionState(props.options, props.default)
 		});
-
-		this._keys = new Keys({testing: this.props.testing});
 	}
 
 	private buildOptionList() {
@@ -183,8 +178,8 @@ export class OptionGroup extends BaseComponent<
 					controlled={false}
 					disabled={this.props.disabled}
 					initialToggle={toggle}
-					key={this._keys.at(text)}
-					id={this._keys.at(text)}
+					key={this.keys.at(text)}
+					id={this.keys.at(text)}
 					onSelection={this.handleSelection}
 					optionType={this.props.optionType}
 					selected={toggle}

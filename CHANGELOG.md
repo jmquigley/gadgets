@@ -11,6 +11,7 @@
 - Moved debugging output functions to base.  The create/render debug output is now handled in the base class so all child components do not need to implement them.
 - Added state initialization to the base class super for all child modules.  This ensures that the initial state information is available for the create debug output when a component is created.
 - Removed the `obj` prop and now use the constructor name.  The [Wrapper](https://github.com/jmquigley/gadgets/blob/master/docs/lib/shared/wrapper.md) was also updated to accept the compnent name.
+- Added `selectedId` to the [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md) component props.  This allows the parent component to set the selected value within the tree.  By default this id is handled as internal state.
 
 #### Bug Fixes:
 
@@ -18,6 +19,7 @@
 - Fixed how the TabContainer handles cloning child Tab components and their underlying content.
 - Fixed getDefaultBaseState to properly clone the default settings.
 - The Pager menu was not displaying and has been fixed.  Related to missing overflow css setting.
+- Fixed a problem in the webpack watcher config.  The bundler report pacakge is now disabled when running the watch option in webpack.  This plugin is not compatible with this option, so a command line option was added to turn off specific plugins.
 
 ---
 

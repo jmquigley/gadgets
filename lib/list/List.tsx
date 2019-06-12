@@ -58,7 +58,6 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
-import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
 import {
 	BaseComponent,
@@ -88,14 +87,12 @@ export function getDefaultListProps(): ListProps {
 }
 
 export interface ListState extends BaseState {
-	keys: Keys;
 	selectedItem: ListItem;
 }
 
 export function getDefaultListState(): ListState {
 	return {
 		...getDefaultBaseState(),
-		keys: null,
 		selectedItem: null
 	};
 }
@@ -113,9 +110,48 @@ export class List extends BaseComponent<ListProps, ListState> {
 
 	constructor(props: ListProps) {
 		super("ui-list", List, props, {
-			...getDefaultListState(),
-			keys: new Keys({testing: props.testing})
+			...getDefaultListState()
 		});
+	}
+
+	private buildChildList() {
+		let children = null;
+
+		if (this.props.children) {
+			children = React.Children.map(
+				this.props.children,
+				(child: any, idx: number) => {
+					const id = child["props"]["id"] || this.keys.at(idx);
+					const selected: boolean =
+						!this.props.noselect &&
+						id != null &&
+						this.state != null &&
+						"selectedItem" in this.state &&
+						this.state.selectedItem != null &&
+						this.state.selectedItem.id === id;
+
+					this.debug(
+						"child: %O, id: %o, selected: %o, props: %O",
+						child,
+						id,
+						selected,
+						this.props
+					);
+
+					return React.cloneElement(child, {
+						href: {
+							selectHandler: this.selectHandler
+						},
+						id,
+						key: id,
+						selected,
+						sizing: this.props.sizing
+					});
+				}
+			);
+		}
+
+		return children;
 	}
 
 	@autobind
@@ -126,6 +162,8 @@ export class List extends BaseComponent<ListProps, ListState> {
 		) {
 			item = null;
 		}
+
+		this.debug("selectHandler -> item: %O", item);
 
 		this.setState(
 			{
@@ -139,45 +177,11 @@ export class List extends BaseComponent<ListProps, ListState> {
 		);
 	}
 
-	public static getDerivedStateFromProps(props: ListProps, state: ListState) {
-		const newState: ListState = {...state};
-
-		if (props.children) {
-			newState.children = React.Children.map(
-				props.children,
-				(child: any, idx: number) =>
-					React.cloneElement(child, {
-						// only generate an id/key if one is not given with the props
-						id: child["props"]["id"] || newState.keys.at(idx),
-						key: child["key"] || newState.keys.at(idx),
-						sizing: props.sizing
-					})
-			);
-		}
-
-		return super.getDerivedStateFromProps(props, newState, true);
-	}
-
 	public render() {
 		super.render();
 
-		let children: any = null;
-		const selectedKey =
-			(this.state.selectedItem && this.state.selectedItem.props.id) ||
-			null;
-
-		if (this.state.children) {
-			children = React.Children.map(this.state.children, (child: any) => {
-				const selected = child["props"].id === selectedKey;
-				return React.cloneElement(child as any, {
-					href: {
-						selectHandler: this.selectHandler,
-						sizing: this.props.sizing
-					},
-					selected: !this.props.noselect && selected
-				});
-			});
-		}
+		const children: any = this.buildChildList();
+		this.debug("Children: %O", children);
 
 		return (
 			<Wrapper {...this.props} name={this.name}>

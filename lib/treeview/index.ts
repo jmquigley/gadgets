@@ -5,7 +5,8 @@ import Treeview, {
 	NodeData,
 	TreeItem,
 	TreeviewData,
-	TreeviewProps
+	TreeviewProps,
+	TreeviewSelectedId
 } from "./Treeview";
 
 export {
@@ -16,5 +17,6 @@ export {
 	TreeItem,
 	Treeview,
 	TreeviewData,
-	TreeviewProps
+	TreeviewProps,
+	TreeviewSelectedId
 };

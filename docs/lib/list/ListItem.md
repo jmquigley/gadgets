@@ -21,11 +21,9 @@ invoked to return the title string associated with this ListItem
 - `ui-listitem` - A global style placed on the `<li>` element.
 
 #### Properties
-- `href={selectHandler: nilEvent, sizing: Sizing.normal} {boolean}` - The
-parent List component passes this object to each child to share parent
-variables.  It contains the following fields:
+- `href={selectHandler: nilEvent}` - The parent List component passes this
+object to each child to share parent variables.  It contains the following
+fields:
   - `selectHandler {(item: ListItem) => void}` - invoked by the child when
     it is selected to notify the parent that it was selected.
-  - `sizing {Sizing}` - The sizing of the parent so that it can react to
-    change in size of the parent component.
 

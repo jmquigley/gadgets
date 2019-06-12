@@ -35,6 +35,7 @@ import {Children, cloneElement, PureComponent} from "react";
 import {DefaultTheme} from "styled-components";
 import {calc} from "util.calc";
 import {ClassNames} from "util.classnames";
+import {Keys} from "util.keys";
 import {getUUID} from "util.toolbox";
 import {isDebug} from "./helpers";
 import {KeyHandler, KeyMap} from "./keybinding";
@@ -47,7 +48,11 @@ export const baseZIndex: number = 9999;
 export const defaultSize: number = 16;
 export let sizes: Sizes = Sizes.instance(defaultSize);
 
-interface RenderOptions {
+export interface BaseOptions {
+	namespaceRoot?: string;
+}
+
+export interface RenderOptions {
 	noclassnameupdate?: boolean;
 }
 
@@ -56,27 +61,45 @@ export abstract class BaseComponent<
 	S
 > extends PureComponent<P, S> {
 	private _className: ClassNames = new ClassNames();
-	private _name: string;
 	private _debug: any = null;
 	private _debugCreate: any = null;
 	private _debugRender: any = null;
 	private _defaultClassName: string;
 	public static defaultStyles: any = {};
 	private _id: string;
+	protected _keys: Keys;
 	protected _keyHandler: KeyHandler = {};
 	protected _keyMap: KeyMap = {};
+	private _name: string;
+	protected _options: BaseOptions = {
+		namespaceRoot: "gadgets"
+	};
 	public state: S;
 
-	constructor(defaultClassName: string, cls: any, props: P, state: S = null) {
+	constructor(
+		defaultClassName: string,
+		cls: any,
+		props: P,
+		state: S = null,
+		options: BaseOptions = null
+	) {
 		super(props);
 		this.state = state || ({} as S);
 
+		this._options = Object.assign(this._options, options || {});
 		this._name = cls.name || "Unknown";
 		BaseComponent.defaultStyles = cls.defaultProps.style || {};
+		this._keys = new Keys({testing: props.testing});
 
-		this._debug = debug(`gadgets.${this._name || "base"}`);
-		this._debugCreate = debug(`gadgets.${this._name || "base"}:create`);
-		this._debugRender = debug(`gadgets.${this._name || "base"}:render`);
+		this._debug = debug(
+			`${this._options.namespaceRoot}.${this._name || "base"}`
+		);
+		this._debugCreate = debug(
+			`${this._options.namespaceRoot}.${this._name || "base"}:create`
+		);
+		this._debugRender = debug(
+			`${this._options.namespaceRoot}.${this._name || "base"}:render`
+		);
 
 		this._defaultClassName = defaultClassName;
 		this._className = new ClassNames(defaultClassName);
@@ -121,6 +144,10 @@ export abstract class BaseComponent<
 
 	get keyMap(): KeyMap {
 		return this._keyMap;
+	}
+
+	get keys(): Keys {
+		return this._keys;
 	}
 
 	get name(): string {

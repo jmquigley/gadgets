@@ -38,7 +38,6 @@
 
 import * as React from "react";
 import styled from "styled-components";
-import {Keys} from "util.keys";
 import {
 	BaseComponent,
 	BaseProps,
@@ -78,11 +77,9 @@ const AccordionView: any = styled.ul`
 
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
 	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
-	private keys: Keys = null;
 
 	constructor(props: AccordionProps) {
 		super("ui-accordion", Accordion, props, getDefaultAccordionState());
-		this.keys = new Keys({testing: this.props.testing});
 	}
 
 	public render() {
