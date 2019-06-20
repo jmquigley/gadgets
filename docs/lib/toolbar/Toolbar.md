@@ -17,6 +17,11 @@ set of controls (from the Gadgets library)
 - Switch
 - TextField
 
+Note that if a component is wrapped in a styled component and placed in the
+toolbar it will NOT work.  The class name is lost when by the styled
+component is applied (and becomes display name).  The child components should
+not be wrapped.
+
 ## Screen:
 <img src="https://github.com/jmquigley/gadgets/blob/master/images/toolbar.png" width="60%" />
 

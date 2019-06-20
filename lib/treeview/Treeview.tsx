@@ -304,10 +304,6 @@ const SortableTreeView: any = styled(SortableTree)`
 }
 `;
 
-const SearchTextField: any = styled(TextField)`
-	width: 10rem;
-`;
-
 const StyledButton: any = styled(Button)``;
 
 const StyledItem: any = styled(Item)`
@@ -440,14 +436,14 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 						style={buttonStyles}
 					/>
 					<Divider />
-					<SearchTextField
-						obj='TextField'
+					<TextField
 						onChange={this.handleSearch}
 						onClear={this.clearSearch}
 						placeholder='search'
 						style={buttonStyles}
 						useclear
 						value={this.state.search}
+						width='10rem'
 					/>
 					<Divider />
 					<Button

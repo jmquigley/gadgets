@@ -20,6 +20,7 @@
 - Fixed getDefaultBaseState to properly clone the default settings.
 - The Pager menu was not displaying and has been fixed.  Related to missing overflow css setting.
 - Fixed a problem in the webpack watcher config.  The bundler report pacakge is now disabled when running the watch option in webpack.  This plugin is not compatible with this option, so a command line option was added to turn off specific plugins.
+- Fixed missing search textfield in Treeview component.
 
 ---
 

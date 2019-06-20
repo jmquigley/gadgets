@@ -1,9 +1,8 @@
-const {leader} = require("util.leader");
-
 const CircularDependencyPlugin = require("circular-dependency-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const {leader} = require("util.leader");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 	.BundleAnalyzerPlugin;
 const path = require("path");
