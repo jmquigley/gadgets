@@ -1,26 +1,7 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	getDefaultSwitchProps,
-	getDefaultSwitchState,
-	Switch,
-	SwitchType
-} from "./index";
-
-test("Test retrieval of the Switch props object", () => {
-	const props = getDefaultSwitchProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultSwitchState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Switch, {SwitchType} from "./Switch";
 
 test("Test creation of an inny type Switch", () => {
 	const ctl = shallow(

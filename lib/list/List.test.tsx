@@ -1,27 +1,9 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {waitPromise} from "util.wait";
-import {
-	getDefaultListProps,
-	getDefaultListState,
-	List,
-	ListItem
-} from "./index";
-
-test("Test retrieval of List props object", () => {
-	const props = getDefaultListProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultListState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import List from "./List";
+import ListItem from "./ListItem";
 
 test("Test the creation of a List control container", () => {
 	const ctl = shallow(

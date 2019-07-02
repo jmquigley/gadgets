@@ -1,21 +1,7 @@
-"use strict";
-
 import {shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultToastProps, getDefaultToastState, Toast} from "./index";
-
-test("Test retrieval of Toast props object", () => {
-	const props = getDefaultToastProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultToastState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Toast from "./Toast";
 
 test("Test creation of a Toast control", () => {
 	const ctl = shallow(<Toast className='test-class' />);

@@ -45,13 +45,7 @@ import * as React from "react";
 import styled, {css} from "styled-components";
 import {ClassNames} from "util.classnames";
 import {nilEvent} from "util.toolbox";
-import {
-	Button,
-	ButtonProps,
-	ButtonState,
-	getDefaultButtonProps,
-	getDefaultButtonState
-} from "../button";
+import {Button, ButtonProps, ButtonState} from "../button/Button";
 import {
 	BaseComponent,
 	baseZIndex,
@@ -61,8 +55,8 @@ import {
 	Sizing,
 	Wrapper
 } from "../shared";
-import {tooltip} from "../tooltip";
-import {Triangle} from "../triangle";
+import {tooltip} from "../tooltip/Tooltip";
+import {Triangle} from "../triangle/Triangle";
 
 export interface ButtonDialogProps extends ButtonProps {
 	dialogClasses?: string[];
@@ -71,30 +65,8 @@ export interface ButtonDialogProps extends ButtonProps {
 	triangleClasses?: string[];
 }
 
-export function getDefaultButtonDialogProps(): ButtonDialogProps {
-	return {
-		...getDefaultButtonProps(),
-		dialogClasses: [],
-		location: Location.bottom,
-		notriangle: false,
-		onClick: nilEvent,
-		style: {
-			backgroundColor: "inherit",
-			color: "inherit"
-		},
-		triangleClasses: []
-	};
-}
-
 export interface ButtonDialogState extends ButtonState {
 	visible: boolean;
-}
-
-export function getDefaultButtonDialogState(): ButtonDialogState {
-	return {
-		...getDefaultButtonState(),
-		visible: false
-	};
 }
 
 const ButtonDialogContent: any = styled.div`
@@ -166,18 +138,24 @@ export class ButtonDialog extends BaseComponent<
 	ButtonDialogProps,
 	ButtonDialogState
 > {
-	public static readonly defaultProps: ButtonDialogProps = getDefaultButtonDialogProps();
+	public static readonly defaultProps: ButtonDialogProps = {
+		...Button.defaultProps,
+		dialogClasses: [],
+		location: Location.bottom,
+		notriangle: false,
+		onClick: nilEvent,
+		style: {
+			backgroundColor: "inherit",
+			color: "inherit"
+		},
+		triangleClasses: []
+	};
 
 	private _dialogClasses: ClassNames = new ClassNames("ui-dialog-popup");
 	private _triangleClasses: ClassNames = new ClassNames("ui-dialog-triangle");
 
 	constructor(props: ButtonDialogProps) {
-		super(
-			"ui-button-dialog",
-			ButtonDialog,
-			props,
-			getDefaultButtonDialogState()
-		);
+		super("ui-button-dialog", ButtonDialog, props, {visible: false});
 	}
 
 	@autobind

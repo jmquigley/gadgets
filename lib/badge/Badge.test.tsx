@@ -3,19 +3,7 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {Badge, getDefaultBadgeProps, getDefaultBadgeState} from "./index";
-
-test("Test retrieval of Badge props object", () => {
-	const props = getDefaultBadgeProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultBadgeState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import {Badge} from "./Badge";
 
 test("Test creation of a Badge control", () => {
 	const ctl = shallow(

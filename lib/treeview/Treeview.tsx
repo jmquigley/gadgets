@@ -147,28 +147,27 @@ import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
 import styled from "styled-components";
 import {GeneralTree, GeneralTreeItem} from "util.ds";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
-import {Container} from "../container";
-import {Divider} from "../divider";
-import {Item} from "../item";
-import {Label} from "../label";
+import {Button} from "../button/Button";
+import {Container} from "../container/Container";
+import {Divider} from "../divider/Divider";
+import {Item} from "../item/Item";
+import {Label} from "../label/Label";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	Direction,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
 } from "../shared";
-import {TextField} from "../textField";
-import {TitleLayout} from "../title";
-import {Toolbar} from "../toolbar";
+import {TextField} from "../textField/TextField";
+import {TitleLayout} from "../title/Title";
+import {Toolbar} from "../toolbar/Toolbar";
 
 export type TreeviewSelectedId = string | number;
 
@@ -213,54 +212,12 @@ export interface TreeviewProps extends BaseProps {
 	usehidden?: boolean;
 }
 
-export function getDefaultTreeviewProps(): TreeviewProps {
-	return {
-		...getDefaultBaseProps(),
-		addAsFirstChild: true,
-		defaultTitle: "New Title",
-		direction: Direction.top,
-		height: "15em",
-		isVirtualized: true,
-		kbAdd: "ctrl+alt+n",
-		kbCollapseAll: "ctrl+-",
-		kbDelete: "ctrl+alt+d",
-		kbExpandAll: "ctrl+=",
-		minHeight: "15em",
-		nodeWidth: "20em",
-		noscroll: false,
-		nosearch: false,
-		onAdd: nilEvent,
-		onChange: nilEvent,
-		onCollapse: nilEvent,
-		onDelete: nilEvent,
-		onExpand: nilEvent,
-		onInit: nilEvent,
-		onSearch: nilEvent,
-		onSelection: nilEvent,
-		onUpdate: nilEvent,
-		selectNew: true,
-		treeData: [],
-		usehidden: true
-	};
-}
-
 export interface TreeviewState extends BaseState {
 	matches?: NodeData[];
 	search?: string;
 	searchFocusIndex?: number;
 	searchFoundCount?: number;
 	selectedId?: TreeviewSelectedId;
-}
-
-export function getDefaultTreeviewState(): TreeviewState {
-	return {
-		...getDefaultBaseState(),
-		matches: [],
-		search: "",
-		searchFocusIndex: 0,
-		searchFoundCount: 0,
-		selectedId: null
-	};
 }
 
 const SortableTreeView: any = styled(SortableTree)`
@@ -357,7 +314,34 @@ const TreeviewWrapper: any = styled(Container)`
 `;
 
 export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
-	public static defaultProps: TreeviewProps = getDefaultTreeviewProps();
+	public static defaultProps: TreeviewProps = {
+		...defaultBaseProps,
+		addAsFirstChild: true,
+		defaultTitle: "New Title",
+		direction: Direction.top,
+		height: "15em",
+		isVirtualized: true,
+		kbAdd: "ctrl+alt+n",
+		kbCollapseAll: "ctrl+-",
+		kbDelete: "ctrl+alt+d",
+		kbExpandAll: "ctrl+=",
+		minHeight: "15em",
+		nodeWidth: "20em",
+		noscroll: false,
+		nosearch: false,
+		onAdd: nilEvent,
+		onChange: nilEvent,
+		onCollapse: nilEvent,
+		onDelete: nilEvent,
+		onExpand: nilEvent,
+		onInit: nilEvent,
+		onSearch: nilEvent,
+		onSelection: nilEvent,
+		onUpdate: nilEvent,
+		selectNew: true,
+		treeData: [],
+		usehidden: true
+	};
 
 	private _rowHeights = {
 		[Sizing.xxsmall]: 45,
@@ -373,7 +357,10 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	constructor(props: TreeviewProps) {
 		super("ui-treeview", Treeview, props, {
-			...getDefaultTreeviewState(),
+			matches: [],
+			search: "",
+			searchFocusIndex: 0,
+			searchFoundCount: 0,
 			selectedId: "selectedId" in props ? props.selectedId : null
 		});
 
@@ -689,42 +676,37 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 
 	@autobind
 	private handleSearch(e: React.FormEvent<HTMLInputElement>) {
-		if (!this.props.nosearch) {
-			const value: string = (e.target as HTMLInputElement).value;
-			this.setState({
-				search: value
-			});
-		}
+		const value: string = (e.target as HTMLInputElement).value;
+		this.setState({
+			search: value
+		});
 	}
 
 	@autobind
 	private handleSearchFinish(matches: ExtendedNodeData[]) {
-		if (!this.props.nosearch) {
-			const searchFocusIndex: number =
-				matches.length > 0
-					? this.state.searchFocusIndex % matches.length
-					: 0;
+		const searchFocusIndex: number =
+			matches.length > 0
+				? this.state.searchFocusIndex % matches.length
+				: 0;
 
-			if (matches.length > 0) {
-				this.setState(
-					{
-						selectedId: matches[searchFocusIndex].node.id,
-						matches,
-						searchFoundCount: matches.length,
-						searchFocusIndex
-					},
-					() => {
-						if (matches.length > 0) {
-							this.props.onSearch(this.state.matches[
-								searchFocusIndex
-							].node as TreeItem);
-							this.props.onSelection(this.state.matches[
-								searchFocusIndex
-							].node as TreeItem);
-						}
+		if (matches.length > 0) {
+			this.setState(
+				{
+					selectedId: matches[searchFocusIndex].node.id,
+					matches,
+					searchFoundCount: matches.length,
+					searchFocusIndex
+				},
+				() => {
+					if (matches.length > 0) {
+						this.props.onSearch(this.state.matches[searchFocusIndex]
+							.node as TreeItem);
+						this.props.onSelection(this.state.matches[
+							searchFocusIndex
+						].node as TreeItem);
 					}
-				);
-			}
+				}
+			);
 		}
 	}
 
@@ -748,16 +730,10 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		);
 
 		this._td.treeData = this.props.treeData;
+		this._toolbar = this.buildToolbar();
 
 		if (this._td.treeData.length > 0 && !this.state.selectedId) {
 			this.handleSelection(this._td.first);
-		}
-
-		if (
-			prevProps.nosearch !== this.props.nosearch ||
-			prevProps.direction !== this.props.direction
-		) {
-			this._toolbar = this.buildToolbar();
 		}
 	}
 

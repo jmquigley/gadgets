@@ -57,18 +57,18 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {ButtonToggle} from "../buttonToggle";
+import {ButtonToggle} from "../buttonToggle/ButtonToggle";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
+import {Title, TitleLayout} from "../title/Title";
 
 export enum OptionType {
 	square,
@@ -82,7 +82,6 @@ export enum OptionType {
 	dot,
 	star
 }
-import {Title, TitleLayout} from "../title";
 
 export interface OptionProps extends BaseProps {
 	initialToggle?: boolean;
@@ -93,29 +92,8 @@ export interface OptionProps extends BaseProps {
 	text?: string;
 }
 
-export function getDefaultOptionProps(): OptionProps {
-	return {
-		...getDefaultBaseProps(),
-		initialToggle: false,
-		onClick: nilEvent,
-		onSelection: nilEvent,
-		optionType: OptionType.square,
-		ripple: false,
-		selected: false,
-		style: {
-			backgroundColor: "inherit",
-			color: "inherit"
-		},
-		text: ""
-	};
-}
-
 export interface OptionState extends BaseState {
 	selected?: boolean;
-}
-
-export function getDefaultOptionState(): OptionState {
-	return {...getDefaultBaseState(), selected: false};
 }
 
 const OptionView: any = styled.div`
@@ -143,7 +121,20 @@ const StyledButtonToggle: any = styled(ButtonToggle)`
 `;
 
 export class Option extends BaseComponent<OptionProps, OptionState> {
-	public static readonly defaultProps: OptionProps = getDefaultOptionProps();
+	public static readonly defaultProps: OptionProps = {
+		...defaultBaseProps,
+		initialToggle: false,
+		onClick: nilEvent,
+		onSelection: nilEvent,
+		optionType: OptionType.square,
+		ripple: false,
+		selected: false,
+		style: {
+			backgroundColor: "inherit",
+			color: "inherit"
+		},
+		text: ""
+	};
 
 	private readonly icons: any = {
 		[OptionType.square]: {
@@ -190,7 +181,6 @@ export class Option extends BaseComponent<OptionProps, OptionState> {
 
 	constructor(props: OptionProps) {
 		super("ui-option", Option, props, {
-			...getDefaultOptionState(),
 			selected: props.initialToggle
 		});
 	}

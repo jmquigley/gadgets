@@ -88,25 +88,26 @@ import * as React from "react";
 import styled, {css} from "styled-components";
 import {Keys} from "util.keys";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
-import {ButtonDialog} from "../buttonDialog";
-import {ButtonText} from "../buttonText";
-import {Divider} from "../divider";
-import {Icon} from "../icon";
-import {List, ListDivider, ListItem} from "../list";
+import {Button} from "../button/Button";
+import {ButtonDialog} from "../buttonDialog/ButtonDialog";
+import {ButtonText} from "../buttonText/ButtonText";
+import {Divider} from "../divider/Divider";
+import {Icon} from "../icon/Icon";
+import {List} from "../list/List";
+import {ListDivider} from "../list/ListDivider";
+import {ListItem} from "../list/ListItem";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Justify,
 	Location,
 	Sizing,
 	SortOrder,
 	Wrapper
 } from "../shared";
-import {TextField} from "../textField";
+import {TextField} from "../textField/TextField";
 
 export const defaultPageSize: number = 25;
 export const defaultPageSizes: number[] = [25, 50, 100];
@@ -123,35 +124,10 @@ export interface PagerProps extends BaseProps {
 	useinput?: boolean;
 }
 
-export function getDefaultPagerProps(): PagerProps {
-	return {
-		...getDefaultBaseProps(),
-		initialPage: 1,
-		initialPageSize: defaultPageSize,
-		onChangePageSize: nilEvent,
-		onSelection: nilEvent,
-		onSort: null,
-		pagesToDisplay: 3,
-		pageSizes: defaultPageSizes.slice(),
-		sizing: Sizing.normal,
-		totalItems: 0,
-		useinput: false
-	};
-}
-
 export interface PagerState extends BaseState {
 	currentPage: number;
 	currentSort: SortOrder;
 	pageSize: number;
-}
-
-export function getDefaultPagerState(): PagerState {
-	return {
-		...getDefaultBaseState(),
-		currentPage: 0,
-		currentSort: SortOrder.ascending,
-		pageSize: 0
-	};
 }
 
 const ButtonCSS: any = css`
@@ -205,7 +181,19 @@ const StyledTextField: any = styled(TextField)`
 `;
 
 export class Pager extends BaseComponent<PagerProps, PagerState> {
-	public static readonly defaultProps: PagerProps = getDefaultPagerProps();
+	public static readonly defaultProps: PagerProps = {
+		...defaultBaseProps,
+		initialPage: 1,
+		initialPageSize: defaultPageSize,
+		onChangePageSize: nilEvent,
+		onSelection: nilEvent,
+		onSort: null,
+		pagesToDisplay: 3,
+		pageSizes: defaultPageSizes.slice(),
+		sizing: Sizing.normal,
+		totalItems: 0,
+		useinput: false
+	};
 
 	private _lastPage: number = 0;
 	private _buttonsDisplay: any = [];
@@ -231,7 +219,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.computeInitialPages(this.props.initialPageSize);
 
 		this.state = {
-			...getDefaultPagerState(),
+			...this.state,
 			currentPage: this.initialPage,
 			currentSort: SortOrder.ascending,
 			pageSize: this.initialPageSize

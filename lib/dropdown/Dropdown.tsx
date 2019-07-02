@@ -60,16 +60,15 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	getTheme,
 	invisible,
 	Sizing,
 	Wrapper
 } from "../shared";
-import {tooltip} from "../tooltip";
+import {tooltip} from "../tooltip/Tooltip";
 
 export interface DropdownOption {
 	value: string;
@@ -84,21 +83,8 @@ export interface DropdownProps extends BaseProps {
 	onSelection?: (val: DropdownDataType) => void;
 }
 
-export function getDefaultDropdownProps(): DropdownProps {
-	return {
-		...getDefaultBaseProps(),
-		initialValue: "",
-		items: [],
-		onSelection: nilEvent
-	};
-}
-
 export interface DropdownState extends BaseState {
 	currentValue: string;
-}
-
-export function getDefaultDropdownState(): DropdownState {
-	return {...getDefaultBaseState(), currentValue: ""};
 }
 
 const DropdownContainerView: any = styled.div`
@@ -146,11 +132,15 @@ function getChevronStyle(sizing: Sizing) {
 }
 
 export class Dropdown extends BaseComponent<DropdownProps, DropdownState> {
-	public static readonly defaultProps: DropdownProps = getDefaultDropdownProps();
+	public static readonly defaultProps: DropdownProps = {
+		...defaultBaseProps,
+		initialValue: "",
+		items: [],
+		onSelection: nilEvent
+	};
 
 	constructor(props: DropdownProps) {
 		super("ui-dropdown", Dropdown, props, {
-			...getDefaultDropdownState(),
 			currentValue: props.initialValue,
 			style: getChevronStyle(props.sizing)
 		});

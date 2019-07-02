@@ -48,10 +48,9 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
@@ -64,27 +63,8 @@ export interface TextAreaProps extends BaseProps {
 	value?: string;
 }
 
-export function getDefaultTextAreaProps(): TextAreaProps {
-	return {
-		...getDefaultBaseProps(),
-		onChange: nilEvent,
-		onUpdate: nilEvent,
-		padding: "4px",
-		rows: 5,
-		updateDelay: 150,
-		value: null
-	};
-}
-
 export interface TextAreaState extends BaseState {
 	value: string;
-}
-
-export function getDefaultTextAreaState(): TextAreaState {
-	return {
-		...getDefaultBaseState(),
-		value: ""
-	};
 }
 
 const TextAreaView: any = styled.div`
@@ -109,13 +89,21 @@ const TextAreaView: any = styled.div`
 `;
 
 export class TextArea extends BaseComponent<TextAreaProps, TextAreaState> {
-	public static readonly defaultProps: TextAreaProps = getDefaultTextAreaProps();
+	public static readonly defaultProps: TextAreaProps = {
+		...defaultBaseProps,
+		onChange: nilEvent,
+		onUpdate: nilEvent,
+		padding: "4px",
+		rows: 5,
+		updateDelay: 150,
+		value: null
+	};
+
 	private _container: HTMLDivElement = null;
 	private _debounceUpdate: any = null;
 
 	constructor(props: TextAreaProps) {
 		super("ui-textarea", TextArea, props, {
-			...getDefaultTextAreaState(),
 			value: props.value
 		});
 

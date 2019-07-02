@@ -46,9 +46,8 @@ import {
 	BaseProps,
 	BaseState,
 	boxStyle,
+	defaultBaseProps,
 	Direction,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	Wrapper
 } from "../shared";
 
@@ -56,24 +55,7 @@ export interface TriangleProps extends BaseProps {
 	nobase?: boolean;
 }
 
-export function getDefaultTriangleProps(): TriangleProps {
-	return {
-		...getDefaultBaseProps(),
-		direction: Direction.up,
-		nobase: false,
-		style: {
-			fill: "black",
-			stroke: "black",
-			stokeWidth: "2px"
-		}
-	};
-}
-
 export type TriangleState = BaseState;
-
-export function getDefaultTriangleState(): TriangleState {
-	return {...getDefaultBaseState()};
-}
 
 const SVGView: any = styled.svg`
 	transform: ${(props: TriangleProps) => {
@@ -94,10 +76,19 @@ const SVGView: any = styled.svg`
 `;
 
 export class Triangle extends BaseComponent<TriangleProps, TriangleState> {
-	public static readonly defaultProps: TriangleProps = getDefaultTriangleProps();
+	public static readonly defaultProps: TriangleProps = {
+		...defaultBaseProps,
+		direction: Direction.up,
+		nobase: false,
+		style: {
+			fill: "black",
+			stroke: "black",
+			stokeWidth: "2px"
+		}
+	};
 
 	constructor(props: TriangleProps) {
-		super("ui-triangle", Triangle, props, getDefaultTriangleState());
+		super("ui-triangle", Triangle, props);
 	}
 
 	public render() {

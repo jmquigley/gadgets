@@ -11,7 +11,7 @@ exports[`Creation of the Divider control (inherit) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -76,7 +76,7 @@ exports[`Creation of the Divider control (inherit) 1`] = `
     style={Object {}}
     width="4px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -92,7 +92,7 @@ exports[`Creation of the Divider control (large) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -157,7 +157,7 @@ exports[`Creation of the Divider control (large) 1`] = `
     style={Object {}}
     width="6px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -173,7 +173,7 @@ exports[`Creation of the Divider control (medium) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -238,7 +238,7 @@ exports[`Creation of the Divider control (medium) 1`] = `
     style={Object {}}
     width="4px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -254,7 +254,7 @@ exports[`Creation of the Divider control (normal) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -319,7 +319,7 @@ exports[`Creation of the Divider control (normal) 1`] = `
     style={Object {}}
     width="4px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -335,7 +335,7 @@ exports[`Creation of the Divider control (small) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -400,7 +400,7 @@ exports[`Creation of the Divider control (small) 1`] = `
     style={Object {}}
     width="3px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -416,7 +416,7 @@ exports[`Creation of the Divider control (xlarge) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -481,7 +481,7 @@ exports[`Creation of the Divider control (xlarge) 1`] = `
     style={Object {}}
     width="8px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -497,7 +497,7 @@ exports[`Creation of the Divider control (xsmall) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -562,7 +562,7 @@ exports[`Creation of the Divider control (xsmall) 1`] = `
     style={Object {}}
     width="2px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -578,7 +578,7 @@ exports[`Creation of the Divider control (xxlarge) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -643,7 +643,7 @@ exports[`Creation of the Divider control (xxlarge) 1`] = `
     style={Object {}}
     width="12px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
 `;
@@ -659,7 +659,7 @@ exports[`Creation of the Divider control (xxsmall) 1`] = `
   controlled={true}
   direction="right"
   disabled={false}
-  dividerType=" "
+  dividerType="|"
   err={null}
   errorMessage={null}
   focus={false}
@@ -724,84 +724,7 @@ exports[`Creation of the Divider control (xxsmall) 1`] = `
     style={Object {}}
     width="1.5px"
   >
-     
+    |
   </Divider__DividerView>
 </Wrapper>
-`;
-
-exports[`Test retrieval of Divider props object 1`] = `
-Object {
-  "backgroundColor": null,
-  "border": null,
-  "borderColor": null,
-  "bottom": null,
-  "children": null,
-  "className": null,
-  "color": null,
-  "controlled": true,
-  "direction": "right",
-  "disabled": false,
-  "dividerType": " ",
-  "err": null,
-  "errorMessage": null,
-  "focus": false,
-  "height": null,
-  "hidden": false,
-  "id": null,
-  "left": null,
-  "location": "none",
-  "maxHeight": null,
-  "maxWidth": null,
-  "minHeight": null,
-  "minWidth": null,
-  "noborder": false,
-  "noedit": false,
-  "nohover": false,
-  "nopropagation": false,
-  "notheme": false,
-  "notooltip": false,
-  "padding": null,
-  "ripple": false,
-  "selected": false,
-  "sizing": "normal",
-  "style": Object {},
-  "testing": true,
-  "theme": Object {
-    "backgroundColor": "#ffffff",
-    "borderColor": "#c0c0c0",
-    "buttonColor": "#666666",
-    "chevronColor": "#cccccc",
-    "color": "#000000",
-    "fontFamily": "OpenSans, Georgia, serif",
-    "headerBackgroundColor": "#004358",
-    "headerForegroundColor": "#ffffff",
-    "headerHoverColor": "#ffe11a",
-    "hoverColor": "#c0c0c0",
-    "inputBorderColor": "#c0c0c0",
-    "itemHoverColor": "#bedb39",
-    "outlineColor": "#51cbee",
-    "searchFocus": "#51cbee",
-    "searchMatch": "#fd7400",
-    "selectedBackgroundColor": "#1f8a70",
-    "selectedForegroundColor": "#ffe11a",
-    "titleBarBackgroundColor": "#004358",
-    "titleBarForegroundColor": "#ffe11a",
-    "tooltipBackgroundColor": "#708090",
-    "tooltipForegroundColor": "#ffffff",
-    "transitionDelay": "0.33s",
-  },
-  "tooltip": null,
-  "top": null,
-  "visible": true,
-  "width": null,
-  "xcss": null,
-}
-`;
-
-exports[`Test retrieval of Divider props object 2`] = `
-Object {
-  "children": null,
-  "sizing": "normal",
-  "style": Object {},
-}
 `;

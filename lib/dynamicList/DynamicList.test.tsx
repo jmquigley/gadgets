@@ -4,23 +4,7 @@ import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {waitPromise} from "util.wait";
-import {
-	DynamicList,
-	getDefaultDynamicListProps,
-	getDefaultDynamicListState
-} from "./index";
-
-test("Test retrieval of DynamicList props object", () => {
-	const props = getDefaultDynamicListProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultDynamicListState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import DynamicList from "./DynamicList";
 
 test("Test creation of a DynamicList control", () => {
 	const ctl = shallow(<DynamicList className='test-class' />);

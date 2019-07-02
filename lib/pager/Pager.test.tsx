@@ -6,25 +6,13 @@ import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {waitPromise} from "util.wait";
-import {getDefaultPagerProps, getDefaultPagerState, Pager} from "./index";
+import Pager from "./Pager";
 
 function validate(ctl: any) {
 	assert(ctl);
 	assert(ctl.prop("disabled") === false);
 	assert(ctl.prop("visible"));
 }
-
-test("Test retrieval of Pager props object", () => {
-	const props = getDefaultPagerProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultPagerState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
 
 test("Test creation of a Pager control", () => {
 	const ctl = shallow(<Pager className='test-class' />);

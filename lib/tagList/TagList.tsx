@@ -63,19 +63,18 @@ import * as React from "react";
 import styled from "styled-components";
 import {FontInfo, getFontInfo, getTextWidth} from "util.html";
 import {nilEvent} from "util.toolbox";
-import {Icon} from "../icon";
+import {Icon} from "../icon/Icon";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
-import {TextField} from "../textField";
+import {TextField} from "../textField/TextField";
 import {Tag} from "./Tag";
 
 export interface TagListProps extends BaseProps {
@@ -91,33 +90,9 @@ export interface TagListProps extends BaseProps {
 	useinput?: boolean;
 }
 
-export function getDefaultTagListProps(): TagListProps {
-	return {
-		...getDefaultBaseProps(),
-		nosort: false,
-		onBlur: nilEvent,
-		onChange: nilEvent,
-		onDelete: nilEvent,
-		onKeyDown: nilEvent,
-		onKeyPress: nilEvent,
-		onNew: nilEvent,
-		placeholder: "new",
-		tags: [],
-		useinput: false
-	};
-}
-
 export interface TagListState extends BaseState {
 	inputText: string;
 	tags?: List<string>;
-}
-
-export function getDefaultTagListState(): TagListState {
-	return {
-		...getDefaultBaseState(),
-		inputText: "",
-		tags: null
-	};
 }
 
 const StyledIcon: any = styled(Icon)`
@@ -150,11 +125,23 @@ const TagListView: any = styled.div`
 `;
 
 export class TagList extends BaseComponent<TagListProps, TagListState> {
-	public static readonly defaultProps: TagListProps = getDefaultTagListProps();
+	public static readonly defaultProps: TagListProps = {
+		...defaultBaseProps,
+		nosort: false,
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onDelete: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onNew: nilEvent,
+		placeholder: "new",
+		tags: [],
+		useinput: false
+	};
 
 	constructor(props: TagListProps) {
 		super("ui-taglist", TagList, props, {
-			...getDefaultTagListState(),
+			inputText: "",
 			tags: List<string>(props.nosort ? props.tags : props.tags.sort())
 		});
 	}

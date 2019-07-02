@@ -1,73 +1,36 @@
 import "./lib/globals";
 
-import {
-	Accordion,
-	AccordionItem,
-	getDefaultAccordionItemProps,
-	getDefaultAccordionProps
-} from "./lib/accordion";
-import {Badge, getDefaultBadgeProps} from "./lib/badge";
-import {
-	Breadcrumbs,
-	Crumbs,
-	getDefaultBreadcrumbsProps
-} from "./lib/breadcrumbs";
-import {Break, getDefaultBreakProps} from "./lib/break";
-import {Browser, getDefaultBrowserProps} from "./lib/browser";
-import {Button, getDefaultButtonProps} from "./lib/button";
-import {ButtonCircle, getDefaultButtonCircleProps} from "./lib/buttonCircle";
-import {ButtonDialog, getDefaultButtonDialogProps} from "./lib/buttonDialog";
-import {ButtonText, getDefaultButtonTextProps} from "./lib/buttonText";
-import {ButtonToggle, getDefaultButtonToggleProps} from "./lib/buttonToggle";
-import {Container, getDefaultContainerProps} from "./lib/container";
-import {
-	Datagrid,
-	DatagridColumn,
-	DatagridRow,
-	getDefaultDatagridProps
-} from "./lib/datagrid";
-import {
-	DialogBox,
-	DialogBoxType,
-	getDefaultDialogBoxProps
-} from "./lib/dialogBox";
-import {DialogWindow, getDefaultDialogWindowProps} from "./lib/dialogWindow";
-import {Divider, DividerType, getDefaultDividerProps} from "./lib/divider";
-import {
-	Dropdown,
-	DropdownOption,
-	getDefaultDropdownProps
-} from "./lib/dropdown";
-import {
-	DynamicList,
-	DynamicListItem,
-	getDefaultDynamicListProps
-} from "./lib/dynamicList";
-import {Editor, getDefaultEditorProps} from "./lib/editor";
-import {getDefaultIconProps, Icon} from "./lib/icon";
-import {getDefaultItemProps, Item} from "./lib/item";
-import {getDefaultLabelProps, Label} from "./lib/label";
-import {
-	getDefaultListDividerProps,
-	getDefaultListFooterProps,
-	getDefaultListHeaderProps,
-	getDefaultListItemProps,
-	getDefaultListProps,
-	List,
-	ListDivider,
-	ListFooter,
-	ListHeader,
-	ListItem
-} from "./lib/list";
-import {
-	getDefaultOptionGroupProps,
-	getDefaultOptionProps,
-	Option,
-	OptionGroup,
-	OptionType
-} from "./lib/option";
-import {getDefaultPagerProps, Pager} from "./lib/pager";
-import {getDefaultPreviewProps, Preview, PreviewMode} from "./lib/preview";
+import {Accordion} from "./lib/accordion/Accordion";
+import {AccordionItem} from "./lib/accordion/AccordionItem";
+import {Badge} from "./lib/badge/Badge";
+import {Breadcrumbs, Crumbs} from "./lib/breadcrumbs/Breadcrumbs";
+import {Break} from "./lib/break/Break";
+import {Browser} from "./lib/browser/Browser";
+import {Button} from "./lib/button/Button";
+import {ButtonCircle} from "./lib/buttonCircle/ButtonCircle";
+import {ButtonDialog} from "./lib/buttonDialog/ButtonDialog";
+import {ButtonText} from "./lib/buttonText/ButtonText";
+import {ButtonToggle} from "./lib/buttonToggle/ButtonToggle";
+import {Container} from "./lib/container/Container";
+import {Datagrid, DatagridColumn, DatagridRow} from "./lib/datagrid/Datagrid";
+import {DialogBox, DialogBoxType} from "./lib/dialogBox/DialogBox";
+import {DialogWindow} from "./lib/dialogWindow/DialogWindow";
+import {Divider, DividerType} from "./lib/divider/Divider";
+import {Dropdown, DropdownOption} from "./lib/dropdown/Dropdown";
+import {DynamicList, DynamicListItem} from "./lib/dynamicList/DynamicList";
+import {Editor} from "./lib/editor/Editor";
+import {Icon} from "./lib/icon/Icon";
+import {Item} from "./lib/item/Item";
+import {Label} from "./lib/label/Label";
+import {List} from "./lib/list/List";
+import {ListDivider} from "./lib/list/ListDivider";
+import {ListFooter} from "./lib/list/ListFooter";
+import {ListHeader} from "./lib/list/ListHeader";
+import {ListItem} from "./lib/list/ListItem";
+import {Option, OptionType} from "./lib/option/Option";
+import {OptionGroup} from "./lib/option/OptionGroup";
+import {Pager} from "./lib/pager/Pager";
+import {Preview, PreviewMode} from "./lib/preview/Preview";
 import {
 	BaseComponent,
 	BaseOptions,
@@ -76,13 +39,11 @@ import {
 	BaseThemeProps,
 	Color,
 	ColorScheme,
+	defaultBaseProps,
 	defaultSize,
 	DefaultTheme,
 	Direction,
 	FontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
-	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
 	globalize,
@@ -101,27 +62,15 @@ import {
 	Theme,
 	Wrapper
 } from "./lib/shared";
-import {getDefaultSliderProps, Slider} from "./lib/slider";
-import {getDefaultSwitchProps, Switch, SwitchType} from "./lib/switch";
+import {Slider} from "./lib/slider/Slider";
+import {Switch, SwitchType} from "./lib/switch/Switch";
+import {Tab} from "./lib/tabs/Tab";
+import {TabContainer} from "./lib/tabs/TabContainer";
+import {Tag} from "./lib/tagList/Tag";
+import {TagList} from "./lib/tagList/TagList";
+import {TextArea} from "./lib/textArea/TextArea";
+import {TextField, TextFieldType} from "./lib/textField/TextField";
 import {
-	getDefaultTabContainerProps,
-	getDefaultTabProps,
-	Tab,
-	TabContainer
-} from "./lib/tabs";
-import {
-	getDefaultTagListProps,
-	getDefaultTagProps,
-	Tag,
-	TagList
-} from "./lib/tagList";
-
-import {getDefaultTextAreaProps, TextArea} from "./lib/textArea";
-
-import {
-	getDefaultTextFieldProps,
-	TextField,
-	TextFieldType,
 	validateEmail,
 	validateMaxLength,
 	validateMinLength,
@@ -129,22 +78,21 @@ import {
 	validateURL,
 	Validator,
 	ValidatorFn
-} from "./lib/textField";
-import {getDefaultTitleProps, Title, TitleLayout} from "./lib/title";
-import {getDefaultToastProps, Toast, ToastLevel} from "./lib/toast";
-import {getDefaultToolbarProps, Toolbar} from "./lib/toolbar";
-import {getDefaultTooltipProps, Tooltip} from "./lib/tooltip";
+} from "./lib/textField/validator";
+import {Title, TitleLayout} from "./lib/title/Title";
+import {Toast, ToastLevel} from "./lib/toast/Toast";
+import {Toolbar} from "./lib/toolbar/Toolbar";
+import {Tooltip} from "./lib/tooltip/Tooltip";
 import {
 	ExtendedNodeData,
-	getDefaultTreeviewProps,
 	NodeData,
 	TreeItem,
 	Treeview,
 	TreeviewData,
 	TreeviewProps,
 	TreeviewSelectedId
-} from "./lib/treeview";
-import {getDefaultTriangleProps, Triangle} from "./lib/triangle";
+} from "./lib/treeview/Treeview";
+import {Triangle} from "./lib/triangle/Triangle";
 
 const pkg = require("./package.json");
 const version = `v${JSON.stringify(pkg.version)}`;
@@ -173,6 +121,7 @@ export {
 	Datagrid,
 	DatagridColumn,
 	DatagridRow,
+	defaultBaseProps,
 	defaultSize,
 	DefaultTheme,
 	DialogBox,
@@ -188,54 +137,6 @@ export {
 	Editor,
 	ExtendedNodeData,
 	FontStyle,
-	getDefaultAccordionProps,
-	getDefaultAccordionItemProps,
-	getDefaultBadgeProps,
-	getDefaultBaseProps,
-	getDefaultBaseState,
-	getDefaultBreadcrumbsProps,
-	getDefaultBreakProps,
-	getDefaultBrowserProps,
-	getDefaultButtonCircleProps,
-	getDefaultButtonDialogProps,
-	getDefaultButtonProps,
-	getDefaultButtonTextProps,
-	getDefaultButtonToggleProps,
-	getDefaultContainerProps,
-	getDefaultDatagridProps,
-	getDefaultDialogBoxProps,
-	getDefaultDialogWindowProps,
-	getDefaultDividerProps,
-	getDefaultDropdownProps,
-	getDefaultDynamicListProps,
-	getDefaultEditorProps,
-	getDefaultIconProps,
-	getDefaultItemProps,
-	getDefaultLabelProps,
-	getDefaultListDividerProps,
-	getDefaultListFooterProps,
-	getDefaultListHeaderProps,
-	getDefaultListItemProps,
-	getDefaultListProps,
-	getDefaultOptionGroupProps,
-	getDefaultOptionProps,
-	getDefaultPagerProps,
-	getDefaultPreviewProps,
-	getDefaultSliderProps,
-	getDefaultSwitchProps,
-	getDefaultTabContainerProps,
-	getDefaultTabProps,
-	getDefaultTagListProps,
-	getDefaultTagProps,
-	getDefaultTextAreaProps,
-	getDefaultTextFieldProps,
-	getDefaultTitleProps,
-	getDefaultToastProps,
-	getDefaultToolbarProps,
-	getDefaultTreeviewProps,
-	getDefaultTooltipProps,
-	getDefaultTriangleProps,
-	getDefaultWrapperProps,
 	getTheme,
 	getThemeList,
 	globalize,

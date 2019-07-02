@@ -27,25 +27,11 @@ import * as React from "react";
 import styled from "styled-components";
 import {sp} from "util.constants";
 import {roundUp} from "util.toolbox";
-import {
-	BaseComponent,
-	BaseProps,
-	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState
-} from "../shared";
+import {BaseComponent, BaseProps, BaseState, defaultBaseProps} from "../shared";
 
 export interface BreakProps extends BaseProps {
 	fontSize?: string;
 	n?: number;
-}
-
-export function getDefaultBreakProps(): BreakProps {
-	return {
-		...getDefaultBaseProps(),
-		fontSize: "1.0rem",
-		n: 1
-	};
 }
 
 const BreakView: any = styled.p`
@@ -57,10 +43,14 @@ const BreakView: any = styled.p`
 `;
 
 export class Break extends BaseComponent<BreakProps, BaseState> {
-	public static readonly defaultProps: BreakProps = getDefaultBreakProps();
+	public static readonly defaultProps: BreakProps = {
+		...defaultBaseProps,
+		fontSize: "1.0rem",
+		n: 1
+	};
 
 	constructor(props: BaseProps) {
-		super("ui-break", Break, props, getDefaultBaseState());
+		super("ui-break", Break, props);
 	}
 
 	public render() {

@@ -63,15 +63,14 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {ButtonText} from "../buttonText";
-import {Icon} from "../icon";
+import {ButtonText} from "../buttonText/ButtonText";
+import {Icon} from "../icon/Icon";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Justify,
 	Sizing,
@@ -91,22 +90,7 @@ export interface BreadcrumbsProps extends BaseProps {
 	onSelection?: (name: string, uri: string) => void;
 }
 
-export function getDefaultBreadcrumbsProps(): BreadcrumbsProps {
-	return {
-		...getDefaultBaseProps(),
-		chevron: "chevron-right",
-		icon: "paperclip",
-		items: [],
-		onSelection: nilEvent,
-		ripple: false
-	};
-}
-
 export type BreadcrumbsState = BaseState;
-
-export function getDefaultBreadcrumbsState(): BreadcrumbsState {
-	return {...getDefaultBaseState()};
-}
 
 const BreadcrumbsView: any = styled.div`
 	display: inline-flex;
@@ -147,15 +131,17 @@ export class Breadcrumbs extends BaseComponent<
 	BreadcrumbsProps,
 	BreadcrumbsState
 > {
-	public static readonly defaultProps: BreadcrumbsProps = getDefaultBreadcrumbsProps();
+	public static readonly defaultProps: BreadcrumbsProps = {
+		...defaultBaseProps,
+		chevron: "chevron-right",
+		icon: "paperclip",
+		items: [],
+		onSelection: nilEvent,
+		ripple: false
+	};
 
 	constructor(props: BreadcrumbsProps) {
-		super(
-			"ui-breadcrumbs",
-			Breadcrumbs,
-			props,
-			getDefaultBreadcrumbsState()
-		);
+		super("ui-breadcrumbs", Breadcrumbs, props);
 	}
 
 	@autobind

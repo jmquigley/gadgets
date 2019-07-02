@@ -78,13 +78,7 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
-import {
-	Button,
-	ButtonProps,
-	ButtonState,
-	getDefaultButtonProps,
-	getDefaultButtonState
-} from "../button";
+import {Button, ButtonProps, ButtonState} from "../button/Button";
 import {BaseComponent, Wrapper} from "../shared";
 
 export interface ButtonToggleProps extends ButtonProps {
@@ -99,9 +93,16 @@ export interface ButtonToggleProps extends ButtonProps {
 	onToggle?: (toggle: boolean) => void;
 }
 
-export function getDefaultButtonToggleProps(): ButtonToggleProps {
-	return {
-		...getDefaultButtonProps(),
+export interface ButtonToggleState extends ButtonState {
+	toggle: boolean;
+}
+
+export class ButtonToggle extends BaseComponent<
+	ButtonToggleProps,
+	ButtonToggleState
+> {
+	public static readonly defaultProps: ButtonToggleProps = {
+		...Button.defaultProps,
 		bgColorOff: "inherit",
 		bgColorOn: "inherit",
 		fgColorOff: "gray",
@@ -114,28 +115,9 @@ export function getDefaultButtonToggleProps(): ButtonToggleProps {
 		ripple: false,
 		selected: false
 	};
-}
-
-export interface ButtonToggleState extends ButtonState {
-	toggle: boolean;
-}
-
-export function getDefaultButtonToggleState(): ButtonToggleState {
-	return {
-		...getDefaultButtonState(),
-		toggle: false
-	};
-}
-
-export class ButtonToggle extends BaseComponent<
-	ButtonToggleProps,
-	ButtonToggleState
-> {
-	public static readonly defaultProps: ButtonToggleProps = getDefaultButtonToggleProps();
 
 	constructor(props: ButtonToggleProps) {
 		super("ui-button-toggle", ButtonToggle, props, {
-			...getDefaultButtonToggleState(),
 			toggle: props.initialToggle
 		});
 	}

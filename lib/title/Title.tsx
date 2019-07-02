@@ -67,15 +67,14 @@
 import * as React from "react";
 import styled, {css} from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {Label} from "../label";
+import {Label} from "../label/Label";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
@@ -100,23 +99,7 @@ export interface TitleProps extends BaseProps {
 	useedit?: boolean;
 }
 
-export function getDefaultTitleProps(): TitleProps {
-	return {
-		...getDefaultBaseProps(),
-		layout: TitleLayout.dominant,
-		onClick: nilEvent,
-		onUpdate: nilEvent,
-		ripple: true,
-		widget: null,
-		useedit: false
-	};
-}
-
 export type TitleState = BaseState;
-
-export function getDefaultTitleState(): TitleState {
-	return {...getDefaultBaseState()};
-}
 
 export const TitleView: any = styled.div`
 	box-sizing: border-box;
@@ -225,10 +208,18 @@ const StyledLabel: any = styled(Label)`
 `;
 
 export class Title extends BaseComponent<TitleProps, TitleState> {
-	public static defaultProps: TitleProps = getDefaultTitleProps();
+	public static defaultProps: TitleProps = {
+		...defaultBaseProps,
+		layout: TitleLayout.dominant,
+		onClick: nilEvent,
+		onUpdate: nilEvent,
+		ripple: true,
+		widget: null,
+		useedit: false
+	};
 
 	constructor(props: TitleProps) {
-		super("ui-title-bar", Title, props, getDefaultTitleState());
+		super("ui-title-bar", Title, props);
 	}
 
 	public render() {

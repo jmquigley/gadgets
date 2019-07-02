@@ -1,5 +1,3 @@
-"use strict";
-
 import {
 	validateEmail,
 	validateMaxLength,
@@ -7,7 +5,7 @@ import {
 	validateRegex,
 	validateURL,
 	Validator
-} from "./index";
+} from "./validator";
 
 test("Test creation of the default validator object", () => {
 	const validator = new Validator(null, null, null);

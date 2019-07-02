@@ -44,8 +44,7 @@ import {
 	BaseProps,
 	BaseState,
 	Color,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Wrapper
 } from "../shared";
 
@@ -59,18 +58,7 @@ export interface DividerProps extends BaseProps {
 	dividerType?: DividerType;
 }
 
-export function getDefaultDividerProps(): DividerProps {
-	return {
-		...getDefaultBaseProps(),
-		dividerType: DividerType.none
-	};
-}
-
 export type DividerState = BaseState;
-
-export function getDefaultDividerState(): DividerState {
-	return {...getDefaultBaseState()};
-}
 
 const DividerView: any = styled.div`
 	align-items: center;
@@ -82,10 +70,13 @@ const DividerView: any = styled.div`
 `;
 
 export class Divider extends BaseComponent<DividerProps, DividerState> {
-	public static readonly defaultProps: DividerProps = getDefaultDividerProps();
+	public static readonly defaultProps: DividerProps = {
+		...defaultBaseProps,
+		dividerType: DividerType.none
+	};
 
 	constructor(props: DividerProps) {
-		super("ui-divider", Divider, props, getDefaultDividerState());
+		super("ui-divider", Divider, props);
 	}
 
 	public render() {

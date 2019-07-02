@@ -1,27 +1,9 @@
-"use strict";
-
 import {EnumValues as ev} from "enum-values";
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Direction, Sizing} from "../shared";
-import {
-	getDefaultTriangleProps,
-	getDefaultTriangleState,
-	Triangle
-} from "./index";
-
-test("Test retrieval of Triangle props object", () => {
-	const props = getDefaultTriangleProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTriangleState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Triangle from "./Triangle";
 
 test("Test creation of a Triangle control", () => {
 	const ctl = shallow(<Triangle className='test-class' />);

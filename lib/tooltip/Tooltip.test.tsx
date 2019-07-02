@@ -1,23 +1,9 @@
-"use strict";
-
 import {EnumValues as ev} from "enum-values";
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Location} from "../shared";
-import {getDefaultTooltipProps, getDefaultTooltipState, Tooltip} from "./index";
-
-test("Test retrieval of Tooltip props object", () => {
-	const props = getDefaultTooltipProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTooltipState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Tooltip from "./Tooltip";
 
 for (const location of ev.getNames(Location)) {
 	test(`Creation of Tooltip in position ${location}`, () => {

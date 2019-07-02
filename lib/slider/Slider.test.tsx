@@ -1,21 +1,7 @@
-"use strict";
-
 import {mount} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultSliderProps, getDefaultSliderState, Slider} from "./index";
-
-test("Test retrieval of Slider props object", () => {
-	const props = getDefaultSliderProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultSliderState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Slider from "./Slider";
 
 test("Test creation of a simple Slider control", () => {
 	const ctl = mount(

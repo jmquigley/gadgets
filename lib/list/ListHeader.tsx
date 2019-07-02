@@ -27,40 +27,26 @@
  */
 
 import * as React from "react";
-import {
-	getDefaultItemProps,
-	getDefaultItemState,
-	Item,
-	ItemProps,
-	ItemState
-} from "../item";
+import {Item, ItemProps, ItemState} from "../item/Item";
 import {BaseComponent, Wrapper} from "../shared";
 
 export interface ListHeaderProps extends ItemProps {
 	href?: any;
 }
 
-export function getDefaultListHeaderProps(): ListHeaderProps {
-	return {
-		...getDefaultItemProps(),
-		nohover: true
-	};
-}
-
 export type ListHeaderState = ItemState;
-
-export function getDefaultListHeaderState(): ListHeaderState {
-	return {...getDefaultItemState()};
-}
 
 export class ListHeader extends BaseComponent<
 	ListHeaderProps,
 	ListHeaderState
 > {
-	public static readonly defaultProps: ListHeaderProps = getDefaultListHeaderProps();
+	public static readonly defaultProps: ListHeaderProps = {
+		...Item.defaultProps,
+		nohover: true
+	};
 
 	constructor(props: ListHeaderProps) {
-		super("ui-list-header", ListHeader, props, getDefaultItemState());
+		super("ui-list-header", ListHeader, props);
 	}
 
 	public render() {

@@ -1,22 +1,8 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import {List} from "immutable";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultTagListProps, getDefaultTagListState, TagList} from "./index";
-
-test("Test retrieval of TagList props object", () => {
-	const props = getDefaultTagListProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTagListState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import TagList from "./TagList";
 
 test("Test creation of a simple TagList instance", () => {
 	const ctl = shallow(<TagList />);

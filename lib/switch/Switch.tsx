@@ -62,9 +62,8 @@ import {
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	rectStyle,
 	Wrapper
@@ -84,27 +83,8 @@ export interface SwitchProps extends BaseProps {
 	switchType?: SwitchType;
 }
 
-export function getDefaultSwitchProps(): SwitchProps {
-	return {
-		...getDefaultBaseProps(),
-		initialToggle: false,
-		innyScale: 0.6,
-		onClick: nilEvent,
-		outyScale: 1.25,
-		sliderScale: 1.25,
-		switchType: SwitchType.outy
-	};
-}
-
 export interface SwitchState extends BaseState {
 	toggle: boolean;
-}
-
-export function getDefaultSwitchState(): SwitchState {
-	return {
-		...getDefaultBaseState(),
-		toggle: false
-	};
 }
 
 const StyledButton: any = styled.div`
@@ -144,14 +124,21 @@ const SliderContainerView: any = styled.div`
 `;
 
 export class Switch extends BaseComponent<SwitchProps, SwitchState> {
-	public static readonly defaultProps: SwitchProps = getDefaultSwitchProps();
+	public static readonly defaultProps: SwitchProps = {
+		...defaultBaseProps,
+		initialToggle: false,
+		innyScale: 0.6,
+		onClick: nilEvent,
+		outyScale: 1.25,
+		sliderScale: 1.25,
+		switchType: SwitchType.outy
+	};
 
 	private _buttonStyles: ClassNames = new ClassNames("ui-switch-button");
 	private _sliderStyles: ClassNames = new ClassNames("ui-switch-slider");
 
 	constructor(props: SwitchProps) {
 		super("ui-switch", Switch, props, {
-			...getDefaultSwitchState(),
 			toggle: props.initialToggle
 		});
 	}

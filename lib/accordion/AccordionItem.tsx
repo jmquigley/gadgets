@@ -59,15 +59,8 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {getDefaultItemProps, Item, ItemProps} from "../item";
-import {
-	BaseComponent,
-	BaseState,
-	Color,
-	fontStyle,
-	getDefaultBaseState,
-	Wrapper
-} from "../shared";
+import {Item, ItemProps} from "../item/Item";
+import {BaseComponent, BaseState, Color, fontStyle, Wrapper} from "../shared";
 
 export interface AccordionItemProps extends ItemProps {
 	initialToggle?: boolean;
@@ -78,27 +71,8 @@ export interface AccordionItemProps extends ItemProps {
 	rightButton?: any;
 }
 
-export function getDefaultAccordionItemProps(): AccordionItemProps {
-	return {
-		...getDefaultItemProps(),
-		initialToggle: false,
-		leftButton: null,
-		nocollapse: false,
-		onClick: nilEvent,
-		onUpdate: nilEvent,
-		rightButton: null
-	};
-}
-
 export interface AccordionItemState extends BaseState {
 	toggle: boolean;
-}
-
-export function getDefaultAccordionItemState(): AccordionItemState {
-	return {
-		...getDefaultBaseState(),
-		toggle: false
-	};
 }
 
 const AccordionItemView: any = styled.ul`
@@ -126,11 +100,18 @@ export class AccordionItem extends BaseComponent<
 	AccordionItemProps,
 	AccordionItemState
 > {
-	public static readonly defaultProps: AccordionItemProps = getDefaultAccordionItemProps();
+	public static readonly defaultProps: AccordionItemProps = {
+		...Item.defaultProps,
+		initialToggle: false,
+		leftButton: null,
+		nocollapse: false,
+		onClick: nilEvent,
+		onUpdate: nilEvent,
+		rightButton: null
+	};
 
 	constructor(props: AccordionItemProps) {
 		super("ui-accordionitem", AccordionItem, props, {
-			...getDefaultAccordionItemState(),
 			toggle: props.initialToggle
 		});
 	}

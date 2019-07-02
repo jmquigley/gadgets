@@ -3,19 +3,7 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultLabelProps, getDefaultLabelState, Label} from "./index";
-
-test("Test retrieval of default Label props object", () => {
-	const props = getDefaultLabelProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultLabelState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Label from "./Label";
 
 test("Test creation of a Label control", () => {
 	const s: string = "Test label text";

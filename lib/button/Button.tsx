@@ -36,18 +36,17 @@ import * as React from "react";
 import {HotKeys} from "react-hotkeys";
 import styled, {css} from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {Icon} from "../icon";
+import {Icon} from "../icon/Icon";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	hidden,
 	Wrapper
 } from "../shared";
-import {tooltip} from "../tooltip";
+import {tooltip} from "../tooltip/Tooltip";
 
 export interface ButtonProps extends BaseProps {
 	iconName?: string; // font awesome string
@@ -56,23 +55,7 @@ export interface ButtonProps extends BaseProps {
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export function getDefaultButtonProps(): ButtonProps {
-	return {
-		...getDefaultBaseProps(),
-		iconName: "bomb",
-		iconStyle: "",
-		kbActivate: "",
-		nopropagation: true,
-		onClick: nilEvent,
-		ripple: true
-	};
-}
-
 export type ButtonState = BaseState;
-
-export function getDefaultButtonState(): ButtonState {
-	return {...getDefaultBaseState()};
-}
 
 export const BaseButtonView: any = css`
 	align-items: center;
@@ -107,10 +90,18 @@ const StyledIcon: any = styled(Icon)`
 `;
 
 export class Button extends BaseComponent<ButtonProps, ButtonState> {
-	public static readonly defaultProps: ButtonProps = getDefaultButtonProps();
+	public static readonly defaultProps: ButtonProps = {
+		...defaultBaseProps,
+		iconName: "bomb",
+		iconStyle: "",
+		kbActivate: "",
+		nopropagation: true,
+		onClick: nilEvent,
+		ripple: true
+	};
 
 	constructor(props: ButtonProps) {
-		super("ui-button", Button, props, getDefaultButtonState());
+		super("ui-button", Button, props);
 
 		this.buildKeyMap({
 			kbActivate: this.handleClick

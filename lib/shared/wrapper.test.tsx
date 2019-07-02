@@ -1,25 +1,7 @@
-"use strict";
-
 import {mount} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	getDefaultWrapperProps,
-	getDefaultWrapperState,
-	Wrapper
-} from "./wrapper";
-
-test("Test creation of the Wrapper props object", () => {
-	const props = getDefaultWrapperProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultWrapperState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Wrapper from "./wrapper";
 
 test("Test creation of a default Wrapper", () => {
 	const errfn = jest.fn();

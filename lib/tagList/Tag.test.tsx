@@ -1,21 +1,7 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultTagProps, getDefaultTagState, Tag} from "./index";
-
-test("Test retrieval of Tag props object", () => {
-	const props = getDefaultTagProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTagState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Tag from "./Tag";
 
 test("Test creation of a simple Tag instance", () => {
 	const ctl = shallow(<Tag>test tag</Tag>);

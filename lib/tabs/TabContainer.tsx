@@ -86,13 +86,12 @@ import * as React from "react";
 import styled, {css} from "styled-components";
 import {unitToNumber} from "util.calc";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
+import {Button} from "../button/Button";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Location,
 	Wrapper
 } from "../shared";
@@ -108,31 +107,8 @@ export interface TabContainerProps extends BaseProps {
 	tabWidth?: number;
 }
 
-export function getDefaultTabContainerProps(): TabContainerProps {
-	return {
-		...getDefaultBaseProps(),
-		location: Location.top,
-		maxTabs: 5,
-		noborder: false,
-		noclose: false,
-		nonavigation: false,
-		onRemove: nilEvent,
-		onSelection: nilEvent,
-		tabWidth: 100,
-		minHeight: "100px",
-		minWidth: "350px"
-	};
-}
-
 export interface TabContainerState extends BaseState {
 	selectedTab?: string;
-}
-
-export function getDefaultTabContainerState(): TabContainerState {
-	return {
-		...getDefaultBaseState(),
-		selectedTab: ""
-	};
 }
 
 interface TabContent {
@@ -259,7 +235,19 @@ export class TabContainer extends BaseComponent<
 	TabContainerProps,
 	TabContainerState
 > {
-	public static defaultProps: TabContainerProps = getDefaultTabContainerProps();
+	public static defaultProps: TabContainerProps = {
+		...defaultBaseProps,
+		location: Location.top,
+		maxTabs: 5,
+		noborder: false,
+		noclose: false,
+		nonavigation: false,
+		onRemove: nilEvent,
+		onSelection: nilEvent,
+		tabWidth: 100,
+		minHeight: "100px",
+		minWidth: "350px"
+	};
 
 	private _removedTabs: any = [];
 	private _tabContent: any = null;
@@ -276,7 +264,7 @@ export class TabContainer extends BaseComponent<
 		}
 
 		this.state = {
-			...getDefaultTabContainerState(),
+			...this.state,
 			selectedTab: this._tabs.length > 0 ? this._tabs[0].props["id"] : ""
 		};
 	}

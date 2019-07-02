@@ -12,6 +12,8 @@
 - Added state initialization to the base class super for all child modules.  This ensures that the initial state information is available for the create debug output when a component is created.
 - Removed the `obj` prop and now use the constructor name.  The [Wrapper](https://github.com/jmquigley/gadgets/blob/master/docs/lib/shared/wrapper.md) was also updated to accept the compnent name.
 - Added `selectedId` to the [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md) component props.  This allows the parent component to set the selected value within the tree.  By default this id is handled as internal state.
+- Removed all getters for base state and props from all components.  They are now set directly in `defaultProps` on the class.  The intial *state* for all components is handled in base.
+- Removed all of the *index.ts* modules from each component.  They are now retrieved directly in the single *index.ts* at the root of the project.  It was syntactic sugar that made parts difficult to maintain and easy to forget with updates.
 
 #### Bug Fixes:
 

@@ -3,22 +3,9 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	AccordionItem,
-	getDefaultAccordionItemProps,
-	getDefaultAccordionItemState
-} from "./index";
+import {AccordionItem} from "./AccordionItem";
 
-test("Test retrieval of AccordionItem props object", () => {
-	const props = getDefaultAccordionItemProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultAccordionItemState();
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+const debug = require("debug")("gadgets.test.AccordionItem");
 
 test("Test the creation of a AccordionItem control", () => {
 	const ctl = shallow(

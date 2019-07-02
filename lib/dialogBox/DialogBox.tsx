@@ -72,16 +72,15 @@ import * as React from "react";
 import {HotKeys} from "react-hotkeys";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {ButtonText} from "../buttonText";
-import {Icon} from "../icon";
+import {ButtonText} from "../buttonText/ButtonText";
+import {Icon} from "../icon/Icon";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	baseZIndex,
 	Color,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Justify,
 	Sizing,
 	Wrapper
@@ -108,31 +107,8 @@ export interface DialogBoxProps extends BaseProps {
 	show?: boolean;
 }
 
-export function getDefaultDialogBoxProps(): DialogBoxProps {
-	return {
-		...getDefaultBaseProps(),
-		dialogType: DialogBoxType.info,
-		iconName: "bomb",
-		kbCancel: "esc",
-		kbClose: "esc",
-		kbOk: "alt+k",
-		message: "",
-		onClose: nilEvent,
-		onOpen: nilEvent,
-		onSelection: nilEvent,
-		show: false
-	};
-}
-
 export interface DialogBoxState extends BaseState {
 	showModal?: boolean;
-}
-
-export function getDefaultDialogBoxState(): DialogBoxState {
-	return {
-		...getDefaultBaseState(),
-		showModal: false
-	};
 }
 
 const ButtonBar: any = styled.div`
@@ -180,7 +156,19 @@ const StyledIcon: any = styled(Icon)`
 `;
 
 export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
-	public static readonly defaultProps: DialogBoxProps = getDefaultDialogBoxProps();
+	public static readonly defaultProps: DialogBoxProps = {
+		...defaultBaseProps,
+		dialogType: DialogBoxType.info,
+		iconName: "bomb",
+		kbCancel: "esc",
+		kbClose: "esc",
+		kbOk: "alt+k",
+		message: "",
+		onClose: nilEvent,
+		onOpen: nilEvent,
+		onSelection: nilEvent,
+		show: false
+	};
 
 	private _customStyle: any = {
 		content: {
@@ -198,7 +186,9 @@ export class DialogBox extends BaseComponent<DialogBoxProps, DialogBoxState> {
 	private _icon: any = {};
 
 	constructor(props: DialogBoxProps) {
-		super("ui-dialogbox", DialogBox, props, getDefaultDialogBoxState());
+		super("ui-dialogbox", DialogBox, props, {
+			showModal: false
+		});
 
 		this.buildKeyMap({
 			kbCancel: this.handleNo,

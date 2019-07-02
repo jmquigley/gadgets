@@ -5,24 +5,7 @@ import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Sizing} from "../shared";
-import {
-	getDefaultOptionProps,
-	getDefaultOptionState,
-	Option,
-	OptionType
-} from "./index";
-
-test("Test retrieval of Option props object", () => {
-	const props = getDefaultOptionProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultOptionState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Option, {OptionType} from "./Option";
 
 for (const sizing of ev.getNames(Sizing)) {
 	test(`Creation of the Option control (${sizing})`, () => {

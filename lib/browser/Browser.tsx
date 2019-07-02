@@ -73,18 +73,17 @@ import * as React from "react";
 import {HotKeys, KeyMapOptions} from "react-hotkeys";
 import styled from "styled-components";
 import {nilEvent, objFindKeyByValue} from "util.toolbox";
-import {Button} from "../button";
-import {Divider} from "../divider";
+import {Button} from "../button/Button";
+import {Divider} from "../divider/Divider";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Wrapper
 } from "../shared";
-import {TextField} from "../textField";
-import {Toolbar} from "../toolbar";
+import {TextField} from "../textField/TextField";
+import {Toolbar} from "../toolbar/Toolbar";
 import {WebView} from "./WebView";
 
 export interface BrowserProps extends BaseProps {
@@ -108,38 +107,10 @@ export interface BrowserProps extends BaseProps {
 	useparser?: boolean;
 }
 
-export function getDefaultBrowserProps(): BrowserProps {
-	return {
-		...getDefaultBaseProps(),
-		home: "about:blank",
-		kbBack: "alt+arrowleft",
-		kbForward: "alt+arrowright",
-		kbHome: "alt+home",
-		kbNextSearch: "f3",
-		kbPreviousSearch: "alt+f3",
-		kbRefresh: "alt+r",
-		kbSnapshot: "",
-		notooltips: false,
-		onClip: nilEvent,
-		onOpen: nilEvent,
-		uri: "about:blank",
-		useparser: false
-	};
-}
-
 export interface BrowserState extends BaseState {
 	search?: string;
 	uri?: string;
 	uriHistory?: List<string>;
-}
-
-export function getDefaultBrowserState(): BrowserState {
-	return {
-		...getDefaultBaseState(),
-		search: "",
-		uri: "",
-		uriHistory: List()
-	};
 }
 
 const BrowserContainer: any = styled(HotKeys)`
@@ -201,14 +172,29 @@ const SearchTextField: any = styled(TextField)`
 `;
 
 export class Browser extends BaseComponent<BrowserProps, BrowserState> {
-	public static readonly defaultProps: BrowserProps = getDefaultBrowserProps();
+	public static readonly defaultProps: BrowserProps = {
+		...defaultBaseProps,
+		home: "about:blank",
+		kbBack: "alt+arrowleft",
+		kbForward: "alt+arrowright",
+		kbHome: "alt+home",
+		kbNextSearch: "f3",
+		kbPreviousSearch: "alt+f3",
+		kbRefresh: "alt+r",
+		kbSnapshot: "",
+		notooltips: false,
+		onClip: nilEvent,
+		onOpen: nilEvent,
+		uri: "about:blank",
+		useparser: false
+	};
 
 	private _webview: WebviewTag = null;
 	private _webViewHandlerEnabled: boolean = false;
 
 	constructor(props: BrowserProps) {
 		super("ui-browser", Browser, props, {
-			...getDefaultBrowserState(),
+			search: "",
 			uri: props.uri || props.home || "",
 			uriHistory: List(props.uri || props.home || "")
 		});

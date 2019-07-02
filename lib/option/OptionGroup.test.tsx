@@ -5,24 +5,8 @@ import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Sizing} from "../shared";
-import {
-	getDefaultOptionGroupProps,
-	getDefaultOptionGroupState,
-	OptionGroup,
-	OptionType
-} from "./index";
-
-test("Test retrieval of OptionGroup props object", () => {
-	const props = getDefaultOptionGroupProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultOptionGroupState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import {OptionType} from "./Option";
+import OptionGroup from "./OptionGroup";
 
 for (const sizing of ev.getNames(Sizing)) {
 	test(`Creation of the OptionGroup control (${sizing})`, () => {

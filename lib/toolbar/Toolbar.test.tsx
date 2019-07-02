@@ -1,24 +1,9 @@
-"use strict";
-
 import {shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-
-import {Button} from "../button";
+import {Button} from "../button/Button";
 import {Justify, Sizing} from "../shared";
-import {getDefaultToolbarProps, getDefaultToolbarState, Toolbar} from "./index";
-
-test("Test retrieval of Toolbar props object", () => {
-	const props = getDefaultToolbarProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultToolbarState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Toolbar from "./Toolbar";
 
 [Justify.left, Justify.right, Justify.center].forEach((justify: Justify) => {
 	test(`Test creation of a Toolbar instance with ${Justify[justify]} justification`, () => {

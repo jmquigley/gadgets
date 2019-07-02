@@ -3,23 +3,7 @@
 import {shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	DialogWindow,
-	getDefaultDialogWindowProps,
-	getDefaultDialogWindowState
-} from "./index";
-
-test("Test retrieval of DialogWindow props object", () => {
-	const props = getDefaultDialogWindowProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultDialogWindowState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import DialogWindow from "./DialogWindow";
 
 test("Test creation of a default DialogWindow control", () => {
 	const ctl = shallow(

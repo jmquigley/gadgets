@@ -58,10 +58,9 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
@@ -80,39 +79,11 @@ export interface LabelProps extends BaseProps {
 	useedit?: boolean;
 }
 
-export function getDefaultLabelProps(): LabelProps {
-	return {
-		...getDefaultBaseProps(),
-		defaultText: "default",
-		noedit: false,
-		nopropagation: true,
-		onBlur: nilEvent,
-		onChange: nilEvent,
-		onClick: nilEvent,
-		onDoubleClick: nilEvent,
-		onKeyDown: nilEvent,
-		onKeyPress: nilEvent,
-		onUpdate: nilEvent,
-		text: sp,
-		useedit: false
-	};
-}
-
 export interface LabelState extends BaseState {
 	editable: boolean;
 	originalText: string;
 	previousText: string;
 	text: string;
-}
-
-export function getDefaultLabelState(): LabelState {
-	return {
-		...getDefaultBaseState(),
-		editable: false,
-		originalText: "",
-		previousText: "",
-		text: ""
-	};
 }
 
 const LabelView: any = styled.span`
@@ -130,13 +101,26 @@ const LabelView: any = styled.span`
 `;
 
 export class Label extends BaseComponent<LabelProps, LabelState> {
-	public static readonly defaultProps: LabelProps = getDefaultLabelProps();
+	public static readonly defaultProps: LabelProps = {
+		...defaultBaseProps,
+		defaultText: "default",
+		noedit: false,
+		nopropagation: true,
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onClick: nilEvent,
+		onDoubleClick: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onUpdate: nilEvent,
+		text: sp,
+		useedit: false
+	};
 
 	private _label: any = null;
 
 	constructor(props: LabelProps) {
 		super("ui-label", Label, props, {
-			...getDefaultLabelState(),
 			editable: props.useedit,
 			originalText: String(props.text),
 			previousText: String(props.text),

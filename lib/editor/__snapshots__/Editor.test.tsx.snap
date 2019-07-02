@@ -1,102 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test retrieval of the Editor props object 1`] = `
-Object {
-  "backgroundColor": null,
-  "border": null,
-  "borderColor": null,
-  "bottom": null,
-  "children": null,
-  "className": null,
-  "color": null,
-  "content": "",
-  "controlled": true,
-  "defaultFont": "Fira Code",
-  "defaultFontSize": 12,
-  "direction": "right",
-  "disabled": false,
-  "err": null,
-  "errorMessage": null,
-  "focus": false,
-  "height": null,
-  "hidden": false,
-  "id": null,
-  "kbBold": "ctrl+b",
-  "kbHeader1": "alt+ctrl+1",
-  "kbHeader2": "alt+ctrl+2",
-  "kbHeader3": "alt+ctrl+3",
-  "kbHeader4": "alt+ctrl+4",
-  "kbHeader5": "alt+ctrl+5",
-  "kbHeader6": "alt+ctrl+6",
-  "kbItalic": "ctrl+i",
-  "kbMono": "ctrl+m",
-  "kbRedo": "ctrl+shift+z",
-  "kbRefresh": "alt+r",
-  "kbStrikeThrough": "ctrl+shift+t",
-  "kbUnderline": "ctrl+u",
-  "kbUndo": "ctrl+z",
-  "left": null,
-  "location": "none",
-  "maxHeight": null,
-  "maxWidth": null,
-  "minHeight": null,
-  "minWidth": null,
-  "noborder": false,
-  "noedit": false,
-  "nohover": false,
-  "nopropagation": false,
-  "notheme": false,
-  "notooltip": false,
-  "onChange": [Function],
-  "onClick": [Function],
-  "onClickLink": [Function],
-  "padding": null,
-  "ripple": false,
-  "scheme": Object {
-    "background": "#000000",
-    "foreground": "#ffffff",
-  },
-  "selected": false,
-  "sizing": "normal",
-  "style": Object {},
-  "testing": true,
-  "theme": Object {
-    "backgroundColor": "#ffffff",
-    "borderColor": "#c0c0c0",
-    "buttonColor": "#666666",
-    "chevronColor": "#cccccc",
-    "color": "#000000",
-    "fontFamily": "OpenSans, Georgia, serif",
-    "headerBackgroundColor": "#004358",
-    "headerForegroundColor": "#ffffff",
-    "headerHoverColor": "#ffe11a",
-    "hoverColor": "#c0c0c0",
-    "inputBorderColor": "#c0c0c0",
-    "itemHoverColor": "#bedb39",
-    "outlineColor": "#51cbee",
-    "searchFocus": "#51cbee",
-    "searchMatch": "#fd7400",
-    "selectedBackgroundColor": "#1f8a70",
-    "selectedForegroundColor": "#ffe11a",
-    "titleBarBackgroundColor": "#004358",
-    "titleBarForegroundColor": "#ffe11a",
-    "tooltipBackgroundColor": "#708090",
-    "tooltipForegroundColor": "#ffffff",
-    "transitionDelay": "0.33s",
-  },
-  "tooltip": null,
-  "top": null,
-  "useSmallButtons": false,
-  "visible": true,
-  "width": null,
-  "xcss": null,
-}
-`;
-
-exports[`Test retrieval of the Editor props object 2`] = `
-Object {
-  "children": null,
-  "sizing": "normal",
-  "style": Object {},
-}
+exports[`Test creation of an Editor control 1`] = `
+<Editor
+  backgroundColor={null}
+  border={null}
+  borderColor={null}
+  bottom={null}
+  className={null}
+  color={null}
+  content=""
+  controlled={true}
+  defaultFont="Fira Code"
+  defaultFontSize={12}
+  direction="right"
+  disabled={false}
+  err={null}
+  errorMessage={null}
+  focus={false}
+  height={null}
+  hidden={false}
+  id={null}
+  kbBold="ctrl+b"
+  kbHeader1="alt+ctrl+1"
+  kbHeader2="alt+ctrl+2"
+  kbHeader3="alt+ctrl+3"
+  kbHeader4="alt+ctrl+4"
+  kbHeader5="alt+ctrl+5"
+  kbHeader6="alt+ctrl+6"
+  kbItalic="ctrl+i"
+  kbMono="ctrl+m"
+  kbRedo="ctrl+shift+z"
+  kbRefresh="alt+r"
+  kbStrikeThrough="ctrl+shift+t"
+  kbUnderline="ctrl+u"
+  kbUndo="ctrl+z"
+  left={null}
+  location="none"
+  maxHeight={null}
+  maxWidth={null}
+  minHeight={null}
+  minWidth={null}
+  noborder={false}
+  noedit={false}
+  nohover={false}
+  nopropagation={false}
+  notheme={false}
+  notooltip={false}
+  onChange={[Function]}
+  onClick={[Function]}
+  onClickLink={[Function]}
+  padding={null}
+  ripple={false}
+  scheme={
+    Object {
+      "background": "#000000",
+      "foreground": "#ffffff",
+    }
+  }
+  selected={false}
+  sizing="normal"
+  style={Object {}}
+  testing={true}
+  theme={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderColor": "#c0c0c0",
+      "buttonColor": "#666666",
+      "chevronColor": "#cccccc",
+      "color": "#000000",
+      "fontFamily": "OpenSans, Georgia, serif",
+      "headerBackgroundColor": "#004358",
+      "headerForegroundColor": "#ffffff",
+      "headerHoverColor": "#ffe11a",
+      "hoverColor": "#c0c0c0",
+      "inputBorderColor": "#c0c0c0",
+      "itemHoverColor": "#bedb39",
+      "outlineColor": "#51cbee",
+      "searchFocus": "#51cbee",
+      "searchMatch": "#fd7400",
+      "selectedBackgroundColor": "#1f8a70",
+      "selectedForegroundColor": "#ffe11a",
+      "titleBarBackgroundColor": "#004358",
+      "titleBarForegroundColor": "#ffe11a",
+      "tooltipBackgroundColor": "#708090",
+      "tooltipForegroundColor": "#ffffff",
+      "transitionDelay": "0.33s",
+    }
+  }
+  tooltip={null}
+  top={null}
+  useSmallButtons={false}
+  visible={true}
+  width={null}
+  xcss={null}
+/>
 `;

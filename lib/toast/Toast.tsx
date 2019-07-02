@@ -89,17 +89,16 @@ import * as React from "react";
 import styled, {css} from "styled-components";
 import {calc} from "util.calc";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
+import {Button} from "../button/Button";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	baseZIndex,
 	Color,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
@@ -121,25 +120,8 @@ export interface ToastProps extends BaseProps {
 	show?: boolean;
 }
 
-export function getDefaultToastProps(): ToastProps {
-	return {
-		...getDefaultBaseProps(),
-		usebottom: false,
-		decay: true,
-		duration: 3,
-		level: ToastLevel.info,
-		onClick: nilEvent,
-		onClose: nilEvent,
-		show: false
-	};
-}
-
 export interface ToastState extends BaseState {
 	visible: boolean;
-}
-
-export function getDefaultToastState(): ToastState {
-	return {...getDefaultBaseState(), visible: false};
 }
 
 const ContentView: any = styled.div`
@@ -217,14 +199,22 @@ const ToastView: any = styled.div`
 `;
 
 export class Toast extends BaseComponent<ToastProps, ToastState> {
-	public static readonly defaultProps: ToastProps = getDefaultToastProps();
+	public static readonly defaultProps: ToastProps = {
+		...defaultBaseProps,
+		usebottom: false,
+		decay: true,
+		duration: 3,
+		level: ToastLevel.info,
+		onClick: nilEvent,
+		onClose: nilEvent,
+		show: false
+	};
 
 	private _initialVisibility: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ToastProps) {
 		super("ui-toast", Toast, props, {
-			...getDefaultToastState(),
 			visible: props.show
 		});
 

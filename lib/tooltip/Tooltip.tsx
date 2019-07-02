@@ -52,40 +52,21 @@ import {
 	BaseProps,
 	BaseState,
 	baseZIndex,
+	defaultBaseProps,
 	Direction,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	getTheme,
 	Location,
 	Wrapper
 } from "../shared";
-import {Triangle} from "../triangle";
+import {Triangle} from "../triangle/Triangle";
 
 export interface TooltipProps extends BaseProps {
 	parent?: any;
 }
 
-export function getDefaultTooltipProps(): TooltipProps {
-	const theme = getTheme();
-
-	return {
-		...getDefaultBaseProps(),
-		location: Location.top,
-		parent: null,
-		style: {
-			color: theme.tooltipForegroundColor,
-			backgroundColor: theme.tooltipBackgroundColor
-		}
-	};
-}
-
 export interface TooltipState extends BaseState {
 	show?: boolean;
-}
-
-export function getDefaultTooltipState(): TooltipState {
-	return {...getDefaultBaseState(), show: false};
 }
 
 const Bottom: any = css`
@@ -272,10 +253,24 @@ const TooltipView: any = styled.div`
 `;
 
 export class Tooltip extends BaseComponent<TooltipProps, TooltipState> {
-	public static readonly defaultProps: TooltipProps = getDefaultTooltipProps();
+	public static readonly defaultProps: TooltipProps = (() => {
+		const theme = getTheme();
+
+		return {
+			...defaultBaseProps,
+			location: Location.top,
+			parent: null,
+			style: {
+				color: theme.tooltipForegroundColor,
+				backgroundColor: theme.tooltipBackgroundColor
+			}
+		};
+	})();
 
 	constructor(props: TooltipProps) {
-		super("ui-tooltip", Tooltip, props, getDefaultTooltipState());
+		super("ui-tooltip", Tooltip, props, {
+			show: false
+		});
 	}
 
 	@autobind

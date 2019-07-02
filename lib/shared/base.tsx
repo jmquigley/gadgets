@@ -41,6 +41,7 @@ import {isDebug} from "./helpers";
 import {KeyHandler, KeyMap} from "./keybinding";
 import {BaseProps} from "./props";
 import {FontStyle, Sizes, Sizing, Styling} from "./sizing";
+import {getDefaultBaseState} from "./state";
 
 require("./styles.css");
 
@@ -80,11 +81,15 @@ export abstract class BaseComponent<
 		defaultClassName: string,
 		cls: any,
 		props: P,
-		state: S = null,
+		state: S = {} as S,
 		options: BaseOptions = null
 	) {
 		super(props);
-		this.state = state || ({} as S);
+
+		this.state = {
+			...getDefaultBaseState(),
+			...state
+		};
 
 		this._options = Object.assign(this._options, options || {});
 		this._name = cls.name || "Unknown";

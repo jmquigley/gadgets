@@ -31,13 +31,7 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
-import {
-	getDefaultItemProps,
-	getDefaultItemState,
-	Item,
-	ItemProps,
-	ItemState
-} from "../item";
+import {Item, ItemProps, ItemState} from "../item/Item";
 import {BaseComponent, Wrapper} from "../shared";
 
 export interface ListItemHREF {
@@ -52,9 +46,13 @@ export interface ListItemProps extends ItemProps {
 	onSelection?: (title: string) => void;
 }
 
-export function getDefaultListItemProps(): ListItemProps {
-	return {
-		...getDefaultItemProps(),
+export interface ListItemState extends ItemState {
+	toggleRipple: boolean; // use this to turn ripple on/off during editing
+}
+
+export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
+	public static readonly defaultProps: ListItemProps = {
+		...Item.defaultProps,
 		href: {
 			selectHandler: nilEvent
 		},
@@ -63,28 +61,15 @@ export function getDefaultListItemProps(): ListItemProps {
 		onDoubleClick: nilEvent,
 		onSelection: nilEvent
 	};
-}
-
-export interface ListItemState extends ItemState {
-	toggleRipple: boolean; // use this to turn ripple on/off during editing
-}
-
-export function getDefaultListItemState(): ListItemState {
-	return {
-		...getDefaultItemState(),
-		toggleRipple: true
-	};
-}
-
-export class ListItem extends BaseComponent<ListItemProps, ListItemState> {
-	public static readonly defaultProps: ListItemProps = getDefaultListItemProps();
 
 	private _delay = 250; // double click delay
 	private _preventClick: boolean = false;
 	private _timer: any = null;
 
 	constructor(props: ListItemProps) {
-		super("ui-listitem", ListItem, props, getDefaultListItemState());
+		super("ui-listitem", ListItem, props, {
+			toggleRipple: true
+		});
 	}
 
 	get preventClick(): boolean {

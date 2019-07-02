@@ -61,10 +61,9 @@ import {
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
@@ -86,19 +85,7 @@ export interface DatagridProps extends BaseProps {
 	[key: string]: any;
 }
 
-export function getDefaultDatagridProps(): DatagridProps {
-	return {
-		...getDefaultBaseProps(),
-		columns: [],
-		rows: []
-	};
-}
-
 export type DatagridState = BaseState;
-
-export function getDefaultDatagridState(): DatagridState {
-	return {...getDefaultBaseState()};
-}
 
 const DatagridWrapper: any = styled.div`
 	.react-grid-HeaderRow {
@@ -122,10 +109,14 @@ const DatagridWrapper: any = styled.div`
 `;
 
 export class Datagrid extends BaseComponent<DatagridProps, DatagridState> {
-	public static readonly defaultProps: DatagridProps = getDefaultDatagridProps();
+	public static readonly defaultProps: DatagridProps = {
+		...defaultBaseProps,
+		columns: [],
+		rows: []
+	};
 
 	constructor(props: DatagridProps) {
-		super("ui-datagrid", Datagrid, props, getDefaultDatagridState());
+		super("ui-datagrid", Datagrid, props);
 	}
 
 	/** @return the height of the row in pixels (number) */

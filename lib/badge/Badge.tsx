@@ -45,10 +45,9 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Location,
 	locationStyle,
@@ -63,28 +62,7 @@ export interface BadgeProps extends BaseProps {
 	suppress?: boolean;
 }
 
-export function getDefaultBadgeProps(): BadgeProps {
-	return {
-		...getDefaultBaseProps(),
-		counter: 0,
-		location: Location.topRight,
-		onClick: nilEvent,
-		onUpdate: nilEvent,
-		sizing: Sizing.normal,
-		style: {
-			backgroundColor: "white",
-			border: "solid 0.125em",
-			color: "red"
-		},
-		suppress: false
-	};
-}
-
 export type BadgeState = BaseState;
-
-export function getDefaultBadgeState(): BadgeState {
-	return {...getDefaultBaseState()};
-}
 
 const BadgeView: any = styled.div`
 	border-radius: 96px;
@@ -108,10 +86,23 @@ const BadgeContainerView: any = styled.div`
 `;
 
 export class Badge extends BaseComponent<BadgeProps, BadgeState> {
-	public static readonly defaultProps: BadgeProps = getDefaultBadgeProps();
+	public static readonly defaultProps: BadgeProps = {
+		...defaultBaseProps,
+		counter: 0,
+		location: Location.topRight,
+		onClick: nilEvent,
+		onUpdate: nilEvent,
+		sizing: Sizing.normal,
+		style: {
+			backgroundColor: "white",
+			border: "solid 0.125em",
+			color: "red"
+		},
+		suppress: false
+	};
 
 	constructor(props: BadgeProps) {
-		super("ui-badge", Badge, props, getDefaultBadgeState());
+		super("ui-badge", Badge, props);
 		this.props.onUpdate(this.props.counter);
 	}
 

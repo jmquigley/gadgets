@@ -54,16 +54,15 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
-import {Icon} from "../icon";
-import {Item} from "../item";
+import {Button} from "../button/Button";
+import {Icon} from "../icon/Icon";
+import {Item} from "../item/Item";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Wrapper
 } from "../shared";
 
@@ -75,30 +74,9 @@ export interface DialogWindowProps extends BaseProps {
 	title?: string;
 }
 
-export function getDefaultDialogWindowProps(): DialogWindowProps {
-	return {
-		...getDefaultBaseProps(),
-		height: "400px",
-		icon: "window-restore",
-		onClose: nilEvent,
-		onOpen: nilEvent,
-		show: false,
-		title: "Dialog Window",
-		width: "400px"
-	};
-}
-
 export interface DialogWindowState extends BaseState {
 	showModal?: boolean;
 	icon?: any;
-}
-
-export function getDefaultDialogWindowState(): DialogWindowState {
-	return {
-		...getDefaultBaseState(),
-		showModal: false,
-		icon: null
-	};
 }
 
 const DialogWindowView: any = styled.div`
@@ -131,7 +109,16 @@ export class DialogWindow extends BaseComponent<
 	DialogWindowProps,
 	DialogWindowState
 > {
-	public static readonly defaultProps: DialogWindowProps = getDefaultDialogWindowProps();
+	public static readonly defaultProps: DialogWindowProps = {
+		...defaultBaseProps,
+		height: "400px",
+		icon: "window-restore",
+		onClose: nilEvent,
+		onOpen: nilEvent,
+		show: false,
+		title: "Dialog Window",
+		width: "400px"
+	};
 
 	private _customStyle: any = {
 		content: {
@@ -146,12 +133,10 @@ export class DialogWindow extends BaseComponent<
 	};
 
 	constructor(props: DialogWindowProps) {
-		super(
-			"ui-dialogwindow",
-			DialogWindow,
-			props,
-			getDefaultDialogWindowState()
-		);
+		super("ui-dialogwindow", DialogWindow, props, {
+			showModal: false,
+			icon: null
+		});
 	}
 
 	@autobind

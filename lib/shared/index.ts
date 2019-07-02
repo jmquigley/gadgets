@@ -14,10 +14,10 @@ import {KeyHandler, KeyMap, parseKeyCombo} from "./keybinding";
 
 import {
 	BaseProps,
+	defaultBaseProps,
 	Direction,
 	disabled,
 	DisabledCSS,
-	getDefaultBaseProps,
 	hidden,
 	HiddenCSS,
 	invisible,
@@ -41,7 +41,7 @@ import {
 	Styling
 } from "./sizing";
 
-import {BaseState, getDefaultBaseState} from "./state";
+import {BaseState} from "./state";
 
 import {
 	BaseThemeProps,
@@ -52,12 +52,7 @@ import {
 	Theme
 } from "./themes";
 
-import {
-	getDefaultWrapperProps,
-	getDefaultWrapperState,
-	Wrapper,
-	WrapperProps
-} from "./wrapper";
+import {Wrapper} from "./wrapper";
 
 export {
 	BaseComponent,
@@ -70,6 +65,7 @@ export {
 	boxStyle,
 	Color,
 	ColorScheme,
+	defaultBaseProps,
 	defaultSize,
 	DefaultTheme,
 	Direction,
@@ -77,10 +73,6 @@ export {
 	DisabledCSS,
 	fontStyle,
 	FontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
-	getDefaultWrapperProps,
-	getDefaultWrapperState,
 	getTheme,
 	getThemeList,
 	globalize,
@@ -104,6 +96,5 @@ export {
 	Styles,
 	Styling,
 	Theme,
-	Wrapper,
-	WrapperProps
+	Wrapper
 };

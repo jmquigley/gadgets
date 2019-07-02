@@ -3,19 +3,7 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultIconProps, getDefaultIconState, Icon} from "./index";
-
-test("Test retrieval of the Icon props object", () => {
-	const props = getDefaultIconProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultIconState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Icon from "./Icon";
 
 test("Test creation of an Icon control with icon", () => {
 	const ctl = shallow(

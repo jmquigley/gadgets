@@ -130,27 +130,29 @@ import {sp} from "util.constants";
 import {trimHTML} from "util.html";
 import {Keys} from "util.keys";
 import {nil, nilEvent} from "util.toolbox";
-import {Accordion, AccordionItem} from "../accordion";
-import {Button} from "../button";
-import {DialogBox, DialogBoxType} from "../dialogBox";
-import {List, ListFooter, ListItem} from "../list";
-import {defaultPageSizes, Pager} from "../pager";
+import {Accordion} from "../accordion/Accordion";
+import {AccordionItem} from "../accordion/AccordionItem";
+import {Button} from "../button/Button";
+import {DialogBox, DialogBoxType} from "../dialogBox/DialogBox";
+import {List} from "../list/List";
+import {ListFooter} from "../list/ListFooter";
+import {ListItem} from "../list/ListItem";
+import {defaultPageSizes, Pager} from "../pager/Pager";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Sizing,
 	SortOrder,
 	Wrapper
 } from "../shared";
-import {TextField} from "../textField";
-import {TitleLayout} from "../title";
-import {Toast, ToastLevel} from "../toast";
+import {TextField} from "../textField/TextField";
+import {TitleLayout} from "../title/Title";
+import {Toast, ToastLevel} from "../toast/Toast";
 
 export interface DynamicListItem {
 	[key: string]: any;
@@ -177,31 +179,6 @@ export interface DynamicListProps extends BaseProps {
 	title?: any;
 }
 
-export function getDefaultDynamicListProps(): DynamicListProps {
-	return {
-		...getDefaultBaseProps(),
-		collapsable: false,
-		errorMessage: "",
-		errorMessageDuration: 3,
-		items: {},
-		layout: TitleLayout.dominant,
-		nocollapse: false,
-		noselect: false,
-		onBlur: nilEvent,
-		onClick: nilEvent,
-		onDelete: nilEvent,
-		onError: nilEvent,
-		onFocus: nilEvent,
-		onNew: nilEvent,
-		onSelection: nilEvent,
-		onSort: nilEvent,
-		onUpdate: nilEvent,
-		pageSizes: defaultPageSizes,
-		sortOrder: SortOrder.ascending,
-		title: sp
-	};
-}
-
 export interface DynamicListState extends BaseState {
 	errorMessage?: string;
 	initialToggle?: boolean;
@@ -213,23 +190,6 @@ export interface DynamicListState extends BaseState {
 	showNew?: boolean;
 	sortOrder?: SortOrder;
 	totalItems?: number;
-}
-
-// TODO: add additional init
-export function getDefaultDynamicListState(): DynamicListState {
-	return {
-		...getDefaultBaseState(),
-		errorMessage: "",
-		initialToggle: true,
-		page: 1,
-		pageSize: 0,
-		search: "",
-		showConfirm: false,
-		showError: false,
-		showNew: false,
-		sortOrder: SortOrder.ascending,
-		totalItems: 0
-	};
 }
 
 const DynamicListContainer: any = styled.div`
@@ -271,7 +231,28 @@ export class DynamicList extends BaseComponent<
 	DynamicListProps,
 	DynamicListState
 > {
-	public static readonly defaultProps: DynamicListProps = getDefaultDynamicListProps();
+	public static readonly defaultProps: DynamicListProps = {
+		...defaultBaseProps,
+		collapsable: false,
+		errorMessage: "",
+		errorMessageDuration: 3,
+		items: {},
+		layout: TitleLayout.dominant,
+		nocollapse: false,
+		noselect: false,
+		onBlur: nilEvent,
+		onClick: nilEvent,
+		onDelete: nilEvent,
+		onError: nilEvent,
+		onFocus: nilEvent,
+		onNew: nilEvent,
+		onSelection: nilEvent,
+		onSort: nilEvent,
+		onUpdate: nilEvent,
+		pageSizes: defaultPageSizes,
+		sortOrder: SortOrder.ascending,
+		title: sp
+	};
 
 	private readonly _baseMessage: string =
 		'Are you sure you want to delete "%s"?';
@@ -291,9 +272,16 @@ export class DynamicList extends BaseComponent<
 
 	constructor(props: DynamicListProps) {
 		super("ui-dynamiclist", DynamicList, props, {
-			...getDefaultDynamicListState(),
+			errorMessage: "",
+			initialToggle: true,
+			page: 1,
 			pageSize: props.pageSizes[0],
-			sortOrder: props.sortOrder
+			search: "",
+			showConfirm: false,
+			showError: false,
+			showNew: false,
+			sortOrder: props.sortOrder,
+			totalItems: 0
 		});
 
 		this._fillerKeys = new Keys({testing: this.props.testing});

@@ -4,12 +4,8 @@ import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {waitPromise} from "util.wait";
-import {Button} from "../button";
-import {
-	getDefaultListItemProps,
-	getDefaultListItemState,
-	ListItem
-} from "./index";
+import {Button} from "../button/Button";
+import ListItem from "./ListItem";
 
 function validate(ctl: any) {
 	assert(ctl);
@@ -17,18 +13,6 @@ function validate(ctl: any) {
 	assert(ctl.prop("visible"));
 	assert(ctl.find(".ui-listitem").length === 10);
 }
-
-test("Test retrieval of ListItem props object", () => {
-	const props = getDefaultListItemProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultListItemState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
 
 test("Test the creation of a ListItem control with simple title", () => {
 	const ctl = shallow(<ListItem title='test title' selected />);

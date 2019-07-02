@@ -44,13 +44,12 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	Sizing,
 	Wrapper
 } from "../shared";
-import {Title, TitleLayout, TitleProps} from "../title";
+import {Title, TitleLayout, TitleProps} from "../title/Title";
 
 export interface ItemProps extends BaseProps, TitleProps {
 	hiddenLeftButton?: boolean;
@@ -72,36 +71,7 @@ export interface ItemProps extends BaseProps, TitleProps {
 	useedit?: boolean;
 }
 
-export function getDefaultItemProps(): ItemProps {
-	return {
-		...getDefaultBaseProps(),
-		hiddenLeftButton: false,
-		hiddenRightButton: false,
-		layout: TitleLayout.dominant,
-		leftButton: null,
-		onBlur: nilEvent,
-		onChange: nilEvent,
-		onClick: nilEvent,
-		onDoubleClick: nilEvent,
-		onFocus: nilEvent,
-		onKeyDown: nilEvent,
-		onKeyPress: nilEvent,
-		onMouseOut: nilEvent,
-		onUpdate: nilEvent,
-		rightButton: null,
-		selected: false,
-		stacked: false,
-		title: sp,
-		useedit: false,
-		widget: null
-	};
-}
-
 export type ItemState = BaseState;
-
-export function getDefaultItemState(): ItemState {
-	return {...getDefaultBaseState()};
-}
 
 const HiddenButton: any = css`
 	display: none;
@@ -175,10 +145,31 @@ const ItemViewButton: any = styled.div`
 `;
 
 export class Item extends BaseComponent<ItemProps, ItemState> {
-	public static readonly defaultProps: ItemProps = getDefaultItemProps();
+	public static readonly defaultProps: ItemProps = {
+		...defaultBaseProps,
+		hiddenLeftButton: false,
+		hiddenRightButton: false,
+		layout: TitleLayout.dominant,
+		leftButton: null,
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onClick: nilEvent,
+		onDoubleClick: nilEvent,
+		onFocus: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onMouseOut: nilEvent,
+		onUpdate: nilEvent,
+		rightButton: null,
+		selected: false,
+		stacked: false,
+		title: sp,
+		useedit: false,
+		widget: null
+	};
 
 	constructor(props: ItemProps) {
-		super("ui-item", Item, props, getDefaultItemState());
+		super("ui-item", Item, props);
 	}
 
 	public render() {

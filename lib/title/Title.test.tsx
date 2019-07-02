@@ -1,26 +1,7 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	getDefaultTitleProps,
-	getDefaultTitleState,
-	Title,
-	TitleLayout
-} from "./index";
-
-test("Test retrieval of Title props object", () => {
-	const props = getDefaultTitleProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTitleState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Title, {TitleLayout} from "./Title";
 
 test("Test creation of a Title control with default props", () => {
 	const ctl = shallow(

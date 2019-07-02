@@ -3,21 +3,7 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	ButtonCircle,
-	getDefaultButtonCircleProps,
-	getDefaultButtonCircleState
-} from "./index";
-
-test("Test retrieval of ButtonCircle props object", () => {
-	const props = getDefaultButtonCircleProps();
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultButtonCircleState();
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import {ButtonCircle} from "./ButtonCircle";
 
 test("Test creation of a ButtonCircle control", () => {
 	const ctl = shallow(<ButtonCircle className='test-class' />);

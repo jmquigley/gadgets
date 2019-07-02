@@ -3,23 +3,7 @@ const debug = require("debug")("gadgets.test.Accordion");
 import {shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	Accordion,
-	getDefaultAccordionProps,
-	getDefaultAccordionState
-} from "./index";
-
-test("Test retrieval of Accordion props object", () => {
-	const props = getDefaultAccordionProps();
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultAccordionState();
-	assert(state);
-	expect(state).toMatchSnapshot();
-
-	debug("props: %O, state: %O", props, state);
-});
+import {Accordion} from "./Accordion";
 
 test("Test the creation of a Accordion control container", () => {
 	const li = <li>some list item</li>;

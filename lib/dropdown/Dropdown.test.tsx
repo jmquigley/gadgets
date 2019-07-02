@@ -3,30 +3,13 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	Dropdown,
-	DropdownOption,
-	getDefaultDropdownProps,
-	getDefaultDropdownState
-} from "./index";
+import Dropdown, {DropdownOption} from "./Dropdown";
 
 const testData: DropdownOption[] = [
 	{value: "idstr1", label: "lstr1"},
 	{value: "idstr2", label: "lstr2"},
 	{value: "idstr3", label: "lstr3"}
 ];
-
-test("Test retrieval of Dropdown props object", () => {
-	const props = getDefaultDropdownProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultDropdownState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
 
 test("Creation of the Dropdown control", () => {
 	const ctl = shallow(<Dropdown defaultVal='idstr2' items={testData} />);

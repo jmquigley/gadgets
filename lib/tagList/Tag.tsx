@@ -36,16 +36,15 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {ButtonCircle} from "../buttonCircle";
-import {Label} from "../label";
+import {ButtonCircle} from "../buttonCircle/ButtonCircle";
+import {Label} from "../label/Label";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
@@ -58,23 +57,8 @@ export interface TagProps extends BaseProps {
 	usedelete?: boolean;
 }
 
-export function getDefaultTagProps(): TagProps {
-	return {
-		...getDefaultBaseProps(),
-		onClick: nilEvent,
-		onDelete: nilEvent,
-		onMouseOut: nilEvent,
-		onMouseOver: nilEvent,
-		usedelete: false
-	};
-}
-
 export interface TagState extends BaseState {
 	showDelete?: boolean;
-}
-
-export function getDefaultTagState(): TagState {
-	return {...getDefaultBaseState(), showDelete: false};
 }
 
 const DeleteButtonView: any = styled(ButtonCircle)`
@@ -110,12 +94,21 @@ const TagView: any = styled.div`
 export const StyledLabel: any = styled(Label)``;
 
 export class Tag extends BaseComponent<TagProps, TagState> {
-	public static readonly defaultProps: TagProps = getDefaultTagProps();
+	public static readonly defaultProps: TagProps = {
+		...defaultBaseProps,
+		onClick: nilEvent,
+		onDelete: nilEvent,
+		onMouseOut: nilEvent,
+		onMouseOver: nilEvent,
+		usedelete: false
+	};
 
 	private tag: string;
 
 	constructor(props: TagProps) {
-		super("ui-tag", Tag, props, getDefaultTagState());
+		super("ui-tag", Tag, props, {
+			showDelete: false
+		});
 	}
 
 	@autobind

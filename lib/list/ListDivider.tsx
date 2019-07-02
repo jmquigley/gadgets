@@ -27,31 +27,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import {BaseComponent, Wrapper} from "../shared";
-import {
-	getDefaultListProps,
-	getDefaultListState,
-	ListProps,
-	ListState
-} from "./List";
+import {List, ListProps, ListState} from "./List";
 
 export interface ListDividerProps extends ListProps {
 	color?: string;
 }
 
-export function getDefaultListDividerProps(): ListDividerProps {
-	return {
-		...getDefaultListProps(),
-		color: "lightgray"
-	};
-}
-
 export type ListDividerState = ListState;
-
-export function getDefaultListDividerState(): ListDividerState {
-	return {
-		...getDefaultListState()
-	};
-}
 
 const ListDividerView: any = styled.li`
 	background-color: inherit;
@@ -67,15 +49,13 @@ export class ListDivider extends BaseComponent<
 	ListDividerProps,
 	ListDividerState
 > {
-	public static readonly defaultProps: ListDividerProps = getDefaultListDividerProps();
+	public static readonly defaultProps: ListDividerProps = {
+		...List.defaultProps,
+		color: "lightgray"
+	};
 
 	constructor(props: ListDividerProps) {
-		super(
-			"ui-list-divider",
-			ListDivider,
-			props,
-			getDefaultListDividerState()
-		);
+		super("ui-list-divider", ListDivider, props);
 	}
 
 	public static getDerivedStateFromProps(

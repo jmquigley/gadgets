@@ -63,8 +63,7 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Wrapper
 } from "../shared";
 import {ListItem} from "./ListItem";
@@ -76,25 +75,8 @@ export interface ListProps extends BaseProps {
 	onSelection?: (title: string) => void;
 }
 
-export function getDefaultListProps(): ListProps {
-	return {
-		...getDefaultBaseProps(),
-		alternating: false,
-		children: null,
-		noselect: false,
-		onSelection: nilEvent
-	};
-}
-
 export interface ListState extends BaseState {
 	selectedItem: ListItem;
-}
-
-export function getDefaultListState(): ListState {
-	return {
-		...getDefaultBaseState(),
-		selectedItem: null
-	};
 }
 
 const ListView: any = styled.ul`
@@ -106,11 +88,17 @@ const ListView: any = styled.ul`
 `;
 
 export class List extends BaseComponent<ListProps, ListState> {
-	public static readonly defaultProps: ListProps = getDefaultListProps();
+	public static readonly defaultProps: ListProps = {
+		...defaultBaseProps,
+		alternating: false,
+		children: null,
+		noselect: false,
+		onSelection: nilEvent
+	};
 
 	constructor(props: ListProps) {
 		super("ui-list", List, props, {
-			...getDefaultListState()
+			selectedItem: null
 		});
 	}
 

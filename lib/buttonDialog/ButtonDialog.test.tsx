@@ -4,21 +4,7 @@ import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Location} from "../shared";
-import {
-	ButtonDialog,
-	getDefaultButtonDialogProps,
-	getDefaultButtonDialogState
-} from "./index";
-
-test("Test retrieval of ButtonDialog props object", () => {
-	const props = getDefaultButtonDialogProps();
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultButtonDialogState();
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import {ButtonDialog} from "./ButtonDialog";
 
 test("Test creation of a ButtonDialog control", () => {
 	const ctl = shallow(

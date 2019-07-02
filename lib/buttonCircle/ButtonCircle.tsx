@@ -52,29 +52,15 @@ import {
 	BaseButtonView,
 	Button,
 	ButtonProps,
-	ButtonState,
-	getDefaultButtonProps,
-	getDefaultButtonState
-} from "../button";
+	ButtonState
+} from "../button/Button";
 import {BaseComponent, borderStyle, Sizing, Wrapper} from "../shared";
 
 export interface ButtonCircleProps extends ButtonProps {
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export function getDefaultButtonCircleProps(): ButtonProps {
-	return {
-		...getDefaultButtonProps(),
-		onClick: nilEvent,
-		ripple: false
-	};
-}
-
 export type ButtonCircleState = ButtonState;
-
-export function getDefaultButtonCircleState(): ButtonCircleState {
-	return {...getDefaultButtonState()};
-}
 
 const ButtonCircleContainerView: any = styled.div`
 	${BaseButtonView}
@@ -118,15 +104,14 @@ export class ButtonCircle extends BaseComponent<
 	ButtonCircleProps,
 	ButtonCircleState
 > {
-	public static readonly defaultProps: ButtonCircleProps = getDefaultButtonCircleProps();
+	public static readonly defaultProps: ButtonCircleProps = {
+		...Button.defaultProps,
+		onClick: nilEvent,
+		ripple: false
+	};
 
 	constructor(props: ButtonCircleProps) {
-		super(
-			"ui-button-circle",
-			ButtonCircle,
-			props,
-			getDefaultButtonCircleState()
-		);
+		super("ui-button-circle", ButtonCircle, props);
 	}
 
 	public render() {

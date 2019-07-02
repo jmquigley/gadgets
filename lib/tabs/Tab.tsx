@@ -58,24 +58,28 @@ import autobind from "autobind-decorator";
 import * as React from "react";
 import styled, {css} from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
-import {Item} from "../item";
+import {Button} from "../button/Button";
+import {Item} from "../item/Item";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
 	ColorScheme,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Location,
 	Wrapper
 } from "../shared";
 
+export interface TabHREF {
+	hiddenTabHandler: (tab: Tab) => void;
+	selectHandler: (tab: Tab) => void;
+}
+
 export interface TabProps extends BaseProps {
-	href?: any;
+	href?: TabHREF;
 	noclose?: boolean;
 	onClick?: (e: React.MouseEvent<HTMLLIElement>) => void;
 	onClose?: (tab: any) => void;
@@ -83,29 +87,8 @@ export interface TabProps extends BaseProps {
 	selected?: boolean;
 	title?: string;
 }
-
-export function getDefaultTabProps(): TabProps {
-	return {
-		...getDefaultBaseProps(),
-		href: {
-			selectHandler: nilEvent
-		},
-		minWidth: "120px",
-		noclose: false,
-		onClick: nilEvent,
-		onClose: nilEvent,
-		orientation: Location.top,
-		selected: false,
-		title: ""
-	};
-}
-
 export interface TabState extends BaseState {
 	visible: boolean;
-}
-
-export function getDefaultTabState(): TabState {
-	return {...getDefaultBaseState(), visible: true};
 }
 
 const TabBorderTop: any = css`
@@ -214,13 +197,23 @@ const TabView: any = styled.div`
 `;
 
 export class Tab extends BaseComponent<TabProps, TabState> {
-	public static readonly defaultProps: TabProps = getDefaultTabProps();
-
-	public state: TabState = getDefaultTabState();
+	public static readonly defaultProps: TabProps = {
+		...defaultBaseProps,
+		href: {
+			selectHandler: nilEvent,
+			hiddenTabHandler: nilEvent
+		},
+		minWidth: "120px",
+		noclose: false,
+		onClick: nilEvent,
+		onClose: nilEvent,
+		orientation: Location.top,
+		selected: false,
+		title: ""
+	};
 
 	constructor(props: TabProps) {
 		super("ui-tab", Tab, props, {
-			...getDefaultTabState(),
 			visible: props.visible
 		});
 	}

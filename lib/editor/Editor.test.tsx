@@ -1,19 +1,19 @@
-"use strict";
-
+import {mount} from "enzyme";
 import assert from "power-assert";
+import * as React from "react";
 import "../globals";
-import {getDefaultEditorProps, getDefaultEditorState} from "./index";
+import Editor from "./Editor";
 
-test("Test retrieval of the Editor props object", () => {
-	const props = getDefaultEditorProps();
+const debug = require("debug")("gadgets.test.Editor");
 
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultEditorState();
-	assert(state);
-	expect(state).toMatchSnapshot();
+beforeEach(() => {
+	document.body.innerHTML = `<div id="Editor-0"></div>`;
+	debug("innerHTML: %O", window.document.body.innerHTML);
 });
 
-// Editor test are currently broken in jest.  Still trying to figure out why, so these are removed
-// for now.  The Editor control works in the demo, but automated testing does not.
+test("Test creation of an Editor control", () => {
+	const ctl = mount(<Editor />);
+
+	assert(ctl);
+	expect(ctl).toMatchSnapshot();
+});

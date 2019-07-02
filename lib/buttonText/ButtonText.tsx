@@ -44,14 +44,13 @@ import * as React from "react";
 import {HotKeys} from "react-hotkeys";
 import styled from "styled-components";
 import {nilEvent} from "util.toolbox";
-import {BaseButtonView} from "../button";
-import {getDefaultIconProps, Icon, IconProps} from "../icon";
+import {BaseButtonView} from "../button/Button";
+import {Icon, IconProps} from "../icon/Icon";
 import {
 	BaseComponent,
 	BaseState,
 	disabled,
 	fontStyle,
-	getDefaultBaseState,
 	hidden,
 	Justify,
 	Wrapper
@@ -65,23 +64,7 @@ export interface ButtonTextProps extends IconProps {
 	text?: string;
 }
 
-export function getDefaultButtonTextProps(): ButtonTextProps {
-	return {
-		...getDefaultIconProps(),
-		justify: Justify.right,
-		kbActivate: "",
-		noicon: false,
-		onClick: nilEvent,
-		ripple: true,
-		text: ""
-	};
-}
-
 export type ButtonTextState = BaseState;
-
-export function getDefaultButtonTextState(): ButtonTextState {
-	return {...getDefaultBaseState()};
-}
 
 const ButtonTextContent: any = styled.div`
 	flex: 1;
@@ -123,10 +106,18 @@ export class ButtonText extends BaseComponent<
 	ButtonTextProps,
 	ButtonTextState
 > {
-	public static readonly defaultProps: ButtonTextProps = getDefaultButtonTextProps();
+	public static readonly defaultProps: ButtonTextProps = {
+		...Icon.defaultProps,
+		justify: Justify.right,
+		kbActivate: "",
+		noicon: false,
+		onClick: nilEvent,
+		ripple: true,
+		text: ""
+	};
 
 	constructor(props: ButtonTextProps) {
-		super("ui-button-text", ButtonText, props, getDefaultButtonTextState());
+		super("ui-button-text", ButtonText, props);
 
 		this.buildKeyMap({
 			kbActivate: this.handleClick

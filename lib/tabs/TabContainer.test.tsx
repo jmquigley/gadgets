@@ -1,27 +1,9 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Location} from "../shared";
-import {
-	getDefaultTabContainerProps,
-	getDefaultTabContainerState,
-	Tab,
-	TabContainer
-} from "./index";
-
-test("Test retrieval of Tabs props object", () => {
-	const props = getDefaultTabContainerProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTabContainerState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Tab from "./Tab";
+import TabContainer from "./TabContainer";
 
 test("Create an empty TabContainer instance", () => {
 	const ctl = mount(<TabContainer />);

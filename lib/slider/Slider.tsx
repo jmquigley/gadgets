@@ -68,9 +68,8 @@ import {
 	BaseProps,
 	BaseState,
 	boxStyle,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
@@ -85,25 +84,8 @@ export interface SliderProps extends BaseProps {
 	ticks?: number;
 }
 
-export function getDefaultSliderProps(): SliderProps {
-	return {
-		...getDefaultBaseProps(),
-		max: 100,
-		min: 0,
-		onSelection: nilEvent,
-		scale: 1,
-		snap: false,
-		startPosition: 0,
-		ticks: 0
-	};
-}
-
 export interface SliderState extends BaseState {
 	x?: number;
-}
-
-export function getDefaultSliderState(): SliderState {
-	return {...getDefaultBaseState(), x: 0};
 }
 
 const SliderBar: any = styled.div`
@@ -147,7 +129,16 @@ const SliderTick: any = styled.div`
 `;
 
 export class Slider extends BaseComponent<SliderProps, SliderState> {
-	public static readonly defaultProps: SliderProps = getDefaultSliderProps();
+	public static readonly defaultProps: SliderProps = {
+		...defaultBaseProps,
+		max: 100,
+		min: 0,
+		onSelection: nilEvent,
+		scale: 1,
+		snap: false,
+		startPosition: 0,
+		ticks: 0
+	};
 
 	private _borderSize: number = 1;
 	private _box: any;
@@ -160,7 +151,6 @@ export class Slider extends BaseComponent<SliderProps, SliderState> {
 
 	constructor(props: SliderProps) {
 		super("ui-slider", Slider, props, {
-			...getDefaultSliderState(),
 			x: props.startPosition
 		});
 

@@ -62,8 +62,7 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState,
+	defaultBaseProps,
 	Justify,
 	Wrapper
 } from "../shared";
@@ -72,18 +71,7 @@ export interface ToolbarProps extends BaseProps {
 	justify?: Justify;
 }
 
-export function getDefaultToolbarProps(): ToolbarProps {
-	return {
-		...getDefaultBaseProps(),
-		justify: Justify.left
-	};
-}
-
 export type ToolbarState = BaseState;
-
-export function getDefaultToolbarState(): ToolbarState {
-	return {...getDefaultBaseState()};
-}
 
 const ToolbarView: any = styled.div`
 	background-color: ${(props: ToolbarProps) => props.theme.backgroundColor};
@@ -123,7 +111,10 @@ const ToolbarElementView: any = styled.div`
 `;
 
 export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
-	public static readonly defaultProps: ToolbarProps = getDefaultToolbarProps();
+	public static readonly defaultProps: ToolbarProps = {
+		...defaultBaseProps,
+		justify: Justify.left
+	};
 
 	private static readonly _whitelist = new BinaryTree([
 		"Button",
@@ -143,7 +134,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 	]);
 
 	constructor(props: ToolbarProps) {
-		super("ui-toolbar", Toolbar, props, getDefaultToolbarState());
+		super("ui-toolbar", Toolbar, props);
 	}
 
 	public render() {

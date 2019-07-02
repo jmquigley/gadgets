@@ -4,7 +4,7 @@ import {EnumValues as ev} from "enum-values";
 import {shallow} from "enzyme";
 import * as React from "react";
 import {Sizing} from "../shared";
-import {Break} from "./index";
+import {Break} from "./Break";
 
 let count: number = 1;
 

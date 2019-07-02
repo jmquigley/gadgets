@@ -3,24 +3,7 @@
 import {shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {
-	DialogBox,
-	DialogBoxType,
-	getDefaultDialogBoxProps,
-	getDefaultDialogBoxState
-} from "./index";
-
-test("Test retrieval of DialogBox props object", () => {
-	const props = getDefaultDialogBoxProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultDialogBoxState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import DialogBox, {DialogBoxType} from "./DialogBox";
 
 test("Test creation of a default DialogBox control", () => {
 	const ctl = shallow(<DialogBox className='test-class' />);

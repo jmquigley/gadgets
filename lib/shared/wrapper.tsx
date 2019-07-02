@@ -66,8 +66,8 @@ import * as React from "react";
 import styled, {ThemeProvider} from "styled-components";
 import {nilEvent} from "util.toolbox";
 import {BaseComponent} from "./base";
-import {BaseProps, disabled, getDefaultBaseProps, invisible} from "./props";
-import {BaseState, getDefaultBaseState} from "./state";
+import {BaseProps, defaultBaseProps, disabled, invisible} from "./props";
+import {BaseState} from "./state";
 
 export interface WrapperProps extends BaseProps {
 	children?: React.ReactChild;
@@ -76,30 +76,9 @@ export interface WrapperProps extends BaseProps {
 	reset?: boolean;
 }
 
-export function getDefaultWrapperProps(): WrapperProps {
-	return {
-		...getDefaultBaseProps(),
-		children: null,
-		name: "Unknown",
-		onError: nilEvent,
-		reset: false,
-		style: {
-			whiteSpace: "pre-wrap"
-		}
-	};
-}
-
 export interface WrapperState extends BaseState {
 	error: string;
 	errorInfo: any;
-}
-
-export function getDefaultWrapperState(): WrapperState {
-	return {
-		...getDefaultBaseState(),
-		error: "",
-		errorInfo: null
-	};
 }
 
 const WrapperView: any = styled.div`
@@ -108,10 +87,22 @@ const WrapperView: any = styled.div`
 `;
 
 export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
-	public static defaultProps: WrapperProps = getDefaultWrapperProps();
+	public static defaultProps: WrapperProps = {
+		...defaultBaseProps,
+		children: null,
+		name: "Unknown",
+		onError: nilEvent,
+		reset: false,
+		style: {
+			whiteSpace: "pre-wrap"
+		}
+	};
 
 	constructor(props: WrapperProps) {
-		super("ui-error", Wrapper, props, getDefaultWrapperState());
+		super("ui-error", Wrapper, props, {
+			error: "",
+			errorInfo: null
+		});
 	}
 
 	public componentDidCatch(error: any = null, errorInfo: any = null) {
@@ -188,3 +179,5 @@ export class Wrapper extends BaseComponent<WrapperProps, WrapperState> {
 		}
 	}
 }
+
+export default Wrapper;

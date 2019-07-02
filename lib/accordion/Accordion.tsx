@@ -42,27 +42,13 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	Wrapper
 } from "../shared";
 
 export type AccordionProps = BaseProps;
-
-export function getDefaultAccordionProps(): AccordionProps {
-	return {
-		...getDefaultBaseProps()
-	};
-}
-
 export type AccordionState = BaseState;
-
-export function getDefaultAccordionState(): AccordionState {
-	return {
-		...getDefaultBaseState()
-	};
-}
 
 const AccordionView: any = styled.ul`
 	cursor: default;
@@ -76,10 +62,12 @@ const AccordionView: any = styled.ul`
 `;
 
 export class Accordion extends BaseComponent<AccordionProps, AccordionState> {
-	public static readonly defaultProps: AccordionProps = getDefaultAccordionProps();
+	public static readonly defaultProps: AccordionProps = {
+		...defaultBaseProps
+	};
 
 	constructor(props: AccordionProps) {
-		super("ui-accordion", Accordion, props, getDefaultAccordionState());
+		super("ui-accordion", Accordion, props);
 	}
 
 	public render() {

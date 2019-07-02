@@ -133,25 +133,25 @@ import styled from "styled-components";
 import {ClassNames} from "util.classnames";
 import {Match} from "util.matches";
 import {nilEvent} from "util.toolbox";
-import {Button} from "../button";
-import {ButtonDialog} from "../buttonDialog";
-import {Divider} from "../divider";
-import {Dropdown, DropdownOption} from "../dropdown";
-import {List, ListItem} from "../list";
+import {Button} from "../button/Button";
+import {ButtonDialog} from "../buttonDialog/ButtonDialog";
+import {Divider} from "../divider/Divider";
+import {Dropdown, DropdownOption} from "../dropdown/Dropdown";
+import {List} from "../list/List";
+import {ListItem} from "../list/ListItem";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	DisabledCSS,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	InvisibleCSS,
 	parseKeyCombo,
 	Sizing,
 	Wrapper
 } from "../shared";
-import {Toolbar} from "../toolbar";
+import {Toolbar} from "../toolbar/Toolbar";
 
 export interface QuillKeyBindings {
 	[key: string]: any;
@@ -184,44 +184,7 @@ export interface EditorProps extends BaseProps {
 	useSmallButtons?: boolean;
 }
 
-export function getDefaultEditorProps(): EditorProps {
-	return {
-		...getDefaultBaseProps(),
-		content: "",
-		defaultFont: "Fira Code",
-		defaultFontSize: 12,
-		kbBold: "ctrl+b",
-		kbHeader1: "alt+ctrl+1",
-		kbHeader2: "alt+ctrl+2",
-		kbHeader3: "alt+ctrl+3",
-		kbHeader4: "alt+ctrl+4",
-		kbHeader5: "alt+ctrl+5",
-		kbHeader6: "alt+ctrl+6",
-		kbItalic: "ctrl+i",
-		kbMono: "ctrl+m",
-		kbRedo: "ctrl+shift+z",
-		kbRefresh: "alt+r",
-		kbStrikeThrough: "ctrl+shift+t",
-		kbUnderline: "ctrl+u",
-		kbUndo: "ctrl+z",
-		onChange: nilEvent,
-		onClick: nilEvent,
-		onClickLink: nilEvent,
-		scheme: {
-			background: Color.black,
-			foreground: Color.white
-		},
-		useSmallButtons: false
-	};
-}
-
 export type EditorState = BaseState;
-
-export function getDefaultEditorState(): EditorState {
-	return {
-		...getDefaultBaseState()
-	};
-}
 
 const EditorContainer: any = styled.div`
 	box-sizing: border-box;
@@ -252,7 +215,34 @@ const EditorToolbar: any = styled(Toolbar)`
 `;
 
 export class Editor extends BaseComponent<EditorProps, EditorState> {
-	public static readonly defaultProps: EditorProps = getDefaultEditorProps();
+	public static readonly defaultProps: EditorProps = {
+		...defaultBaseProps,
+		content: "",
+		defaultFont: "Fira Code",
+		defaultFontSize: 12,
+		kbBold: "ctrl+b",
+		kbHeader1: "alt+ctrl+1",
+		kbHeader2: "alt+ctrl+2",
+		kbHeader3: "alt+ctrl+3",
+		kbHeader4: "alt+ctrl+4",
+		kbHeader5: "alt+ctrl+5",
+		kbHeader6: "alt+ctrl+6",
+		kbItalic: "ctrl+i",
+		kbMono: "ctrl+m",
+		kbRedo: "ctrl+shift+z",
+		kbRefresh: "alt+r",
+		kbStrikeThrough: "ctrl+shift+t",
+		kbUnderline: "ctrl+u",
+		kbUndo: "ctrl+z",
+		onChange: nilEvent,
+		onClick: nilEvent,
+		onClickLink: nilEvent,
+		scheme: {
+			background: Color.black,
+			foreground: Color.white
+		},
+		useSmallButtons: false
+	};
 
 	private _custom: any;
 	private _editor: any;
@@ -267,9 +257,11 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	private _toolbarStyles: ClassNames = new ClassNames("ui-editor-toolbar");
 
 	constructor(props: EditorProps) {
-		super("ui-editor", Editor, props, getDefaultEditorState());
+		super("ui-editor", Editor, props);
 
 		this.debug('Editor key: "%s"', this.id);
+		this.debug("Quill: %O", Quill);
+
 		this._keybindings = this.buildKeyboardHandler();
 	}
 
@@ -477,6 +469,8 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 			},
 			theme: "snow"
 		});
+
+		this.debug("Quill editor instance (%o)): %O", this.id, this._editor);
 
 		this._markup = this._editor.getModule("markup");
 		this._markup.setContent(this.props.content);

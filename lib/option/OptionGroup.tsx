@@ -57,14 +57,13 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Sizing,
 	Wrapper
 } from "../shared";
-import {Title, TitleLayout} from "../title";
+import {Title, TitleLayout} from "../title/Title";
 import {Option, OptionType} from "./Option";
 
 export interface OptionGroupProps extends BaseProps {
@@ -75,26 +74,8 @@ export interface OptionGroupProps extends BaseProps {
 	title?: string;
 }
 
-export function getDefaultOptionGroupProps(): OptionGroupProps {
-	return {
-		...getDefaultBaseProps(),
-		default: "",
-		onSelection: nilEvent,
-		optionType: OptionType.square,
-		options: [],
-		title: ""
-	};
-}
-
 export interface OptionGroupState extends BaseState {
 	options?: OrderedMap<string, boolean>;
-}
-
-export function getDefaultOptionGroupState(): OptionGroupState {
-	return {
-		...getDefaultBaseState(),
-		options: null
-	};
 }
 
 const StyledOptionGroup: any = styled.div`
@@ -160,11 +141,17 @@ export class OptionGroup extends BaseComponent<
 	OptionGroupProps,
 	OptionGroupState
 > {
-	public static readonly defaultProps: OptionGroupProps = getDefaultOptionGroupProps();
+	public static readonly defaultProps: OptionGroupProps = {
+		...defaultBaseProps,
+		default: "",
+		onSelection: nilEvent,
+		optionType: OptionType.square,
+		options: [],
+		title: ""
+	};
 
 	constructor(props: OptionGroupProps) {
 		super("ui-option-group", OptionGroup, props, {
-			...getDefaultOptionGroupState(),
 			options: OptionGroup.buildOptionState(props.options, props.default)
 		});
 	}

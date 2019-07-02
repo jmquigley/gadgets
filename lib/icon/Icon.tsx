@@ -54,10 +54,9 @@ import {
 	BaseProps,
 	BaseState,
 	boxStyle,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	locationStyle,
 	Sizing,
@@ -69,20 +68,7 @@ export interface IconProps extends BaseProps {
 	imageFile?: string;
 }
 
-export function getDefaultIconProps(): IconProps {
-	return {
-		...getDefaultBaseProps(),
-		iconName: "bomb",
-		imageFile: "",
-		sizing: Sizing.normal
-	};
-}
-
 export type IconState = BaseState;
-
-export function getDefaultIconState(): IconState {
-	return {...getDefaultBaseState()};
-}
 
 const FontAwesome: any = styled.i`
 	text-align: center;
@@ -100,10 +86,15 @@ const Image: any = styled.img`
 `;
 
 export class Icon extends BaseComponent<IconProps, IconState> {
-	public static readonly defaultProps: IconProps = getDefaultIconProps();
+	public static readonly defaultProps: IconProps = {
+		...defaultBaseProps,
+		iconName: "bomb",
+		imageFile: "",
+		sizing: Sizing.normal
+	};
 
 	constructor(props: IconProps) {
-		super("ui-icon", Icon, props, getDefaultIconState());
+		super("ui-icon", Icon, props);
 	}
 
 	public render() {

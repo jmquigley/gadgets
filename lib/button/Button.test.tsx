@@ -3,18 +3,7 @@
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {Button, getDefaultButtonProps, getDefaultButtonState} from "./index";
-
-test("Test retrieval of Button props object", () => {
-	const props = getDefaultButtonProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultButtonState();
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import {Button} from "./Button";
 
 test("Test creation of a Button control", () => {
 	const ctl = shallow(<Button className='test-class' />);

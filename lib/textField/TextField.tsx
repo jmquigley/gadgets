@@ -128,20 +128,19 @@ import * as React from "react";
 import styled, {css} from "styled-components";
 import {sp} from "util.constants";
 import {nilEvent} from "util.toolbox";
-import {ButtonCircle} from "../buttonCircle";
+import {ButtonCircle} from "../buttonCircle/ButtonCircle";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
 	Color,
+	defaultBaseProps,
 	disabled,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
-import {tooltip} from "../tooltip";
+import {tooltip} from "../tooltip/Tooltip";
 import {
 	validateEmail,
 	validateMaxLength,
@@ -189,33 +188,6 @@ export interface TextFieldProps extends BaseProps {
 	[key: string]: any;
 }
 
-export function getDefaultTextFieldProps(): TextFieldProps {
-	return {
-		...getDefaultBaseProps(),
-		initialValue: "",
-		max: "any",
-		maxLength: null,
-		min: "any",
-		minLength: null,
-		minWidth: "1em",
-		noborder: false,
-		noripple: true,
-		nospinner: false,
-		onBlur: nilEvent,
-		onChange: nilEvent,
-		onClear: nilEvent,
-		onKeyDown: nilEvent,
-		onKeyPress: nilEvent,
-		onValidation: nilEvent,
-		size: null,
-		step: "any",
-		type: TextFieldType.text,
-		useclear: false,
-		usevalidation: false,
-		validators: []
-	};
-}
-
 export interface TextFieldState extends BaseState {
 	message: string;
 	messageType: MessageType;
@@ -223,18 +195,6 @@ export interface TextFieldState extends BaseState {
 	previousValue: string;
 	valid: boolean;
 	value: any;
-}
-
-export function getDefaultTextFieldState(): TextFieldState {
-	return {
-		...getDefaultBaseState(),
-		message: "",
-		messageType: MessageType.none,
-		minWidth: "",
-		previousValue: "",
-		valid: true,
-		value: ""
-	};
 }
 
 const textTypes: any[] = ["text", "email", "search", "password", "tel", "url"];
@@ -318,15 +278,41 @@ const TextFieldView: any = styled.div`
 `;
 
 export class TextField extends BaseComponent<TextFieldProps, TextFieldState> {
-	public static readonly defaultProps: TextFieldProps = getDefaultTextFieldProps();
+	public static readonly defaultProps: TextFieldProps = {
+		...defaultBaseProps,
+		initialValue: "",
+		max: "any",
+		maxLength: null,
+		min: "any",
+		minLength: null,
+		minWidth: "1em",
+		noborder: false,
+		noripple: true,
+		nospinner: false,
+		onBlur: nilEvent,
+		onChange: nilEvent,
+		onClear: nilEvent,
+		onKeyDown: nilEvent,
+		onKeyPress: nilEvent,
+		onValidation: nilEvent,
+		size: null,
+		step: "any",
+		type: TextFieldType.text,
+		useclear: false,
+		usevalidation: false,
+		validators: []
+	};
 
 	private _input: HTMLInputElement = null;
 	private _validators: Validator[] = null;
 
 	constructor(props: TextFieldProps) {
 		super("ui-textfield", TextField, props, {
-			...getDefaultTextFieldState(),
+			message: "",
+			messageType: MessageType.none,
+			minWidth: "",
 			previousValue: props.initialValue,
+			valid: true,
 			value: props.value || props.initialValue
 		});
 

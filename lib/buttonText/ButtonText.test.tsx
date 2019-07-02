@@ -4,21 +4,7 @@ import {mount} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
 import {Justify} from "../shared";
-import {
-	ButtonText,
-	getDefaultButtonTextProps,
-	getDefaultButtonTextState
-} from "./index";
-
-test("Test retrieval of ButtonText props object", () => {
-	const props = getDefaultButtonTextProps();
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultButtonTextState();
-	assert(state);
-	expect(props).toMatchSnapshot();
-});
+import {ButtonText} from "./ButtonText";
 
 test("Test creation of a ButtonText control to the left", () => {
 	const ctl = mount(

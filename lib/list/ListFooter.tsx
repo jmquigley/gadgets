@@ -26,30 +26,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import {BaseComponent, Wrapper} from "../shared";
-import {
-	getDefaultTitleProps,
-	getDefaultTitleState,
-	Title,
-	TitleLayout,
-	TitleProps,
-	TitleState
-} from "../title";
+import {Title, TitleLayout, TitleProps, TitleState} from "../title/Title";
 
 export type ListFooterProps = TitleProps;
-
-export function getDefaultListFooterProps(): TitleProps {
-	return {
-		...getDefaultTitleProps(),
-		layout: TitleLayout.even,
-		title: ""
-	};
-}
-
 export type ListFooterState = TitleState;
-
-export function getDefaultListFooterState(): ListFooterState {
-	return {...getDefaultTitleState()};
-}
 
 const ListFooterView: any = styled(Title)`
 	margin: -1px;
@@ -65,10 +45,14 @@ export class ListFooter extends BaseComponent<
 	ListFooterProps,
 	ListFooterState
 > {
-	public static readonly defaultProps: ListFooterProps = getDefaultListFooterProps();
+	public static readonly defaultProps: ListFooterProps = {
+		...Title.defaultProps,
+		layout: TitleLayout.even,
+		title: ""
+	};
 
 	constructor(props: ListFooterProps) {
-		super("ui-list-footer", ListFooter, props, getDefaultListFooterState());
+		super("ui-list-footer", ListFooter, props);
 	}
 
 	public render() {

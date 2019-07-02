@@ -1,21 +1,7 @@
-"use strict";
-
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";
 import * as React from "react";
-import {getDefaultTabProps, getDefaultTabState, Tab} from "./index";
-
-test("Test retrieval of Tab props object", () => {
-	const props = getDefaultTabProps();
-
-	assert(props);
-	expect(props).toMatchSnapshot();
-
-	const state = getDefaultTabState();
-
-	assert(state);
-	expect(state).toMatchSnapshot();
-});
+import Tab from "./Tab";
 
 test("Test the creation of a Tab instance", () => {
 	const ctl = shallow(

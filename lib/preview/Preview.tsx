@@ -49,9 +49,8 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	disabled,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	invisible,
 	Wrapper
 } from "../shared";
@@ -69,27 +68,9 @@ export interface PreviewProps extends BaseProps {
 	onChange?: (content: string, html: string) => void;
 }
 
-export function getDefaultPreviewProps(): PreviewProps {
-	return {
-		...getDefaultBaseProps(),
-		content: "",
-		css: "",
-		mode: PreviewMode.markdown,
-		onChange: nilEvent
-	};
-}
-
 export interface PreviewState extends BaseState {
 	content: string;
 	html: string;
-}
-
-export function getDefaultPreviewState(): PreviewState {
-	return {
-		...getDefaultBaseState(),
-		content: "",
-		html: ""
-	};
 }
 
 const PreviewWrapper: any = styled.div`
@@ -106,7 +87,13 @@ const PreviewWrapper: any = styled.div`
 `;
 
 export class Preview extends BaseComponent<PreviewProps, PreviewState> {
-	public static readonly defaultProps: PreviewProps = getDefaultPreviewProps();
+	public static readonly defaultProps: PreviewProps = {
+		...defaultBaseProps,
+		content: "",
+		css: "",
+		mode: PreviewMode.markdown,
+		onChange: nilEvent
+	};
 
 	private static readonly parsers = {
 		[PreviewMode.asciidoc]: MarkupFactory.instance(MarkupMode.asciidoc),
@@ -120,7 +107,10 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 	private _webview: any = null;
 
 	constructor(props: PreviewProps) {
-		super("ui-preview", Preview, props, getDefaultPreviewState());
+		super("ui-preview", Preview, props, {
+			content: "",
+			html: ""
+		});
 	}
 
 	@autobind

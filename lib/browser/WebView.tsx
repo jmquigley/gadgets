@@ -19,38 +19,22 @@
 import autobind from "autobind-decorator";
 import * as React from "react";
 import {nilEvent} from "util.toolbox";
-import {
-	BaseComponent,
-	BaseProps,
-	BaseState,
-	getDefaultBaseProps,
-	getDefaultBaseState
-} from "../shared";
+import {BaseComponent, BaseProps, BaseState, defaultBaseProps} from "../shared";
 
 export interface WebViewProps extends BaseProps {
 	innerRef?: (ref: any) => void;
 }
 
-export function getDefaultWebViewProps(): WebViewProps {
-	return {
-		...getDefaultBaseProps(),
-		innerRef: nilEvent
-	};
-}
-
 export type WebViewState = BaseState;
 
-export function getDefaultWebViewState(): WebViewState {
-	return {
-		...getDefaultBaseState()
-	};
-}
-
 export class WebView extends BaseComponent<WebViewProps, WebViewState> {
-	public static readonly defaultProps: WebViewProps = getDefaultWebViewProps();
+	public static readonly defaultProps: WebViewProps = {
+		...defaultBaseProps,
+		innerRef: nilEvent
+	};
 
 	constructor(props: any) {
-		super("ui-webview", WebView, props, getDefaultWebViewState());
+		super("ui-webview", WebView, props);
 	}
 
 	@autobind

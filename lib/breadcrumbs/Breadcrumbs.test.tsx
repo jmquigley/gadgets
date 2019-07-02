@@ -3,20 +3,13 @@
 import {mount} from "enzyme";
 import * as React from "react";
 import {Sizing} from "../shared";
-import {Breadcrumbs, Crumbs, getDefaultBreadcrumbsProps} from "./index";
+import {Breadcrumbs, Crumbs} from "./Breadcrumbs";
 
 const items: Crumbs[] = [
 	{name: "name1", uri: "http://www.example1.com"},
 	{name: "name2", uri: "http://www.example2.com"},
 	{name: "name3", uri: "http://www.example3.com"}
 ];
-
-test("Test retrieval of Breadcrumbs props object", () => {
-	const props = getDefaultBreadcrumbsProps();
-
-	expect(props).toBeDefined();
-	expect(props).toMatchSnapshot();
-});
 
 for (const val in Sizing) {
 	if (Sizing.hasOwnProperty(val)) {

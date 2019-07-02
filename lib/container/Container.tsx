@@ -34,9 +34,8 @@ import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	defaultBaseProps,
 	fontStyle,
-	getDefaultBaseProps,
-	getDefaultBaseState,
 	Wrapper
 } from "../shared";
 
@@ -45,21 +44,7 @@ export interface ContainerProps extends BaseProps {
 	title?: string;
 }
 
-export function getDefaultContainerProps(): ContainerProps {
-	return {
-		...getDefaultBaseProps(),
-		children: null,
-		title: ""
-	};
-}
-
 export type ContainerState = BaseState;
-
-export function getDefaultContainerState(): ContainerState {
-	return {
-		...getDefaultBaseState()
-	};
-}
 
 const ContainerView: any = styled.div`
 	height: ${(props: ContainerProps) => props.height};
@@ -71,10 +56,14 @@ const ContainerView: any = styled.div`
 `;
 
 export class Container extends BaseComponent<ContainerProps, ContainerState> {
-	public static readonly defaultProps: ContainerProps = getDefaultContainerProps();
+	public static readonly defaultProps: ContainerProps = {
+		...defaultBaseProps,
+		children: null,
+		title: ""
+	};
 
 	constructor(props: ContainerProps) {
-		super("ui-container", Container, props, getDefaultContainerState());
+		super("ui-container", Container, props);
 	}
 
 	public render() {
