@@ -54,6 +54,8 @@ toolbar component.
 - `ui-editor-quill` - a global style attached to the Quill editor component
 
 #### Properties
+- `buttonSizing=Sizing.normal {Sizing}` - Changes the sizing of the buttons
+on the toolbar.  The default is normal sizing.
 - `content=""" {string}` - the initial text content for the component
 - `defaultFont="Fira Code" {string}` - The name of the default editor font
 - `defaultFontSize=12 {number}` - The size of the font in pixels (px)
@@ -119,7 +121,4 @@ keys:
   - `strikethrough`
   - `underline`
   - `wiki` - wiki name coloring in [[name | link]]
-- `useSmallButtons=false {boolean}` - if set to true, then the buttons
-on the toolbar will use sizing.SMALL, otherwise the sizing is set to the
-default for the component (which is typically Sizing.normal).
 

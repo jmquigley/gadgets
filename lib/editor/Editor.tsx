@@ -52,6 +52,8 @@
  * - `ui-editor-quill` - a global style attached to the Quill editor component
  *
  * #### Properties
+ * - `buttonSizing=Sizing.normal {Sizing}` - Changes the sizing of the buttons
+ * on the toolbar.  The default is normal sizing.
  * - `content=""" {string}` - the initial text content for the component
  * - `defaultFont="Fira Code" {string}` - The name of the default editor font
  * - `defaultFontSize=12 {number}` - The size of the font in pixels (px)
@@ -117,9 +119,6 @@
  *   - `strikethrough`
  *   - `underline`
  *   - `wiki` - wiki name coloring in [[name | link]]
- * - `useSmallButtons=false {boolean}` - if set to true, then the buttons
- * on the toolbar will use sizing.SMALL, otherwise the sizing is set to the
- * default for the component (which is typically Sizing.normal).
  *
  * @module Editor
  */
@@ -159,6 +158,7 @@ export interface QuillKeyBindings {
 
 export interface EditorProps extends BaseProps {
 	background?: string;
+	buttonSizing?: Sizing;
 	content?: string;
 	defaultFont?: string;
 	defaultFontSize?: number;
@@ -181,7 +181,6 @@ export interface EditorProps extends BaseProps {
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	onClickLink?: (match: Match) => void;
 	scheme?: any;
-	useSmallButtons?: boolean;
 }
 
 export type EditorState = BaseState;
@@ -217,6 +216,7 @@ const EditorToolbar: any = styled(Toolbar)`
 export class Editor extends BaseComponent<EditorProps, EditorState> {
 	public static readonly defaultProps: EditorProps = {
 		...defaultBaseProps,
+		buttonSizing: Sizing.normal,
 		content: "",
 		defaultFont: "Fira Code",
 		defaultFontSize: 12,
@@ -240,8 +240,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		scheme: {
 			background: Color.black,
 			foreground: Color.white
-		},
-		useSmallButtons: false
+		}
 	};
 
 	private _custom: any;
@@ -517,11 +516,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 					<EditorToolbar
 						{...this.props}
 						className={this._toolbarStyles.value}
-						sizing={
-							this.props.useSmallButtons
-								? Sizing.small
-								: this.props.sizing
-						}
+						sizing={this.props.buttonSizing}
 					>
 						<Button iconName='bold' onClick={this.handleSetBold} />
 						<Button

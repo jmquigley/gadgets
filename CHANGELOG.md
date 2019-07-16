@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.0.70
+#### Enhancements:
+
+- Added an `buttonSizing` parameter to the [Editor](https://github.com/jmquigley/gadgets/blob/master/docs/lib/editor/Editor.md) component so the toolbar buttons could be resized.
+
+
+#### Bug Fixes:
+
+N/A
+
+---
+
 ## v0.0.69
 #### Enhancements:
 
