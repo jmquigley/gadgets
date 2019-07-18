@@ -204,12 +204,26 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 						delete style["border"];
 					}
 
-					const newChild = React.cloneElement(child as any, {
+					const childProps = {
 						className: "ui-toolbar-element",
-						disabled: this.props.disabled,
-						sizing: this.props.sizing,
-						visible: this.props.visible
-					});
+						sizing: this.props.sizing
+					};
+
+					// If the toolbar is marked as disabled or invisible, then
+					// mark the element as disabled, otherwise respect the
+					// compoennts state
+					if (this.props.disabled) {
+						childProps["disabled"] = true;
+					}
+
+					if (!this.props.visible) {
+						childProps["visible"] = false;
+					}
+
+					const newChild = React.cloneElement(
+						child as any,
+						childProps
+					);
 
 					components.push(
 						<ToolbarElementView

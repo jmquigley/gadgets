@@ -8,7 +8,7 @@
 
 #### Bug Fixes:
 
-N/A
+- Fixed an issue where the disable/visible props set on a component within a [Toolbar](https://github.com/jmquigley/gadgets/blob/master/docs/lib/toolbar/Toolbar.md) are not maintained.  Without this fix it is not possible to disable or hide an element within a toolbar programatically.
 
 ---
 

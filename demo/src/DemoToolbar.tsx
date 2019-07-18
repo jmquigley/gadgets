@@ -43,7 +43,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					justify={Justify.left}
 					sizing={this.props["sizing"]}
 				>
-					<Button iconName='car' />
+					<Button disabled={true} iconName='car' />
 					<ButtonCircle iconName='times' />
 					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
 					<Divider />
@@ -67,7 +67,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					justify={Justify.center}
 					sizing={this.props["sizing"]}
 				>
-					<Button iconName='car' />
+					<Button disabled={true} iconName='car' />
 					<ButtonCircle iconName='times' />
 					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
 					<Divider dividerType={DividerType.vertical} />
@@ -91,7 +91,7 @@ export default class DemoToolbar extends React.Component<any, undefined> {
 					justify={Justify.right}
 					sizing={this.props["sizing"]}
 				>
-					<Button iconName='car' />
+					<Button disabled={true} iconName='car' />
 					<ButtonCircle iconName='times' />
 					<ButtonDialog iconName='bars'>Test Text</ButtonDialog>
 					<Divider dividerType={DividerType.horizontal} />
