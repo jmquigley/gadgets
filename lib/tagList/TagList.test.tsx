@@ -58,7 +58,7 @@ test("Create a new dynamic TagList by adding a new input", () => {
 
 	expect(keypress).toHaveBeenCalled();
 	expect(onnew).toHaveBeenCalled();
-	expect(onnew).toHaveBeenCalledWith("a");
+	expect(onnew).toHaveBeenCalledWith("a", ["a", "b", "c", "d"]);
 
 	tags = ctl.state("tags");
 	expect(tags).toBeDefined();
@@ -144,7 +144,7 @@ test("Remove a tag from a TagList", () => {
 	btns.at(0).simulate("click");
 
 	expect(ondelete).toHaveBeenCalled();
-	expect(ondelete).toHaveBeenCalledWith("a");
+	expect(ondelete).toHaveBeenCalledWith("a", ["b", "c"]);
 
 	tags = ctl.state("tags");
 	expect(tags).toBeDefined();

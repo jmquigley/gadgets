@@ -34,14 +34,16 @@ import {TagList} from 'gadgets';
 like the escape key (resets the input)
 - `onChange` - invoked as the user presses keys.  Receives the a reference
 to the `HTMLInputElement`
-- `onDelete(tag: string)` - invoked when a user removes a tag from the list.
-The tag that is removed is given to the callback as a parameter.
+- `onDelete(tag: string, tags: List<string>)` - invoked when a user removes
+a tag from the list.  The tag that is removed is given to the callback as
+the first parameter.  The second parameter is the full list.
 - `onKeyDown` - invoked when the user first presses a key.  This watches for
 the escape key within the control.
 - `onKeyPress` - invoked whne the user presses a key.  This watches for the
 enter key within the control.
-- `onNew(tag: string)` - invoked when the user adds a new tag to the list.
-The tag that is added is given to the callback as a parameter.
+- `onNew(tag: string, tags: List<string>)` - invoked when the user adds a new
+tag to the list. The tag that is added is given to the callback as the first
+parameter.  The second parameter is the full list.
 
 #### Styles
 - `ui-taglist` - style placed on the root div of the control

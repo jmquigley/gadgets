@@ -4,7 +4,7 @@
 #### Enhancements:
 
 - Added an `buttonSizing` parameter to the [Editor](https://github.com/jmquigley/gadgets/blob/master/docs/lib/editor/Editor.md) component so the toolbar buttons could be resized.
-
+- Added the full tag list to `onNew` and `onDelete` callbacks in the [TagList](https://github.com/jmquigley/gadgets/blob/master/docs/lib/tagList/TagList.md).  Originally this was just the tag that was added or removed.  It now includes the full tag list in the callback as a second parameter.
 
 #### Bug Fixes:
 

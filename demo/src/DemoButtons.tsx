@@ -1,5 +1,3 @@
-"use strict";
-
 const debug = require("debug")("DemoButtons");
 
 import autobind from "autobind-decorator";

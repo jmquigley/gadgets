@@ -32,14 +32,16 @@
  * like the escape key (resets the input)
  * - `onChange` - invoked as the user presses keys.  Receives the a reference
  * to the `HTMLInputElement`
- * - `onDelete(tag: string)` - invoked when a user removes a tag from the list.
- * The tag that is removed is given to the callback as a parameter.
+ * - `onDelete(tag: string, tags: List<string>)` - invoked when a user removes
+ * a tag from the list.  The tag that is removed is given to the callback as
+ * the first parameter.  The second parameter is the full list.
  * - `onKeyDown` - invoked when the user first presses a key.  This watches for
  * the escape key within the control.
  * - `onKeyPress` - invoked whne the user presses a key.  This watches for the
  * enter key within the control.
- * - `onNew(tag: string)` - invoked when the user adds a new tag to the list.
- * The tag that is added is given to the callback as a parameter.
+ * - `onNew(tag: string, tags: List<string>)` - invoked when the user adds a new
+ * tag to the list. The tag that is added is given to the callback as the first
+ * parameter.  The second parameter is the full list.
  *
  * #### Styles
  * - `ui-taglist` - style placed on the root div of the control
@@ -81,10 +83,10 @@ export interface TagListProps extends BaseProps {
 	nosort?: boolean;
 	onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-	onDelete?: (tag: string) => void;
+	onDelete?: (tag: string, tags: string[]) => void;
 	onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 	onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-	onNew?: (tag: string) => void;
+	onNew?: (tag: string, tags: string[]) => void;
 	placeholder?: string;
 	tags?: string[];
 	useinput?: boolean;
@@ -177,7 +179,7 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				tags: this.props.nosort ? tags : tags.sort()
 			},
 			() => {
-				this.props.onDelete(tag);
+				this.props.onDelete(tag, this.state.tags.toJS());
 			}
 		);
 	}
@@ -198,13 +200,17 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 			let {tags} = this.state;
 
 			if (target.value && !tags.contains(target.value)) {
-				tags = tags.push(target.value);
+				const tag: string = target.value;
+				tags = tags.push(tag);
 
-				this.setState({
-					tags: this.props.nosort ? tags : tags.sort()
-				});
-
-				this.props.onNew(target.value);
+				this.setState(
+					{
+						tags: this.props.nosort ? tags : tags.sort()
+					},
+					() => {
+						this.props.onNew(tag, this.state.tags.toJS());
+					}
+				);
 			}
 
 			this.clearInput(target);
