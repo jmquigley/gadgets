@@ -86,10 +86,7 @@ export abstract class BaseComponent<
 	) {
 		super(props);
 
-		this.state = {
-			...getDefaultBaseState(),
-			...state
-		};
+		this.initialState = state;
 
 		this._options = Object.assign(this._options, options || {});
 		this._name = cls.name || "Unknown";
@@ -141,6 +138,13 @@ export abstract class BaseComponent<
 	 */
 	get id(): string {
 		return this._id;
+	}
+
+	set initialState(state: S) {
+		this.state = {
+			...getDefaultBaseState(),
+			...state
+		};
 	}
 
 	get keyHandler(): KeyHandler {

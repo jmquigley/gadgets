@@ -41,7 +41,7 @@ import {
 	Styling
 } from "./sizing";
 
-import {BaseState} from "./state";
+import {BaseState, getDefaultBaseState} from "./state";
 
 import {
 	BaseThemeProps,
@@ -73,6 +73,7 @@ export {
 	DisabledCSS,
 	fontStyle,
 	FontStyle,
+	getDefaultBaseState,
 	getTheme,
 	getThemeList,
 	globalize,

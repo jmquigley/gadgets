@@ -263,8 +263,7 @@ export class TabContainer extends BaseComponent<
 			this.buildTabs(this.props);
 		}
 
-		this.state = {
-			...this.state,
+		this.initialState = {
 			selectedTab: this._tabs.length > 0 ? this._tabs[0].props["id"] : ""
 		};
 	}

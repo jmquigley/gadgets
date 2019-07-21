@@ -5,7 +5,7 @@
  * control the list of string are given when the control is created and
  * are never changed.  With the dynamic control the list of tags can
  * be added or removed from the list.  Each operation results in an event
- * signalling what occurred.
+ * signalling what occurred (new or delete).
  *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="40%" />
@@ -51,8 +51,8 @@
  * sorted when displayed, otherwise they are sorted.
  * - `placeholder="new" {string}` - the string placeholder in the input text
  * for new tags.
- * - `tags=[] {string[]}` - the list of tag strings initially added to the
- * control.  This is only respected on creation of the control
+ * - `tags=[] {string[]|string}` - the list of tag strings initially added to
+ * the control.  This is only respected on creation of the control
  * - `useinput=false {boolean}` - if set to true, then the user is allowed to
  * manipulate the tag list inline, otherwise the list is statically created.
  *
@@ -64,6 +64,7 @@ import {List} from "immutable";
 import * as React from "react";
 import styled from "styled-components";
 import {FontInfo, getFontInfo, getTextWidth} from "util.html";
+import {parseList} from "util.string";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon/Icon";
 import {
@@ -88,7 +89,7 @@ export interface TagListProps extends BaseProps {
 	onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 	onNew?: (tag: string, tags: string[]) => void;
 	placeholder?: string;
-	tags?: string[];
+	tags?: string[] | string;
 	useinput?: boolean;
 }
 
@@ -142,10 +143,19 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	};
 
 	constructor(props: TagListProps) {
-		super("ui-taglist", TagList, props, {
+		super("ui-taglist", TagList, props);
+
+		let tags: string[];
+		if (typeof props.tags === "string") {
+			tags = parseList(props.tags);
+		} else {
+			tags = props.tags;
+		}
+
+		this.initialState = {
 			inputText: "",
-			tags: List<string>(props.nosort ? props.tags : props.tags.sort())
-		});
+			tags: List<string>(props.nosort ? tags : tags.sort())
+		};
 	}
 
 	private clearInput(e: HTMLInputElement) {

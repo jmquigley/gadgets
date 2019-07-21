@@ -218,8 +218,7 @@ export class Pager extends BaseComponent<PagerProps, PagerState> {
 		this.pageSizes = this.props.pageSizes;
 		this.computeInitialPages(this.props.initialPageSize);
 
-		this.state = {
-			...this.state,
+		this.initialState = {
 			currentPage: this.initialPage,
 			currentSort: SortOrder.ascending,
 			pageSize: this.initialPageSize

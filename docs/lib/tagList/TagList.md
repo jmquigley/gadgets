@@ -7,7 +7,7 @@ two types of `TagList` controls: static and dynamic.  With the static
 control the list of string are given when the control is created and
 are never changed.  With the dynamic control the list of tags can
 be added or removed from the list.  Each operation results in an event
-signalling what occurred.
+signalling what occurred (new or delete).
 
 ## Screen:
 <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="40%" />
@@ -53,8 +53,8 @@ parameter.  The second parameter is the full list.
 sorted when displayed, otherwise they are sorted.
 - `placeholder="new" {string}` - the string placeholder in the input text
 for new tags.
-- `tags=[] {string[]}` - the list of tag strings initially added to the
-control.  This is only respected on creation of the control
+- `tags=[] {string[]|string}` - the list of tag strings initially added to
+the control.  This is only respected on creation of the control
 - `useinput=false {boolean}` - if set to true, then the user is allowed to
 manipulate the tag list inline, otherwise the list is statically created.
 
