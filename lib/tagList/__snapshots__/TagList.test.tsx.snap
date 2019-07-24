@@ -44,8 +44,8 @@ exports[`Create a new dynamic TagList by adding a new input 1`] = `
   style={Object {}}
   tags={
     Array [
-      "b",
       "c",
+      "b",
       "d",
     ]
   }
@@ -120,7 +120,7 @@ exports[`Create a new dynamic TagList item and cancel creation with escape 1`] =
   onDelete={[Function]}
   onKeyDown={[MockFunction]}
   onKeyPress={[Function]}
-  onNew={[Function]}
+  onNew={[MockFunction]}
   padding={null}
   placeholder="new"
   ripple={false}
@@ -382,13 +382,7 @@ exports[`Remove a tag from a TagList 1`] = `
   selected={false}
   sizing="normal"
   style={Object {}}
-  tags={
-    Array [
-      "a",
-      "b",
-      "c",
-    ]
-  }
+  tags="a, b, c"
   testing={true}
   theme={
     Object {
@@ -564,8 +558,8 @@ exports[`Try to create a duplicate entry within a dynamic TagList 1`] = `
   style={Object {}}
   tags={
     Array [
-      "b",
       "c",
+      "b",
       "d",
     ]
   }

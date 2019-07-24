@@ -5,20 +5,53 @@ import * as React from "react";
 import {Break, TagList} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";
 
-export default class DemoTagList extends React.Component<any, undefined> {
+export interface DemoTagState {
+	tags1: string;
+	tags2: string;
+}
+
+export default class DemoTagList extends React.Component<any, DemoTagState> {
 	constructor(props: any) {
 		super(props);
+
+		this.state = {
+			tags1: "aaa, ccc, bbb",
+			tags2: "xxx, yyy, zzz"
+		};
+
 		debug("creating");
 	}
 
 	@autobind
-	private handleNew(tag: string, tags: string[]) {
+	private handleNew1(tag: string, tags: string[]) {
 		debug(`handleNew -> tag: %o, tags: %O`, tag, tags);
+		this.setState({
+			tags1: tags.join(",")
+		});
 	}
 
 	@autobind
-	private handleDelete(tag: string, tags: string[]) {
+	private handleDelete1(tag: string, tags: string[]) {
 		debug(`handleDelete -> tag: %o, tags: %O`, tag, tags);
+		this.setState({
+			tags1: tags.join(",")
+		});
+	}
+
+	@autobind
+	private handleNew2(tag: string, tags: string[]) {
+		debug(`handleNew -> tag: %o, tags: %O`, tag, tags);
+		this.setState({
+			tags2: tags.join(",")
+		});
+	}
+
+	@autobind
+	private handleDelete2(tag: string, tags: string[]) {
+		debug(`handleDelete -> tag: %o, tags: %O`, tag, tags);
+		this.setState({
+			tags2: tags.join(",")
+		});
 	}
 
 	public render() {
@@ -27,8 +60,6 @@ export default class DemoTagList extends React.Component<any, undefined> {
 				<h3>Static</h3>
 				<TagList
 					disabled={this.props["disabled"]}
-					onDelete={this.handleDelete}
-					onNew={this.handleNew}
 					sizing={this.props["sizing"]}
 					tags={["one", "two", "three"]}
 				/>
@@ -38,10 +69,10 @@ export default class DemoTagList extends React.Component<any, undefined> {
 				<TagList
 					disabled={this.props["disabled"]}
 					nosort
-					onDelete={this.handleDelete}
-					onNew={this.handleNew}
+					onDelete={this.handleDelete1}
+					onNew={this.handleNew1}
 					sizing={this.props["sizing"]}
-					tags={["aaa", "ccc", "bbb"]}
+					tags={this.state.tags1}
 					useinput
 				/>
 				<Break sizing={this.props["sizing"]} />
@@ -49,10 +80,10 @@ export default class DemoTagList extends React.Component<any, undefined> {
 				<h3>Changeable (sorted)</h3>
 				<TagList
 					disabled={this.props["disabled"]}
-					onDelete={this.handleDelete}
-					onNew={this.handleNew}
+					onDelete={this.handleDelete2}
+					onNew={this.handleNew2}
 					sizing={this.props["sizing"]}
-					tags={["aaa", "ccc", "bbb"]}
+					tags={this.state.tags2}
 					useinput
 				/>
 			</StyledContainer>

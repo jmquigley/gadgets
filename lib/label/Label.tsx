@@ -21,8 +21,9 @@
  * ## API
  * #### Events
  * - `onBlur` - Invoked when the focus moves away from the label
- * - `onChange(val: string)` - Invoked when a label is changed.  This happens
- * when editing the control and pressing enter or losing focus (blur).
+ * - `onChange(React.FormEvent<HTMLSpanElement>)` - Invoked when a label is
+ * changed.  This happens when editing the control and pressing enter or losing
+ * focus (blur).  It returns a reference to the HTML SPAN element.
  * - `onClick` - Invoked when the label is clicked.
  * - `onDoubleClick` - Invoked when the user double clicks on the control.  This
  * will cause the control to enter an editing mode.

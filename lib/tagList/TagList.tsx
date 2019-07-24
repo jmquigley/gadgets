@@ -5,7 +5,9 @@
  * control the list of string are given when the control is created and
  * are never changed.  With the dynamic control the list of tags can
  * be added or removed from the list.  Each operation results in an event
- * signalling what occurred (new or delete).
+ * signalling what occurred (new or delete).  The tags from the events
+ * must them be used to update the parent state and pass the new tags
+ * back into the component (this is an uncontrolled component)
  *
  * ## Screen:
  * <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="40%" />
@@ -32,14 +34,14 @@
  * like the escape key (resets the input)
  * - `onChange` - invoked as the user presses keys.  Receives the a reference
  * to the `HTMLInputElement`
- * - `onDelete(tag: string, tags: List<string>)` - invoked when a user removes
+ * - `onDelete(tag: string, tags: string[])` - invoked when a user removes
  * a tag from the list.  The tag that is removed is given to the callback as
  * the first parameter.  The second parameter is the full list.
  * - `onKeyDown` - invoked when the user first presses a key.  This watches for
  * the escape key within the control.
  * - `onKeyPress` - invoked whne the user presses a key.  This watches for the
  * enter key within the control.
- * - `onNew(tag: string, tags: List<string>)` - invoked when the user adds a new
+ * - `onNew(tag: string, tags: string[])` - invoked when the user adds a new
  * tag to the list. The tag that is added is given to the callback as the first
  * parameter.  The second parameter is the full list.
  *
@@ -60,7 +62,7 @@
  */
 
 import autobind from "autobind-decorator";
-import {List} from "immutable";
+import * as _ from "lodash";
 import * as React from "react";
 import styled from "styled-components";
 import {FontInfo, getFontInfo, getTextWidth} from "util.html";
@@ -95,7 +97,6 @@ export interface TagListProps extends BaseProps {
 
 export interface TagListState extends BaseState {
 	inputText: string;
-	tags?: List<string>;
 }
 
 const StyledIcon: any = styled(Icon)`
@@ -143,95 +144,21 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 	};
 
 	constructor(props: TagListProps) {
-		super("ui-taglist", TagList, props);
-
-		let tags: string[];
-		if (typeof props.tags === "string") {
-			tags = parseList(props.tags);
-		} else {
-			tags = props.tags;
-		}
-
-		this.initialState = {
-			inputText: "",
-			tags: List<string>(props.nosort ? tags : tags.sort())
-		};
-	}
-
-	private clearInput(e: HTMLInputElement) {
-		this.setState({inputText: ""});
-		e.value = "";
-	}
-
-	@autobind
-	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
-		this.clearInput(e.target as HTMLInputElement);
-		this.props.onBlur(e);
-	}
-
-	@autobind
-	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		this.setState({
-			inputText: (e.target as HTMLInputElement).value
+		super("ui-taglist", TagList, props, {
+			inputText: ""
 		});
-
-		this.props.onChange(e);
 	}
 
-	@autobind
-	private handleDelete(tag: string) {
-		let {tags} = this.state;
-
-		tags = tags.remove(tags.indexOf(tag));
-
-		this.setState(
-			{
-				tags: this.props.nosort ? tags : tags.sort()
-			},
-			() => {
-				this.props.onDelete(tag, this.state.tags.toJS());
-			}
-		);
-	}
-
-	@autobind
-	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === "Escape") {
-			this.clearInput(e.target as HTMLInputElement);
+	get tags(): string[] {
+		if (typeof this.props.tags === "string") {
+			return parseList(this.props.tags);
 		}
 
-		this.props.onKeyDown(e);
+		return this.props.tags;
 	}
 
-	@autobind
-	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
-		if (e.key === "Enter") {
-			const target = e.target as HTMLInputElement;
-			let {tags} = this.state;
-
-			if (target.value && !tags.contains(target.value)) {
-				const tag: string = target.value;
-				tags = tags.push(tag);
-
-				this.setState(
-					{
-						tags: this.props.nosort ? tags : tags.sort()
-					},
-					() => {
-						this.props.onNew(tag, this.state.tags.toJS());
-					}
-				);
-			}
-
-			this.clearInput(target);
-			this.props.onKeyPress(e);
-		}
-	}
-
-	public render() {
-		super.render();
-
-		const tags = this.state.tags.map((tag: string) => {
+	private buildTags() {
+		return this.tags.map((tag: string) => {
 			return (
 				<Tag
 					disabled={this.props.disabled}
@@ -244,8 +171,9 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				</Tag>
 			);
 		});
+	}
 
-		let textInputField = null;
+	private buildTextInputField() {
 		if (this.props.useinput) {
 			const fontInfo: FontInfo = getFontInfo();
 			const font: string = `${fontInfo.weight} ${fontInfo.size}px ${fontInfo.family[0]}`.trim();
@@ -279,8 +207,69 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 				textFieldProps["value"] = "";
 			}
 
-			textInputField = <StyledTextField {...textFieldProps} />;
+			return <StyledTextField {...textFieldProps} />;
 		}
+
+		return null;
+	}
+
+	private clearInput(e: HTMLInputElement) {
+		this.setState({inputText: ""});
+		e.value = "";
+	}
+
+	@autobind
+	private handleBlur(e: React.FocusEvent<HTMLInputElement>) {
+		this.clearInput(e.target as HTMLInputElement);
+		this.props.onBlur(e);
+	}
+
+	@autobind
+	private handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		this.setState({
+			inputText: (e.target as HTMLInputElement).value
+		});
+
+		this.props.onChange(e);
+	}
+
+	@autobind
+	private handleDelete(tag: string) {
+		this.props.onDelete(tag, this.tags.filter((it: string) => it !== tag));
+	}
+
+	@autobind
+	private handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+		if (e.key === "Escape") {
+			this.clearInput(e.target as HTMLInputElement);
+		}
+
+		this.props.onKeyDown(e);
+	}
+
+	@autobind
+	private handleKeyPress(e: React.KeyboardEvent<HTMLInputElement>) {
+		if (e.key === "Enter") {
+			const target = e.target as HTMLInputElement;
+
+			if (target.value && !this.tags.includes(target.value)) {
+				const tag: string = target.value;
+				const tags: string[] = _.clone(this.tags);
+
+				tags.push(tag);
+				this.props.onNew(tag, this.props.nosort ? tags : tags.sort());
+			}
+
+			this.clearInput(target);
+			this.props.onKeyPress(e);
+		}
+	}
+
+	public render() {
+		super.render();
+
+		const tags = this.buildTags();
+		const textInputField = this.buildTextInputField();
 
 		return (
 			<Wrapper {...this.props} name={this.name}>

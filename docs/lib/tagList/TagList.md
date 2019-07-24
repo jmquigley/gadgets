@@ -7,7 +7,9 @@ two types of `TagList` controls: static and dynamic.  With the static
 control the list of string are given when the control is created and
 are never changed.  With the dynamic control the list of tags can
 be added or removed from the list.  Each operation results in an event
-signalling what occurred (new or delete).
+signalling what occurred (new or delete).  The tags from the events
+must them be used to update the parent state and pass the new tags
+back into the component (this is an uncontrolled component)
 
 ## Screen:
 <img src="https://github.com/jmquigley/gadgets/blob/master/images/tagList.png" width="40%" />
@@ -34,14 +36,14 @@ import {TagList} from 'gadgets';
 like the escape key (resets the input)
 - `onChange` - invoked as the user presses keys.  Receives the a reference
 to the `HTMLInputElement`
-- `onDelete(tag: string, tags: List<string>)` - invoked when a user removes
+- `onDelete(tag: string, tags: string[])` - invoked when a user removes
 a tag from the list.  The tag that is removed is given to the callback as
 the first parameter.  The second parameter is the full list.
 - `onKeyDown` - invoked when the user first presses a key.  This watches for
 the escape key within the control.
 - `onKeyPress` - invoked whne the user presses a key.  This watches for the
 enter key within the control.
-- `onNew(tag: string, tags: List<string>)` - invoked when the user adds a new
+- `onNew(tag: string, tags: string[])` - invoked when the user adds a new
 tag to the list. The tag that is added is given to the callback as the first
 parameter.  The second parameter is the full list.
 
