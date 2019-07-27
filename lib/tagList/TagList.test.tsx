@@ -4,6 +4,8 @@ import assert from "power-assert";
 import * as React from "react";
 import TagList from "./TagList";
 
+const debug = require("debug")("gadgets.test.TagList");
+
 test("Test creation of a simple TagList instance", () => {
 	const ctl = shallow(<TagList />);
 
@@ -116,4 +118,44 @@ test("Remove a tag from a TagList", () => {
 
 	expect(ondelete).toHaveBeenCalled();
 	expect(ondelete).toHaveBeenCalledWith("a", ["b", "c"]);
+});
+
+test("Try differnet tag property scenarios", () => {
+	let ctl = mount(<TagList tags={"  a,      b,  c    "} />);
+	assert(ctl);
+
+	let tagList = ctl.instance() as TagList;
+	assert(tagList);
+
+	assert(tagList.tags);
+	expect(tagList.tags).toEqual(expect.arrayContaining(["a", "b", "c"]));
+
+	ctl = mount(<TagList tags={""} />);
+	assert(ctl);
+
+	tagList = ctl.instance() as TagList;
+	assert(tagList);
+
+	assert(tagList.tags);
+	expect(tagList.tags).toEqual(expect.arrayContaining([]));
+
+	ctl = mount(<TagList tags={[" a ", "    ", "   b  ", "  c", "d  ", ""]} />);
+	assert(ctl);
+
+	tagList = ctl.instance() as TagList;
+	assert(tagList);
+
+	assert(tagList.tags);
+	debug(tagList.tags);
+	expect(tagList.tags).toEqual(expect.arrayContaining(["a", "b", "c", "d"]));
+
+	ctl = mount(<TagList tags={"     ,a,b,c,"} />);
+	assert(ctl);
+
+	tagList = ctl.instance() as TagList;
+	assert(tagList);
+
+	assert(tagList.tags);
+	debug(tagList.tags);
+	expect(tagList.tags).toEqual(expect.arrayContaining(["a", "b", "c"]));
 });

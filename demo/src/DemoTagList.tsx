@@ -8,6 +8,7 @@ import {StyledContainer} from "./helpers";
 export interface DemoTagState {
 	tags1: string;
 	tags2: string;
+	tagsEmpty?: string;
 }
 
 export default class DemoTagList extends React.Component<any, DemoTagState> {
@@ -16,7 +17,8 @@ export default class DemoTagList extends React.Component<any, DemoTagState> {
 
 		this.state = {
 			tags1: "aaa, ccc, bbb",
-			tags2: "xxx, yyy, zzz"
+			tags2: "xxx, yyy, zzz",
+			tagsEmpty: null
 		};
 
 		debug("creating");
@@ -54,9 +56,35 @@ export default class DemoTagList extends React.Component<any, DemoTagState> {
 		});
 	}
 
+	@autobind
+	private handleNewEmpty(tag: string, tags: string[]) {
+		debug(`handleNewEmpty -> tag: %o, tags: %O`, tag, tags);
+		this.setState({
+			tagsEmpty: tags.join(",")
+		});
+	}
+
+	@autobind
+	private handleDeleteEmpty(tag: string, tags: string[]) {
+		debug(`handleDeleteEmpty -> tag: %o, tags: %O`, tag, tags);
+		this.setState({
+			tagsEmpty: tags.join(",")
+		});
+	}
+
 	public render() {
 		return (
 			<StyledContainer id='tagListExample' title='TagList'>
+				<h3>Empty</h3>
+				<TagList
+					disabled={this.props["disabled"]}
+					onDelete={this.handleDeleteEmpty}
+					onNew={this.handleNewEmpty}
+					sizing={this.props["sizing"]}
+					tags={this.state.tagsEmpty}
+					useinput
+				/>
+
 				<h3>Static</h3>
 				<TagList
 					disabled={this.props["disabled"]}

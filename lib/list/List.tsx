@@ -84,7 +84,14 @@ const ListView: any = styled.ul`
 	list-style: none;
 
 	${(props: ListProps) =>
-		props.alternating && "> li:nth-child(2n) {background: #e6e6e6;}"}
+		props.alternating &&
+		"> li:nth-child(2n) {background: " +
+			props.theme.itemAlternatingColor +
+			";}"}
+
+	.ui-item:hover {
+		background-color: ${(props: ListProps) => props.theme.itemHoverColor};
+	}
 `;
 
 export class List extends BaseComponent<ListProps, ListState> {

@@ -5,4 +5,10 @@
 //
 
 const pkg = require("./package.json");
-process.env["DEBUG"] = pkg.debug ? "gadgets.test.*" : "";
+
+let debugEnv = "";
+if ("DEBUG" in process.env) {
+	debugEnv = `${process.env["DEBUG"]},`;
+}
+
+process.env["DEBUG"] = pkg.debug ? `${debugEnv}gadgets.test.*` : "";

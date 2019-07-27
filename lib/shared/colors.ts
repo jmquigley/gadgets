@@ -1,3 +1,5 @@
+export type ColorType = string;
+
 export enum ColorScheme {
 	c1 = "#004358",
 	c2 = "#1f8a70",
@@ -18,6 +20,7 @@ export enum Color {
 	silver = "#c0c0c0",
 	slategray = "#708090",
 	success = "#5cb85c",
+	ultralightgray = "#e6e6e6",
 	warning = "#f0ad4e",
 	white = "#ffffff"
 }

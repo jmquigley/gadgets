@@ -1,6 +1,6 @@
 "use strict";
 
-// const debug = require('debug')('Pager.test');
+// const debug = require('debug')('gadgets.test.Pager');
 
 import {mount, shallow} from "enzyme";
 import assert from "power-assert";

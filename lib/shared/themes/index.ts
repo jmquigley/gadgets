@@ -36,33 +36,34 @@
  */
 
 import {DefaultTheme} from "styled-components";
-
+import {ColorType} from "../colors";
 import {default as base} from "./base";
 import {default as dark} from "./dark";
 import {default as light} from "./light";
 
 export interface BaseThemeProps {
-	backgroundColor: string;
-	borderColor: string;
-	buttonColor: string;
-	chevronColor: string;
-	color: string;
+	backgroundColor: ColorType;
+	borderColor: ColorType;
+	buttonColor: ColorType;
+	chevronColor: ColorType;
+	color: ColorType;
 	fontFamily: string;
-	headerForegroundColor: string;
-	headerBackgroundColor: string;
-	headerHoverColor: string;
-	hoverColor: string;
-	inputBorderColor: string;
-	itemHoverColor: string;
-	outlineColor: string;
-	searchFocus: string;
-	searchMatch: string;
-	selectedBackgroundColor: string;
-	selectedForegroundColor: string;
-	titleBarBackgroundColor: string;
-	titleBarForegroundColor: string;
-	tooltipBackgroundColor: string;
-	tooltipForegroundColor: string;
+	headerForegroundColor: ColorType;
+	headerBackgroundColor: ColorType;
+	headerHoverColor: ColorType;
+	hoverColor: ColorType;
+	inputBorderColor: ColorType;
+	itemAlternatingColor: ColorType;
+	itemHoverColor: ColorType;
+	outlineColor: ColorType;
+	searchFocus: ColorType;
+	searchMatch: ColorType;
+	selectedBackgroundColor: ColorType;
+	selectedForegroundColor: ColorType;
+	titleBarBackgroundColor: ColorType;
+	titleBarForegroundColor: ColorType;
+	tooltipBackgroundColor: ColorType;
+	tooltipForegroundColor: ColorType;
 	transitionDelay: string;
 }
 

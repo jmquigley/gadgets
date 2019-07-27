@@ -6,10 +6,16 @@
 - Added an `buttonSizing` parameter to the [Editor](https://github.com/jmquigley/gadgets/blob/master/docs/lib/editor/Editor.md) component so the toolbar buttons could be resized.
 - Added the full tag list to `onNew` and `onDelete` callbacks in the [TagList](https://github.com/jmquigley/gadgets/blob/master/docs/lib/tagList/TagList.md).  Originally this was just the tag that was added or removed.  It now includes the full tag list in the callback as a second parameter.
 - Changed the [TagList](https://github.com/jmquigley/gadgets/blob/master/docs/lib/tagList/TagList.md) to have the inital props accept tags as an array of strings or a single comma delimited list of tags.  The component now only draws what is passed in the `tags` field (unmanaged).  That means the parent component is responsible for managing the list of tags passed to the component.
+- Added a `nosubtitles` option to the [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md) component to suppress them from the display.
+- Added a new theme color for the `alternating` feature within the [List](https://github.com/jmquigley/gadgets/blob/master/docs/lib/list/List.md) component named `itemAlternatingColor`.
 
 #### Bug Fixes:
 
 - Fixed an issue where the disable/visible props set on a component within a [Toolbar](https://github.com/jmquigley/gadgets/blob/master/docs/lib/toolbar/Toolbar.md) are not maintained.  Without this fix it is not possible to disable or hide an element within a toolbar programatically.
+- Fixed a display issue in [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md) when using subtitles on the node.
+- Fixed a logic error in [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md) related to selecting the default node in `componentDidUpdate`.  Zero was included with null when checking for no selection, when 0 is a valid id number.
+- Fixed a problem in [List](https://github.com/jmquigley/gadgets/blob/master/docs/lib/list/List.md) in background color specificity for hover to allow other components to override it.
+- The hover color effect now works on [Treeview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/treeview/Treeview.md) nodes that contain subtitles.
 
 ---
 

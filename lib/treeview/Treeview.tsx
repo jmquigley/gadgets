@@ -125,6 +125,8 @@
  * - `noscroll=false {boolean}` - turns off the scroll bars when the width/height
  * of all nodes expands past the right or bottom edge of the display container.
  * - `nosearch=false {boolean}` - turns off the search toolbar for the widget
+ * - `nosubtitles=false {boolean}` - turns the node subtitle display on or off
+ * It is on by default.
  * - `selectedId=null {number|string}` - the id value of the node that should
  * be selected.  Only use this if the parent component that will wrap this one
  * needs to control what is selected in the component.
@@ -145,6 +147,7 @@ import * as React from "react";
 import {HotKeys} from "react-hotkeys";
 import SortableTree, {ExtendedNodeData, NodeData} from "react-sortable-tree";
 import styled from "styled-components";
+import {sp} from "util.constants";
 import {GeneralTree, GeneralTreeItem} from "util.ds";
 import {nilEvent} from "util.toolbox";
 import {Button} from "../button/Button";
@@ -193,6 +196,7 @@ export interface TreeviewProps extends BaseProps {
 	nodeWidth?: string;
 	noscroll?: boolean;
 	nosearch?: boolean;
+	nosubtitles?: boolean;
 	onAdd?: (node: TreeItem, treeData: TreeItem[]) => void;
 	onChange?: (treeData: TreeItem[]) => void;
 	onCollapse?: (treeData: TreeItem[]) => void;
@@ -222,16 +226,28 @@ export interface TreeviewState extends BaseState {
 
 const SortableTreeView: any = styled(SortableTree)`
 	${(props: TreeviewProps) => disabled(props)}
-	${(props: TreeviewProps) => props.sizing && fontStyle[props.sizing]}
+	${(props: TreeviewProps) =>
+		props.sizing && fontStyle[props.sizing]}
 
 	.rst__rowContents {
-		padding: 0 0 0 1px;
+		align-items: unset;
 		border-radius: 0;
+		padding: 0 0 0 1px;
+
+		&:hover .rst__rowSubtitle,
+		&:hover .ui-label {
+			color: ${(props: TreeviewProps) => props.theme.color};
+		}
 	}
 
 	.rst__rowLabel {
 		padding-right: 0;
 		width: 100%;
+
+		&:hover .ui-item {
+			background-color: ${(props: TreeviewProps) =>
+				props.theme.itemHoverColor};
+		}
 	}
 
 	.rst__rowSearchMatch {
@@ -248,26 +264,26 @@ const SortableTreeView: any = styled(SortableTree)`
 
 	.rst__rowTitle {
 		font-weight: normal;
+		margin-bottom: 6px;
+	}
+
+	.rst__rowSubtitle {
+		padding-left: 3px;
 	}
 
 	.rst__rowWrapper {
-		padding: 4px 0;
+		padding: 8px 0 2px 0;
 	}
 
 	.rst__virtualScrollOverride {
 		overflow: ${(props: TreeviewProps) =>
 			props.noscroll ? "hidden" : "auto"} !important;
 	}
-}
 `;
 
 const StyledButton: any = styled(Button)``;
 
 const StyledItem: any = styled(Item)`
-	&:hover {
-		color: ${(props: TreeviewProps) => props.theme.color};
-	}
-
 	&:hover .ui-item-button {
 		color: ${(props: TreeviewProps) => props.theme.backgroundColor};
 		background-color: ${(props: TreeviewProps) => props.theme.hoverColor};
@@ -280,6 +296,13 @@ const StyledItem: any = styled(Item)`
 	.ui-label {
 		padding: 8px 2px;
 	}
+`;
+
+const StyledSubtitleLabel: any = styled(Label)`
+	color: ${(props: TreeviewProps) =>
+		props.selected
+			? props.theme.selectedForegroundColor
+			: props.theme.color};
 `;
 
 const StyledToolbar: any = styled(Toolbar)`
@@ -329,6 +352,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		nodeWidth: "20em",
 		noscroll: false,
 		nosearch: false,
+		nosubtitles: false,
 		onAdd: nilEvent,
 		onChange: nilEvent,
 		onCollapse: nilEvent,
@@ -347,7 +371,7 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		[Sizing.xxsmall]: 45,
 		[Sizing.xsmall]: 45,
 		[Sizing.small]: 45,
-		[Sizing.normal]: 50,
+		[Sizing.normal]: 52,
 		[Sizing.large]: 70,
 		[Sizing.xlarge]: 80,
 		[Sizing.xxlarge]: 90
@@ -511,6 +535,15 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 					selected={node.id === this.state.selectedId}
 					sizing={this.props.sizing}
 					title={node.title as string}
+				/>
+			),
+			subtitle: (
+				<StyledSubtitleLabel
+					onClick={handleCustomClick(node)}
+					selected={node.id === this.state.selectedId}
+					sizing={BaseComponent.prev(this.props.sizing)}
+					text={this.props.nosubtitles ? sp : node.subtitle}
+					noedit
 				/>
 			),
 			className: node.id === this.state.selectedId ? "ui-selected" : ""
@@ -730,9 +763,24 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 		);
 
 		this._td.treeData = this.props.treeData;
+
+		// The subtitle field must be present in all tree structure elements or
+		// it breaks the display formatting when the component has a mix of
+		// subtitles and no subtitles.
+		this._td.walk((it: TreeviewData) => {
+			if (
+				!("subtitle" in it) ||
+				!it["subtitle"] ||
+				!it["subtitle"].trim()
+			) {
+				it["subtitle"] = sp;
+			}
+		});
+
 		this._toolbar = this.buildToolbar();
 
-		if (this._td.treeData.length > 0 && !this.state.selectedId) {
+		// If there is data, but no current selection id set in the state, then set it
+		if (this._td.treeData.length > 0 && this.state.selectedId == null) {
 			this.handleSelection(this._td.first);
 		}
 	}

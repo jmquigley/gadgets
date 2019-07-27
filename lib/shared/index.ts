@@ -6,7 +6,7 @@ import {
 	RenderOptions
 } from "./base";
 
-import {Color, ColorScheme} from "./colors";
+import {Color, ColorScheme, ColorType} from "./colors";
 
 import {globalize} from "./helpers";
 
@@ -65,6 +65,7 @@ export {
 	boxStyle,
 	Color,
 	ColorScheme,
+	ColorType,
 	defaultBaseProps,
 	defaultSize,
 	DefaultTheme,

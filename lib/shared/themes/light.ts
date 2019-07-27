@@ -15,6 +15,7 @@ const theme: BaseThemeProps = {
 	headerHoverColor: "#ffe11a",
 	hoverColor: "#ffe11a",
 	inputBorderColor: Color.silver,
+	itemAlternatingColor: Color.ultralightgray,
 	itemHoverColor: ColorScheme.c3,
 	outlineColor: Color.glow,
 	searchFocus: Color.glow,

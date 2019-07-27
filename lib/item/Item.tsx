@@ -93,9 +93,7 @@ const ItemView: any = styled.li`
 
 	${(props: ItemProps) =>
 		!props.nohover &&
-		"&:hover {background-color: " +
-			props.theme.itemHoverColor +
-			" !important;}"}
+		"&:hover {background-color: " + props.theme.itemHoverColor + ";}"}
 
 	&:hover .ui-item-button {
 		display: inline-flex;

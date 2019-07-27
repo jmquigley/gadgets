@@ -1,5 +1,3 @@
-"use strict";
-
 import {Color, ColorScheme} from "../colors";
 import defaultTheme from "./default";
 import {BaseThemeProps} from "./index";
@@ -10,11 +8,13 @@ const theme: BaseThemeProps = {
 	borderColor: Color.silver,
 	chevronColor: Color.lightgray,
 	color: Color.black,
+	fontFamily: "OpenSans, Georgia, serif",
 	headerForegroundColor: Color.white,
 	headerBackgroundColor: ColorScheme.c1,
 	headerHoverColor: ColorScheme.c4,
 	hoverColor: Color.silver,
 	inputBorderColor: Color.silver,
+	itemAlternatingColor: Color.ultralightgray,
 	itemHoverColor: ColorScheme.c3,
 	outlineColor: Color.glow,
 	searchFocus: Color.glow,

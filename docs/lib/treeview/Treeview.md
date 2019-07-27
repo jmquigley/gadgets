@@ -127,6 +127,8 @@ selected.
 - `noscroll=false {boolean}` - turns off the scroll bars when the width/height
 of all nodes expands past the right or bottom edge of the display container.
 - `nosearch=false {boolean}` - turns off the search toolbar for the widget
+- `nosubtitles=false {boolean}` - turns the node subtitle display on or off
+It is on by default.
 - `selectedId=null {number|string}` - the id value of the node that should
 be selected.  Only use this if the parent component that will wrap this one
 needs to control what is selected in the component.

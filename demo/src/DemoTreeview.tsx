@@ -23,6 +23,7 @@ interface DemoData extends TreeviewData {
 export interface DemoTreeviewState {
 	menuPosition: boolean;
 	noscroll: boolean;
+	nosubtitles: boolean;
 	selectedId: TreeviewSelectedId;
 	selectNew: boolean;
 	treeData: DemoData[];
@@ -43,22 +44,30 @@ export default class DemoTreeview extends React.Component<
 		this.state = {
 			menuPosition: false,
 			noscroll: false,
+			nosubtitles: false,
 			selectedId: null,
 			selectNew: false,
 			treeData: [
 				{
 					title: "1.0",
+					subtitle: "a, b,c",
 					expanded: true,
 					note: "some test data",
-					children: [{title: "1.1"}, {title: "1.2"}, {title: "1.3"}]
+					children: [
+						{title: "1.1", subtitle: "x, y, z"},
+						{title: "1.2"},
+						{title: "1.3"}
+					]
 				},
 				{
 					title: "2.0",
+					subtitle: "d, e,f",
 					expanded: true,
 					children: [{title: "2.1"}, {title: "2.2"}, {title: "2.3"}]
 				},
 				{
 					title: "3.0",
+					subtitle: "g, h, i",
 					expanded: true,
 					children: [{title: "3.1"}, {title: "3.2"}, {title: "3.3"}]
 				}
@@ -96,6 +105,11 @@ export default class DemoTreeview extends React.Component<
 	@autobind
 	private handleDisableScroll(selected: boolean) {
 		this.setState({noscroll: selected});
+	}
+
+	@autobind
+	private handleDisableSubtitles(selected: boolean) {
+		this.setState({nosubtitles: selected});
 	}
 
 	@autobind
@@ -168,6 +182,12 @@ export default class DemoTreeview extends React.Component<
 					text='Check this to disable horizontal scrolling'
 				/>
 				<Break sizing={this.props["sizing"]} />
+				<Option
+					disabled={this.props["disabled"]}
+					onSelection={this.handleDisableSubtitles}
+					text='Check this to disable subtitles in the node'
+				/>
+				<Break sizing={this.props["sizing"]} />
 
 				<Treeview
 					direction={
@@ -179,6 +199,7 @@ export default class DemoTreeview extends React.Component<
 					height='640px'
 					isVirtualized={false}
 					noscroll={this.state.noscroll}
+					nosubtitles={this.state.nosubtitles}
 					notooltip
 					onAdd={this.handleAdd}
 					onChange={this.handleChange}

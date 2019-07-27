@@ -66,6 +66,7 @@ import * as _ from "lodash";
 import * as React from "react";
 import styled from "styled-components";
 import {FontInfo, getFontInfo, getTextWidth} from "util.html";
+import memoize from "util.memoize";
 import {parseList} from "util.string";
 import {nilEvent} from "util.toolbox";
 import {Icon} from "../icon/Icon";
@@ -149,28 +150,62 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 		});
 	}
 
+	/**
+	 * Retrieves a sanitized version of the input tag list.  The component can
+	 * accept a string list or an array of strings.  This method reads the props
+	 * for the tags and ensures that it is converted to an array of strings.
+	 * all blank tags are removed from the array.
+	 */
 	get tags(): string[] {
-		if (typeof this.props.tags === "string") {
-			return parseList(this.props.tags);
+		const self = this;
+
+		function normalizeTags(tags: string | string[]) {
+			let newTags: string[];
+
+			self.debug(
+				"normalizeTags -> tags: '%O', type: %o",
+				tags,
+				typeof tags
+			);
+
+			if (typeof tags === "string") {
+				newTags = parseList(tags);
+			} else {
+				newTags = tags || [];
+			}
+
+			self.debug("newTags before: %O", newTags);
+
+			newTags = newTags
+				.map((it: string) => it.trim())
+				.filter((it: string) => it);
+
+			self.debug("tags: `%O` -> newTags; %O", tags, newTags);
+
+			return newTags;
 		}
 
-		return this.props.tags;
+		return memoize(this.props.tags, normalizeTags);
 	}
 
 	private buildTags() {
-		return this.tags.map((tag: string) => {
-			return (
-				<Tag
-					disabled={this.props.disabled}
-					key={tag}
-					onDelete={this.handleDelete}
-					usedelete={this.props.useinput}
-					visible={this.props.visible}
-				>
-					{tag}
-				</Tag>
-			);
-		});
+		if (this.tags.length > 0) {
+			return this.tags.map((tag: string) => {
+				return (
+					<Tag
+						disabled={this.props.disabled}
+						key={tag}
+						onDelete={this.handleDelete}
+						usedelete={this.props.useinput}
+						visible={this.props.visible}
+					>
+						{tag}
+					</Tag>
+				);
+			});
+		}
+
+		return null;
 	}
 
 	private buildTextInputField() {
