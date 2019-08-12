@@ -53,4 +53,6 @@ placed on this div.
 - `justify=Justify.left {Justify}` - The toolbar can be placed to the left
 (default), center, or right within its container.  The property sets that
 location.
+- `noborder=false {boolean}` - turns off the outline border for the component
+when used.  By default the border is shown.
 

@@ -13,8 +13,10 @@ function createWindow() {
 		webPreferences: {
 			contextIsolation: false,
 			nodeIntegration: true,
+			nodeIntegrationInSubFrames: true,
 			preload: join(__dirname, "preload.js"),
-			webviewTag: true
+			webviewTag: true,
+			webSecurity: false
 		}
 	});
 

@@ -2,7 +2,7 @@
 
 ## Preview
 Takes a string of a markup language (asciidoc, markdown, or
-restructuredtext), converts it to HTML, and presents it in a webview control.
+restructuredtext), converts it to HTML, and presents it in an iframe element.
 
 The componet uses the [util.markup](https://github.com/jmquigley/util.markup)
 package for parsing content into a proper HTML document.
@@ -27,9 +27,9 @@ changed in the control. It will contain the content parsed and the
 resulting HTML, both as strings.
 
 #### Styles
-- `ui-preview` - Applied to the div container surrounding the webview
+- `ui-preview` - Applied to the div container surrounding the iframe
 component
-- `ui-preview-content` - Applied to the underlying webview component.  This
+- `ui-preview-content` - Applied to the underlying iframe component.  This
 is an id
 
 #### Properties

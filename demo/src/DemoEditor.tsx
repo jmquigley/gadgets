@@ -24,6 +24,8 @@ export default class DemoEditor extends React.Component<any, undefined> {
 	public render() {
 		return (
 			<StyledContainer id='editorExample' title='Editor'>
+				<p>To show the preview panel for the component use ALT+P</p>
+
 				<Editor content={this.markdown} scheme={{bold: "red"}} />
 			</StyledContainer>
 		);

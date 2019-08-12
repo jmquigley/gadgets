@@ -51,6 +51,8 @@
  * - `justify=Justify.left {Justify}` - The toolbar can be placed to the left
  * (default), center, or right within its container.  The property sets that
  * location.
+ * - `noborder=false {boolean}` - turns off the outline border for the component
+ * when used.  By default the border is shown.
  *
  * @module Toolbar
  */
@@ -75,7 +77,14 @@ export type ToolbarState = BaseState;
 
 const ToolbarView: any = styled.div`
 	background-color: ${(props: ToolbarProps) => props.theme.backgroundColor};
-	border: solid 1px silver;
+	border: ${(props: ToolbarProps) => {
+		if (props.noborder) {
+			return "none";
+		} else {
+			return "solid 1px " + props.theme.borderColor;
+		}
+	}};
+
 	box-sizing: border-box;
 	display: flex;
 	padding: 3px 2px;
@@ -239,7 +248,7 @@ export class Toolbar extends BaseComponent<ToolbarProps, ToolbarState> {
 
 		return (
 			<Wrapper {...this.props} name={this.name}>
-				<ToolbarView className={this.className}>
+				<ToolbarView {...this.props} className={this.className}>
 					<ToolbarGroupView
 						className='ui-toolbar-group'
 						justify={this.props.justify}

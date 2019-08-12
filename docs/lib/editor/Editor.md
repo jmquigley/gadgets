@@ -79,6 +79,9 @@ a line strike through in the text.
 to the current text.
 - `kbUndo="ctrl+z" {string}` - keyboard combo for undoing the previous set
 of operations.
+- `resizerWidth=10 {number}` - When the preview mode is turned on a slider is
+presented between the editor and the preview.  This is the width in pixels
+of that slider.
 - `scheme={foreground: "white", background: "black"} {Object}` - the
 color customizations used by the markup processor.  It contains the following
 keys:
@@ -121,4 +124,8 @@ keys:
   - `strikethrough`
   - `underline`
   - `wiki` - wiki name coloring in [[name | link]]
+
+- `showPreview=false {boolean}` - When the initial component is created
+this will determine if the preview pane will be displayed.  it is not
+by default.
 

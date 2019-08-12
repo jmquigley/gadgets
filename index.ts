@@ -95,6 +95,7 @@ import {
 	TreeviewSelectedId
 } from "./lib/treeview/Treeview";
 import {Triangle} from "./lib/triangle/Triangle";
+import {WebView} from "./lib/webview/WebView";
 
 const pkg = require("./package.json");
 const version = `v${JSON.stringify(pkg.version)}`;
@@ -202,5 +203,6 @@ export {
 	Validator,
 	ValidatorFn,
 	version,
+	WebView,
 	Wrapper
 };

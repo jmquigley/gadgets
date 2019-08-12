@@ -30,6 +30,7 @@ exports[`Test creation of an Editor control 1`] = `
   kbHeader6="alt+ctrl+6"
   kbItalic="ctrl+i"
   kbMono="ctrl+m"
+  kbPreview="alt+p"
   kbRedo="ctrl+shift+z"
   kbRefresh="alt+r"
   kbStrikeThrough="ctrl+shift+t"
@@ -51,6 +52,7 @@ exports[`Test creation of an Editor control 1`] = `
   onClick={[Function]}
   onClickLink={[Function]}
   padding={null}
+  resizerWidth={10}
   ripple={false}
   scheme={
     Object {
@@ -59,6 +61,7 @@ exports[`Test creation of an Editor control 1`] = `
     }
   }
   selected={false}
+  showPreview={false}
   sizing="normal"
   style={Object {}}
   testing={true}

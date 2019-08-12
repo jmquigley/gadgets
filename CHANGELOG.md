@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.0.71
+#### Enhancements:
+
+- Moved the [WebView](https://github.com/jmquigley/gadgets/blob/master/docs/lib/webview/WebView.md) widget out of the [Browser](https://github.com/jmquigley/gadgets/blob/master/docs/lib/browser/Browser.md) component into its own library location.
+- Changed [Preview](https://github.com/jmquigley/gadgets/blob/master/docs/lib/preview/Preview.md) to use IFrame instead of WebView.
+- Added the `noborder` property to the [Toolbar](https://github.com/jmquigley/gadgets/blob/master/docs/lib/toolbar/Toolbar.md) component.
+
+#### Bug Fixes:
+
+N/A
+
+---
+
 ## v0.0.70
 #### Enhancements:
 

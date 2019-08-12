@@ -77,6 +77,9 @@
  * to the current text.
  * - `kbUndo="ctrl+z" {string}` - keyboard combo for undoing the previous set
  * of operations.
+ * - `resizerWidth=10 {number}` - When the preview mode is turned on a slider is
+ * presented between the editor and the preview.  This is the width in pixels
+ * of that slider.
  * - `scheme={foreground: "white", background: "black"} {Object}` - the
  * color customizations used by the markup processor.  It contains the following
  * keys:
@@ -120,6 +123,10 @@
  *   - `underline`
  *   - `wiki` - wiki name coloring in [[name | link]]
  *
+ * - `showPreview=false {boolean}` - When the initial component is created
+ * this will determine if the preview pane will be displayed.  it is not
+ * by default.
+ *
  * @module Editor
  */
 
@@ -131,19 +138,22 @@ import * as React from "react";
 import styled from "styled-components";
 import {ClassNames} from "util.classnames";
 import {Match} from "util.matches";
-import {nilEvent} from "util.toolbox";
+import {nilEvent, roundUp} from "util.toolbox";
 import {Button} from "../button/Button";
 import {ButtonDialog} from "../buttonDialog/ButtonDialog";
 import {Divider} from "../divider/Divider";
 import {Dropdown, DropdownOption} from "../dropdown/Dropdown";
 import {List} from "../list/List";
 import {ListItem} from "../list/ListItem";
+import {Preview} from "../preview/Preview";
 import {
 	BaseComponent,
 	BaseProps,
 	BaseState,
+	baseZIndex,
 	Color,
 	defaultBaseProps,
+	Direction,
 	DisabledCSS,
 	InvisibleCSS,
 	parseKeyCombo,
@@ -172,31 +182,36 @@ export interface EditorProps extends BaseProps {
 	kbHeader6?: string;
 	kbItalic?: string;
 	kbMono?: string;
+	kbPreview?: string;
 	kbRedo?: string;
 	kbRefresh?: string;
 	kbStrikeThrough?: string;
 	kbUnderline?: string;
 	kbUndo?: string;
-	onChange?: any;
+	onChange?: (text: string) => void;
 	onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 	onClickLink?: (match: Match) => void;
+	resizerWidth?: number;
 	scheme?: any;
+	showPreview?: boolean;
 }
 
-export type EditorState = BaseState;
+export interface EditorState extends BaseState {
+	content?: string;
+	editorWidth?: number;
+	previewWidth?: number;
+	visiblePreview?: boolean;
+	sliderEnabled?: boolean;
+	x?: number;
+}
 
-const EditorContainer: any = styled.div`
-	box-sizing: border-box;
+const EditorElement: any = styled.div`
+	border: solid 1px ${(props: EditorProps) => props.theme.borderColor};
 	display: flex;
-	flex-direction: column;
-	height: inherit;
-	min-width: 625px;
-	width: inherit;
-`;
-
-const EditorView: any = styled.div`
-	display: flex;
+	height: 100%;
 	min-width: inherit;
+	width: ${(props: EditorProps) => props.width};
+	z-index: ${baseZIndex};
 
 	> .ql-editor {
 		min-width: inherit;
@@ -208,9 +223,48 @@ const EditorView: any = styled.div`
 	${(props: EditorProps) => !props.visible && InvisibleCSS}
 `;
 
+const EditorContainer: any = styled.div`
+	box-sizing: border-box;
+	border-top: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	display: flex;
+	flex-direction: column;
+	height: inherit;
+	min-width: 625px;
+	width: inherit;
+`;
+
 const EditorToolbar: any = styled(Toolbar)`
-	margin-bottom: -1px;
-	min-width: inherit;
+	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border-left: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	min-width: inh erit;
+`;
+
+const EditorView: any = styled.div`
+	display: flex;
+`;
+
+const SliderElement: any = styled.div`
+	background-color: ${(props: EditorProps) => props.theme.backgroundColor};
+	border: none;
+	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	cursor: col-resize;
+	height: 100%;
+	width: ${(props: EditorProps) => props.width};
+	z-index: ${baseZIndex + 1};
+
+	${(props: EditorProps) => props.disabled && DisabledCSS}
+	${(props: EditorProps) => !props.visible && InvisibleCSS}
+`;
+
+const StyledPreview: any = styled(Preview)`
+	border: none;
+	border-top: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border-bottom: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	width: ${(props: EditorProps) => props.width};
+	z-index: ${baseZIndex};
+
+	${(props: EditorProps) => !props.visible && InvisibleCSS}
 `;
 
 export class Editor extends BaseComponent<EditorProps, EditorState> {
@@ -229,6 +283,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		kbHeader6: "alt+ctrl+6",
 		kbItalic: "ctrl+i",
 		kbMono: "ctrl+m",
+		kbPreview: "alt+p",
 		kbRedo: "ctrl+shift+z",
 		kbRefresh: "alt+r",
 		kbStrikeThrough: "ctrl+shift+t",
@@ -237,26 +292,36 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		onChange: nilEvent,
 		onClick: nilEvent,
 		onClickLink: nilEvent,
+		resizerWidth: 10,
 		scheme: {
 			background: Color.black,
 			foreground: Color.white
-		}
+		},
+		showPreview: false
 	};
 
+	private _boundingBox: any; // bounding box rect on editor container
 	private _custom: any;
 	private _editor: any;
 	private _fontList: DropdownOption[] = [];
 	private _fontSizes: DropdownOption[] = [];
 	private _highlights: DropdownOption[] = [];
 	private _keybindings: QuillKeyBindings;
-
 	private _markup: Markup;
 	private _modes: DropdownOption[] = [];
-	private _editorStyles: ClassNames = new ClassNames("ui-editor-quill");
+	private _refContainer: any;
+	private _refEditor: any;
 	private _toolbarStyles: ClassNames = new ClassNames("ui-editor-toolbar");
 
 	constructor(props: EditorProps) {
-		super("ui-editor", Editor, props);
+		super("ui-editor", Editor, props, {
+			content: props.content,
+			editorWidth: 0,
+			previewWidth: 0,
+			sliderEnabled: false,
+			visiblePreview: props.showPreview,
+			x: 0
+		});
 
 		this.debug('Editor key: "%s"', this.id);
 		this.debug("Quill: %O", Quill);
@@ -325,6 +390,10 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 				...parseKeyCombo(this.props.kbMono),
 				handler: this.handleSetMono
 			},
+			preview: {
+				...parseKeyCombo(this.props.kbPreview),
+				handler: this.handlePreview
+			},
 			redo: {
 				...parseKeyCombo(this.props.kbRedo),
 				handler: this.handleRedo
@@ -370,6 +439,226 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		}));
 	}
 
+	private buildToolbar() {
+		return (
+			<EditorToolbar
+				className={this._toolbarStyles.value}
+				noborder
+				sizing={this.props.buttonSizing}
+			>
+				<Button iconName='bold' onClick={this.handleSetBold} />
+				<Button iconName='italic' onClick={this.handleSetItalic} />
+				<Button iconName='underline' onClick={this.handleUnderline} />
+				<Button
+					iconName='strikethrough'
+					onClick={this.handleStrikeThrough}
+				/>
+				<Button iconName='code' onClick={this.handleSetMono} />
+				<ButtonDialog iconName='header' notriangle>
+					<List sizing={Sizing.small} alternating noselect>
+						<ListItem
+							title='h1'
+							onSelection={this.handleSelect("1")}
+						/>
+						<ListItem
+							title='h2'
+							onSelection={this.handleSelect("2")}
+						/>
+						<ListItem
+							title='h3'
+							onSelection={this.handleSelect("3")}
+						/>
+						<ListItem
+							title='h4'
+							onSelection={this.handleSelect("4")}
+						/>
+						<ListItem
+							title='h5'
+							onSelection={this.handleSelect("5")}
+						/>
+						<ListItem
+							title='h6'
+							onSelection={this.handleSelect("6")}
+						/>
+					</List>
+				</ButtonDialog>
+				<Divider />
+				<Button iconName='undo' onClick={this.handleUndo} />
+				<Button iconName='repeat' onClick={this.handleRedo} />
+				<Divider />
+				<Dropdown
+					initialValue={this.props.defaultFont}
+					items={this._fontList}
+					onSelection={this._markup && this._markup.setFont}
+				/>
+				<Dropdown
+					initialValue={this.props.defaultFontSize.toString()}
+					items={this._fontSizes}
+					onSelection={this._markup && this._markup.setFontSize}
+				/>
+				<Divider />
+				<Dropdown
+					initialValue={"markdown"}
+					items={this._modes}
+					onSelection={this._markup && this._markup.setMode}
+				/>
+				<Dropdown
+					initialValue={"solarized-light"}
+					items={this._highlights}
+					onSelection={this._markup && this._markup.setHighlight}
+					style={{
+						width: "6rem"
+					}}
+				/>
+				<Button iconName='refresh' onClick={this.handleRefresh} />
+			</EditorToolbar>
+		);
+	}
+
+	@autobind
+	private focusEditor() {
+		if (this._refEditor) {
+			this._refEditor.focus();
+		}
+	}
+
+	@autobind
+	private handleChange(text: string) {
+		this.setState({
+			content: text
+		});
+
+		this.props.onChange(text);
+	}
+
+	@autobind
+	private handleDisableDragDrop() {
+		return false;
+	}
+
+	@autobind
+	private handleMouseDown(e: React.MouseEvent<HTMLDivElement>) {
+		if (!this.props.disabled && this.state.visiblePreview) {
+			this.setState({
+				sliderEnabled: true
+			});
+
+			this.debug("mouseDown: %O, e: %O", this._refContainer, e);
+			e.preventDefault();
+		}
+	}
+
+	@autobind
+	private handleMouseMove(
+		e: MouseEvent,
+		direction: Direction = Direction.left
+	) {
+		if (this.state.sliderEnabled) {
+			let dx: number = 0;
+
+			// Compute the current location of the slider control based on the mouse
+			// moving left over the editor, or right over the Preview component
+			if (direction === Direction.left) {
+				dx = e.pageX - this._boundingBox.left;
+			} else {
+				dx = this.state.x + e.pageX;
+			}
+
+			let editorWidth: number = dx;
+			let previewWidth: number = this._boundingBox.right - dx;
+
+			// Deal with extreme (outside) left/right bourndaries
+			if (dx < 0) {
+				// past the left side border (no editor, all preview)
+				dx = editorWidth = 0;
+				previewWidth =
+					this._boundingBox.width - this.props.resizerWidth;
+			} else if (dx > this._boundingBox.width - this.props.resizerWidth) {
+				// past the right side border (no preview, all editor)
+				dx = editorWidth =
+					this._boundingBox.right - this.props.resizerWidth;
+				previewWidth = 0;
+			}
+
+			const newState = {
+				editorWidth,
+				previewWidth,
+				x: dx
+			};
+
+			/*
+			this.debug(
+				"handleMouseMove(%o) -> state: %O, newState: %O, e: %O, boundingBox: %O",
+				this.state,
+				direction,
+				newState,
+				e,
+				this._boundingBox
+			);
+			*/
+
+			this.setState(newState);
+			e.preventDefault();
+		}
+	}
+
+	@autobind
+	private handleMouseMoveLeft(e: MouseEvent) {
+		this.handleMouseMove(e, Direction.left);
+	}
+
+	@autobind
+	private handleMouseMoveRight(e: MouseEvent) {
+		this.handleMouseMove(e, Direction.right);
+	}
+
+	@autobind
+	private handleMouseUp(e: MouseEvent) {
+		if (!this.props.disabled && this.state.visiblePreview) {
+			this.setState({
+				sliderEnabled: false
+			});
+
+			this.debug("mouseUp: %O", e);
+			e.preventDefault();
+		}
+	}
+
+	@autobind
+	private handlePreview() {
+		this.setInitialDimensions(!this.state.visiblePreview);
+	}
+
+	@autobind
+	private handleRedo() {
+		if (this._markup) {
+			this._markup.redo();
+		}
+	}
+
+	@autobind
+	private handleRefContainer(ref: any) {
+		this._refContainer = ref;
+	}
+
+	@autobind
+	private handleRefEditor(ref: any) {
+		this._refEditor = ref;
+	}
+
+	@autobind
+	private handleRefresh() {
+		if (this._markup) {
+			this._markup.refresh();
+		}
+	}
+
+	@autobind
+	private handleResize() {
+		this.updateBoundingBox();
+		this.setInitialDimensions(this.state.visiblePreview);
+	}
+
 	@autobind
 	private handleSelect(level: string) {
 		return () => {
@@ -401,20 +690,6 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	}
 
 	@autobind
-	private handleRedo() {
-		if (this._markup) {
-			this._markup.redo();
-		}
-	}
-
-	@autobind
-	private handleRefresh() {
-		if (this._markup) {
-			this._markup.refresh();
-		}
-	}
-
-	@autobind
 	private handleStrikeThrough() {
 		if (this._markup) {
 			this._markup.setStrikeThrough();
@@ -435,7 +710,32 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		}
 	}
 
+	private setInitialDimensions(visiblePreview: boolean) {
+		const startX: number = roundUp(this._boundingBox.width / 2.0);
+
+		// Toggle the state of the current preview pane.
+		this.setState(
+			{
+				editorWidth: visiblePreview ? startX : 0,
+				previewWidth: this._boundingBox.width - startX,
+				visiblePreview,
+				x: visiblePreview ? startX : 0
+			},
+			() => {
+				this.focusEditor();
+			}
+		);
+	}
+
+	private updateBoundingBox() {
+		if (this._refContainer) {
+			this._boundingBox = this._refContainer.getBoundingClientRect();
+		}
+	}
+
 	public componentDidMount() {
+		window.addEventListener("resize", this.handleResize);
+
 		// The quill editor must be added after the component has mounted
 		// because the DOM element used for replacement is not available
 		// until the first render call.
@@ -457,7 +757,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 					fontSize: this.props.defaultFontSize,
 					followLinks: true,
 					mode: MarkupMode.markdown,
-					onChange: this.props.onChange,
+					onChange: this.handleChange,
 					onClick: this.props.onClick,
 					onClickLink: this.props.onClickLink
 				},
@@ -488,6 +788,15 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		// first render pass because its not mounted.  This will force a
 		// rerender to ensure things like the font list are updated
 		this.forceUpdate();
+		this.focusEditor();
+	}
+
+	public componentWillUnmount() {
+		window.removeEventListener("resize", this.handleResize);
+	}
+
+	public componentDidUpdate() {
+		this.updateBoundingBox();
 	}
 
 	public render() {
@@ -513,96 +822,44 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 					className={this.className}
 					style={this.state.style}
 				>
-					<EditorToolbar
-						{...this.props}
-						className={this._toolbarStyles.value}
-						sizing={this.props.buttonSizing}
-					>
-						<Button iconName='bold' onClick={this.handleSetBold} />
-						<Button
-							iconName='italic'
-							onClick={this.handleSetItalic}
-						/>
-						<Button
-							iconName='underline'
-							onClick={this.handleUnderline}
-						/>
-						<Button
-							iconName='strikethrough'
-							onClick={this.handleStrikeThrough}
-						/>
-						<Button iconName='code' onClick={this.handleSetMono} />
-						<ButtonDialog iconName='header' notriangle>
-							<List sizing={Sizing.small} alternating noselect>
-								<ListItem
-									title='h1'
-									onSelection={this.handleSelect("1")}
-								/>
-								<ListItem
-									title='h2'
-									onSelection={this.handleSelect("2")}
-								/>
-								<ListItem
-									title='h3'
-									onSelection={this.handleSelect("3")}
-								/>
-								<ListItem
-									title='h4'
-									onSelection={this.handleSelect("4")}
-								/>
-								<ListItem
-									title='h5'
-									onSelection={this.handleSelect("5")}
-								/>
-								<ListItem
-									title='h6'
-									onSelection={this.handleSelect("6")}
-								/>
-							</List>
-						</ButtonDialog>
-						<Divider />
-						<Button iconName='undo' onClick={this.handleUndo} />
-						<Button iconName='repeat' onClick={this.handleRedo} />
-						<Divider />
-						<Dropdown
-							initialValue={this.props.defaultFont}
-							items={this._fontList}
-							onSelection={this._markup && this._markup.setFont}
-						/>
-						<Dropdown
-							initialValue={this.props.defaultFontSize.toString()}
-							items={this._fontSizes}
-							onSelection={
-								this._markup && this._markup.setFontSize
-							}
-						/>
-						<Divider />
-						<Dropdown
-							initialValue={"markdown"}
-							items={this._modes}
-							onSelection={this._markup && this._markup.setMode}
-						/>
-						<Dropdown
-							initialValue={"solarized-light"}
-							items={this._highlights}
-							onSelection={
-								this._markup && this._markup.setHighlight
-							}
-							style={{
-								width: "6rem"
-							}}
-						/>
-						<Button
-							iconName='refresh'
-							onClick={this.handleRefresh}
-						/>
-					</EditorToolbar>
+					{this.buildToolbar()}
 					<EditorView
-						className={this._editorStyles.value}
-						disabled={this.props.disabled}
-						id={this.id}
-						visible={this.props.visible}
-					/>
+						className='ui-editor-view'
+						ref={this.handleRefContainer}
+						onBlur={this.handleMouseUp}
+					>
+						<EditorElement
+							className='ui-editor-quill'
+							disabled={this.props.disabled}
+							id={this.id}
+							onMouseMove={this.handleMouseMoveLeft}
+							ref={this.handleRefEditor}
+							visible={this.props.visible}
+							width={
+								this.state.visiblePreview
+									? `${this.state.editorWidth}px`
+									: "100%"
+							}
+						/>
+						<SliderElement
+							className='ui-editor-slider'
+							left={this.state.x}
+							onDragEnd={this.handleDisableDragDrop}
+							onDragStart={this.handleDisableDragDrop}
+							onMouseDown={this.handleMouseDown}
+							onMouseUp={this.handleMouseUp}
+							visible={this.state.visiblePreview}
+							width={`${this.props.resizerWidth}px`}
+						/>
+						<StyledPreview
+							className='ui-editor-preview'
+							content={this.state.content}
+							onMouseMove={this.handleMouseMoveRight}
+							onMouseUp={this.handleMouseUp}
+							visible={this.state.visiblePreview}
+							width={`${this.state.previewWidth}px`}
+						/>
+					</EditorView>
 				</EditorContainer>
 			</Wrapper>
 		);

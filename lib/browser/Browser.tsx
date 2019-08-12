@@ -84,7 +84,7 @@ import {
 } from "../shared";
 import {TextField} from "../textField/TextField";
 import {Toolbar} from "../toolbar/Toolbar";
-import {WebView} from "./WebView";
+import {WebView} from "../webview/WebView";
 
 export interface BrowserProps extends BaseProps {
 	home?: string;

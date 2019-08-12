@@ -1,6 +1,6 @@
 /**
  * Takes a string of a markup language (asciidoc, markdown, or
- * restructuredtext), converts it to HTML, and presents it in a webview control.
+ * restructuredtext), converts it to HTML, and presents it in an iframe element.
  *
  * The componet uses the [util.markup](https://github.com/jmquigley/util.markup)
  * package for parsing content into a proper HTML document.
@@ -25,9 +25,9 @@
  * resulting HTML, both as strings.
  *
  * #### Styles
- * - `ui-preview` - Applied to the div container surrounding the webview
+ * - `ui-preview` - Applied to the div container surrounding the iframe
  * component
- * - `ui-preview-content` - Applied to the underlying webview component.  This
+ * - `ui-preview-content` - Applied to the underlying iframe component.  This
  * is an id
  *
  * #### Properties
@@ -66,6 +66,8 @@ export interface PreviewProps extends BaseProps {
 	css?: string;
 	mode?: PreviewMode;
 	onChange?: (content: string, html: string) => void;
+	onMouseMove?: (event: MouseEvent) => void;
+	onMouseUp?: (event: MouseEvent) => void;
 }
 
 export interface PreviewState extends BaseState {
@@ -73,14 +75,18 @@ export interface PreviewState extends BaseState {
 	html: string;
 }
 
-const PreviewWrapper: any = styled.div`
-	border: solid 1px ${(props: PreviewProps) => props.theme.borderColor};
+const IFrameContent: any = styled.iframe`
+	border: none;
 	height: 100%;
 	overflow: auto;
+	width: 100%;
+`;
 
-	webview {
-		height: 100%;
-	}
+const PreviewWrapper: any = styled.div`
+	border: solid 1px ${(props: PreviewProps) => props.theme.borderColor};
+	align-items: stretch;
+	display: flex;
+	height: 100%;
 
 	${(props: PreviewProps) => disabled(props)}
 	${(props: PreviewProps) => invisible(props)}
@@ -92,7 +98,9 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 		content: "",
 		css: "",
 		mode: PreviewMode.markdown,
-		onChange: nilEvent
+		onChange: nilEvent,
+		onMouseMove: nilEvent,
+		onMouseUp: nilEvent
 	};
 
 	private static readonly parsers = {
@@ -103,8 +111,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 		)
 	};
 
-	private _preview: HTMLDivElement;
-	private _webview: any = null;
+	private _iframe: HTMLIFrameElement = null;
 
 	constructor(props: PreviewProps) {
 		super("ui-preview", Preview, props, {
@@ -115,7 +122,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 
 	@autobind
 	private handleRef(ref: any) {
-		this._preview = ref;
+		this._iframe = ref;
 	}
 
 	public static getDerivedStateFromProps(
@@ -135,16 +142,6 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 	}
 
 	public componentDidMount() {
-		if (!this._webview) {
-			this._webview = document.createElement("webview");
-			this._webview.setAttribute(
-				"id",
-				this.props.id || "ui-preview-content"
-			);
-			this._webview.nodeintegration = true;
-			this._preview.appendChild(this._webview);
-		}
-
 		this.parseContent(this.state.content);
 	}
 
@@ -158,13 +155,35 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 	}
 
 	private parseContent(content: string) {
-		Preview.parsers[this.props.mode]
-			.parse({markup: content, css: this.props.css})
-			.then((results: HTMLResults) => {
-				this._webview.src = `data:text/html,${results.html}`;
-				this.props.onChange(content, results.html);
-			})
-			.catch((err: string) => console.error(err));
+		if (this._iframe) {
+			Preview.parsers[this.props.mode]
+				.parse({markup: content, css: this.props.css})
+				.then((results: HTMLResults) => {
+					this._iframe.src = `data:text/html,${results.html}`;
+					this._iframe.onload = () => {
+						const iframeWindow = this._iframe.contentWindow;
+
+						this.debug(
+							"iframe: %O, window: %O",
+							this._iframe,
+							iframeWindow
+						);
+
+						iframeWindow.addEventListener(
+							"mousemove",
+							this.props.onMouseMove
+						);
+
+						iframeWindow.addEventListener(
+							"mouseup",
+							this.props.onMouseUp
+						);
+					};
+
+					this.props.onChange(content, results.html);
+				})
+				.catch((err: string) => console.error(err));
+		}
 	}
 
 	public render() {
@@ -175,10 +194,15 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 				<PreviewWrapper
 					className={this.className}
 					disabled={this.props.disabled}
-					ref={this.handleRef}
 					style={this.state.style}
 					visible={this.props.visible}
-				/>
+				>
+					<IFrameContent
+						className='ui-preview-content'
+						sandbox='allow-same-origin allow-scripts'
+						ref={this.handleRef}
+					/>
+				</PreviewWrapper>
 			</Wrapper>
 		);
 	}
