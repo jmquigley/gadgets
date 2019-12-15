@@ -2,12 +2,12 @@
 
 > Reusable React UI widgets - This is my widget library. There are many like it, but this one is mine...
 
-[![build](https://circleci.com/gh/jmquigley/gadgets/tree/master.svg?style=shield)](https://circleci.com/gh/jmquigley/gadgets/tree/master)
+[![build](https://github.com/jmquigley/gadgets/workflows/build/badge.svg)](https://github.com/jmquigley/gadgets/actions)
 [![analysis](https://img.shields.io/badge/analysis-tslint-9cf.svg)](https://palantir.github.io/tslint/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![testing](https://img.shields.io/badge/testing-jest-blue.svg)](https://facebook.github.io/jest/)
 [![NPM](https://img.shields.io/npm/v/gadgets.svg)](https://www.npmjs.com/package/gadgets)
-[![coverage](https://coveralls.io/repos/github/jmquigley/gadgets/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/gadgets?branch=master)
+
 
 This library provides widgets and composite controls for building desktop apps using [Electron](https://electronjs.org/).  The widgets are listed below.
 

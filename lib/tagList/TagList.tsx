@@ -270,7 +270,10 @@ export class TagList extends BaseComponent<TagListProps, TagListState> {
 
 	@autobind
 	private handleDelete(tag: string) {
-		this.props.onDelete(tag, this.tags.filter((it: string) => it !== tag));
+		this.props.onDelete(
+			tag,
+			this.tags.filter((it: string) => it !== tag)
+		);
 	}
 
 	@autobind

@@ -327,10 +327,9 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 	@autobind
 	private handleSnapshot() {
 		if (this._webview) {
-			this._webview.executeJavaScript(
-				"document.documentElement.innerHTML",
-				false,
-				(content: string) => {
+			this._webview
+				.executeJavaScript("document.documentElement.innerHTML")
+				.then((content: string) => {
 					let dom: Document = null;
 
 					// By default the webview content is not parsed into
@@ -348,8 +347,7 @@ export class Browser extends BaseComponent<BrowserProps, BrowserState> {
 						dom,
 						this.state.uriHistory
 					);
-				}
-			);
+				});
 		}
 	}
 

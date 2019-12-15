@@ -30,7 +30,7 @@ const constants = new webpack.DefinePlugin({
 });
 
 const alias = {
-	react: path.resolve(
+	"react": path.resolve(
 		__dirname,
 		"node_modules",
 		"react",

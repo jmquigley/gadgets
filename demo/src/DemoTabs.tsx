@@ -3,7 +3,7 @@
 const debug = require("debug")("DemoTabs");
 
 import autobind from "autobind-decorator";
-import * as loremIpsum from "lorem-ipsum";
+import {loremIpsum} from "lorem-ipsum";
 import * as React from "react";
 import {Break, Location, Tab, TabContainer} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";

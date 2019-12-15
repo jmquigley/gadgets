@@ -732,11 +732,14 @@ export class Treeview extends BaseComponent<TreeviewProps, TreeviewState> {
 				},
 				() => {
 					if (matches.length > 0) {
-						this.props.onSearch(this.state.matches[searchFocusIndex]
-							.node as TreeItem);
-						this.props.onSelection(this.state.matches[
-							searchFocusIndex
-						].node as TreeItem);
+						this.props.onSearch(
+							this.state.matches[searchFocusIndex]
+								.node as TreeItem
+						);
+						this.props.onSelection(
+							this.state.matches[searchFocusIndex]
+								.node as TreeItem
+						);
 					}
 				}
 			);

@@ -35,7 +35,6 @@
  * @module themes
  */
 
-import {DefaultTheme} from "styled-components";
 import {ColorType} from "../colors";
 import {default as base} from "./base";
 import {default as dark} from "./dark";

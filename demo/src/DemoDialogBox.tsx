@@ -3,7 +3,7 @@
 const debug = require("debug")("DemoDialogBox");
 
 import autobind from "autobind-decorator";
-import * as loremIpsum from "lorem-ipsum";
+import {loremIpsum} from "lorem-ipsum";
 import * as React from "react";
 import {ButtonText, DialogBox, DialogBoxType} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";

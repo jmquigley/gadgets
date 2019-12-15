@@ -2,7 +2,7 @@
 
 const debug = require("debug")("DemoTooltip");
 
-import * as loremIpsum from "lorem-ipsum";
+import {loremIpsum} from "lorem-ipsum";
 import * as React from "react";
 import {Location, Tooltip} from "../../dist/bundle";
 import {StyledContainer} from "./helpers";

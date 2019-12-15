@@ -354,70 +354,70 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 
 	private buildKeyboardHandler() {
 		return {
-			bold: {
+			"bold": {
 				...parseKeyCombo(this.props.kbBold),
 				handler: this.handleSetBold
 			},
-			header1: {
+			"header1": {
 				...parseKeyCombo(this.props.kbHeader1),
 				handler: this.handleSelect("1")
 			},
-			header2: {
+			"header2": {
 				...parseKeyCombo(this.props.kbHeader2),
 				handler: this.handleSelect("2")
 			},
-			header3: {
+			"header3": {
 				...parseKeyCombo(this.props.kbHeader3),
 				handler: this.handleSelect("3")
 			},
-			header4: {
+			"header4": {
 				...parseKeyCombo(this.props.kbHeader4),
 				handler: this.handleSelect("4")
 			},
-			header5: {
+			"header5": {
 				...parseKeyCombo(this.props.kbHeader5),
 				handler: this.handleSelect("5")
 			},
-			header6: {
+			"header6": {
 				...parseKeyCombo(this.props.kbHeader6),
 				handler: this.handleSelect("6")
 			},
-			italic: {
+			"italic": {
 				...parseKeyCombo(this.props.kbItalic),
 				handler: this.handleSetItalic
 			},
-			mono: {
+			"mono": {
 				...parseKeyCombo(this.props.kbMono),
 				handler: this.handleSetMono
 			},
-			preview: {
+			"preview": {
 				...parseKeyCombo(this.props.kbPreview),
 				handler: this.handlePreview
 			},
-			redo: {
+			"redo": {
 				...parseKeyCombo(this.props.kbRedo),
 				handler: this.handleRedo
 			},
-			refresh: {
+			"refresh": {
 				...parseKeyCombo(this.props.kbRefresh),
 				handler: this.handleRefresh
 			},
-			strikethrough: {
+			"strikethrough": {
 				...parseKeyCombo(this.props.kbStrikeThrough),
 				handler: this.handleStrikeThrough
 			},
-			tab: {
+			"tab": {
 				key: 9,
 				handler: function(textRange: any) {
 					this.quill.insertText(textRange.index, "    ");
 					return false;
 				}
 			},
-			underline: {
+			"underline": {
 				...parseKeyCombo(this.props.kbUnderline),
 				handler: this.handleUnderline
 			},
-			undo: {
+			"undo": {
 				...parseKeyCombo(this.props.kbUndo),
 				handler: this.handleUndo
 			},
