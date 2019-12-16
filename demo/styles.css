@@ -95,11 +95,13 @@ textfieldExample {
 	transform: translateX(-50%);
 }
 
+/*
 #editorExample {
 	display: flex;
 	flex-direction: column;
 	height: 600px;
 }
+*/
 
 #simple-icons .box .ui-icon,
 .box .ui-button,
@@ -206,6 +208,10 @@ selectBox {
 
 .ui-breadcrumbs {
 	border: solid 1px silver;
+}
+
+.ui-editor {
+	height: 600px !important;
 }
 
 .ui-select .Select-control {

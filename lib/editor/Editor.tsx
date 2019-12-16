@@ -135,6 +135,7 @@ const Quill = (global as any).Quill;
 import autobind from "autobind-decorator";
 import {Markup, MarkupMode} from "quill-markup";
 import * as React from "react";
+import {HotKeys} from "react-hotkeys";
 import styled from "styled-components";
 import {ClassNames} from "util.classnames";
 import {Match} from "util.matches";
@@ -156,6 +157,7 @@ import {
 	Direction,
 	DisabledCSS,
 	InvisibleCSS,
+	Justify,
 	parseKeyCombo,
 	Sizing,
 	Wrapper
@@ -206,7 +208,15 @@ export interface EditorState extends BaseState {
 }
 
 const EditorElement: any = styled.div`
-	border: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border: ${(props: EditorProps) => {
+		if (props.width === "0px") {
+			return "none";
+		} else {
+			return "solid 1px " + props.theme.borderColor;
+		}
+	}};
+
+	border-left: none;
 	display: flex;
 	height: 100%;
 	min-width: inherit;
@@ -225,7 +235,6 @@ const EditorElement: any = styled.div`
 
 const EditorContainer: any = styled.div`
 	box-sizing: border-box;
-	border-top: solid 1px ${(props: EditorProps) => props.theme.borderColor};
 	display: flex;
 	flex-direction: column;
 	height: inherit;
@@ -234,19 +243,24 @@ const EditorContainer: any = styled.div`
 `;
 
 const EditorToolbar: any = styled(Toolbar)`
-	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
-	border-left: solid 1px ${(props: EditorProps) => props.theme.borderColor};
-	min-width: inh erit;
+	flex: 1;
+	min-width: inherit;
 `;
 
-const EditorView: any = styled.div`
+const EditorView: any = styled(HotKeys)`
+	border-left: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
 	display: flex;
+	height: inherit;
+`;
+
+const PreviewToolbar: any = styled(Toolbar)`
+	flex: 1;
 `;
 
 const SliderElement: any = styled.div`
 	background-color: ${(props: EditorProps) => props.theme.backgroundColor};
 	border: none;
-	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
 	cursor: col-resize;
 	height: 100%;
 	width: ${(props: EditorProps) => props.width};
@@ -257,14 +271,26 @@ const SliderElement: any = styled.div`
 `;
 
 const StyledPreview: any = styled(Preview)`
-	border: none;
-	border-top: solid 1px ${(props: EditorProps) => props.theme.borderColor};
-	border-bottom: solid 1px ${(props: EditorProps) => props.theme.borderColor};
-	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border: ${(props: EditorProps) => {
+		if (props.width === "0px") {
+			return "none";
+		} else {
+			return "solid 1px " + props.theme.borderColor;
+		}
+	}};
+
+	border-right: none;
 	width: ${(props: EditorProps) => props.width};
 	z-index: ${baseZIndex};
 
 	${(props: EditorProps) => !props.visible && InvisibleCSS}
+`;
+
+const ToolbarContainer: any = styled.div`
+	border-left: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border-right: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	border-top: solid 1px ${(props: EditorProps) => props.theme.borderColor};
+	display: flex;
 `;
 
 export class Editor extends BaseComponent<EditorProps, EditorState> {
@@ -353,6 +379,12 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 	}
 
 	private buildKeyboardHandler() {
+		this.buildKeyMap({
+			kbPreview: this.handlePreview
+		});
+
+		this.debug("keymap: %O", this.keyMap);
+
 		return {
 			"bold": {
 				...parseKeyCombo(this.props.kbBold),
@@ -441,77 +473,85 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 
 	private buildToolbar() {
 		return (
-			<EditorToolbar
-				className={this._toolbarStyles.value}
-				noborder
-				sizing={this.props.buttonSizing}
-			>
-				<Button iconName='bold' onClick={this.handleSetBold} />
-				<Button iconName='italic' onClick={this.handleSetItalic} />
-				<Button iconName='underline' onClick={this.handleUnderline} />
-				<Button
-					iconName='strikethrough'
-					onClick={this.handleStrikeThrough}
-				/>
-				<Button iconName='code' onClick={this.handleSetMono} />
-				<ButtonDialog iconName='header' notriangle>
-					<List sizing={Sizing.small} alternating noselect>
-						<ListItem
-							title='h1'
-							onSelection={this.handleSelect("1")}
-						/>
-						<ListItem
-							title='h2'
-							onSelection={this.handleSelect("2")}
-						/>
-						<ListItem
-							title='h3'
-							onSelection={this.handleSelect("3")}
-						/>
-						<ListItem
-							title='h4'
-							onSelection={this.handleSelect("4")}
-						/>
-						<ListItem
-							title='h5'
-							onSelection={this.handleSelect("5")}
-						/>
-						<ListItem
-							title='h6'
-							onSelection={this.handleSelect("6")}
-						/>
-					</List>
-				</ButtonDialog>
-				<Divider />
-				<Button iconName='undo' onClick={this.handleUndo} />
-				<Button iconName='repeat' onClick={this.handleRedo} />
-				<Divider />
-				<Dropdown
-					initialValue={this.props.defaultFont}
-					items={this._fontList}
-					onSelection={this._markup && this._markup.setFont}
-				/>
-				<Dropdown
-					initialValue={this.props.defaultFontSize.toString()}
-					items={this._fontSizes}
-					onSelection={this._markup && this._markup.setFontSize}
-				/>
-				<Divider />
-				<Dropdown
-					initialValue={"markdown"}
-					items={this._modes}
-					onSelection={this._markup && this._markup.setMode}
-				/>
-				<Dropdown
-					initialValue={"solarized-light"}
-					items={this._highlights}
-					onSelection={this._markup && this._markup.setHighlight}
-					style={{
-						width: "6rem"
-					}}
-				/>
-				<Button iconName='refresh' onClick={this.handleRefresh} />
-			</EditorToolbar>
+			<ToolbarContainer>
+				<EditorToolbar
+					className={this._toolbarStyles.value}
+					noborder
+					sizing={this.props.buttonSizing}
+				>
+					<Button iconName='bold' onClick={this.handleSetBold} />
+					<Button iconName='italic' onClick={this.handleSetItalic} />
+					<Button
+						iconName='underline'
+						onClick={this.handleUnderline}
+					/>
+					<Button
+						iconName='strikethrough'
+						onClick={this.handleStrikeThrough}
+					/>
+					<Button iconName='code' onClick={this.handleSetMono} />
+					<ButtonDialog iconName='header' notriangle>
+						<List sizing={Sizing.small} alternating noselect>
+							<ListItem
+								title='h1'
+								onSelection={this.handleSelect("1")}
+							/>
+							<ListItem
+								title='h2'
+								onSelection={this.handleSelect("2")}
+							/>
+							<ListItem
+								title='h3'
+								onSelection={this.handleSelect("3")}
+							/>
+							<ListItem
+								title='h4'
+								onSelection={this.handleSelect("4")}
+							/>
+							<ListItem
+								title='h5'
+								onSelection={this.handleSelect("5")}
+							/>
+							<ListItem
+								title='h6'
+								onSelection={this.handleSelect("6")}
+							/>
+						</List>
+					</ButtonDialog>
+					<Divider />
+					<Button iconName='undo' onClick={this.handleUndo} />
+					<Button iconName='repeat' onClick={this.handleRedo} />
+					<Divider />
+					<Dropdown
+						initialValue={this.props.defaultFont}
+						items={this._fontList}
+						onSelection={this._markup && this._markup.setFont}
+					/>
+					<Dropdown
+						initialValue={this.props.defaultFontSize.toString()}
+						items={this._fontSizes}
+						onSelection={this._markup && this._markup.setFontSize}
+					/>
+					<Divider />
+					<Dropdown
+						initialValue={"markdown"}
+						items={this._modes}
+						onSelection={this._markup && this._markup.setMode}
+					/>
+					<Dropdown
+						initialValue={"solarized-light"}
+						items={this._highlights}
+						onSelection={this._markup && this._markup.setHighlight}
+						style={{
+							width: "6rem"
+						}}
+					/>
+					<Button iconName='refresh' onClick={this.handleRefresh} />
+				</EditorToolbar>
+				<PreviewToolbar justify={Justify.right} noborder>
+					<Button iconName='eye' onClick={this.handlePreview} />
+				</PreviewToolbar>
+			</ToolbarContainer>
 		);
 	}
 
@@ -559,24 +599,27 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 			// Compute the current location of the slider control based on the mouse
 			// moving left over the editor, or right over the Preview component
 			if (direction === Direction.left) {
-				dx = e.pageX - this._boundingBox.left;
+				dx = e.pageX - this._boundingBox.left - 1;
 			} else {
 				dx = this.state.x + e.pageX;
 			}
 
 			let editorWidth: number = dx;
-			let previewWidth: number = this._boundingBox.right - dx;
+			let previewWidth: number = this._boundingBox.width - dx;
 
 			// Deal with extreme (outside) left/right bourndaries
-			if (dx < 0) {
+			if (dx <= 0) {
 				// past the left side border (no editor, all preview)
 				dx = editorWidth = 0;
 				previewWidth =
 					this._boundingBox.width - this.props.resizerWidth;
-			} else if (dx > this._boundingBox.width - this.props.resizerWidth) {
+			} else if (
+				dx >=
+				this._boundingBox.width - this.props.resizerWidth
+			) {
 				// past the right side border (no preview, all editor)
 				dx = editorWidth =
-					this._boundingBox.right - this.props.resizerWidth;
+					this._boundingBox.width - this.props.resizerWidth;
 				previewWidth = 0;
 			}
 
@@ -586,7 +629,6 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 				x: dx
 			};
 
-			/*
 			this.debug(
 				"handleMouseMove(%o) -> state: %O, newState: %O, e: %O, boundingBox: %O",
 				this.state,
@@ -595,7 +637,6 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 				e,
 				this._boundingBox
 			);
-			*/
 
 			this.setState(newState);
 			e.preventDefault();
@@ -619,13 +660,13 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 				sliderEnabled: false
 			});
 
-			this.debug("mouseUp: %O", e);
 			e.preventDefault();
 		}
 	}
 
 	@autobind
 	private handlePreview() {
+		this.debug("handlePreview");
 		this.setInitialDimensions(!this.state.visiblePreview);
 	}
 
@@ -710,6 +751,15 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		}
 	}
 
+	/**
+	 * Computes the initial sizing for the editor and preview window.  The
+	 * size is dependent on the visibility of the preview pane.  The
+	 * two components are evenly split between the overall space available
+	 * in the editor view.
+	 * @param visiblePreview {boolean} - if true, then the preview pane is
+	 * currently visible and should be used in the starting size
+	 * calculation, otherwise it is ignored.
+	 */
 	private setInitialDimensions(visiblePreview: boolean) {
 		const startX: number = roundUp(this._boundingBox.width / 2.0);
 
@@ -727,6 +777,13 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 		);
 	}
 
+	/**
+	 * The size of the EditorView component is retrieved and saved when
+	 * this is called the reference to the EditorView.  The sizing
+	 * rectangle is saved into the object so it can be used by other
+	 * components.  This is called when the component is resized, the
+	 * preview pane is toggled, or initial creation.
+	 */
 	private updateBoundingBox() {
 		if (this._refContainer) {
 			this._boundingBox = this._refContainer.getBoundingClientRect();
@@ -825,8 +882,10 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 					{this.buildToolbar()}
 					<EditorView
 						className='ui-editor-view'
-						ref={this.handleRefContainer}
-						onBlur={this.handleMouseUp}
+						handlers={this.keyHandler}
+						keyMap={this.keyMap}
+						innerRef={this.handleRefContainer}
+						onMouseLeave={this.handleMouseUp}
 					>
 						<EditorElement
 							className='ui-editor-quill'
@@ -854,6 +913,7 @@ export class Editor extends BaseComponent<EditorProps, EditorState> {
 						<StyledPreview
 							className='ui-editor-preview'
 							content={this.state.content}
+							onClick={this.focusEditor}
 							onMouseMove={this.handleMouseMoveRight}
 							onMouseUp={this.handleMouseUp}
 							visible={this.state.visiblePreview}

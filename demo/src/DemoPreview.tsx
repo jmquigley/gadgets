@@ -50,6 +50,11 @@ export default class DemoPreview extends React.Component<
 	}
 
 	@autobind
+	private handleClick(event: any) {
+		debug("handleClick in Preview: %O", event);
+	}
+
+	@autobind
 	private handleChange(_content: string, _html: string) {
 		debug("handleChange");
 	}
@@ -78,6 +83,7 @@ export default class DemoPreview extends React.Component<
 					disabled={this.props["disabled"]}
 					mode={this.state.mode}
 					onChange={this.handleChange}
+					onClick={this.handleClick}
 				/>
 			</PreviewStyledContainer>
 		);

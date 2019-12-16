@@ -20,6 +20,7 @@ import {Dropdown, DropdownOption} from "./lib/dropdown/Dropdown";
 import {DynamicList, DynamicListItem} from "./lib/dynamicList/DynamicList";
 import {Editor} from "./lib/editor/Editor";
 import {Icon} from "./lib/icon/Icon";
+import {IFrame} from "./lib/iframe/IFrame";
 import {Item} from "./lib/item/Item";
 import {Label} from "./lib/label/Label";
 import {List} from "./lib/list/List";
@@ -146,6 +147,7 @@ export {
 	getThemeList,
 	globalize,
 	Icon,
+	IFrame,
 	Item,
 	Justify,
 	KeyHandler,

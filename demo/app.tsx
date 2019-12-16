@@ -22,6 +22,7 @@ import DemoDropdown from "./src/DemoDropdown";
 import DemoDynamicList from "./src/DemoDynamicList";
 import DemoEditor from "./src/DemoEditor";
 import DemoErrorHandler from "./src/DemoErrorHandler";
+import DemoIFrame from "./src/DemoIFrame";
 import DemoLabels from "./src/DemoLabels";
 import DemoListItem from "./src/DemoListItem";
 import DemoOption from "./src/DemoOption";
@@ -142,6 +143,7 @@ class App extends React.Component<any, AppState> {
 					sizing={this.state.sizing}
 					disabled={this.state.disabled}
 				/>
+				<DemoIFrame disabled={this.state.disabled} />
 				<DemoLabels
 					sizing={this.state.sizing}
 					disabled={this.state.disabled}

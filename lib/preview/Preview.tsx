@@ -66,6 +66,7 @@ export interface PreviewProps extends BaseProps {
 	css?: string;
 	mode?: PreviewMode;
 	onChange?: (content: string, html: string) => void;
+	onClick?: (event: MouseEvent) => void;
 	onMouseMove?: (event: MouseEvent) => void;
 	onMouseUp?: (event: MouseEvent) => void;
 }
@@ -99,6 +100,7 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 		css: "",
 		mode: PreviewMode.markdown,
 		onChange: nilEvent,
+		onClick: nilEvent,
 		onMouseMove: nilEvent,
 		onMouseUp: nilEvent
 	};
@@ -177,6 +179,11 @@ export class Preview extends BaseComponent<PreviewProps, PreviewState> {
 						iframeWindow.addEventListener(
 							"mouseup",
 							this.props.onMouseUp
+						);
+
+						iframeWindow.addEventListener(
+							"click",
+							this.props.onClick
 						);
 					};
 
